@@ -1,0 +1,452 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   Form support
+============================================================================ */
+
+$inputPadding: 14px;
+$inputHeight: 30px;
+$formRowMargin: 10px;
+$formItemSpacing: 5px;
+$formColor: $baseColor;
+
+/* @group Forms generic reset
+  --------------------------------------------------------------------------- */
+
+.form {
+	border: none;
+	margin: 0; // IE7
+
+	button,
+	input,
+	select,
+	textarea {
+		margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+		padding: 0;
+		vertical-align: baseline;
+	}
+
+	input {
+		&[type="button"],
+		&[type="submit"],
+		&[type="reset"] {
+			-webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
+		}
+
+		&[type="checkbox"],
+		&[type="radio"] {
+			box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
+			padding: 0; // Removes excess padding in IE 8/9.
+		}
+
+		&[type="radio"] {
+			vertical-align: text-top;
+		}
+
+		&[type="checkbox"] {
+			vertical-align: baseline;
+		}
+	}
+
+	button,
+	input {
+		&[disabled] {
+			cursor: default;
+		}
+
+		&::-moz-focus-inner {
+			border: none; // Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+			padding: 0;
+		}
+	}
+
+}
+/* @end */
+
+/* @group Form generic themed styles
+	--------------------------------------------------------------------------- */
+
+.form {
+
+	button,
+	input,
+	select,
+	textarea {
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+	}
+
+	label,
+	.form__label{
+		display: block;
+		line-height: $inputHeight;
+		@include vendor(user-select, none);
+		font-weight: bold;
+
+		> span {
+			display: inline-block;
+			vertical-align: middle;
+			line-height: $base-line-height;
+		}
+	}
+
+	input[type="password"],
+	input[type="search"],
+	input[type="text"],
+	select,
+	textarea {
+		padding: 0 $inputPadding;
+		margin: 0;
+		height: $inputHeight;
+		line-height: $inputHeight;
+		width: 100%;
+		@include vendor(box-sizing, border-box);
+		border: 1px solid #a4a4a4;
+		background: #fff;
+		color: $formColor;
+		font-style: italic;
+		box-shadow: 0 0 15px 3px transparent;
+		@include transition();
+
+		&:hover {
+			border-color: lighten(#a4a4a4, 5%);
+		}
+
+		&:focus {
+			outline: none;
+			border-color: lighten(#a4a4a4, 10%);
+			box-shadow: 0 0 0 3px #EBE66F; //#E4E4E4;
+		}
+	}
+
+	textarea {
+		overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
+		vertical-align: top; //Improves readability and alignment in all browsers
+		height: auto; // overwrite theming on form element
+		min-height: 4em;
+		line-height: $base-line-height;
+		padding: 5px $inputPadding;
+		resize: vertical;
+	}
+
+	select {
+		&[multiple="multiple"] {
+			height: auto; // overwrite theming on form element
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form field sets
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	// Reset
+
+	fieldset {
+		margin: 0;
+		padding: 0;
+		border: none;
+		position: relative;
+	}
+
+	legend {
+		border: none; // Corrects color not being inherited in IE 8/9.
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+	}
+
+	// Generic
+
+	.form__set { // <fieldset>
+		padding: 20px 0 0;
+	}
+
+	.form__set-legend { // <legend>
+		font-size: $h3-font-size;
+		font-weight: bold;
+
+		span {
+			display: block;
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
+
+}
+
+/* @end */
+
+/* @group Form Placeholders
+  --------------------------------------------------------------------------- */
+
+.form {
+
+	input {
+
+		&::-webkit-input-placeholder {
+			font-style: normal;
+			color: lighten($formColor, 10%);
+		}
+
+		&:-moz-placeholder {
+			font-style: normal;
+			color: lighten($formColor, 10%);
+		}
+
+		&::-ms-input-placeholder {
+			font-style: normal;
+			color: lighten($formColor, 10%);
+		}
+
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: lighten($formColor, 30%);
+			}
+
+			&:-moz-placeholder {
+				color: lighten($formColor, 30%);
+			}
+
+			&::-ms-input-placeholder {
+				font-style: normal;
+				color: lighten($formColor, 10%);
+			}
+		}
+	}
+}
+
+/* @end */
+
+/* @group Form Layout
+  --------------------------------------------------------------------------- */
+
+.l-form__row {
+	@extend .i-clfx;
+	margin: $formRowMargin 0;
+//	line-height: 1px; // fix inline box
+}
+
+.l-form__item {
+	float: left;
+	padding: 0 $formItemSpacing 0 0;
+	line-height: $inputHeight;
+}
+
+@each $itemWidth in 30 {
+	.l-form__item_w-#{$itemWidth} {
+		width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
+	}
+}
+
+// table mods
+
+table.l-form__row {
+	border-collapse: collapse;	//Remove most spacing between table cells.
+	border-spacing: 0;	//Remove most spacing between table cells.
+	border-width: 0;
+	//width: 100%; // add this if width in percentage
+
+	.ie6-7 & {
+		display: table-row; // Fix IE7 wired indent of input
+	}
+}
+
+td.l-form__item {
+	float: none;
+	vertical-align: middle;
+}
+
+// fieldset mod
+
+.form {
+
+	fieldset.l-form__row {
+		margin: $formRowMargin 0;
+	}
+
+	legend.l-form__item {
+		padding: 0 $formItemSpacing 0 0;
+	}
+}
+
+/* @end */
+
+/* @group Form Elements
+  --------------------------------------------------------------------------- */
+
+.form__notes {
+	font-size: .8em;
+}
+
+.form__req-sign {
+	color: red;
+}
+
+.i-inputs_disabled {
+	color: #ccc;
+
+	input,
+	select,
+	textarea {
+		opacity: 0.3;
+	}
+}
+
+/* @end */
+
+/* =============================================================================
+    Stylization
+============================================================================= */
+
+.l-form__item_lined {
+	border-bottom: 1px solid $baseColor;
+	margin-bottom: 3px;
+}
+
+.l-form__row_submit_right {
+	text-align: right;
+}
+
+/* @group form__input-w-ico
+  --------------------------------------------------------------------------- */
+
+.form__input-w-ico {
+	display: block;
+	position: relative;
+}
+
+.form__input-w-ico__ico {
+	position: absolute;
+	top: 2px;
+	right: 4px;
+	bottom: 1px;
+	z-index: 5;
+	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+	padding: 0 10px 0 20px;
+	line-height: $inputHeight;
+	text-align: center;
+
+	.i-ico {
+		vertical-align: text-top;
+	}
+}
+
+/* @end */
+
+/* @group form__input-act
+  --------------------------------------------------------------------------- */
+
+.form__input-act {
+	padding: 0 3px 0 20px;
+	background: transparent;
+
+	label.i-ico {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-left: 3px;
+		cursor: pointer;
+		opacity: 0;
+		@include transition();
+
+		input {
+			@include i-hide_vis;
+		}
+	}
+}
+
+input:focus + .form__input-act,
+select:focus + .form__input-act {
+	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+	
+	label.i-ico {
+		opacity: 0.4;
+
+		&:hover {
+			opacity: 1;
+		}
+	}
+}
+
+.js-ico-checked {
+	opacity: 1 !important;
+}
+
+/* @end */
+
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
+
+.form_decloration {
+	margin: 20px 0;
+}
+
+.form {
+
+	.form__set.form__set_paper {
+		padding: 25px 0 0;
+		margin: 1em 0;
+	}
+
+	.form__set-legend {
+		span {
+			font-size: $h5-font-size;
+			font-weight: bold;
+		}
+	}
+
+	// main fieldset block
+	.form__set_main.form__set_paper {
+		padding: 40px 10px 10px;
+		border: 1px solid $baseColor;
+
+		> .form__set-legend {
+			span {
+				font-size: $h5-font-size;
+				line-height: 26px;
+				border-bottom: 1px solid $baseColor;
+				text-align: center;
+			}
+		}
+	}
+
+}
+
+.form__set_paper {
+	input[type="password"],
+	input[type="search"],
+	input[type="text"],
+	select,
+	textarea {
+		border-color: transparent;
+
+		&:hover {
+			border-color: lighten(#a4a4a4, 20%);
+		}
+	}
+
+	textarea {
+		background: url(../images/bg-form-textarea.png) 0 19px repeat;
+	}
+
+	.form__label {
+		font-size: $h5-font-size;
+		font-weight: bold;
+	}
+}
+
+.form__set_notes.form__set {
+	font-family: $sans;
+	background-color: lightyellow;
+	padding: 20px;
+}
+
+/* @end */

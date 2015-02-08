@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--[if IEMobile 7]>
+<html class="iem7 no-js" lang="en-US" dir="ltr"><![endif]-->
+<!--[if (lte IE 6)&(!IEMobile)]>
+<html class="ie6 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>
+<html class="ie7 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (IE 8)&(!IEMobile)]>
+<html class="ie8 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html class="no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
+
+		<%= partial "partials/html-header__social" %>
+
+		<title><%= data.page.title || "Weiss - blank canvas framework" %></title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+
+		<%= stylesheet_inline "core-style" %>
+		<%= javascript_include_tag "jquery.min" %>
+
+		<!--[if lt IE 9]>
+			<%= javascript_include_tag "html5shiv" %>
+		<![endif]-->
+	</head>
+	<body>
+		<div class="l-main-aux">
+
+			<div class="l-main-aux__inner i-clfx">
+				<!-- /region-main-->
+				<div class="region-main i-clfx">
+					<main role="main">
+
+						<!-- /region-main__content -->
+						<div class="region-main__content">
+							<%= yield %>
+
+						</div>
+						<!-- /.region-main__content -->
+					</main>
+				</div>
+				<!-- /.region-main-->
+
+			</div>
+			<!-- /.l-main-aux__inner -->
+		</div>
+		<!-- /.l-main-aux -->
+
+
+		<!--[if lt IE 7]>
+			<div class="general-msg general-msg_warning js-warning">
+				<a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode" class="general-msg__inner">
+					This site does not fully support your browser!<br/>
+					You are using an outdated browser. For a faster, safer browsing experience,upgrade for free today.
+				</a>
+			</div>
+		<![endif]-->
+
+		<%= stylesheet_link_tag "style" %>
+
+		<%= javascript_include_tag "jquery.placeholder.min" %>
+		<%= javascript_include_tag "jquery-validation/jquery.validate.min.js" %>
+		<%= javascript_include_tag "jquery-cloneya.min.js" %>
+		<%= javascript_include_tag "main" %>
+
+	</body>
+</html>

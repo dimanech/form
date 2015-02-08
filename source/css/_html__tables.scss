@@ -1,0 +1,96 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+  Table support
+============================================================================ */
+
+/* @group Table generic
+  --------------------------------------------------------------------------- */
+
+.table {
+	border-collapse: collapse;	//Remove most spacing between table cells.
+	border-spacing: 0;	//Remove most spacing between table cells.
+	border-width: 0;
+	width: 100%;
+	empty-cells: hide;
+
+	caption {
+		@include adjust-font-size-to($h5-font-size);
+		font-weight: bold;
+	}
+
+	td,
+	th {
+		vertical-align: middle;
+		padding: 5px;
+		border: 1px solid $baseColor;
+		text-align: left;
+	}
+
+	thead {
+		td,
+		th {
+			font-weight: bold;
+			text-align: center;
+		}
+	}
+
+	tfoot {
+		font-size: .9em;
+
+		td {
+			text-align: center;
+			border: none;
+		}
+	}
+}
+
+/* @end */
+
+/* @group Table mod: cell fixed width
+  --------------------------------------------------------------------------- */
+
+.table_fixed {
+	table-layout: fixed;
+	word-wrap: break-word;
+	width: auto;
+}
+
+/* @end */
+
+/* @group Table styling
+  --------------------------------------------------------------------------- */
+
+.table {
+
+	.table__cell_unstyled {
+		border-color: transparent;
+	}
+
+	.table__cell_unspaced {
+		padding: 0;
+	}
+
+	.table__cell_bd-r {
+		border-color: transparent;
+		border-right: 1px solid $baseColor;
+	}
+
+	.table__cell_bd-l {
+		border-color: transparent;
+		border-left: 1px solid $baseColor;
+	}
+
+	.table__cell_fwn {
+		font-weight: normal;
+	}
+
+	.table__psdo-th {
+		font-weight: bold;
+	}
+}
+
+
+
+/* @end */

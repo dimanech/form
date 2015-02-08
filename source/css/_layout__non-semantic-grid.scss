@@ -1,0 +1,60 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+    Non-semantic grid support
+ ============================================================================ */
+
+/* @group Non-semantic grid support : generic
+  --------------------------------------------------------------------------- */
+
+.l-row {
+	@extend .i-clfx;
+}
+
+.l-row_w {
+	width: grid-width(12);
+	margin: 0 auto;
+}
+
+.l-span {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;
+}
+
+@each $columns in 1, 2, 4, 6, 8, 10, 12 {
+	.l-span_#{$columns} {
+		width: grid-width($columns);
+		margin-right: $gw-gutter;
+	}
+}
+
+/* Non-semantic grid support : Layout type */
+
+.l-span_4-6-12 {
+}
+
+.l-span_4-8-12 {
+}
+
+/* End Layout type */
+
+.l-span_last {
+	float: right !important;
+	margin-right: 0 !important;
+}
+
+/* @end */
+
+// @group Susy
+//  ---------------------------------------------------------------------------
+
+//@each $columns in 1, 2, 4, 6, 8, 10, 12 {
+//	.l-span_#{$columns} {
+//		@include span-columns($columns,12);
+//	}
+//}
+
+// @end

@@ -1,0 +1,35 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+   Embed content
+============================================================================= */
+
+img {
+	font-size: 1em;
+	color: $baseColor;
+	// alt text style
+
+	a & {
+		border: none;
+		// remove border if in <a> elem
+	}
+}
+
+//@media #{$media-grace-mobile} {
+//	img, object, embed, video, iframe {
+//		max-width: 100%;
+//		height: auto;
+//	}
+//}
+
+//object,
+//embed,
+//video {
+//	max-width: 100%;
+//	height: auto;
+//}
+
+figure {
+	margin: 0;
+}

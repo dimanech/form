@@ -1,0 +1,25 @@
+---
+title: Decloration form
+
+formSections:
+- set__intro
+- set__general
+- set__income
+- set__estate
+- set__vehicle
+- set__banks
+- set__liabilities
+- set__outro
+
+---
+
+<h1 class="declaration-head">
+	<strong class="declaration-head__em">Декларація</strong>
+	про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
+</h1>
+
+<form class="form form_decloration" id="form-decloration" action="" method="get" accept-charset="utf-8">
+	<% current_page.data.formSections.each do |b| %>
+		<%= partial "partials/sections/" + b  %>
+	<% end %>
+</form>

@@ -1,0 +1,48 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		Layout: global
+============================================================================= */
+
+%container {
+	width: grid-width(12);
+	margin: 0 auto;
+}
+
+body {
+	min-width: grid-width(12);
+}
+
+.l-main-aux {
+	background-color: $mainFgColor;
+}
+
+.l-main-aux__inner {
+	position: relative;
+	background-color: $mainBgColor;
+	@extend %container;
+}
+
+/* @group layout header
+  --------------------------------------------------------------------------- */
+
+.l-global-header {
+	@extend %container;
+}
+
+/* @end */
+
+/* @group layout footer
+  --------------------------------------------------------------------------- */
+
+.l-global-footer {
+	clear: both;
+	overflow: hidden;
+}
+
+.l-global-footer__inner {
+	@extend %container;
+}
+
+/* @end */

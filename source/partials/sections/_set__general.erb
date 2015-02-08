@@ -1,0 +1,174 @@
+
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ I. Загальні відомості</span>
+	</legend>
+
+	<fieldset class="l-form__row">
+		<legend class="l-form__item form__label">
+			<span>1.</span>
+		</legend>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__last-name" class="i-wai">Прізвище</label>
+			<input class="js-validate-digits" type="text" id="general__last-name" name="general__last-name" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+		</div>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__name" class="i-wai">Ім’я</label>
+			<input class="js-validate-digits" type="text" id="general__name" name="general__name" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+		</div>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__surname" class="i-wai">По батькові</label>
+			<input class="js-validate-letters" type="text" id="general__surname" name="general__surname" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+		</div>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__inn" class="i-wai">ІНН</label>
+			<input class="js-validate-digits" type="text" id="general__inn" name="general__inn" placeholder="ІНН" minlength="10" digits="" data-inp-act="hidden,unclear" />
+		</div>
+	</fieldset>
+
+	<fieldset class="l-form__row js-clone-wrapper">
+		<legend class="l-form__item form__label">
+			<span>2. Місце проживання</span>
+		</legend>
+		<div class="l-form__item js-toclone">
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Область</label>
+				<select id="" data-inp-act="hidden,unclear">
+					<option value="" selected="">Область</option>
+					<option value="">Немає данних</option>
+					<option value="">Киевская</option>
+					<option value="">Винницкая</option>
+					<option value="">Днепропетровская</option>
+				</select>
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Район</label>
+				<input type="text" id="" placeholder="Район" />
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Населений пункт</label>
+				<input type="text" id="" placeholder="Населений пункт" />
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Имя</label>
+				<select id="">
+					<option value="" selected="">Тип населенного пункту</option>
+					<option value="">Немає данних</option>
+					<option value="">Город</option>
+					<option value="">ПГТ</option>
+					<option value="">Село</option>
+				</select>
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Остальной адрес</label>
+				<input type="text" id="" placeholder="Остальной адрес" />
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Тип адреси</label>
+				<select id="">
+					<option value="" selected="">Тип адреси</option>
+					<option value="">Немає данних</option>
+					<option value="">Адреса реестрації</option>
+					<option value="">Фактична адреса</option>
+				</select>
+			</div>
+			<div class="l-form__item">
+				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку">+</span>
+				<span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку">-</span>
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="l-form__row js-clone-wrapper">
+		<legend class="l-form__item form__label">
+			<span>3. Посада:</span>
+		</legend>
+		<div class="l-form__item js-toclone">
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Область</label>
+				<select id="">
+					<option value="" selected="">Область</option>
+					<option value="">Немає данних</option>
+					<option value="">Киевская</option>
+					<option value="">Винницкая</option>
+					<option value="">Днепропетровская</option>
+				</select>
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Відомство</label>
+				<input type="text" id="" placeholder="Відомство" />
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="" class="i-wai">Посада</label>
+				<input type="text" id="" placeholder="Посада" />
+			</div>
+			<div class="l-form__item">
+				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку">+</span>
+				<span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку">-</span>
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset class="form__set">
+		<legend class="form__set-legend">
+			<span>4. Члени сім’ї декларанта:</span>
+		</legend>
+		<table class="table js-clone-wrapper">
+			<colgroup>
+				<col />
+				<col />
+				<col width="200" />
+				<col width="30" />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>
+						Ступінь зв’язку
+					</th>
+					<th>
+						Прізвище ініціали, дата народження
+					</th>
+					<th>
+						Реєстраційний номер облікової картки платника податків/ серія та номер паспарта громодянина України
+					</th>
+					<th class="table__cell_bd-l">
+						&nbsp;
+					</th>
+				</tr>
+			</thead>
+			<tr class="js-toclone">
+				<td>
+					<div class="l-form__row">
+						<div class="l-form__item">
+							<select id="general__family__relations" name="general__family__relations">
+								<option value="nothing-select" selected="">Ступінь зв’язку</option>
+								<option value="no-data">Немає данних</option>
+								<option value="spouse">Супруг</option>
+								<option value="parents">Батькі</option>
+								<option value="children">Дитина</option>
+								<option value="other">Інше</option>
+							</select>
+						</div>
+						<div class="l-form__item">
+							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" />
+						</div>
+					</div>
+				</td>
+				<td>
+					<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" />
+				</td>
+				<td>
+					<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" />
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+				</td>
+			</tr>
+		</table>
+
+
+	</fieldset>
+
+
+</fieldset>
+

@@ -1,0 +1,45 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		GLOBAL
+============================================================================= */
+
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+	display: block;
+	// Corrects `block` display not defined in IE 9.
+}
+
+html {
+	-webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%;
+}
+
+body {
+	font-size: $base-font-size;
+	@include adjust-leading-to(1);
+	font-family: $baseFontFamily;
+	color: $baseColor;
+	background: $mainBgColor;
+	margin: 0;	// Removes default margin.
+}
+
+///* @group selection fixes
+//  --------------------------------------------------------------------------- */
+//
+// ::-moz-selection {
+// 	text-shadow: none;
+// }
+//
+// ::selection {
+// 	text-shadow: none;
+// }
+//
+// body {
+// 	-webkit-tap-highlight-color: rgb(255,255,158);
+// }
+//
+///* @end */
+
+

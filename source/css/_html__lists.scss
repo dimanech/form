@@ -1,0 +1,74 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		Lists
+============================================================================= */
+
+/* @group Lists generic
+  --------------------------------------------------------------------------- */
+
+ul,
+ol {
+	margin: rhythm(1) 0;
+	padding-left: 1.5em;
+
+	li {
+		margin: rhythm(0.2) 0;
+	}
+}
+
+ul {
+	list-style: disc outside;
+}
+
+ol {
+	list-style: decimal outside;
+}
+
+ol ul {
+	list-style: disc;	// ul inside ul fix
+}
+
+/* @end */
+
+/* @group Lists specific
+  --------------------------------------------------------------------------- */
+
+.list {}
+
+%list-flat {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+
+	.list__item {
+		margin: 0;
+		padding: 0;
+	}
+}
+
+.list_unstyled {
+	padding: 0;
+	list-style: none;
+}
+
+.list_flat {
+	@extend %list-flat;
+}
+
+.list_inline {
+	@extend %list-flat;
+
+	.list__item {
+		display: inline-block;
+		vertical-align: top;
+
+		.ie6-7 & {
+			display: inline;
+			zoom: 1;
+		}
+	}
+}
+
+/* @end */

@@ -1,0 +1,54 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		INCLUDE CLASSES A
+============================================================================= */
+
+.i-clfx {
+	@include i-clfx;
+}
+
+.i-wai {
+	@include i-hide_vis;
+}
+
+/* @group i-psln
+  --------------------------------------------------------------------------- */
+
+.i-psln {
+	color: $lnColor;
+	text-decoration: none;
+	border-bottom: 1px dashed;
+	position: relative;
+	cursor: pointer;
+
+	&:hover,
+	&:focus {
+		color: $lnHoverColor;
+	}
+}
+
+/* @end */
+
+/* @group i-img-container
+  --------------------------------------------------------------------------- */
+
+.i-img-aux {
+	// image wrapper
+	overflow: hidden;
+	display: inline-block;
+	vertical-align: top;
+
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
+
+	img {
+		line-height: 1px;
+		position: static;
+	}
+}
+
+/* @end */

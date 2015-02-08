@@ -1,0 +1,56 @@
+@import "weiss__config";
+@import "weiss__mixins";
+
+/* ============================================================================
+		Main
+============================================================================= */
+
+/* @group Global sprite
+  --------------------------------------------------------------------------- */
+
+$icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
+
+.i-ico {
+	background: $icons-map;
+	display: inline-block;
+	vertical-align: top;
+}
+
+@each $ico-name in
+	hidden,
+	unclear
+{
+	.i-ico_#{$ico-name} {
+		@include sprite($icons-map, ico-#{$ico-name}, true);
+	}
+}
+
+//.i-ico_dimensions {
+//	@include sprite($icons-map, ico-file-doc, true);
+//}
+//
+//.i-ico_position {
+//	//background-position: sprite-position($icons-map, ico-file-doc-hover);
+//	background-position: sprite-position($icons-map, ico-file-doc-hover, 3px, -2px);
+//}
+
+/* @end */
+
+/* @group Declaration-head
+  --------------------------------------------------------------------------- */
+
+.declaration-head {
+	font-size: $base-font-size;
+	font-family: $serif;
+	text-align: center;
+	margin: 1em 0 2em;
+	font-weight: normal;
+}
+
+.declaration-head__em {
+	display: block;
+	text-transform: uppercase;
+	@include adjust-font-size-to($h3-font-size, 1.7);
+}
+
+/* @end */
