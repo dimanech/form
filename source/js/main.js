@@ -65,20 +65,22 @@ scripts.Common = {
 	toggleFormSection: function() {
 		var ctrlInput = $(".js-related-control").find("input[type='checkbox']");
 
+		function disableOnChecked (el, checked) {
+			var sectionBlc = el.parents(".js-related-control").next(".js-related-section");
+
+			sectionBlc[checked ? "removeClass" : "addClass"]("i-inputs_disabled");
+			sectionBlc.find("input, select, textarea").attr("disabled", !checked);
+		}
+
 		ctrlInput.each(function() {
 			var self = $(this),
-				ctrlInputInit = self.is(":checked"),
-				sectionBlc = self.parents(".js-related-control").next(".js-related-section");
+				ctrlInputInit = self.is(":checked");
 
-			sectionBlc[ctrlInputInit ? "removeClass" : "addClass"]("i-inputs_disabled");
-			sectionBlc.find("input, select, textarea").attr("disabled", !ctrlInputInit);
+			disableOnChecked(self, ctrlInputInit);
 		});
 
 		ctrlInput.on('click', function() {
-			var sectionBlc = $(this).parents(".js-related-control").next(".js-related-section");
-
-			sectionBlc[this.checked ? "removeClass" : "addClass"]("i-inputs_disabled");
-			sectionBlc.find("input, select, textarea").attr("disabled", !this.checked);
+			disableOnChecked($(this), this.checked);
 		});
 	},
 
