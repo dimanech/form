@@ -60,39 +60,57 @@
 			</th>
 			<td>
 				<div class="l-form__row">
-					<div class="l-form__item">
-						<select name="" id="">
-							<option value="" selected="">Місце знаходження обїєкта</option>
-							<option value="" selected="">Київ</option>
-							<option value="" selected="">Вінниця</option>
-							<option value="" selected="">Дніпропетровськ</option>
-						</select>
-					</div>
-					<div class="l-form__item">
-						<input type="text" id="" name="" placeholder="Коментар" />
-					</div>
+					<select name="" id="">
+						<option value="" selected="">Місце знаходження обїєкта</option>
+						<option value="" selected="">Київ</option>
+						<option value="" selected="">Вінниця</option>
+						<option value="" selected="">Дніпропетровськ</option>
+					</select>
+				</div>
+				<div class="l-form__row">
+					<input type="text" id="" name="" placeholder="Коментар" />
 				</div>
 			</td>
 			<td>
 				<div class="l-form__row">
-					<div class="l-form__item">
-						<input type="text" id="" name="" placeholder="Площа" />
-					</div>
-					<div class="l-form__item">
-						<select name="" id="">
-							<option value="" selected="">м3</option>
-							<option value="">га</option>
-							<option value="">соток</option>
-						</select>
-					</div>
+					<input type="text" id="" name="" placeholder="Площа" />
 				</div>
-				<input type="text" id="" name="" placeholder="комнат" />
+				<div class="l-form__row">
+					<select name="" id="">
+						<option value="" selected="">м3</option>
+						<option value="">га</option>
+						<option value="">соток</option>
+						<option value="">Немає данних</option>
+					</select>
+					<p class="small-note">
+						Если единицы измерения не указаны, предполагаем, что это квадратные метры<br/>
+						Если указана площадь в других единицах измерения — не нужно их переводить, просто выберите правильную единицу измерения
+					</p>
+				</div>
+				<div class="l-form__row">
+					<input type="text" id="" name="" placeholder="Коментар" />
+					<p class="small-note">
+						Сюда записываются дополнения типа "спадщина", "½ часть и др." <br />
+						Если указано, например, “20 м - ½ от 40 м”, то в поле площади вводим 20 метров, а в комментарий записываем 20 м - ½ от 40 м <br />
+						Если указано “0,5 га + 0,3 га + 0,2 га”, то нужно разнести это по трем разным пунктам (будет 3 участка)
+					</p>
+				</div>
 			</td>
 			<td>
-				<input type="text" id="" name="" placeholder="Сума витрат (власність)" />
+				<div class="l-form__row">
+					<input type="text" id="" name="" placeholder="Сума витрат (власність)" />
+				</div>
+				<div class="l-form_row">
+					<input type="text" id="" name="" placeholder="Коментар" />
+				</div>
 			</td>
 			<td>
-				<input type="text" id="" name="" placeholder="Сума витрат (оренда)" />
+				<div class="l-form__row">
+					<input type="text" id="" name="" placeholder="Сума витрат (оренда)" />
+				</div>
+				<div class="l-form_row">
+					<input type="text" id="" name="" placeholder="Коментар" />
+				</div>
 			</td>
 			<td class="table__cell_bd-l">
 				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>

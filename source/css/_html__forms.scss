@@ -192,17 +192,17 @@ $formColor: $baseColor;
 	input {
 
 		&::-webkit-input-placeholder {
-			font-style: normal;
+			font-style: italic;
 			color: lighten($formColor, 10%);
 		}
 
 		&:-moz-placeholder {
-			font-style: normal;
+			font-style: italic;
 			color: lighten($formColor, 10%);
 		}
 
 		&::-ms-input-placeholder {
-			font-style: normal;
+			font-style: italic;
 			color: lighten($formColor, 10%);
 		}
 
@@ -216,7 +216,6 @@ $formColor: $baseColor;
 			}
 
 			&::-ms-input-placeholder {
-				font-style: normal;
 				color: lighten($formColor, 10%);
 			}
 		}
@@ -240,10 +239,14 @@ $formColor: $baseColor;
 	line-height: $inputHeight;
 }
 
-@each $itemWidth in 30 {
+@each $itemWidth in 30, 100 {
 	.l-form__item_w-#{$itemWidth} {
 		width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
 	}
+}
+
+.l-form__item_w-p50 {
+	width: 48%;
 }
 
 // table mods

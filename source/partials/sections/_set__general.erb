@@ -78,10 +78,11 @@
 			</div>
 		</div>
 	</fieldset>
-	<fieldset class="l-form__row js-clone-wrapper">
+	<fieldset class="l-form__row js-data-note js-clone-wrapper">
 		<legend class="l-form__item form__label">
 			<span>3. Посада:</span>
 		</legend>
+		<p class="l-form__item small-note">Вводится текст должности полностью</p>
 		<div class="l-form__item js-toclone">
 			<div class="l-form__item l-form__item_lined">
 				<label for="" class="i-wai">Область</label>
@@ -138,26 +139,28 @@
 			<tr class="js-toclone">
 				<td>
 					<div class="l-form__row">
-						<div class="l-form__item">
-							<select id="general__family__relations" name="general__family__relations">
-								<option value="nothing-select" selected="">Ступінь зв’язку</option>
-								<option value="no-data">Немає данних</option>
-								<option value="spouse">Супруг</option>
-								<option value="parents">Батькі</option>
-								<option value="children">Дитина</option>
-								<option value="other">Інше</option>
-							</select>
-						</div>
-						<div class="l-form__item">
-							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" />
-						</div>
+						<select id="general__family__relations" name="general__family__relations">
+							<option value="nothing-select" selected="">Ступінь зв’язку</option>
+							<option value="no-data">Немає данних</option>
+							<option value="spouse">Супруг</option>
+							<option value="parents">Батькі</option>
+							<option value="children">Дитина</option>
+							<option value="other">Інше</option>
+						</select>
+					</div>
+					<div class="l-form__row">
+						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" />
 					</div>
 				</td>
 				<td>
-					<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" />
+					<div class="l-form__row">
+						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" />
+					</div>
 				</td>
 				<td>
-					<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" />
+					<div class="l-form__row">
+						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" />
+					</div>
 				</td>
 				<td class="table__cell_bd-l">
 					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>

@@ -4,12 +4,12 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</legend>
 
-	<table class="table">
+	<table class="table js-clone-wrapper">
 		<colgroup>
 			<col />
+			<col width="100" />
 			<col />
-			<col />
-			<col />
+			<col width="300" />
 			<col width="30" />
 		</colgroup>
 		<caption>
@@ -36,7 +36,7 @@
 				</th>
 			</tr>
 		</thead>
-		<tr>
+		<tr class="js-toclone">
 			<td class="table__cell_bd-r table__psdo-th">
 				59.
 			</td>
@@ -44,10 +44,51 @@
 				Номінальна власність цінних паперів
 			</th>
 			<td>
-				<input type="text" id="" name="" placeholder="Сума" />
+				<div class="l-form__row">
+					<div class="l-form__item l-form__item_w-p50">
+						<input type="text" id="" name="" placeholder="Сума" />
+						<p class="small-note">
+							Если указано несколько сумм через запятую или знак “+”, они вводятся отдельно.
+						</p>
+					</div>
+					<div class="l-form__item l-form__item_w-p50">
+						<select name="" id="">
+							<option value="">грн.</option>
+							<option value="">долл.</option>
+							<option value="">евро</option>
+							<option value="">другая</option>
+						</select>
+						<p class="small-note">
+							Если валюта не указана, считаем что это грн. <br/>
+							Если указана сумма в валюте, и тут же указан перевод в гривну, вводим только сумму в валюте
+						</p>
+					</div>
+				</div>
+				<div class="l-form__row">
+					<div class="l-form__item">
+						<input type="text" id="" name="" placeholder="Коментар" />
+					</div>
+				</div>
 			</td>
 			<td>
-				<input type="text" id="" name="" placeholder="Сума за кордоном" />
+				<div class="l-form__row">
+					<div class="l-form__item l-form__item_w-p50">
+						<input type="text" id="" name="" placeholder="Сума за кордоном" />
+					</div>
+					<div class="l-form__item l-form__item_w-p50">
+						<select name="" id="">
+							<option value="">грн.</option>
+							<option value="">долл.</option>
+							<option value="">евро</option>
+							<option value="">другая</option>
+						</select>
+					</div>
+				</div>
+				<div class="l-form__row">
+					<div class="l-form__item">
+						<input type="text" id="" name="" placeholder="Коментар" />
+					</div>
+				</div>
 			</td>
 			<td class="table__cell_bd-l">
 				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>

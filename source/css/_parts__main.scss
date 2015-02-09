@@ -54,3 +54,42 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 }
 
 /* @end */
+
+/* @group data-notes
+  --------------------------------------------------------------------------- */
+
+.small-note {
+	font: normal normal 12px/18px $sans;
+	background: lightyellow;
+	padding: 0 4px;
+	margin: 0;
+}
+
+/* @end */
+
+/* @group ui-autocomplete
+  --------------------------------------------------------------------------- */
+
+.ui-autocomplete {
+	background: #fff;
+	box-shadow: 0 8px 30px -5px rgba(#000,.5);
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	position: absolute;
+	z-index: 999;
+	font: normal normal $base-font-size/$base-line-height $sans;
+	
+	li {
+		margin: 0;
+		padding: 0 10px;
+		cursor: default;
+
+		&:hover {
+			background-color: #729fcf;
+			color: #fff;
+		}
+	}
+}
+
+/* @end */

@@ -4,70 +4,70 @@
 		<span>Додаткове про декларацію</span>
 	</legend>
 
-	<div class="l-form__row">
+	<fieldset class="l-form__row js-data-note js-clone-wrapper">
+		<legend class="l-form__item form__label">
+			<span>Дата заповнення декларантом</span>
+		</legend>
 		<div class="l-form__item">
-			<label class="form__label" for="">
-				<span>Дата заповнення декларантом</span>
-			</label>
+			<div class="l-form__item">
+				<select name="declaration__date_day" id="declaration__date_day">
+					<option value="nodata">День</option>
+				</select>
+			</div>
+			<div class="l-form__item">
+				<select name="declaration__date_month" id="declaration__date_month">
+					<option value="nodata">Місяць</option>
+				</select>
+			</div>
+			<div class="l-form__item">
+				<select name="declaration__date_year" id="declaration__date_year">
+					<option value="nodata">Рік</option>
+				</select>
+			</div>
 		</div>
-		<div class="l-form__item">
-			<select name="" id="">
-				<option value="">День</option>
-			</select>
-		</div>
-		<div class="l-form__item">
-			<select name="" id="">
-				<option value="">Месяц</option>
-			</select>
-		</div>
-		<div class="l-form__item">
-			<select name="" id="">
-				<option value="">Год</option>
-			</select>
-		</div>
-	</div>
+	</fieldset>
 
 	<div class="l-form__row js-related-control">
 		<div class="l-form__item">
-			<label class="form__label" for="">
+			<label class="form__label" for="declaration__notfull">
 				<span>Декларація була не повна</span>
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" />
+			<input type="checkbox" name="declaration__notfull" id="declaration__notfull" />
 		</div>
 	</div>
 
 	<div class="l-form__row js-related-section">
 		<div class="l-form__item">
-			<label class="form__label" for="">
+			<label class="form__label" for="declaration__lostpages">
 				<span>Яких сторінок (паперових) не вистачало</span>
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="text" />
+			<input type="text" id="declaration__lostpages" name="declaration__lostpages" />
 		</div>
 	</div>
 
 	<div class="l-form__row js-related-control">
 		<div class="l-form__item">
-			<label class="form__label" for="">
+			<label class="form__label" for="declaration__additional-info">
 				<span>Є додаткова інформація</span>
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" />
+			<input type="checkbox" id="declaration__additional-info" />
 		</div>
 	</div>
 
 	<div class="js-related-section">
 		<div class="l-form__row">
-			<label class="form__label" for="">
+			<label class="form__label" for="declaration__additional-info__text">
 				<span>Що саме не вмістилось</span>
 			</label>
 		</div>
 		<div class="l-form__row">
-			<textarea name="" id="" rows="10"></textarea>
+			<textarea name="declaration__additional-info__text" id="declaration__additional-info__text" rows="10"></textarea>
 		</div>
 	</div>
 
