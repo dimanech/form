@@ -51,75 +51,102 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				25.
-			</td>
-			<th class="table__cell_fwn">
-				Квартири
-			</th>
-			<td>
-				<div class="l-form__row">
-					<select name="" id="">
-						<option value="" selected="">Місце знаходження обїєкта</option>
-						<option value="" selected="">Київ</option>
-						<option value="" selected="">Вінниця</option>
-						<option value="" selected="">Дніпропетровськ</option>
-					</select>
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Площа" />
-				</div>
-				<div class="l-form__row">
-					<select name="" id="">
-						<option value="" selected="">м3</option>
-						<option value="">га</option>
-						<option value="">соток</option>
-						<option value="">Немає данних</option>
-					</select>
-					<p class="small-note">
-						Если единицы измерения не указаны, предполагаем, что это квадратные метры<br/>
-						Если указана площадь в других единицах измерения — не нужно их переводить, просто выберите правильную единицу измерения
-					</p>
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-					<p class="small-note">
-						Сюда записываются дополнения типа "спадщина", "½ часть и др." <br />
-						Если указано, например, “20 м - ½ от 40 м”, то в поле площади вводим 20 метров, а в комментарий записываем 20 м - ½ от 40 м <br />
-						Если указано “0,5 га + 0,3 га + 0,2 га”, то нужно разнести это по трем разным пунктам (будет 3 участка)
-					</p>
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума витрат (власність)" />
-				</div>
-				<div class="l-form_row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума витрат (оренда)" />
-				</div>
-				<div class="l-form_row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
-			</td>
-		</tr>
+		<% data.estate.fields.each do |field| %>
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
+							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="nodata">Немає данних</option>
+							<option value="vinnickaya">Винницкая область</option>
+							<option value="volinskaya">Волынская область</option>
+							<option value="dnepropetrovskaya">Днепропетровская область</option>
+							<option value="doneckaya">Донецкая область</option>
+							<option value="zhytomyrskaya">Житомирская область</option>
+							<option value="zakarpatskaya">Закарпатская область</option>
+							<option value="zaparozhkaya">Запорожская область</option>
+							<option value="ivano-frankovskaya">Ивано-Франковская область</option>
+							<option value="kievskaya">Киевская область</option>
+							<option value="kirovogradskaya">Кировоградская область</option>
+							<option value="krim">Крым</option>
+							<option value="luhanskaya">Луганская область</option>
+							<option value="lvovskaya">Львовская область</option>
+							<option value="nikolaevskaya">Николаевская область</option>
+							<option value="odesskaya">Одесская область</option>
+							<option value="poltavskaya">Полтавская область</option>
+							<option value="rovenskay">Ровенская область</option>
+							<option value="sumskay">Сумская область</option>
+							<option value="ternopolkaya">Тернопольская область</option>
+							<option value="harkovskaya">Харьковская область</option>
+							<option value="hersonskaya">Херсонская область</option>
+							<option value="hmelnickaya">Хмельницкая область</option>
+							<option value="cherkaskaya">Черкасская область</option>
+							<option value="chernigovskaya">Черниговская область</option>
+							<option value="chernoveckaya">Черновицкая область</option>
+						</select>
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" />
+					</div>
+					<div class="l-form__row">
+						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units">
+							<option value="" selected="">м3</option>
+							<option value="">га</option>
+							<option value="">соток</option>
+							<option value="">Немає данних</option>
+						</select>
+						<p class="small-note js-clone-ignore">
+							Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+							Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+						</p>
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
+						<p class="small-note js-clone-ignore">
+							Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше.&raquo; <br />
+							Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+							Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+						</p>
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" />
+					</div>
+					<div class="l-form_row">
+						<input type="text" id="estate__<%= field.number %>__costs_comment" name="estate__<%= field.number %>__costs_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" />
+					</div>
+					<div class="l-form_row">
+						<input type="text" id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 
-	<table class="table">
+	<table class="table js-clone-wrapper">
 		<colgroup>
 			<col />
 			<col />
@@ -131,7 +158,133 @@
 		<caption>
 			Б. Майно, що перебуває у власності, в оренді чи на іншому праві користування сім’ї декларанта
 		</caption>
-
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік об’єктів
+				</th>
+				<th rowspan="2">
+					Місце знаходження об’єкта (країна, адреса)
+				</th>
+				<th rowspan="2">
+					Загальна площа (кв. м)
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+				<th rowspan="2" class="table__cell_bd-l">
+					&nbsp;
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання
+					у власність
+				</th>
+				<th>
+					оренду чи на інше
+					право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.estateB.fields.each do |field| %>
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
+							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="nodata">Немає данних</option>
+							<option value="vinnickaya">Винницкая область</option>
+							<option value="volinskaya">Волынская область</option>
+							<option value="dnepropetrovskaya">Днепропетровская область</option>
+							<option value="doneckaya">Донецкая область</option>
+							<option value="zhytomyrskaya">Житомирская область</option>
+							<option value="zakarpatskaya">Закарпатская область</option>
+							<option value="zaparozhkaya">Запорожская область</option>
+							<option value="ivano-frankovskaya">Ивано-Франковская область</option>
+							<option value="kievskaya">Киевская область</option>
+							<option value="kirovogradskaya">Кировоградская область</option>
+							<option value="krim">Крым</option>
+							<option value="luhanskaya">Луганская область</option>
+							<option value="lvovskaya">Львовская область</option>
+							<option value="nikolaevskaya">Николаевская область</option>
+							<option value="odesskaya">Одесская область</option>
+							<option value="poltavskaya">Полтавская область</option>
+							<option value="rovenskay">Ровенская область</option>
+							<option value="sumskay">Сумская область</option>
+							<option value="ternopolkaya">Тернопольская область</option>
+							<option value="harkovskaya">Харьковская область</option>
+							<option value="hersonskaya">Херсонская область</option>
+							<option value="hmelnickaya">Хмельницкая область</option>
+							<option value="cherkaskaya">Черкасская область</option>
+							<option value="chernigovskaya">Черниговская область</option>
+							<option value="chernoveckaya">Черновицкая область</option>
+						</select>
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" />
+					</div>
+					<div class="l-form__row">
+						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units">
+							<option value="" selected="">м3</option>
+							<option value="">га</option>
+							<option value="">соток</option>
+							<option value="">Немає данних</option>
+						</select>
+						<p class="small-note js-clone-ignore">
+							Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+							Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+						</p>
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
+						<p class="small-note js-clone-ignore">
+							Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
+							Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+							Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+						</p>
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" />
+					</div>
+					<div class="l-form_row">
+						<input type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate__<%= field.number %>__costs_property_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" />
+					</div>
+					<div class="l-form_row">
+						<input type="text" id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 
 

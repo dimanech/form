@@ -49,55 +49,156 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				35.
-			</td>
-			<th class="table__cell_fwn">
-				Автомобілі легкові
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Марка" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Інша інформація о моделі" />
-				</div>
-				<p class="small-note">
-					Иностранные марки записывайте латиницей
-				</p>
-			</td>
-			<td>
-				<select name="" id="">
-					<option value="">Рік випуску</option>
-					<option value="">2014</option>
-					<option value="">2013</option>
-					<option value="">2012</option>
-				</select>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума витрат" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума витрат оренда" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
-			</td>
-		</tr>
+		<% data.vehicle.fields.each do |field| %>
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" />
+					</div>
+					<p class="small-note js-clone-ignore">
+						Иностранные марки записывайте латиницей
+					</p>
+				</td>
+				<td>
+					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year">
+						<option value="">Рік випуску</option>
+						<option value="">2014</option>
+						<option value="">2013</option>
+						<option value="">2012</option>
+					</select>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 
+	<table class="table js-clone-wrapper">
+		<colgroup>
+			<col />
+			<col />
+			<col />
+			<col width="120" />
+			<col width="150" />
+			<col width="150" />
+			<col width="30" />
+		</colgroup>
+		<caption>
+			Б. Транспортні засоби, що перебувають у власності, в оренді чи на іншому праві користування членів сім’ї декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік транспортних засобів
+				</th>
+				<th rowspan="2">
+					Марка/модель (об’єм циліндрів двигуна, куб. см, потужність двигуна, кВт, довжина, см)
+				</th>
+				<th rowspan="2">
+					Рік випуску
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+				<th class="table__cell_bd-l">
+					&nbsp;
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання у власність
+				</th>
+				<th>
+					оренду чи на інше право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.vehicleB.fields.each do |field| %>
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" />
+					</div>
+					<p class="small-note js-clone-ignore">
+						Иностранные марки записывайте латиницей
+					</p>
+				</td>
+				<td>
+					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year">
+						<option value="">Рік випуску</option>
+						<option value="">2014</option>
+						<option value="">2013</option>
+						<option value="">2012</option>
+					</select>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+				</td>
+			</tr>
+		<% end %>
+	</table>
 
 </fieldset>
 

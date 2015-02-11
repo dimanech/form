@@ -32,31 +32,32 @@
 				</th>
 			</tr>
 		</thead>
-		<tr>
-			<td class="table__cell_bd-r table__psdo-th">
-				59.
-			</td>
-			<th class="table__cell_fwn">
-				Інші не зазаначені у розділах III-V витрати
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума за кордоном" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-		</tr>
-
+		<% data.liabilities.fields.each do |field| %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum" name="liabilities__<%= field.number %>__sum" placeholder="Сума" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_comment" name="liabilities__<%= field.number %>__sum_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_foreign" name="liabilities__<%= field.number %>__sum_foreign" placeholder="Сума за кордоном" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_foreign_comment" name="liabilities__<%= field.number %>__sum_foreign_comment" placeholder="Коментар" />
+					</div>
+				</td>
+			</tr>
+		<% end %>
 	</table>
 
 	<table class="table">
@@ -70,50 +71,50 @@
 			Б. Фінансові зобов’язання членів сім’ї декларанта (грн)
 		</caption>
 		<thead>
-		<tr>
-			<th rowspan="2" class="table__cell_bd-r">
-				<span class="i-wai">
-					№
-				</span>
-			</th>
-			<th>
-				Перелік фінансових зобов’язань
-			</th>
-			<th>
-				Усього
-			</th>
-			<th>
-				у тому числі за кордоном
-			</th>
-		</tr>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th>
+					Перелік фінансових зобов’язань
+				</th>
+				<th>
+					Усього
+				</th>
+				<th>
+					у тому числі за кордоном
+				</th>
+			</tr>
 		</thead>
-		<tr>
-			<td class="table__cell_bd-r table__psdo-th">
-				62.
-			</td>
-			<th class="table__cell_fwn">
-				Інші не зазаначені у розділах III-V витрати
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума за кордоном" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
-				</div>
-			</td>
-		</tr>
-
+		<% data.liabilitiesB.fields.each do |field| %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum" name="liabilities__<%= field.number %>__sum" placeholder="Сума" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_comment" name="liabilities__<%= field.number %>__sum_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_foreign" name="liabilities__<%= field.number %>__sum_foreign" placeholder="Сума за кордоном" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="liabilities__<%= field.number %>__sum_foreign_comment" name="liabilities__<%= field.number %>__sum_foreign_comment" placeholder="Коментар" />
+					</div>
+				</td>
+			</tr>
+		<% end %>
 	</table>
-
 
 </fieldset>
 

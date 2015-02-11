@@ -16,8 +16,9 @@
 	empty-cells: hide;
 
 	caption {
-		@include adjust-font-size-to($h5-font-size);
+		@include adjust-font-size-to($h5-font-size, 1.2);
 		font-weight: bold;
+		margin-bottom: 1em;
 	}
 
 	td,

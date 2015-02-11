@@ -69,7 +69,7 @@ scripts.Common = {
 
 	cloneyaInit: function () {
 		$('.js-clone-wrapper').cloneya({
-			limit: 10,
+			limit: 2000,
 			cloneThis: '.js-toclone',
 			valueClone: false,
 			dataClone: false,
@@ -78,7 +78,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: true,
-			ignore: '.unhappyMessage, .small-note, .js-clone-ignore',
+			ignore: '.unhappyMessage, .js-clone-ignore',
 			defaultRender: false
 		});
 
