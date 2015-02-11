@@ -32,44 +32,67 @@
 		</legend>
 		<div class="l-form__item js-toclone">
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Область</label>
-				<select id="" data-inp-act="hidden,unclear">
-					<option value="" selected="">Область</option>
-					<option value="">Немає данних</option>
-					<option value="">Киевская</option>
-					<option value="">Винницкая</option>
-					<option value="">Днепропетровская</option>
+				<label for="general__place" class="i-wai">Область</label>
+				<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
+					<option value="unspecified" selected="">Область</option>
+					<option value="nodata">Немає данних</option>
+					<option value="kiev">Київ</option>
+					<option value="vinnickaya">Винницкая обл.</option>
+					<option value="volinskaya">Волынская обл.</option>
+					<option value="dnepropetrovskaya">Днепропетровская обл.</option>
+					<option value="doneckaya">Донецкая обл.</option>
+					<option value="zhytomyrskaya">Житомирская обл.</option>
+					<option value="zakarpatskaya">Закарпатская обл.</option>
+					<option value="zaparozhkaya">Запорожская обл.</option>
+					<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
+					<option value="kievskaya">Киевская обл.</option>
+					<option value="kirovogradskaya">Кировоградская обл.</option>
+					<option value="krim">Крым</option>
+					<option value="luhanskaya">Луганская обл.</option>
+					<option value="lvovskaya">Львовская обл.</option>
+					<option value="nikolaevskaya">Николаевская обл.</option>
+					<option value="odesskaya">Одесская обл.</option>
+					<option value="poltavskaya">Полтавская обл.</option>
+					<option value="rovenskay">Ровенская обл.</option>
+					<option value="sumskay">Сумская обл.</option>
+					<option value="ternopolkaya">Тернопольская обл.</option>
+					<option value="harkovskaya">Харьковская обл.</option>
+					<option value="hersonskaya">Херсонская обл.</option>
+					<option value="hmelnickaya">Хмельницкая обл.</option>
+					<option value="cherkaskaya">Черкасская обл.</option>
+					<option value="chernigovskaya">Черниговская обл.</option>
+					<option value="chernoveckaya">Черновицкая обл.</option>
 				</select>
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Район</label>
-				<input type="text" id="" placeholder="Район" />
+				<label for="general__place_district" class="i-wai">Район</label>
+				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Населений пункт</label>
-				<input type="text" id="" placeholder="Населений пункт" />
+				<label for="general__place_city" class="i-wai">Населений пункт</label>
+				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Имя</label>
-				<select id="">
+				<label for="general__place_city_type" class="i-wai">Имя</label>
+				<select id="general__place_city_type" name="general__place_city_type">
 					<option value="" selected="">Тип населенного пункту</option>
-					<option value="">Немає данних</option>
-					<option value="">Город</option>
-					<option value="">ПГТ</option>
-					<option value="">Село</option>
+					<option value="nodata">Немає данних</option>
+					<option value="city">Город</option>
+					<option value="pgt">ПГТ</option>
+					<option value="village">Село</option>
 				</select>
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Остальной адрес</label>
-				<input type="text" id="" placeholder="Остальной адрес" />
+				<label for="general__place_address" class="i-wai">Остальной адрес</label>
+				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Тип адреси</label>
-				<select id="">
+				<label for="general__place_address_type" class="i-wai">Тип адреси</label>
+				<select id="general__place_address_type" name="general__place_address_type">
 					<option value="" selected="">Тип адреси</option>
-					<option value="">Немає данних</option>
-					<option value="">Адреса реестрації</option>
-					<option value="">Фактична адреса</option>
+					<option value="nodata">Немає данних</option>
+					<option value="registration">Адреса реестрації</option>
+					<option value="actual">Фактична адреса</option>
 				</select>
 			</div>
 			<div class="l-form__item">
@@ -85,22 +108,45 @@
 		<p class="l-form__item small-note">Вводится текст должности полностью</p>
 		<div class="l-form__item js-toclone">
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Область</label>
-				<select id="">
-					<option value="" selected="">Область</option>
-					<option value="">Немає данних</option>
-					<option value="">Киевская</option>
-					<option value="">Винницкая</option>
-					<option value="">Днепропетровская</option>
+				<label for="general__post_region" class="i-wai">Область</label>
+				<select id="general__post_region" name="general__post_region">
+					<option value="unspecified" selected="">Область</option>
+					<option value="nodata">Немає данних</option>
+					<option value="kiev">Київ</option>
+					<option value="vinnickaya">Винницкая обл.</option>
+					<option value="volinskaya">Волынская обл.</option>
+					<option value="dnepropetrovskaya">Днепропетровская обл.</option>
+					<option value="doneckaya">Донецкая обл.</option>
+					<option value="zhytomyrskaya">Житомирская обл.</option>
+					<option value="zakarpatskaya">Закарпатская обл.</option>
+					<option value="zaparozhkaya">Запорожская обл.</option>
+					<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
+					<option value="kievskaya">Киевская обл.</option>
+					<option value="kirovogradskaya">Кировоградская обл.</option>
+					<option value="krim">Крым</option>
+					<option value="luhanskaya">Луганская обл.</option>
+					<option value="lvovskaya">Львовская обл.</option>
+					<option value="nikolaevskaya">Николаевская обл.</option>
+					<option value="odesskaya">Одесская обл.</option>
+					<option value="poltavskaya">Полтавская обл.</option>
+					<option value="rovenskay">Ровенская обл.</option>
+					<option value="sumskay">Сумская обл.</option>
+					<option value="ternopolkaya">Тернопольская обл.</option>
+					<option value="harkovskaya">Харьковская обл.</option>
+					<option value="hersonskaya">Херсонская обл.</option>
+					<option value="hmelnickaya">Хмельницкая обл.</option>
+					<option value="cherkaskaya">Черкасская обл.</option>
+					<option value="chernigovskaya">Черниговская обл.</option>
+					<option value="chernoveckaya">Черновицкая обл.</option>
 				</select>
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Відомство</label>
-				<input type="text" id="" placeholder="Відомство" />
+				<label for="general__post_office" class="i-wai">Відомство</label>
+				<input type="text" id="general__post_office" name="general__post_office" placeholder="Відомство" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
-				<label for="" class="i-wai">Посада</label>
-				<input type="text" id="" placeholder="Посада" />
+				<label for="general__post_post" class="i-wai">Посада</label>
+				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" />
 			</div>
 			<div class="l-form__item">
 				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку">+</span>

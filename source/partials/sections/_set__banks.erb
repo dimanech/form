@@ -36,7 +36,7 @@
 				</th>
 			</tr>
 		</thead>
-		<% data.banks.fields.each do |field| %>
+		<% data.banks.fields.each_with_index do |field, index| %>
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -50,9 +50,11 @@
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
 							<input type="text" id="banks__<%= field.number %>__sum" name="banks__<%= field.number %>__sum" placeholder="Сума" />
-							<p class="small-note js-clone-ignore">
-								Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
-							</p>
+							<% if (index == 0) %>
+								<p class="small-note js-clone-ignore">
+									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
+								</p>
+							<% end %>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select name="banks__<%= field.number %>__sum_units" id="banks__<%= field.number %>__sum_units">
@@ -61,10 +63,12 @@
 								<option value="">евро</option>
 								<option value="">інша</option>
 							</select>
-							<p class="small-note js-clone-ignore">
-								Якщо валюта не вказана, рахуємо, що це гривні. <br/>
-								Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
-							</p>
+							<% if (index == 0) %>
+								<p class="small-note js-clone-ignore">
+									Якщо валюта не вказана, рахуємо, що це гривні. <br/>
+									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
+								</p>
+							<% end %>
 						</div>
 					</div>
 					<div class="l-form__row">
@@ -133,7 +137,7 @@
 				</th>
 			</tr>
 		</thead>
-		<% data.banksB.fields.each do |field| %>
+		<% data.banksB.fields.each_with_index do |field, index| %>
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -147,9 +151,11 @@
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
 							<input type="text" id="banks__<%= field.number %>__sum" name="banks__<%= field.number %>__sum" placeholder="Сума" />
-							<p class="small-note js-clone-ignore">
-								Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
-							</p>
+							<% if (index == 0) %>
+								<p class="small-note js-clone-ignore">
+									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
+								</p>
+							<% end %>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select name="banks__<%= field.number %>__sum_units" id="banks__<%= field.number %>__sum_units">
@@ -158,10 +164,12 @@
 								<option value="">евро</option>
 								<option value="">інша</option>
 							</select>
-							<p class="small-note js-clone-ignore">
-								Якщо валюта не вказана, рахуємо, що це гривні. <br/>
-								Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
-							</p>
+							<% if (index == 0) %>
+								<p class="small-note js-clone-ignore">
+									Якщо валюта не вказана, рахуємо, що це гривні. <br/>
+									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
+								</p>
+							<% end %>
 						</div>
 					</div>
 					<div class="l-form__row">

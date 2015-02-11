@@ -51,7 +51,7 @@
 				</th>
 			</tr>
 		</thead>
-		<% data.estate.fields.each do |field| %>
+		<% data.estate.fields.each_with_index do |field, index| %>
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -66,31 +66,32 @@
 						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
 							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
 							<option value="nodata">Немає данних</option>
-							<option value="vinnickaya">Винницкая область</option>
-							<option value="volinskaya">Волынская область</option>
-							<option value="dnepropetrovskaya">Днепропетровская область</option>
-							<option value="doneckaya">Донецкая область</option>
-							<option value="zhytomyrskaya">Житомирская область</option>
-							<option value="zakarpatskaya">Закарпатская область</option>
-							<option value="zaparozhkaya">Запорожская область</option>
-							<option value="ivano-frankovskaya">Ивано-Франковская область</option>
-							<option value="kievskaya">Киевская область</option>
-							<option value="kirovogradskaya">Кировоградская область</option>
+							<option value="kiev">Київ</option>
+							<option value="vinnickaya">Винницкая обл.</option>
+							<option value="volinskaya">Волынская обл.</option>
+							<option value="dnepropetrovskaya">Днепропетровская обл.</option>
+							<option value="doneckaya">Донецкая обл.</option>
+							<option value="zhytomyrskaya">Житомирская обл.</option>
+							<option value="zakarpatskaya">Закарпатская обл.</option>
+							<option value="zaparozhkaya">Запорожская обл.</option>
+							<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
+							<option value="kievskaya">Киевская обл.</option>
+							<option value="kirovogradskaya">Кировоградская обл.</option>
 							<option value="krim">Крым</option>
-							<option value="luhanskaya">Луганская область</option>
-							<option value="lvovskaya">Львовская область</option>
-							<option value="nikolaevskaya">Николаевская область</option>
-							<option value="odesskaya">Одесская область</option>
-							<option value="poltavskaya">Полтавская область</option>
-							<option value="rovenskay">Ровенская область</option>
-							<option value="sumskay">Сумская область</option>
-							<option value="ternopolkaya">Тернопольская область</option>
-							<option value="harkovskaya">Харьковская область</option>
-							<option value="hersonskaya">Херсонская область</option>
-							<option value="hmelnickaya">Хмельницкая область</option>
-							<option value="cherkaskaya">Черкасская область</option>
-							<option value="chernigovskaya">Черниговская область</option>
-							<option value="chernoveckaya">Черновицкая область</option>
+							<option value="luhanskaya">Луганская обл.</option>
+							<option value="lvovskaya">Львовская обл.</option>
+							<option value="nikolaevskaya">Николаевская обл.</option>
+							<option value="odesskaya">Одесская обл.</option>
+							<option value="poltavskaya">Полтавская обл.</option>
+							<option value="rovenskay">Ровенская обл.</option>
+							<option value="sumskay">Сумская обл.</option>
+							<option value="ternopolkaya">Тернопольская обл.</option>
+							<option value="harkovskaya">Харьковская обл.</option>
+							<option value="hersonskaya">Херсонская обл.</option>
+							<option value="hmelnickaya">Хмельницкая обл.</option>
+							<option value="cherkaskaya">Черкасская обл.</option>
+							<option value="chernigovskaya">Черниговская обл.</option>
+							<option value="chernoveckaya">Черновицкая обл.</option>
 						</select>
 					</div>
 					<div class="l-form__row">
@@ -108,18 +109,22 @@
 							<option value="">соток</option>
 							<option value="">Немає данних</option>
 						</select>
-						<p class="small-note js-clone-ignore">
-							Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-							Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
-						</p>
+						<% if (index == 0) %>
+							<p class="small-note js-clone-ignore">
+								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+							</p>
+						<% end %>
 					</div>
 					<div class="l-form__row">
 						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
-						<p class="small-note js-clone-ignore">
-							Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше.&raquo; <br />
-							Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
-							Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
-						</p>
+						<% if (index == 0) %>
+							<p class="small-note js-clone-ignore">
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+							</p>
+						<% end %>
 					</div>
 				</td>
 				<td>
@@ -192,7 +197,7 @@
 				</th>
 			</tr>
 		</thead>
-		<% data.estateB.fields.each do |field| %>
+		<% data.estateB.fields.each_with_index do |field, index| %>
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -207,31 +212,32 @@
 						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
 							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
 							<option value="nodata">Немає данних</option>
-							<option value="vinnickaya">Винницкая область</option>
-							<option value="volinskaya">Волынская область</option>
-							<option value="dnepropetrovskaya">Днепропетровская область</option>
-							<option value="doneckaya">Донецкая область</option>
-							<option value="zhytomyrskaya">Житомирская область</option>
-							<option value="zakarpatskaya">Закарпатская область</option>
-							<option value="zaparozhkaya">Запорожская область</option>
-							<option value="ivano-frankovskaya">Ивано-Франковская область</option>
-							<option value="kievskaya">Киевская область</option>
-							<option value="kirovogradskaya">Кировоградская область</option>
+							<option value="kiev">Київ</option>
+							<option value="vinnickaya">Винницкая обл.</option>
+							<option value="volinskaya">Волынская обл.</option>
+							<option value="dnepropetrovskaya">Днепропетровская обл.</option>
+							<option value="doneckaya">Донецкая обл.</option>
+							<option value="zhytomyrskaya">Житомирская обл.</option>
+							<option value="zakarpatskaya">Закарпатская обл.</option>
+							<option value="zaparozhkaya">Запорожская обл.</option>
+							<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
+							<option value="kievskaya">Киевская обл.</option>
+							<option value="kirovogradskaya">Кировоградская обл.</option>
 							<option value="krim">Крым</option>
-							<option value="luhanskaya">Луганская область</option>
-							<option value="lvovskaya">Львовская область</option>
-							<option value="nikolaevskaya">Николаевская область</option>
-							<option value="odesskaya">Одесская область</option>
-							<option value="poltavskaya">Полтавская область</option>
-							<option value="rovenskay">Ровенская область</option>
-							<option value="sumskay">Сумская область</option>
-							<option value="ternopolkaya">Тернопольская область</option>
-							<option value="harkovskaya">Харьковская область</option>
-							<option value="hersonskaya">Херсонская область</option>
-							<option value="hmelnickaya">Хмельницкая область</option>
-							<option value="cherkaskaya">Черкасская область</option>
-							<option value="chernigovskaya">Черниговская область</option>
-							<option value="chernoveckaya">Черновицкая область</option>
+							<option value="luhanskaya">Луганская обл.</option>
+							<option value="lvovskaya">Львовская обл.</option>
+							<option value="nikolaevskaya">Николаевская обл.</option>
+							<option value="odesskaya">Одесская обл.</option>
+							<option value="poltavskaya">Полтавская обл.</option>
+							<option value="rovenskay">Ровенская обл.</option>
+							<option value="sumskay">Сумская обл.</option>
+							<option value="ternopolkaya">Тернопольская обл.</option>
+							<option value="harkovskaya">Харьковская обл.</option>
+							<option value="hersonskaya">Херсонская обл.</option>
+							<option value="hmelnickaya">Хмельницкая обл.</option>
+							<option value="cherkaskaya">Черкасская обл.</option>
+							<option value="chernigovskaya">Черниговская обл.</option>
+							<option value="chernoveckaya">Черновицкая обл.</option>
 						</select>
 					</div>
 					<div class="l-form__row">
@@ -249,18 +255,22 @@
 							<option value="">соток</option>
 							<option value="">Немає данних</option>
 						</select>
-						<p class="small-note js-clone-ignore">
-							Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-							Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
-						</p>
+						<% if (index == 0) %>
+							<p class="small-note js-clone-ignore">
+								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+							</p>
+						<% end %>
 					</div>
 					<div class="l-form__row">
 						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
-						<p class="small-note js-clone-ignore">
-							Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
-							Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
-							Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
-						</p>
+						<% if (index == 0) %>
+							<p class="small-note js-clone-ignore">
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+							</p>
+						<% end %>
 					</div>
 				</td>
 				<td>
