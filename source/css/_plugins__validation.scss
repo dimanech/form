@@ -7,7 +7,7 @@
 
 // msg types
 
-.invalid {
+.form__invalid {
 	border: 1px solid #b33d5d !important;
 }
 
@@ -17,13 +17,11 @@
 	position: relative;
 
 	p {
-		margin: 0;
-		font-size: 14px;
-		line-height: 18px;
+		margin: 0 0 31px;
+		font: 13px/15px $sans;
 		position: absolute;
 		bottom: 7px;
 		z-index: 4;
-		display: none;
 		padding: 10px 14px;
 		background: #b33d5d;
 		color: #fff;

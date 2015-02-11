@@ -1,4 +1,3 @@
-
 <fieldset class="form__set form__set_main form__set_paper">
 	<legend class="form__set-legend form__set-legend_main">
 		<span>Розділ II. Відомості про доходи</span>
@@ -53,18 +52,18 @@
 			</th>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу декларанта" />
+					<input type="text" id="income__5_gr" name="income__summaru_gr" placeholder="Сума доходу декларанта" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__5_gr_comment" name="income__summaru_gr_comment" placeholder="Коментар" />
 				</div>
 			</td>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу сім’ї" />
+					<input type="text" id="income__5_val_family" name="income__5_val_family" placeholder="Сума доходу сім’ї" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__5_val_family_comment" name="income__5_val_family_comment" placeholder="Коментар" />
 				</div>
 			</td>
 		</tr>
@@ -80,18 +79,18 @@
 			</th>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу декларанта" />
+					<input type="text" id="income__6_gr" name="income__6_gr" placeholder="Сума доходу декларанта" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__6_gr_comment" name="income__6_gr_comment" placeholder="Коментар" />
 				</div>
 			</td>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу сім’ї" />
+					<input type="text" id="income__6_val_family" name="income__6_val_family" placeholder="Сума доходу сім’ї" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__6_val_family_comment" name="income__6_val_family_comment" placeholder="Коментар" />
 				</div>
 			</td>
 		</tr>
@@ -104,18 +103,18 @@
 			</th>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу декларанта" />
+					<input type="text" id="income__7_gr" name="income__7_gr" placeholder="Сума доходу декларанта" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__7_gr_comment" name="income__7_gr_comment" placeholder="Коментар" />
 				</div>
 			</td>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу сім’ї" />
+					<input type="text" id="income__7_val" name="income__7_val" placeholder="Сума доходу сім’ї" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__7_val_comment" name="income__7_val_comment" placeholder="Коментар" />
 				</div>
 			</td>
 		</tr>
@@ -136,28 +135,166 @@
 			<col width="200" />
 			<col width="200" />
 		</colgroup>
-		<tr>
+		<% data.income.fields.each do |field| %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="income__<%= field.number %>_gr" name="income__<%= field.number %>_gr" placeholder="Сума доходу декларанта" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="income__<%= field.number %>_gr_comment" name="income__7_gr_comment" placeholder="Коментар" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input type="text" id="income__<%= field.number %>_val" name="income__<%= field.number %>_val" placeholder="Сума доходу сім’ї" />
+					</div>
+					<div class="l-form__row">
+						<input type="text" id="income__<%= field.number %>_val_comment" name="income__<%= field.number %>_val_comment" placeholder="Коментар" />
+					</div>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+
+	<table class="table js-clone-wrapper">
+		<colgroup>
+			<col width="20" />
+			<col />
+			<col width="200" />
+			<col width="200" />
+			<col width="30" />
+		</colgroup>
+		<caption>
+			Б. Одержані (нараховані) з джерел за межами України декларантом
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Назва країни
+				</th>
+				<th colspan="2">
+					Розмір доходу
+				</th>
+				<th colspan="2" class="table__cell_bd-l">
+					&nbsp;
+				</th>
+			</tr>
+			<tr>
+				<th>
+					в іноземній валюті
+				</th>
+				<th>
+					перерахованого у гривні
+				</th>
+			</tr>
+		</thead>
+		<tr class="js-toclone">
 			<td class="table__cell_bd-r table__psdo-th">
-				8.
+				<span class="js-clone-ignore">
+					21.
+				</span>
 			</td>
 			<th class="table__cell_fwn">
-				авторська винагорода, інші доходи від реалізації майнових прав інтелектуальної власності
+				<div class="l-form__row">
+					<input type="text" id="income__outukraine__country" name="income__outukraine__country" placeholder="Назва країни" />
+				</div>
+				<div class="l-form__row">
+					<input type="text" id="income__outukraine__country_comment" name="income__outukraine__country_comment" placeholder="Коментар" />
+				</div>
 			</th>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу декларанта" />
-				</div>
-				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__outukraine__val" name="income__outukraine__val" placeholder="Доход в іноземній валюті" />
 				</div>
 			</td>
 			<td>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Сума доходу сім’ї" />
+					<input type="text" id="income__outukraine__val_gr-equal" name="income__outukraine__val_gr-equal" placeholder="Перерахування в гривню" />
+				</div>
+			</td>
+			<td class="table__cell_bd-l">
+				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+				<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+			</td>
+		</tr>
+	</table>
+
+	<table class="table js-clone-wrapper">
+		<colgroup>
+			<col width="20" />
+			<col />
+			<col width="200" />
+			<col width="200" />
+			<col width="30" />
+		</colgroup>
+		<caption>
+			В. Одержані (нараховані) з джерел за межами України членами сім’ї декларанта
+		</caption>
+		<thead>
+		<tr>
+			<th rowspan="2" class="table__cell_bd-r">
+				<span class="i-wai">
+					№
+				</span>
+			</th>
+			<th rowspan="2">
+				Назва країни
+			</th>
+			<th colspan="2">
+				Розмір доходу
+			</th>
+			<th colspan="2" class="table__cell_bd-l">
+				&nbsp;
+			</th>
+		</tr>
+		<tr>
+			<th>
+				в іноземній валюті
+			</th>
+			<th>
+				перерахованого у гривні
+			</th>
+		</tr>
+		</thead>
+		<tr class="js-toclone">
+			<td class="table__cell_bd-r table__psdo-th">
+				<span class="js-clone-ignore">
+					22.
+				</span>
+			</td>
+			<th class="table__cell_fwn">
+				<div class="l-form__row">
+					<input type="text" id="income__outukraine_family__country" name="income__outukraine_family__country" placeholder="Назва країни" />
 				</div>
 				<div class="l-form__row">
-					<input type="text" id="" name="" placeholder="Коментар" />
+					<input type="text" id="income__outukraine_family__country_comment" name="income__outukraine_family__country_comment" placeholder="Коментар" />
 				</div>
+			</th>
+			<td>
+				<div class="l-form__row">
+					<input type="text" id="income__outukraine_family__val" name="income__outukraine_family__val" placeholder="Доход в іноземній валюті" />
+				</div>
+			</td>
+			<td>
+				<div class="l-form__row">
+					<input type="text" id="income__outukraine_family__val_gr-equal" name="income__outukraine_family__val_gr-equal" placeholder="Перерахування в гривню" />
+				</div>
+			</td>
+			<td class="table__cell_bd-l">
+				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
+				<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
 			</td>
 		</tr>
 	</table>

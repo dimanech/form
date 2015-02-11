@@ -1,10 +1,6 @@
 ;
 var scripts = scripts || {};
 
-jQuery.validator.addMethod("lettersonly", function(value, element) {
-	return this.optional(element) || /^[a-z," "]+$/i.test(value);
-}, "Letters only please");
-
 scripts.Common = {
 	detecting: function () {
 		$('html').removeClass('no-js');
@@ -24,42 +20,6 @@ scripts.Common = {
 
 	jsPlaceholderInit: function () {
 		$('input[placeholder], textarea[placeholder]').placeholder();
-	},
-
-	jqueryValidateInit: function () {
-		$('#form-decloration').validate({
-			errorClass: "invalid",
-			wrapper: "div class='form__msg'",
-			errorElement: "p",
-			errorPlacement: function(error, element) {
-				error.insertBefore(element);
-			},
-			submitHandler: function(form) {
-				form.submit();
-			}
-		});
-
-		//$(".js-validate-digits").rules( "add", {
-		//	required: true,
-		//	minlength: 2,
-		//	digits: true,
-		//	messages: {
-		//		required: "Required input",
-		//		minlength: jQuery.format("Please, at least {0} characters are necessary"),
-		//		digits: jQuery.format("Please, at least {0} digits are necessary")
-		//	}
-		//});
-		//
-		//$(".js-validate-letters").rules( "add", {
-		//	required: true,
-		//	minlength: 2,
-		//	digits: false,
-		//	messages: {
-		//		required: "Required input",
-		//		minlength: jQuery.format("Please, at least {0} digits are necessary"),
-		//		digits: jQuery.format("Please, at least {0} digits are necessary")
-		//	}
-		//});
 	},
 
 	toggleFormSection: function() {
@@ -118,7 +78,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: true,
-			ignore: 'label.error, .small-note',
+			ignore: '.unhappyMessage, .small-note, .js-clone-ignore',
 			defaultRender: false
 		});
 
@@ -142,6 +102,54 @@ scripts.Common = {
 		});
 	},
 
+	validationInit: function () {
+
+		var test = {
+			lettersOnly: function (val) {
+				return  /^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(val);
+			},
+
+			digitsOnly: function (val) {
+				return /^[0-9]/.test(val);
+			},
+
+			minLength: function (val, length) {
+				return val.length >= length;
+			},
+
+			maxLength: function (val, length) {
+				return val.length <= length;
+			}
+		};
+
+		$('#form-declaration').isHappy({
+			errorTemplate : function (error) {
+				return $('<div id="' + error.id + '" class="form__msg" role="alert"><p>' + error.message + '</p></div>');
+			},
+			classes: {
+				'field': 'form__invalid'
+			},
+			fields: {
+				'#general__name': {
+					message: 'Только цифры',
+					test: test.digitsOnly
+				},
+				'.js-is-textOnly': {
+					message: 'Только текст',
+					test: test.lettersOnly
+				},
+				'.js-is-lenghtMin': {
+					message: 'Поле должно содержать не менее ' + $(this).attr('minlength') + ' символа',
+					test: test.minLength
+				},
+				'.js-is-lenghtMax': {
+					message: 'Поле не должно превышать ' + $(this).attr('maxlength') + ' символов',
+					test: test.maxLength
+				}
+			}
+		});
+	},
+
 	init: function () {
 		var scripts = this;
 
@@ -152,7 +160,7 @@ scripts.Common = {
 //
 //			}
 
-			//scripts.jqueryValidateInit();
+			scripts.validationInit();
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();

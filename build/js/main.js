@@ -27,7 +27,7 @@ scripts.Common = {
 	},
 
 	jqueryValidateInit: function () {
-		$('#form-decloration').validate({
+		$('#form-declaration').validate({
 			errorClass: "invalid",
 			wrapper: "div class='form__msg'",
 			errorElement: "p",
