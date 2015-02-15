@@ -123,19 +123,19 @@
 }
 
 .btn_small {
-	@include button-size(12px, 24px, 13px, 100px)
+	@include button-size(10px, 24px, 13px, 100px);
 }
 
 .btn_medium {
-	@include button-size(14px, 34px, 13px, 100px)
+	@include button-size(14px, 34px, 13px, 100px);
 }
 
 .btn_big {
-	@include button-size(16px, 48px, 13px, 100px)
+	@include button-size(16px, 48px, 13px, 100px);
 }
 
 .btn_huge {
-	@include button-size(18px, 56px, 13px, 100px)
+	@include button-size(18px, 56px, 13px, 100px);
 }
 
 /* @end */

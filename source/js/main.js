@@ -22,10 +22,15 @@ scripts.Common = {
 		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
 
-	toggleFormSection: function() {
-		var ctrlInput = $(".js-related-control").find("input[type='checkbox']");
+	toggleFormSection: function(enableOnValue) {
+		var trueValue = (typeof enableOnValue === "undefined") ? "other" : enableOnValue,
+			ctrlInput = $(".js-related-control").find("input[type='checkbox'], select");
 
-		function disableOnChecked (el, checked) {
+		function enabled(el) {
+			return (el.value == "other" || el.checked);
+		}
+
+		function toggleSection(el, checked) {
 			var sectionBlc = el.parents(".js-related-control").next(".js-related-section");
 
 			sectionBlc[checked ? "removeClass" : "addClass"]("i-inputs_disabled");
@@ -33,19 +38,16 @@ scripts.Common = {
 		}
 
 		ctrlInput.each(function() {
-			var self = $(this),
-				ctrlInputInit = self.is(":checked");
-
-			disableOnChecked(self, ctrlInputInit);
+			toggleSection($(this), enabled(this));
 		});
 
-		ctrlInput.on('click', function() {
-			disableOnChecked($(this), this.checked);
+		ctrlInput.on('change', function() {
+			toggleSection($(this), enabled(this));
 		});
 	},
 
 	inputActions: function() {
-		var inputs = $('input[data-inp-act], select[data-inp-act]');
+		var inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
 
 		inputs.wrap("<span class='form__input-w-ico'></span>");
 		$('<i class="form__input-w-ico__ico form__input-act"></i>').insertAfter(inputs);
@@ -79,7 +81,8 @@ scripts.Common = {
 			clonePosition: 'after',
 			serializeID: true,
 			ignore: '.unhappyMessage, .js-clone-ignore',
-			defaultRender: false
+			defaultRender: true,
+			preserveChildCount: true
 		});
 
 		//$('.js-clone').on('click', function(e) {
@@ -130,7 +133,7 @@ scripts.Common = {
 				'field': 'form__invalid'
 			},
 			fields: {
-				'#general__name': {
+				'.js-is-numOnly': {
 					message: 'Только цифры',
 					test: test.digitsOnly
 				},
@@ -150,22 +153,32 @@ scripts.Common = {
 		});
 	},
 
+	dateSelectBoxesInit: function () {
+		$().dateSelectBoxes({
+			monthElement: $('#declaration__date_month'),
+			dayElement: $('#declaration__date_day'),
+			yearElement: $('#declaration__date_year'),
+			//generateOptions: true
+			keepLabels: true,
+			yearLabel: 'Рік',
+			monthLabel: 'Місяць',
+			dayLabel: 'День'
+		});
+	},
+
 	init: function () {
 		var scripts = this;
 
 		scripts.detecting();
 
 		$(function () {
-//			if (!scripts.isModernBrowser) {
-//
-//			}
-
-			scripts.validationInit();
+			//scripts.validationInit();
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
 			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff']);
 			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
+			scripts.dateSelectBoxesInit();
 		});
 
 		return scripts;

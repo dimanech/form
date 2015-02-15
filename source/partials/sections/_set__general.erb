@@ -36,45 +36,22 @@
 				<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Область</option>
 					<option value="nodata">Немає данних</option>
-					<option value="kiev">Київ</option>
-					<option value="vinnickaya">Винницкая обл.</option>
-					<option value="volinskaya">Волынская обл.</option>
-					<option value="dnepropetrovskaya">Днепропетровская обл.</option>
-					<option value="doneckaya">Донецкая обл.</option>
-					<option value="zhytomyrskaya">Житомирская обл.</option>
-					<option value="zakarpatskaya">Закарпатская обл.</option>
-					<option value="zaparozhkaya">Запорожская обл.</option>
-					<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
-					<option value="kievskaya">Киевская обл.</option>
-					<option value="kirovogradskaya">Кировоградская обл.</option>
-					<option value="krim">Крым</option>
-					<option value="luhanskaya">Луганская обл.</option>
-					<option value="lvovskaya">Львовская обл.</option>
-					<option value="nikolaevskaya">Николаевская обл.</option>
-					<option value="odesskaya">Одесская обл.</option>
-					<option value="poltavskaya">Полтавская обл.</option>
-					<option value="rovenskay">Ровенская обл.</option>
-					<option value="sumskay">Сумская обл.</option>
-					<option value="ternopolkaya">Тернопольская обл.</option>
-					<option value="harkovskaya">Харьковская обл.</option>
-					<option value="hersonskaya">Херсонская обл.</option>
-					<option value="hmelnickaya">Хмельницкая обл.</option>
-					<option value="cherkaskaya">Черкасская обл.</option>
-					<option value="chernigovskaya">Черниговская обл.</option>
-					<option value="chernoveckaya">Черновицкая обл.</option>
+					<% data.regions.region.each do |option| %>
+						<option value="<%= option.value %>"><%= option.name %></option>
+					<% end %>
 				</select>
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_district" class="i-wai">Район</label>
-				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" />
+				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_city" class="i-wai">Населений пункт</label>
-				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" />
+				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_city_type" class="i-wai">Имя</label>
-				<select id="general__place_city_type" name="general__place_city_type">
+				<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
 					<option value="" selected="">Тип населенного пункту</option>
 					<option value="nodata">Немає данних</option>
 					<option value="city">Город</option>
@@ -84,11 +61,11 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_address" class="i-wai">Остальной адрес</label>
-				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" />
+				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-				<select id="general__place_address_type" name="general__place_address_type">
+				<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
 					<option value="" selected="">Тип адреси</option>
 					<option value="nodata">Немає данних</option>
 					<option value="registration">Адреса реестрації</option>
@@ -96,61 +73,35 @@
 				</select>
 			</div>
 			<div class="l-form__item">
-				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку">+</span>
-				<span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку">-</span>
+				<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
 			</div>
 		</div>
 	</fieldset>
-	<fieldset class="l-form__row js-data-note js-clone-wrapper">
+	<fieldset class="l-form__row">
 		<legend class="l-form__item form__label">
 			<span>3. Посада:</span>
 		</legend>
-		<p class="l-form__item small-note">Вводится текст должности полностью</p>
+		<p class="l-form__item small-note">
+			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
+		</p>
 		<div class="l-form__item js-toclone">
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general__post_region">
+				<select id="general__post_region" name="general__post_region" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Область</option>
 					<option value="nodata">Немає данних</option>
-					<option value="kiev">Київ</option>
-					<option value="vinnickaya">Винницкая обл.</option>
-					<option value="volinskaya">Волынская обл.</option>
-					<option value="dnepropetrovskaya">Днепропетровская обл.</option>
-					<option value="doneckaya">Донецкая обл.</option>
-					<option value="zhytomyrskaya">Житомирская обл.</option>
-					<option value="zakarpatskaya">Закарпатская обл.</option>
-					<option value="zaparozhkaya">Запорожская обл.</option>
-					<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
-					<option value="kievskaya">Киевская обл.</option>
-					<option value="kirovogradskaya">Кировоградская обл.</option>
-					<option value="krim">Крым</option>
-					<option value="luhanskaya">Луганская обл.</option>
-					<option value="lvovskaya">Львовская обл.</option>
-					<option value="nikolaevskaya">Николаевская обл.</option>
-					<option value="odesskaya">Одесская обл.</option>
-					<option value="poltavskaya">Полтавская обл.</option>
-					<option value="rovenskay">Ровенская обл.</option>
-					<option value="sumskay">Сумская обл.</option>
-					<option value="ternopolkaya">Тернопольская обл.</option>
-					<option value="harkovskaya">Харьковская обл.</option>
-					<option value="hersonskaya">Херсонская обл.</option>
-					<option value="hmelnickaya">Хмельницкая обл.</option>
-					<option value="cherkaskaya">Черкасская обл.</option>
-					<option value="chernigovskaya">Черниговская обл.</option>
-					<option value="chernoveckaya">Черновицкая обл.</option>
+					<% data.regions.region.each do |option| %>
+						<option value="<%= option.value %>"><%= option.name %></option>
+					<% end %>
 				</select>
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general__post_office" placeholder="Відомство" />
+				<input type="text" id="general__post_office" name="general__post_office" placeholder="Відомство" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" />
-			</div>
-			<div class="l-form__item">
-				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку">+</span>
-				<span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку">-</span>
+				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" data-inp-act="hidden,unclear" />
 			</div>
 		</div>
 	</fieldset>
@@ -170,6 +121,9 @@
 				<tr>
 					<th>
 						Ступінь зв’язку
+						<p class="small-note">
+							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нишче.
+						</p>
 					</th>
 					<th>
 						Прізвище ініціали, дата народження
@@ -184,33 +138,32 @@
 			</thead>
 			<tr class="js-toclone">
 				<td>
-					<div class="l-form__row">
-						<select id="general__family__relations" name="general__family__relations">
-							<option value="nothing-select" selected="">Ступінь зв’язку</option>
-							<option value="no-data">Немає данних</option>
+					<div class="l-form__row js-related-control">
+						<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
+							<option value="unspecified" selected="">Ступінь зв’язку</option>
+							<option value="nodata">Немає данних</option>
 							<option value="spouse">Супруг</option>
 							<option value="parents">Батькі</option>
 							<option value="children">Дитина</option>
 							<option value="other">Інше</option>
 						</select>
 					</div>
-					<div class="l-form__row">
+					<div class="l-form__row js-related-section">
 						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" />
+						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" />
+						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
 				</td>
 			</tr>
 		</table>

@@ -61,10 +61,10 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" />
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" />
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" data-inp-act="hidden,unclear" />
 					</div>
 					<% if (index == 0) %>
 						<p class="small-note js-clone-ignore">
@@ -73,7 +73,7 @@
 					<% end %>
 				</td>
 				<td>
-					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year">
+					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year" data-inp-act="hidden,unclear">
 						<option value="nodata">Рік випуску</option>
 						<option value="2014">2014</option>
 						<option value="2013">2013</option>
@@ -103,23 +103,22 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" />
+						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" />
+						<textarea id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" />
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" />
+						<textarea id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
 		<% end %>
@@ -182,10 +181,10 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" />
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" />
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" data-inp-act="hidden,unclear" />
 					</div>
 					<% if (index == 0) %>
 						<p class="small-note js-clone-ignore">
@@ -194,7 +193,7 @@
 					<% end %>
 				</td>
 				<td>
-					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year">
+					<select name="vehicle__<%= field.number %>__year" id="vehicle__<%= field.number %>__year" data-inp-act="hidden,unclear">
 						<option value="nodata">Рік випуску</option>
 						<option value="2014">2014</option>
 						<option value="2013">2013</option>
@@ -224,23 +223,22 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" />
+						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" />
+						<textarea id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" />
+						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" />
+						<textarea id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
 		<% end %>

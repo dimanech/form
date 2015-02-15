@@ -62,6 +62,7 @@ $formColor: $baseColor;
 	}
 
 }
+
 /* @end */
 
 /* @group Form generic themed styles
@@ -342,6 +343,11 @@ td.l-form__item {
 	}
 }
 
+select + .form__input-w-ico__ico {
+	right: 15px;
+//	background: transparent !important; // overwrite focus .form__input-act
+}
+
 /* @end */
 
 /* @group form__input-act
@@ -366,16 +372,23 @@ td.l-form__item {
 	}
 }
 
-input:focus + .form__input-act,
-select:focus + .form__input-act {
-	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
-	
-	label.i-ico {
-		opacity: 0.4;
+input,
+select,
+textarea {
+	&:focus {
 
-		&:hover {
-			opacity: 1;
+		+ .form__input-act {
+			background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+
+			label.i-ico {
+				opacity: 0.4;
+
+				&:hover {
+					opacity: 1;
+				}
+			}
 		}
+
 	}
 }
 
@@ -437,13 +450,19 @@ select:focus + .form__input-act {
 	}
 
 	textarea {
-		background: url(../images/bg-form-textarea.png) 0 19px repeat;
+		height: $inputHeight;
+		min-height: $inputHeight;
 	}
 
 	.form__label {
 		font-size: $h5-font-size;
 		font-weight: bold;
 	}
+}
+
+textarea.form__textarea_lined {
+	background: url(../images/bg-form-textarea.png) 0 19px repeat;
+	min-height: 5em;
 }
 
 .form__set_notes.form__set {

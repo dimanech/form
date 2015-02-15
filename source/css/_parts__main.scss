@@ -12,6 +12,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 .i-ico {
 	background: $icons-map;
+	background-repeat: no-repeat;
 	display: inline-block;
 	vertical-align: top;
 }
@@ -59,10 +60,26 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .small-note {
-	font: normal normal 12px/18px $sans;
-	background: lightyellow;
-	padding: 0 4px;
+	position: relative;
+	font: normal normal 13px/16px $sans;
+	background-color: #fa3;
+	color: #fff;
 	margin: 0;
+	padding: 2px 4px;
+	text-align: left;
+	border-radius: 3px;
+
+	&:before {
+		content: '';
+		position: absolute;
+		top: -8px;
+		left: 4px;
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 0 0 8px 8px;
+		border-color: transparent transparent #fa3 transparent;
+	}
 }
 
 /* @end */

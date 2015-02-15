@@ -9,9 +9,9 @@
 			<col />
 			<col />
 			<col />
-			<col />
-			<col width="100" />
-			<col width="100" />
+			<col width="200" />
+			<col width="150" />
+			<col width="150" />
 			<col width="30" />
 		</colgroup>
 		<caption>
@@ -42,12 +42,10 @@
 			</tr>
 			<tr>
 				<th>
-					придбання
-					у власність
+					придбання у власність
 				</th>
 				<th>
-					оренду чи на інше
-					право користування
+					оренду чи на інше право користування
 				</th>
 			</tr>
 		</thead>
@@ -63,51 +61,28 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
+						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
 							<option value="nodata">Немає данних</option>
-							<option value="kiev">Київ</option>
-							<option value="vinnickaya">Винницкая обл.</option>
-							<option value="volinskaya">Волынская обл.</option>
-							<option value="dnepropetrovskaya">Днепропетровская обл.</option>
-							<option value="doneckaya">Донецкая обл.</option>
-							<option value="zhytomyrskaya">Житомирская обл.</option>
-							<option value="zakarpatskaya">Закарпатская обл.</option>
-							<option value="zaparozhkaya">Запорожская обл.</option>
-							<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
-							<option value="kievskaya">Киевская обл.</option>
-							<option value="kirovogradskaya">Кировоградская обл.</option>
-							<option value="krim">Крым</option>
-							<option value="luhanskaya">Луганская обл.</option>
-							<option value="lvovskaya">Львовская обл.</option>
-							<option value="nikolaevskaya">Николаевская обл.</option>
-							<option value="odesskaya">Одесская обл.</option>
-							<option value="poltavskaya">Полтавская обл.</option>
-							<option value="rovenskay">Ровенская обл.</option>
-							<option value="sumskay">Сумская обл.</option>
-							<option value="ternopolkaya">Тернопольская обл.</option>
-							<option value="harkovskaya">Харьковская обл.</option>
-							<option value="hersonskaya">Херсонская обл.</option>
-							<option value="hmelnickaya">Хмельницкая обл.</option>
-							<option value="cherkaskaya">Черкасская обл.</option>
-							<option value="chernigovskaya">Черниговская обл.</option>
-							<option value="chernoveckaya">Черновицкая обл.</option>
+							<% data.regions.region.each do |option| %>
+								<option value="<%= option.value %>"><%= option.name %></option>
+							<% end %>
 						</select>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" />
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" />
+						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units">
-							<option value="" selected="">м3</option>
-							<option value="">га</option>
-							<option value="">соток</option>
-							<option value="">Немає данних</option>
+						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
+							<option value="meters" selected="">м3</option>
+							<option value="gectars">га</option>
+							<option value="sotok">соток</option>
+							<option value="nodata">Немає данних</option>
 						</select>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
@@ -117,11 +92,11 @@
 						<% end %>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
+						<textarea id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
-								Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
 							</p>
 						<% end %>
@@ -129,23 +104,22 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" />
+						<input type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<input type="text" id="estate__<%= field.number %>__costs_comment" name="estate__<%= field.number %>__costs_comment" placeholder="Коментар" />
+						<textarea id="estate__<%= field.number %>__costs_comment" name="estate__<%= field.number %>__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" />
+						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" />
+						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
 		<% end %>
@@ -209,51 +183,28 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region">
+						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
 							<option value="nodata">Немає данних</option>
-							<option value="kiev">Київ</option>
-							<option value="vinnickaya">Винницкая обл.</option>
-							<option value="volinskaya">Волынская обл.</option>
-							<option value="dnepropetrovskaya">Днепропетровская обл.</option>
-							<option value="doneckaya">Донецкая обл.</option>
-							<option value="zhytomyrskaya">Житомирская обл.</option>
-							<option value="zakarpatskaya">Закарпатская обл.</option>
-							<option value="zaparozhkaya">Запорожская обл.</option>
-							<option value="ivano-frankovskaya">Ивано-Франковская обл.</option>
-							<option value="kievskaya">Киевская обл.</option>
-							<option value="kirovogradskaya">Кировоградская обл.</option>
-							<option value="krim">Крым</option>
-							<option value="luhanskaya">Луганская обл.</option>
-							<option value="lvovskaya">Львовская обл.</option>
-							<option value="nikolaevskaya">Николаевская обл.</option>
-							<option value="odesskaya">Одесская обл.</option>
-							<option value="poltavskaya">Полтавская обл.</option>
-							<option value="rovenskay">Ровенская обл.</option>
-							<option value="sumskay">Сумская обл.</option>
-							<option value="ternopolkaya">Тернопольская обл.</option>
-							<option value="harkovskaya">Харьковская обл.</option>
-							<option value="hersonskaya">Херсонская обл.</option>
-							<option value="hmelnickaya">Хмельницкая обл.</option>
-							<option value="cherkaskaya">Черкасская обл.</option>
-							<option value="chernigovskaya">Черниговская обл.</option>
-							<option value="chernoveckaya">Черновицкая обл.</option>
+							<% data.regions.region.each do |option| %>
+								<option value="<%= option.value %>"><%= option.name %></option>
+							<% end %>
 						</select>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" />
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" />
+						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units">
-							<option value="" selected="">м3</option>
-							<option value="">га</option>
-							<option value="">соток</option>
-							<option value="">Немає данних</option>
+						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
+							<option value="meters" selected="">м3</option>
+							<option value="gectars">га</option>
+							<option value="sotok">соток</option>
+							<option value="nodata">Немає данних</option>
 						</select>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
@@ -263,11 +214,11 @@
 						<% end %>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" />
+						<textarea id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
-								Сюди записуються доповненя типу &laquo;спадщина&raquo;quo;, &laquo;½ частина та інше.&raquo; <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м - ½ від 40 м <br />
+								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
 							</p>
 						<% end %>
@@ -275,23 +226,22 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" />
+						<input type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<input type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate__<%= field.number %>__costs_property_comment" placeholder="Коментар" />
+						<textarea type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate__<%= field.number %>__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" />
+						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" />
+						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку">+</span>
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку">-</span>
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
 		<% end %>
