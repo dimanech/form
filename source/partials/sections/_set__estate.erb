@@ -70,12 +70,12 @@
 						</select>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" data-inp-act="hidden,unclear" />
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
@@ -104,7 +104,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" data-inp-act="hidden,unclear" />
+						<input type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__<%= field.number %>__costs_comment" name="estate__<%= field.number %>__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -112,7 +112,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -130,8 +130,9 @@
 			<col />
 			<col />
 			<col />
-			<col />
-			<col width="200" />
+			<col width="150" />
+			<col width="150" />
+			<col width="150" />
 			<col width="30" />
 		</colgroup>
 		<caption>
@@ -192,12 +193,12 @@
 						</select>
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" data-inp-act="hidden,unclear" />
+						<input type="text" id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
@@ -226,7 +227,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" data-inp-act="hidden,unclear" />
+						<input type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate__<%= field.number %>__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -234,7 +235,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>

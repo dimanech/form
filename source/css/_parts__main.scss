@@ -109,4 +109,8 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	}
 }
 
+.ui-helper-hidden-accessible {
+	@include i-hide_vis();
+}
+
 /* @end */

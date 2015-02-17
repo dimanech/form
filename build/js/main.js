@@ -1,6 +1,10 @@
 ;
 var scripts = scripts || {};
 
+$.validator.addMethod("lettersonly", function(value, element) {
+	return this.optional(element) || /^[а-яА-ЯёЁa-zA-Z]+$/i.test(value);
+}, "Tільки букви, будьласка");
+
 scripts.Common = {
 	detecting: function () {
 		$('html').removeClass('no-js');
@@ -84,16 +88,6 @@ scripts.Common = {
 			defaultRender: true,
 			preserveChildCount: true
 		});
-
-		//$('.js-clone').on('click', function(e) {
-		//	e.preventDefault();
-		//	$('.js-clone-wrapper').trigger('clone_clone');
-		//});
-		//
-		//$('.js-clone-delete').on('click', function(e) {
-		//	e.preventDefault();
-		//	$('.js-clone-wrapper').trigger('clone_delete');
-		//});
 	},
 
 	addAutoComplete: function(elem, source) {
@@ -105,65 +99,44 @@ scripts.Common = {
 		});
 	},
 
-	validationInit: function () {
-
-		var test = {
-			lettersOnly: function (val) {
-				return  /^[а-яА-ЯёЁa-zA-Z0-9]+$/.test(val);
-			},
-
-			digitsOnly: function (val) {
-				return /^[0-9]/.test(val);
-			},
-
-			minLength: function (val, length) {
-				return val.length >= length;
-			},
-
-			maxLength: function (val, length) {
-				return val.length <= length;
-			}
-		};
-
-		$('#form-declaration').isHappy({
-			errorTemplate : function (error) {
-				return $('<div id="' + error.id + '" class="form__msg" role="alert"><p>' + error.message + '</p></div>');
-			},
-			classes: {
-				'field': 'form__invalid'
-			},
-			fields: {
-				'.js-is-numOnly': {
-					message: 'Только цифры',
-					test: test.digitsOnly
-				},
-				'.js-is-textOnly': {
-					message: 'Только текст',
-					test: test.lettersOnly
-				},
-				'.js-is-lenghtMin': {
-					message: 'Поле должно содержать не менее ' + $(this).attr('minlength') + ' символа',
-					test: test.minLength
-				},
-				'.js-is-lenghtMax': {
-					message: 'Поле не должно превышать ' + $(this).attr('maxlength') + ' символов',
-					test: test.maxLength
-				}
-			}
-		});
-	},
-
 	dateSelectBoxesInit: function () {
 		$().dateSelectBoxes({
 			monthElement: $('#declaration__date_month'),
 			dayElement: $('#declaration__date_day'),
 			yearElement: $('#declaration__date_year'),
-			//generateOptions: true
 			keepLabels: true,
 			yearLabel: 'Рік',
 			monthLabel: 'Місяць',
 			dayLabel: 'День'
 		});
+	},
+
+	jqueryValidateInit: function () {
+
+		var validateForm = $('#form-declaration'),
+			validateSettings = {
+				errorClass: "form__input_invalid",
+				errorElement: "p",
+				errorPlacement: function (error, element) {
+					error.insertBefore(element).addClass('form__msg');
+				}
+			};
+
+		jQuery.validator.addClassRules({
+			'js-is-LettersOnly': {
+				lettersonly: true
+			},
+			'js-is-DigitsOnly': {
+				digits: true
+			}
+		});
+
+		validateForm.validate(validateSettings);
+
+		validateForm.on('reset', function () {
+			validateForm.validate().resetForm();
+		});
+
 	},
 
 	init: function () {
@@ -172,11 +145,11 @@ scripts.Common = {
 		scripts.detecting();
 
 		$(function () {
-			//scripts.validationInit();
+			scripts.jqueryValidateInit();
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
-			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff']);
+			scripts.addAutoComplete("#general__name", ['Аграфена, Винница, Бережанский рай.', 'Акакий, Винница, Бережанский рай.', 'fffff, Киев']);
 			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
 			scripts.dateSelectBoxesInit();
 		});

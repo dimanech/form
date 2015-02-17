@@ -231,6 +231,7 @@ $formColor: $baseColor;
 .l-form__row {
 	@extend .i-clfx;
 	margin: $formRowMargin 0;
+	position: relative;
 //	line-height: 1px; // fix inline box
 }
 
@@ -238,6 +239,7 @@ $formColor: $baseColor;
 	float: left;
 	padding: 0 $formItemSpacing 0 0;
 	line-height: $inputHeight;
+	position: relative;
 }
 
 @each $itemWidth in 30, 100 {

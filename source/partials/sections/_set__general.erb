@@ -10,19 +10,19 @@
 		</legend>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__last-name" class="i-wai">Прізвище</label>
-			<input type="text" id="general__last-name" name="general__last-name" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general__last-name" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
-			<input type="text" id="general__name" name="general__name" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__name" name="general__name" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__surname" class="i-wai">По батькові</label>
-			<input type="text" id="general__surname" name="general__surname" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__surname" name="general__surname" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
-			<input type="text" class="js-is-digitsOnly js-is-lenghtMin" id="general__inn" name="general__inn" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
+			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general__inn" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 		</div>
 	</fieldset>
 
@@ -43,11 +43,11 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_district" class="i-wai">Район</label>
-				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_city" class="i-wai">Населений пункт</label>
-				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_city_type" class="i-wai">Имя</label>
@@ -61,7 +61,7 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_address" class="i-wai">Остальной адрес</label>
-				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__place_address_type" class="i-wai">Тип адреси</label>
@@ -101,7 +101,7 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 		</div>
 	</fieldset>
@@ -149,17 +149,17 @@
 						</select>
 					</div>
 					<div class="l-form__row js-related-section">
-						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" />
+						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" data-inp-act="hidden,unclear" />
+						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" data-inp-act="hidden,unclear" />
+						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td class="table__cell_bd-l">

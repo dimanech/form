@@ -61,10 +61,10 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<% if (index == 0) %>
 						<p class="small-note js-clone-ignore">
@@ -103,7 +103,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<textarea id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -111,7 +111,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<textarea id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -181,10 +181,10 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__<%= field.number %>__brand" name="vehicle__<%= field.number %>__brand" placeholder="Марка" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" data-inp-act="hidden,unclear" />
+						<input type="text" id="vehicle__<%= field.number %>__brand_info" name="vehicle__<%= field.number %>__brand_info" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<% if (index == 0) %>
 						<p class="small-note js-clone-ignore">
@@ -223,7 +223,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="vehicle__<%= field.number %>__sum" name="vehicle__<%= field.number %>__sum" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<textarea id="vehicle__<%= field.number %>__sum_comment" name="vehicle__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -231,7 +231,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="vehicle__<%= field.number %>__sum_rent" name="vehicle__<%= field.number %>__sum_rent" placeholder="Сума витрат оренда" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<textarea id="vehicle__<%= field.number %>__sum_rent_comment" name="vehicle__<%= field.number %>__sum_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
