@@ -115,10 +115,14 @@ scripts.Common = {
 
 		var validateForm = $('#form-declaration'),
 			validateSettings = {
-				errorClass: "form__input_invalid",
+				errorClass: "js-invalid",
 				errorElement: "p",
 				errorPlacement: function (error, element) {
-					error.insertBefore(element).addClass('form__msg');
+					if (element.attr('required')) {
+						error.insertBefore(element).addClass('form__msg form__msg_error');
+					} else {
+						error.insertBefore(element).addClass('form__msg form__msg_warn');
+					}
 				}
 			};
 
@@ -149,7 +153,7 @@ scripts.Common = {
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
-			scripts.addAutoComplete("#general__name", ['Аграфена, Винница, Бережанский рай.', 'Акакий, Винница, Бережанский рай.', 'fffff, Киев']);
+			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff', 'aaaa', 'kjkjlj']);
 			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
 			scripts.dateSelectBoxesInit();
 		});

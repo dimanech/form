@@ -5,13 +5,7 @@
 
 }
 
-// msg types
-
-.form__input_invalid {
-	border: 1px solid #ff1b1b !important;
-}
-
-// msg content
+// Message content
 
 .form__msg {
 	width: 100%;
@@ -22,9 +16,7 @@
 	bottom: 0;
 	z-index: 6;
 	padding: 10px 14px;
-	background: #ff1b1b;
 	border-radius: 3px;
-	color: #fff;
 	box-shadow: 0 8px 30px -5px rgba(#000,.5);
 	cursor: default;
 	@include vendor(animation, fadeIn ease-out .5s);
@@ -47,6 +39,36 @@
 		z-index: 999; // show it on hover
 	}
 }
+
+// Message types
+
+.form__msg_error {
+	background: #ff1b1b;
+	color: #fff;
+
+	&:after {
+		border-top: 8px solid #ff1b1b;
+	}
+
+	& + input[type='text'].js-invalid {
+		border-color: #ff1b1b !important;
+	}
+}
+
+.form__msg_warn {
+	background: #FA3;
+	color: #fff;
+
+	&:after {
+		border-top: 8px solid #FA3;
+	}
+
+	& + input[type='text'].js-invalid {
+		border-color: #FA3 !important;
+	}
+}
+
+// Animations
 
 @include keyframes(fadeIn) {
 	from {
