@@ -1,25 +1,73 @@
 ---
 title: Declaration form
-
-formSections:
-- set__intro
-- set__general
-- set__income
-- set__estate
-- set__vehicle
-- set__banks
-- set__liabilities
-- set__outro
-
 ---
 
-<h1 class="declaration-head">
-	<strong class="declaration-head__em">Декларація</strong>
-	про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
-</h1>
-
 <form class="form form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
-	<% current_page.data.formSections.each do |b| %>
-		<%= partial "partials/sections/" + b  %>
-	<% end %>
+
+	<div id="section-0" class="js-tab-content">
+		<h1 class="declaration-head">
+			<strong class="declaration-head__em">Декларація</strong>
+			про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
+		</h1>
+		<%= partial "partials/sections/set__intro"  %>
+		<%= partial "partials/sections/set__general"  %>
+		<%= partial "partials/sections/set__income"  %>
+		<div class="declaration-nav">
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="1">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-1" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">2</li>
+			<li class="progress-indicator__step">3</li>
+			<li class="progress-indicator__step">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
+		<%= partial "partials/sections/set__estate"  %>
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="0">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="2">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-2" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">3</li>
+			<li class="progress-indicator__step">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
+		<%= partial "partials/sections/set__vehicle"  %>
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="1">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="3">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-3" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive  js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
+		<%= partial "partials/sections/set__banks"  %>
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="2">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="4">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-4" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="3">4</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">5</li>
+		</ul>
+		<%= partial "partials/sections/set__liabilities"  %>
+		<%= partial "partials/sections/set__outro"  %>
+	</div>
+
 </form>

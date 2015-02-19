@@ -114,3 +114,50 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 }
 
 /* @end */
+
+/* @group declaration-nav
+  --------------------------------------------------------------------------- */
+
+.declaration-nav {
+	background: #FFFFE0;
+	padding: 20px;
+	text-align: right;
+}
+
+/* @end */
+
+/* @group progress-indicator
+  --------------------------------------------------------------------------- */
+
+.progress-indicator {
+	display: block;
+	margin: 0 0 20px;
+	padding: 0;
+	text-align: center;
+}
+
+.progress-indicator__step {
+	display: inline-block;
+	vertical-align: middle;
+	width: 50px;
+	height: 10px;
+	background: #ccc;
+	overflow: hidden;
+	text-indent: -999px;
+	@include transition();
+}
+
+.progress-indicator__step_inactive {
+	background: #eee;
+	cursor: pointer;
+	
+	&:hover {
+		background: lighten(#729fcf, 20%);
+	}
+}
+
+.progress-indicator__step_cur {
+	background: #729fcf;
+}
+
+/* @end */

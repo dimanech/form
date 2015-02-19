@@ -17,13 +17,8 @@
 	text-overflow: ellipsis;
 	cursor: default;
 	position: relative;
+	outline: none;
 	@include vendor(user-select, none);
-
-	.ie6-7 & {
-		display: inline;
-		zoom: 1;
-		padding: 0 !important;
-	}
 }
 
 /* @group Btn colors

@@ -1,10 +1,6 @@
 ;
 var scripts = scripts || {};
 
-$.validator.addMethod("lettersonly", function(value, element) {
-	return this.optional(element) || /^[а-яА-ЯёЁa-zA-Z]+$/i.test(value);
-}, "Tільки букви, будьласка");
-
 scripts.Common = {
 	detecting: function () {
 		$('html').removeClass('no-js');
@@ -84,7 +80,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: true,
-			ignore: '.unhappyMessage, .js-clone-ignore',
+			ignore: '.form__msg, .js-clone-ignore',
 			defaultRender: true,
 			preserveChildCount: true
 		});
@@ -113,7 +109,20 @@ scripts.Common = {
 
 	jqueryValidateInit: function () {
 
-		var validateForm = $('#form-declaration'),
+		$.validator.addMethod("lettersonly", function(value, element) {
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’’ґҐa-zA-Z]+$/i.test(value);
+		}, "Tільки букви, будьласка");
+
+		$.validator.addClassRules({
+			'js-is-LettersOnly': {
+				lettersonly: true
+			},
+			'js-is-DigitsOnly': {
+				digits: true
+			}
+		});
+
+		var form = $('#form-declaration'),
 			validateSettings = {
 				errorClass: "js-invalid",
 				errorElement: "p",
@@ -123,22 +132,52 @@ scripts.Common = {
 					} else {
 						error.insertBefore(element).addClass('form__msg form__msg_warn');
 					}
-				}
-			};
+				},
+				focusInvalid: false,
+				invalidHandler: function(form, validator) {
+					if (!validator.numberOfInvalids())
+						return;
 
-		jQuery.validator.addClassRules({
-			'js-is-LettersOnly': {
-				lettersonly: true
+					$('html, body').animate({
+						scrollTop: $(validator.errorList[0].element).offset().top - 60
+					}, 200);
+
+				}
 			},
-			'js-is-DigitsOnly': {
-				digits: true
-			}
+			validateThis = form.validate(validateSettings),
+			current = 0,
+			content = $('.js-tab-content');
+
+		form.on('reset', function () {
+			form.validate().resetForm();
 		});
 
-		validateForm.validate(validateSettings);
+		content.hide();
+		$(content[0]).show();
 
-		validateForm.on('reset', function () {
-			validateForm.validate().resetForm();
+		$(".js-section-go").on('click', function(e) {
+			if (!$(this).is('[type="reset"]')) {
+				e.preventDefault();
+			}
+
+			var self = $(this),
+				validateBefore = self.hasClass('js-section-validate'),
+				section = self.data('section-go'),
+				goTo = '#section-' + section,
+				showSection = function () {
+					current = section;
+					content.hide();
+					$(goTo).fadeIn(400);
+					$('html, body').animate({scrollTop:0}, 500);
+				};
+
+			if (validateBefore) {
+				if (validateThis.form()) {
+					showSection();
+				}
+			} else {
+				showSection();
+			}
 		});
 
 	},
