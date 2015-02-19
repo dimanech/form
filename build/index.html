@@ -65,12 +65,13 @@
 
 						<!-- /region-main__content -->
 						<div class="region-main__content">
-							<h1 class="declaration-head">
-	<strong class="declaration-head__em">Декларація</strong>
-	про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
-</h1>
+							<form class="form form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
 
-<form class="form form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
+	<div id="section-0" class="js-tab-content">
+		<h1 class="declaration-head">
+			<strong class="declaration-head__em">Декларація</strong>
+			про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
+		</h1>
 		
 <fieldset class="form__set form__set_main form__set_notes">
 	<legend class="i-wai">
@@ -84,7 +85,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" id="intro__isnotdeclaration" name="intro__isnotdeclaration" />
+			<input type="checkbox" id="intro__isnotdeclaration" name="intro__isnotdeclaration" autofocus="" />
 		</div>
 	</div>
 
@@ -943,6 +944,18 @@
 </fieldset>
 
 
+		<div class="declaration-nav">
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="1">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-1" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">2</li>
+			<li class="progress-indicator__step">3</li>
+			<li class="progress-indicator__step">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
 		
 <fieldset class="form__set form__set_main form__set_paper">
 	<legend class="form__set-legend form__set-legend_main">
@@ -1067,7 +1080,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__23__costs" name="estate__23__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__23__costs" name="estate__23__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__23__costs_comment" name="estate__23__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1150,7 +1163,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__24__costs" name="estate__24__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__24__costs" name="estate__24__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__24__costs_comment" name="estate__24__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1233,7 +1246,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__25__costs" name="estate__25__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__25__costs" name="estate__25__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__25__costs_comment" name="estate__25__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1316,7 +1329,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__26__costs" name="estate__26__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__26__costs" name="estate__26__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__26__costs_comment" name="estate__26__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1399,7 +1412,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__27__costs" name="estate__27__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__27__costs" name="estate__27__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__27__costs_comment" name="estate__27__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1482,7 +1495,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__28__costs" name="estate__28__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__28__costs" name="estate__28__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea id="estate__28__costs_comment" name="estate__28__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1623,7 +1636,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__29__costs_property" name="estate__29__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate__29__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__29__costs_property_comment" name="estate__29__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1706,7 +1719,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__30__costs_property" name="estate__30__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate__30__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__30__costs_property_comment" name="estate__30__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1789,7 +1802,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__31__costs_property" name="estate__31__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate__31__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__31__costs_property_comment" name="estate__31__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1872,7 +1885,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__32__costs_property" name="estate__32__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate__32__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__32__costs_property_comment" name="estate__32__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -1955,7 +1968,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__33__costs_property" name="estate__33__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate__33__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__33__costs_property_comment" name="estate__33__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2038,7 +2051,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input type="text" id="estate__34__costs_property" name="estate__34__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate__34__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
 						<textarea type="text" id="estate__34__costs_property_comment" name="estate__34__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
@@ -2063,6 +2076,19 @@
 </fieldset>
 
 
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="0">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="2">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-2" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">3</li>
+			<li class="progress-indicator__step">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
 		
 <fieldset class="form__set form__set_main form__set_paper">
 	<legend class="form__set-legend form__set-legend_main">
@@ -2842,6 +2868,19 @@
 </fieldset>
 
 
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="1">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="3">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-3" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive  js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">4</li>
+			<li class="progress-indicator__step">5</li>
+		</ul>
 		
 <fieldset class="form__set form__set_main form__set_paper">
 	<legend class="form__set-legend form__set-legend_main">
@@ -3421,6 +3460,19 @@
 </fieldset>
 
 
+		<div class="declaration-nav">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="2">Попередній розділ</button>
+			<button class="btn btn_blue btn_small js-section-go js-section-validate" data-section-go="4">Наступний розділ</button>
+		</div>
+	</div>
+	<div id="section-4" class="js-tab-content">
+		<ul class="progress-indicator">
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="3">4</li>
+			<li class="progress-indicator__step progress-indicator__step_cur">5</li>
+		</ul>
 		
 <fieldset class="form__set form__set_main form__set_paper">
 	<legend class="form__set-legend form__set-legend_main">
@@ -3898,12 +3950,18 @@
 	</div>
 
 	<div class="l-form__row l-form__row_submit l-form__row_submit_right">
-		<input type="reset" class="btn btn_small btn_grey" value="Стерти усі поля" />
+		<div class="l-form__item">
+			<button class="btn btn_grey btn_small js-section-go" data-section-go="3">Попередній розділ</button>
+		</div>
+		<!-- to align this on right -->
+		<input type="reset" class="btn btn_small btn_grey js-section-go" data-section-go="0" value="Стерти усі поля" />
 		<input type="submit" class="btn btn_medium btn_blue" value="Отправити форму" title="Отправити форму" />
 	</div>
 
 </fieldset>
 
+
+	</div>
 
 </form>
 
@@ -3930,12 +3988,12 @@
 
 		<link href="css/style.css" rel="stylesheet" type="text/css" />
 
-		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="js/jquery.validate.min.js" type="text/javascript"></script>
 		<script src="js/messages_uk.min.js" type="text/javascript"></script>
 		<script src="js/jquery-cloneya.min.js" type="text/javascript"></script>
-		<script src="js/jquery-ui.min.js" type="text/javascript"></script>
 		<script src="js/jquery.dateSelectBoxes.js" type="text/javascript"></script>
+		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 
 	</body>
