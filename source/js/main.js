@@ -58,8 +58,19 @@ scripts.Common = {
 				inputActions = input.data('inp-act').split(',');
 
 			$.each(inputActions, function (key, value) {
+				var title;
+
+				switch (value) {
+					case "hidden":
+						var title = 'Це поле скрите';
+						break;
+					case "unclear":
+						var title = 'Це поле нерозбірливе';
+						break;
+				}
+
 				$(input.next('.form__input-w-ico__ico'))
-					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ value +'">' +
+					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
 				'<input type="checkbox" name="'+ inputId + '_' + value +'" tabindex="-1" /></label>');
 			});
 		});

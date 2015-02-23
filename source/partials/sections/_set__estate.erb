@@ -62,7 +62,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 							<% data.regions.region.each do |option| %>
 								<option value="<%= option.value %>"><%= option.name %></option>
@@ -87,7 +87,7 @@
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 						<% end %>
 					</div>
@@ -96,8 +96,8 @@
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
-								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 						<% end %>
 					</div>
@@ -185,7 +185,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 							<% data.regions.region.each do |option| %>
 								<option value="<%= option.value %>"><%= option.name %></option>
@@ -210,7 +210,7 @@
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 						<% end %>
 					</div>
@@ -219,8 +219,8 @@
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
-								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 						<% end %>
 					</div>
