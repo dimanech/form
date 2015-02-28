@@ -425,23 +425,27 @@ textarea {
 	display: block;
 }
 
-.js-ico-checked {
-	opacity: 1 !important;
-}
-
-.form__input-act_hidden {
+.js-input-act_hidden {
 	input,
 	select,
 	textarea {
 		background: url('../images/icons/ico-hidden.png') right center no-repeat !important;
 	}
+
+	label.i-ico_hidden {
+		opacity: 1
+	}
 }
 
-.form__input-act_unclear {
+.js-input-act_unclear {
 	input,
 	select,
 	textarea {
 		background: url('../images/icons/ico-unclear.png') right center no-repeat !important;
+	}
+
+	label.i-ico_unclear {
+		opacity: 1
 	}
 }
 

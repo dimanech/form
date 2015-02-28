@@ -71,15 +71,20 @@ scripts.Common = {
 
 				$(input.next('.form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="checkbox" name="'+ inputName + '_' + value +'" tabindex="-1" data-input-type="' + value +'" /></label>');
+				'<input type="radio" name="'+ inputName + '_' + value +'" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
-		$(".form__input-act input[type='checkbox']").on('click', function() {
-			var self = $(this);
+		$(".form__input-act input[type='radio']").on('click', function() {
+			var self = $(this),
+				container = self.parents('.form__input-w-ico'),
+				selfType = self.data('input-type'),
+				activeClass = 'js-input-act_' + selfType;
 
-			self.parent().toggleClass('js-ico-checked');
-			self.parents('.form__input-w-ico').toggleClass('form__input-act_' + self.data('input-type') );
+			if (!self.checked) {
+				container.removeClass('js-input-act_hidden js-input-act_unclear');
+				container.addClass(activeClass);
+			}
 		});
 	},
 
