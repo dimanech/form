@@ -71,12 +71,15 @@ scripts.Common = {
 
 				$(input.next('.form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="checkbox" name="'+ inputName + '_' + value +'" tabindex="-1" /></label>');
+				'<input type="checkbox" name="'+ inputName + '_' + value +'" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
 		$(".form__input-act input[type='checkbox']").on('click', function() {
-			$(this).parent().toggleClass('js-ico-checked');
+			var self = $(this);
+
+			self.parent().toggleClass('js-ico-checked');
+			self.parents('.form__input-w-ico').toggleClass('form__input-act_' + self.data('input-type') );
 		});
 	},
 
@@ -169,8 +172,8 @@ scripts.Common = {
 			form.validate().resetForm();
 		});
 
-		//content.hide();
-		//$(content[0]).show();
+		content.hide();
+		$(content[0]).show();
 
 		$(".js-section-go").on('click', function(e) {
 			if (!$(this).is('[type="reset"]')) {

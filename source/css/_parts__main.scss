@@ -109,7 +109,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	.ui-state-focus,
 	.ui-widget-content .ui-state-focus,
 	.ui-widget-header .ui-state-focus {
-		background-color: #729fcf;
+		background-color: $accentColor;
 		color: #fff;
 	}
 }
@@ -158,12 +158,12 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	cursor: pointer;
 	
 	&:hover {
-		background: lighten(#729fcf, 20%);
+		background: lighten($accentColor, 20%);
 	}
 }
 
 .progress-indicator__step_cur {
-	background: #729fcf;
+	background: $accentColor;
 }
 
 /* @end */

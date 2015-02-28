@@ -45,7 +45,7 @@ $formColor: $baseColor;
 		}
 
 		&[type="checkbox"] {
-			vertical-align: baseline;
+			vertical-align: middle;
 		}
 	}
 
@@ -107,7 +107,7 @@ $formColor: $baseColor;
 		color: $formColor;
 		font-style: italic;
 		box-shadow: 0 0 15px 3px transparent;
-		@include transition();
+		@include transition(box-shadow);
 
 		&:hover {
 			border-color: lighten(#a4a4a4, 5%);
@@ -128,6 +128,22 @@ $formColor: $baseColor;
 		line-height: $base-line-height;
 		padding: 5px $inputPadding;
 		resize: vertical;
+	}
+
+	select {
+		display: inline-block;
+		padding-right: 15px;
+		height: 30px;
+		line-height: 26px;
+		background: url('../images/bg-select-arrow.png') right center no-repeat;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+
+		.ie8 {
+			padding-right: 0;
+		}
 	}
 
 	select {
@@ -335,7 +351,7 @@ td.l-form__item {
 	right: 4px;
 	bottom: 1px;
 	z-index: 5;
-	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+//	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
 	padding: 0 10px 0 20px;
 	line-height: $inputHeight;
 	text-align: center;
@@ -345,19 +361,33 @@ td.l-form__item {
 	}
 }
 
-select + .form__input-w-ico__ico {
-	right: 15px;
-//	background: transparent !important; // overwrite focus .form__input-act
-}
-
 /* @end */
 
 /* @group form__input-act
   --------------------------------------------------------------------------- */
 
 .form__input-act {
-	padding: 0 3px 0 20px;
-	background: transparent;
+	padding: 0 8px;
+	top: 0;
+	right: -55px;
+	bottom: auto;
+	background-color: #fff;
+	border-radius: 3px;
+	box-shadow: 0 8px 30px -5px rgba(#000,.5);
+	display: none;
+
+	&:before {
+		content: ' ';
+		width: 0;
+		height: 0;
+		border-style: solid;
+		border-width: 10px 10px 10px 0;
+		border-color: transparent #fff transparent transparent;
+		position: absolute;
+		left: -6px;
+		top: 50%;
+		margin-top: -10px;
+	}
 
 	label.i-ico {
 		display: inline-block;
@@ -365,8 +395,7 @@ select + .form__input-w-ico__ico {
 		height: 15px;
 		margin-left: 3px;
 		cursor: pointer;
-		opacity: 0;
-		@include transition();
+		opacity: .4;
 
 		input {
 			@include i-hide_vis;
@@ -380,11 +409,9 @@ textarea {
 	&:focus {
 
 		+ .form__input-act {
-			background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+			display: block;
 
 			label.i-ico {
-				opacity: 0.4;
-
 				&:hover {
 					opacity: 1;
 				}
@@ -394,8 +421,28 @@ textarea {
 	}
 }
 
+.form__input-act:hover {
+	display: block;
+}
+
 .js-ico-checked {
 	opacity: 1 !important;
+}
+
+.form__input-act_hidden {
+	input,
+	select,
+	textarea {
+		background: url('../images/icons/ico-hidden.png') right center no-repeat !important;
+	}
+}
+
+.form__input-act_unclear {
+	input,
+	select,
+	textarea {
+		background: url('../images/icons/ico-unclear.png') right center no-repeat !important;
+	}
 }
 
 /* @end */
