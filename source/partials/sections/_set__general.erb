@@ -26,54 +26,56 @@
 		</div>
 	</fieldset>
 
-	<fieldset class="l-form__row js-clone-wrapper">
+	<fieldset class="l-form__row">
 		<legend class="l-form__item form__label">
 			<span>2. Місце проживання</span>
 		</legend>
-		<div class="l-form__item js-toclone">
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place" class="i-wai">Область</label>
-				<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="">Область</option>
-					<option value="nodata">Немає данних</option>
-					<% data.regions.region.each do |option| %>
-						<option value="<%= option.value %>"><%= option.name %></option>
-					<% end %>
-				</select>
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_district" class="i-wai">Район</label>
-				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_city" class="i-wai">Населений пункт</label>
-				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_city_type" class="i-wai">Имя</label>
-				<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
-					<option value="" selected="">Тип населенного пункту</option>
-					<option value="nodata">Немає данних</option>
-					<option value="city">Город</option>
-					<option value="pgt">ПГТ</option>
-					<option value="village">Село</option>
-				</select>
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_address" class="i-wai">Остальной адрес</label>
-				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-				<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
-					<option value="" selected="">Тип адреси</option>
-					<option value="nodata">Немає данних</option>
-					<option value="registration">Адреса реестрації</option>
-					<option value="actual">Фактична адреса</option>
-				</select>
-			</div>
-			<div class="l-form__item">
-				<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
+		<div class="js-clone-wrapper">
+			<div class="l-form__item js-toclone">
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place" class="i-wai">Область</label>
+					<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
+						<option value="unspecified" selected="">Область</option>
+						<option value="nodata">Немає данних</option>
+						<% data.regions.region.each do |option| %>
+							<option value="<%= option.value %>"><%= option.name %></option>
+						<% end %>
+					</select>
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_district" class="i-wai">Район</label>
+					<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city" class="i-wai">Населений пункт</label>
+					<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city_type" class="i-wai">Имя</label>
+					<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
+						<option value="" selected="">Тип населенного пункту</option>
+						<option value="nodata">Немає данних</option>
+						<option value="city">Город</option>
+						<option value="pgt">ПГТ</option>
+						<option value="village">Село</option>
+					</select>
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address" class="i-wai">Остальной адрес</label>
+					<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
+					<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
+						<option value="" selected="">Тип адреси</option>
+						<option value="nodata">Немає данних</option>
+						<option value="registration">Адреса реестрації</option>
+						<option value="actual">Фактична адреса</option>
+					</select>
+				</div>
+				<div class="l-form__item">
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
+				</div>
 			</div>
 		</div>
 	</fieldset>
@@ -84,7 +86,7 @@
 		<p class="l-form__item small-note">
 			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
 		</p>
-		<div class="l-form__item js-toclone">
+		<div class="l-form__item">
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general__post_region" data-inp-act="hidden,unclear">
@@ -110,7 +112,7 @@
 		<legend class="form__set-legend">
 			<span>4. Члени сім’ї декларанта:</span>
 		</legend>
-		<table class="table js-clone-wrapper">
+		<table class="table">
 			<colgroup>
 				<col />
 				<col />
@@ -136,36 +138,38 @@
 					</th>
 				</tr>
 			</thead>
-			<tr class="js-toclone">
-				<td>
-					<div class="l-form__row js-related-control">
-						<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Ступінь зв’язку</option>
-							<option value="nodata">Немає данних</option>
-							<option value="spouse">Супруг</option>
-							<option value="parents">Батькі</option>
-							<option value="children">Дитина</option>
-							<option value="other">Інше</option>
-						</select>
-					</div>
-					<div class="l-form__row js-related-section">
-						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
-					</div>
-				</td>
-				<td>
-					<div class="l-form__row">
-						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear" />
-					</div>
-				</td>
-				<td>
-					<div class="l-form__row">
-						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
-					</div>
-				</td>
-				<td class="table__cell_bd-l">
-					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
-				</td>
-			</tr>
+			<tbody class="js-clone-wrapper">
+				<tr class="js-toclone">
+					<td>
+						<div class="l-form__row js-related-control">
+							<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
+								<option value="unspecified" selected="">Ступінь зв’язку</option>
+								<option value="nodata">Немає данних</option>
+								<option value="spouse">Супруг</option>
+								<option value="parents">Батькі</option>
+								<option value="children">Дитина</option>
+								<option value="other">Інше</option>
+							</select>
+						</div>
+						<div class="l-form__row js-related-section">
+							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
+						</div>
+					</td>
+					<td>
+						<div class="l-form__row">
+							<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear" />
+						</div>
+					</td>
+					<td>
+						<div class="l-form__row">
+							<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
+						</div>
+					</td>
+					<td class="table__cell_bd-l">
+						<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_w-30'}) %>
+					</td>
+				</tr>
+			</tbody>
 		</table>
 
 

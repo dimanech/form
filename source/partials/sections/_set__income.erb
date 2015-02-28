@@ -122,7 +122,7 @@
 		<% end %>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -159,37 +159,39 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				<span class="js-clone-ignore">
-					21.
-				</span>
-			</td>
-			<th class="table__cell_fwn">
-				<div class="l-form__row">
-					<input type="text" id="income__21__country" name="income__21__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
-				</div>
-				<div class="l-form__row">
-					<textarea id="income__21__country_comment" name="income__21__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-				</div>
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__21__val" name="income__21__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income__21__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
-			</td>
-		</tr>
+		<tbody class="js-clone-wrapper">
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						21.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<div class="l-form__row">
+						<input type="text" id="income__21__country" name="income__21__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<textarea id="income__21__country_comment" name="income__21__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+					</div>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__21__val" name="income__21__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income__21__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -226,34 +228,36 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				<span class="js-clone-ignore">
-					22.
-				</span>
-			</td>
-			<th class="table__cell_fwn">
-				<div class="l-form__row">
-					<input type="text" id="income__22_family__country" name="income__22_family__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
-				</div>
-				<div class="l-form__row">
-					<textarea id="income__22_family__country_comment" name="income__22_family__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-				</div>
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__22_family__val" name="income__22_family__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income__22_family__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
-			</td>
-		</tr>
+		<tbody class="js-clone-wrapper">
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						22.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<div class="l-form__row">
+						<input type="text" id="income__22_family__country" name="income__22_family__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<textarea id="income__22_family__country_comment" name="income__22_family__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+					</div>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__val" name="income__22_family__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income__22_family__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 
 

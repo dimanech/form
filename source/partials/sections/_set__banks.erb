@@ -4,7 +4,7 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</legend>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col width="200"  />
@@ -37,6 +37,7 @@
 			</tr>
 		</thead>
 		<% data.banks.fields.each_with_index do |field, index| %>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -101,6 +102,7 @@
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
+		</tbody>
 		<% end %>
 	</table>
 
@@ -137,6 +139,7 @@
 			</tr>
 		</thead>
 		<% data.banksB.fields.each_with_index do |field, index| %>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -201,6 +204,7 @@
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
+		</tbody>
 		<% end %>
 
 	</table>

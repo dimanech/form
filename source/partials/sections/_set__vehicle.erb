@@ -4,7 +4,7 @@
 		<span>Розділ IV. Відомості про транспортні засоби</span>
 	</legend>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -50,6 +50,7 @@
 			</tr>
 		</thead>
 		<% data.vehicle.fields.each_with_index do |field, index| %>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -121,10 +122,11 @@
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
+		</tbody>
 		<% end %>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -170,6 +172,7 @@
 			</tr>
 		</thead>
 		<% data.vehicleB.fields.each_with_index do |field, index| %>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -241,6 +244,7 @@
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
+		</tbody>
 		<% end %>
 	</table>
 
