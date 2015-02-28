@@ -193,6 +193,17 @@ scripts.Common = {
 
 	},
 
+	testJSON: function () {
+		var form =$('#form-declaration');
+
+		$('<pre id="form-declaration-text"></pre>').insertAfter(form);
+
+		form.on( "submit", function(event) {
+			event.preventDefault();
+			$('#form-declaration-text').text(JSON.stringify($(this).serializeArray(), null, '\t'));
+		});
+	},
+
 	init: function () {
 		var scripts = this;
 
@@ -206,6 +217,7 @@ scripts.Common = {
 			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff', 'aaaa', 'kjkjlj']);
 			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
 			scripts.dateSelectBoxesInit();
+			scripts.testJSON();
 		});
 
 		return scripts;
