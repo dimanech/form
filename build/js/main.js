@@ -216,9 +216,9 @@ scripts.Common = {
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
-			scripts.addAutoComplete("#general__last-name", 'js/autocomplite/lastname.json');
-			scripts.addAutoComplete("#general__name", 'js/autocomplite/firstname.json');
-			scripts.addAutoComplete("#general__surname", 'js/autocomplite/patronymic.json');
+			scripts.addAutoComplete("#general__last-name", '/js/autocomplite/lastname.json');
+			scripts.addAutoComplete("#general__name", '/js/autocomplite/firstname.json');
+			scripts.addAutoComplete("#general__surname", '/js/autocomplite/patronymic.json');
 			scripts.dateSelectBoxesInit();
 			scripts.testJSON();
 		});
