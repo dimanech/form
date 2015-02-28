@@ -100,9 +100,11 @@ scripts.Common = {
 	addAutoComplete: function(elem, source) {
 		var elemPar = $(elem).parent();
 
-		$(elem).autocomplete({
-			source: source,
-			appendTo: elemPar
+		$.getJSON(source, function (data) {
+			$(elem).autocomplete({
+				source: data,
+				appendTo: elemPar
+			});
 		});
 	},
 
@@ -214,8 +216,9 @@ scripts.Common = {
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
-			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff', 'aaaa', 'kjkjlj']);
-			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
+			scripts.addAutoComplete("#general__last-name", 'js/autocomplite/lastname.json');
+			scripts.addAutoComplete("#general__name", 'js/autocomplite/firstname.json');
+			scripts.addAutoComplete("#general__surname", 'js/autocomplite/patronymic.json');
 			scripts.dateSelectBoxesInit();
 			scripts.testJSON();
 		});
