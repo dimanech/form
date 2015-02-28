@@ -101,13 +101,19 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 		margin: 0;
 		padding: 0 10px;
 		cursor: default;
+	}
 
-		&:hover {
-			background-color: #729fcf;
-			color: #fff;
-		}
+	.ui-state-hover,
+	.ui-widget-content .ui-state-hover,
+	.ui-widget-header .ui-state-hover,
+	.ui-state-focus,
+	.ui-widget-content .ui-state-focus,
+	.ui-widget-header .ui-state-focus {
+		background-color: #729fcf;
+		color: #fff;
 	}
 }
+
 
 .ui-helper-hidden-accessible {
 	@include i-hide_vis();

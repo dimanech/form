@@ -123,7 +123,7 @@ scripts.Common = {
 	jqueryValidateInit: function () {
 
 		$.validator.addMethod("lettersonly", function(value, element) {
-			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’’ґҐa-zA-Z]+$/i.test(value);
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
 		$.validator.addClassRules({
@@ -165,8 +165,8 @@ scripts.Common = {
 			form.validate().resetForm();
 		});
 
-		content.hide();
-		$(content[0]).show();
+		//content.hide();
+		//$(content[0]).show();
 
 		$(".js-section-go").on('click', function(e) {
 			if (!$(this).is('[type="reset"]')) {
@@ -216,10 +216,14 @@ scripts.Common = {
 			scripts.toggleFormSection();
 			scripts.inputActions();
 			scripts.cloneyaInit();
+			scripts.dateSelectBoxesInit();
 			scripts.addAutoComplete("#general__last-name", '/js/autocomplite/lastname.json');
 			scripts.addAutoComplete("#general__name", '/js/autocomplite/firstname.json');
 			scripts.addAutoComplete("#general__surname", '/js/autocomplite/patronymic.json');
-			scripts.dateSelectBoxesInit();
+			scripts.addAutoComplete("#vehicle__35__brand", '/js/autocomplite/cars.json');
+			scripts.addAutoComplete("#vehicle__36__brand", '/js/autocomplite/trucks.json');
+			scripts.addAutoComplete("#vehicle__37__brand", '/js/autocomplite/boats.json');
+			scripts.addAutoComplete("#vehicle__39__brand", '/js/autocomplite/motos.json');
 			scripts.testJSON();
 		});
 
