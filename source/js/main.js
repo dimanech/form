@@ -102,7 +102,11 @@ scripts.Common = {
 
 		$.getJSON(source, function (data) {
 			$(elem).autocomplete({
-				source: data,
+				source: function(request, response) {
+					var results = $.ui.autocomplete.filter(data, request.term);
+
+					response(results.slice(0, 16));
+				},
 				appendTo: elemPar
 			});
 		});
