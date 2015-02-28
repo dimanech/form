@@ -54,7 +54,7 @@ scripts.Common = {
 
 		inputs.each(function() {
 			var input = $(this),
-				inputId = input.attr('id'),
+				inputName = input.attr('name'),
 				inputActions = input.data('inp-act').split(',');
 
 			$.each(inputActions, function (key, value) {
@@ -71,7 +71,7 @@ scripts.Common = {
 
 				$(input.next('.form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="checkbox" name="'+ inputId + '_' + value +'" tabindex="-1" /></label>');
+				'<input type="checkbox" name="'+ inputName + '_' + value +'" tabindex="-1" /></label>');
 			});
 		});
 

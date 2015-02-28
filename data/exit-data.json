@@ -1,0 +1,1990 @@
+[
+	{
+		"name": "intro__isnotdeclaration",
+		"value": "1"
+	},
+	{
+		"name": "intro__decoration-year",
+		"value": "2011"
+	},
+	{
+		"name": "general__last-name",
+		"value": "Прізвище"
+	},
+	{
+		"name": "general__name",
+		"value": "Ім’я"
+	},
+	{
+		"name": "general__surname",
+		"value": "Побатькові"
+	},
+	{
+		"name": "general__inn",
+		"value": "0123456789"
+	},
+	{
+		"name": "general__place",
+		"value": "12"
+	},
+	{
+		"name": "general__place_district",
+		"value": "Ленінський"
+	},
+	{
+		"name": "general__place_city",
+		"value": "Луганськ"
+	},
+	{
+		"name": "general__place_city_type",
+		"value": "city"
+	},
+	{
+		"name": "general__place_address",
+		"value": "Решта адреси тут, буд 4, кв. 20"
+	},
+	{
+		"name": "general__place_address_type",
+		"value": "nodata"
+	},
+	{
+		"name": "general__place1",
+		"value": "10"
+	},
+	{
+		"name": "general__place_district1",
+		"value": "(Це клоноване поле) Район"
+	},
+	{
+		"name": "general__place_city1",
+		"value": "Київ"
+	},
+	{
+		"name": "general__place_city_type1",
+		"value": "city"
+	},
+	{
+		"name": "general__place_address1",
+		"value": "Соме стрите, 6-23"
+	},
+	{
+		"name": "general__place_address_type1",
+		"value": "registration"
+	},
+	{
+		"name": "general__post_region",
+		"value": "9"
+	},
+	{
+		"name": "general__post_office",
+		"value": "Якесь відомство"
+	},
+	{
+		"name": "general__post_post",
+		"value": "Якась посада"
+	},
+	{
+		"name": "general__family__relations",
+		"value": "spouse"
+	},
+	{
+		"name": "general__family__name",
+		"value": "Прізвище А.Б., 1964-05-08"
+	},
+	{
+		"name": "general__family__inn",
+		"value": "012345678"
+	},
+	{
+		"name": "general__family__relations1",
+		"value": "other"
+	},
+	{
+		"name": "general__family__relations1",
+		"value": "Інший тип зв’язку (це клоноване поле)"
+	},
+	{
+		"name": "general__family__name1",
+		"value": "Призвище ДД, 5 лютого 1991"
+	},
+	{
+		"name": "general__family__inn1",
+		"value": "ЕН 4566778"
+	},
+	{
+		"name": "income__5",
+		"value": "23000"
+	},
+	{
+		"name": "income__5_comment",
+		"value": " \tЗагальна сума сукупного доходу, гривні, у т.ч. "
+	},
+	{
+		"name": "income__5_family",
+		"value": ""
+	},
+	{
+		"name": "income__5_family_comment",
+		"value": "Це поле не заповнене"
+	},
+	{
+		"name": "income__6",
+		"value": "123456"
+	},
+	{
+		"name": "income__6_comment",
+		"value": "Заробітна плата, інші виплати та винагороди, нараховані (виплачені) декларанту відповідно до умов трудового або цивільно-правового договору (крім виплат, зазначених у позиціях 7, 8)"
+	},
+	{
+		"name": "income__6_family",
+		"value": "12345676"
+	},
+	{
+		"name": "income__6_family_comment",
+		"value": "Це поле може бути не заповнене"
+	},
+	{
+		"name": "income__7",
+		"value": "1234"
+	},
+	{
+		"name": "income__7_comment",
+		"value": "Дохід від викладацької, наукової і творчої діяльності, медичної практики, інструкторіської та суддівської практики із спорту "
+	},
+	{
+		"name": "income__7_family",
+		"value": "1233444"
+	},
+	{
+		"name": "income__7_family_comment",
+		"value": "Коментар"
+	},
+	{
+		"name": "income__7__source-name",
+		"value": "Якась назва закладу"
+	},
+	{
+		"name": "income__8",
+		"value": "12334"
+	},
+	{
+		"name": "income__8_comment",
+		"value": " авторська винагорода, інші доходи від реалізації майнових прав інтелектуальної власності "
+	},
+	{
+		"name": "income__8_family",
+		"value": "121231"
+	},
+	{
+		"name": "income__8_family_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "income__9",
+		"value": "1212312"
+	},
+	{
+		"name": "income__9_comment",
+		"value": " дивіденди, проценти "
+	},
+	{
+		"name": "income__9_family",
+		"value": "12334"
+	},
+	{
+		"name": "income__9_family_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "income__10",
+		"value": "123"
+	},
+	{
+		"name": "income__10_comment",
+		"value": " \tматеріальна допомога "
+	},
+	{
+		"name": "income__10_family",
+		"value": "123"
+	},
+	{
+		"name": "income__10_family_comment",
+		"value": " \tматеріальна допомога "
+	},
+	{
+		"name": "income__11",
+		"value": "123"
+	},
+	{
+		"name": "income__11_comment",
+		"value": " дарунки, призи, виграші "
+	},
+	{
+		"name": "income__11_family",
+		"value": "123"
+	},
+	{
+		"name": "income__11_family_comment",
+		"value": " дарунки, призи, виграші "
+	},
+	{
+		"name": "income__12",
+		"value": "123"
+	},
+	{
+		"name": "income__12_comment",
+		"value": " допомога по безробіттю "
+	},
+	{
+		"name": "income__12_family",
+		"value": "123"
+	},
+	{
+		"name": "income__12_family_comment",
+		"value": " допомога по безробіттю "
+	},
+	{
+		"name": "income__13",
+		"value": "123"
+	},
+	{
+		"name": "income__13_comment",
+		"value": "аліменти"
+	},
+	{
+		"name": "income__13_family",
+		"value": "123"
+	},
+	{
+		"name": "income__13_family_comment",
+		"value": "аліменти"
+	},
+	{
+		"name": "income__14",
+		"value": "123"
+	},
+	{
+		"name": "income__14_comment",
+		"value": "спадщина"
+	},
+	{
+		"name": "income__14_family",
+		"value": "123"
+	},
+	{
+		"name": "income__14_family_comment",
+		"value": "спадщина"
+	},
+	{
+		"name": "income__15",
+		"value": "123"
+	},
+	{
+		"name": "income__15_comment",
+		"value": " страхові виплати, страхові відшкодування, викупні суми та пенсійні виплати, що сплачені декларанту за договором страхування, недержавного пенсійного забезпечення та пенсійного вкладу "
+	},
+	{
+		"name": "income__15_family",
+		"value": "123"
+	},
+	{
+		"name": "income__15_family_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "income__16",
+		"value": "123"
+	},
+	{
+		"name": "income__16_comment",
+		"value": " дохід від відчуження рухомого та нерухомого майна "
+	},
+	{
+		"name": "income__16_family",
+		"value": "123"
+	},
+	{
+		"name": "income__16_family_comment",
+		"value": " дохід від відчуження рухомого та нерухомого майна "
+	},
+	{
+		"name": "income__17",
+		"value": "324"
+	},
+	{
+		"name": "income__17_comment",
+		"value": " дохід від провадження підприємницької та незалежної професійної діяльності "
+	},
+	{
+		"name": "income__17_family",
+		"value": "123123"
+	},
+	{
+		"name": "income__17_family_comment",
+		"value": " дохід від провадження підприємницької та незалежної професійної діяльності "
+	},
+	{
+		"name": "income__18",
+		"value": "2222"
+	},
+	{
+		"name": "income__18_comment",
+		"value": " дохід від відчуження цінних паперів та корпоративних прав "
+	},
+	{
+		"name": "income__18_family",
+		"value": "001"
+	},
+	{
+		"name": "income__18_family_comment",
+		"value": " дохід від відчуження цінних паперів та корпоративних прав "
+	},
+	{
+		"name": "income__19",
+		"value": "0012"
+	},
+	{
+		"name": "income__19_comment",
+		"value": " дохід від передачі в оренду (строкове володіння та/або користування) майна "
+	},
+	{
+		"name": "income__19_family",
+		"value": "1234"
+	},
+	{
+		"name": "income__19_family_comment",
+		"value": " дохід від передачі в оренду (строкове володіння та/або користування) майна "
+	},
+	{
+		"name": "income__20",
+		"value": "56565"
+	},
+	{
+		"name": "income__20_comment",
+		"value": " інші види доходів (не зазначені у позиціях 6–19) "
+	},
+	{
+		"name": "income__20_family",
+		"value": "2323"
+	},
+	{
+		"name": "income__20_family_comment",
+		"value": " інші види доходів (не зазначені у позиціях 6–19) "
+	},
+	{
+		"name": "income__21__country",
+		"value": "Назва крїни"
+	},
+	{
+		"name": "income__21__country_comment",
+		"value": "Коментар до назви країни"
+	},
+	{
+		"name": "income__21__cur",
+		"value": "1000"
+	},
+	{
+		"name": "income__21__gr-equal",
+		"value": "34000"
+	},
+	{
+		"name": "income__21__country1",
+		"value": "Клоноване поле"
+	},
+	{
+		"name": "income__21__country_comment1",
+		"value": "Коментар "
+	},
+	{
+		"name": "income__21__cur1",
+		"value": "1001"
+	},
+	{
+		"name": "income__21__gr-equal1",
+		"value": "1"
+	},
+	{
+		"name": "income__22_family__country",
+		"value": "Назва країни"
+	},
+	{
+		"name": "income__22_family__country_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "income__22_family__cur",
+		"value": "1000"
+	},
+	{
+		"name": "income__22_family__gr-equal",
+		"value": "20"
+	},
+	{
+		"name": "income__22_family__country1",
+		"value": "Клоноване поле"
+	},
+	{
+		"name": "income__22_family__country_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "income__22_family__cur1",
+		"value": "1000"
+	},
+	{
+		"name": "income__22_family__gr-equal1",
+		"value": "1000000000"
+	},
+	{
+		"name": "estate__23__region",
+		"value": "5"
+	},
+	{
+		"name": "estate__23__address",
+		"value": "Якась адреса і коментар до цього"
+	},
+	{
+		"name": "estate__23__space",
+		"value": "1"
+	},
+	{
+		"name": "estate__23__space_units",
+		"value": "sotok"
+	},
+	{
+		"name": "estate__23__space_comment",
+		"value": "Коментар до площі"
+	},
+	{
+		"name": "estate__23__costs",
+		"value": "100"
+	},
+	{
+		"name": "estate__23__costs_comment",
+		"value": "Це сума властності"
+	},
+	{
+		"name": "estate__23__costs_rent",
+		"value": "300000"
+	},
+	{
+		"name": "estate__23__costs_rent_comment",
+		"value": "це сумма оренди"
+	},
+	{
+		"name": "estate__23__region1",
+		"value": "15"
+	},
+	{
+		"name": "estate__23__address1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "estate__23__space1",
+		"value": "233"
+	},
+	{
+		"name": "estate__23__space_units1",
+		"value": "meters"
+	},
+	{
+		"name": "estate__23__space_comment1",
+		"value": "Земельні ділянки "
+	},
+	{
+		"name": "estate__23__costs1",
+		"value": "1000"
+	},
+	{
+		"name": "estate__23__costs_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__23__costs_rent1",
+		"value": "1000"
+	},
+	{
+		"name": "estate__23__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__23__region2",
+		"value": "16"
+	},
+	{
+		"name": "estate__23__address2",
+		"value": "Ще одне клоноване поле"
+	},
+	{
+		"name": "estate__23__space2",
+		"value": "100"
+	},
+	{
+		"name": "estate__23__space_units2",
+		"value": "gectars"
+	},
+	{
+		"name": "estate__23__space_comment2",
+		"value": "Земельні ділянки "
+	},
+	{
+		"name": "estate__23__costs2",
+		"value": "1000"
+	},
+	{
+		"name": "estate__23__costs_comment2",
+		"value": "Коментар"
+	},
+	{
+		"name": "estate__23__costs_rent2",
+		"value": ""
+	},
+	{
+		"name": "estate__23__costs_rent_comment2",
+		"value": "В цьому полю нічого нема"
+	},
+	{
+		"name": "estate__24__region",
+		"value": "3"
+	},
+	{
+		"name": "estate__24__address",
+		"value": "адреса, 3/33"
+	},
+	{
+		"name": "estate__24__space",
+		"value": "123"
+	},
+	{
+		"name": "estate__24__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__24__space_comment",
+		"value": " Житлові будинки "
+	},
+	{
+		"name": "estate__24__costs",
+		"value": "1000"
+	},
+	{
+		"name": "estate__24__costs_comment",
+		"value": " Житлові будинки "
+	},
+	{
+		"name": "estate__24__costs_rent",
+		"value": "1000"
+	},
+	{
+		"name": "estate__24__costs_rent_comment",
+		"value": " Житлові будинки"
+	},
+	{
+		"name": "estate__24__region1",
+		"value": "8"
+	},
+	{
+		"name": "estate__24__address1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "estate__24__space1",
+		"value": "100"
+	},
+	{
+		"name": "estate__24__space_units1",
+		"value": "meters"
+	},
+	{
+		"name": "estate__24__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__24__costs1",
+		"value": "123"
+	},
+	{
+		"name": "estate__24__costs_comment1",
+		"value": "комнетар"
+	},
+	{
+		"name": "estate__24__costs_rent1",
+		"value": "1000"
+	},
+	{
+		"name": "estate__24__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__25__region",
+		"value": "10"
+	},
+	{
+		"name": "estate__25__address",
+		"value": "Адреса"
+	},
+	{
+		"name": "estate__25__space",
+		"value": "1000"
+	},
+	{
+		"name": "estate__25__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__25__space_comment",
+		"value": "Квартири"
+	},
+	{
+		"name": "estate__25__costs",
+		"value": "1000"
+	},
+	{
+		"name": "estate__25__costs_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__25__costs_rent",
+		"value": "1000"
+	},
+	{
+		"name": "estate__25__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__25__region1",
+		"value": "unspecified"
+	},
+	{
+		"name": "estate__25__address1",
+		"value": "це клонованое поле"
+	},
+	{
+		"name": "estate__25__space1",
+		"value": "123"
+	},
+	{
+		"name": "estate__25__space_units1",
+		"value": "meters"
+	},
+	{
+		"name": "estate__25__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__25__costs1",
+		"value": "100"
+	},
+	{
+		"name": "estate__25__costs_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__25__costs_rent1",
+		"value": "10"
+	},
+	{
+		"name": "estate__25__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__26__region",
+		"value": "6"
+	},
+	{
+		"name": "estate__26__address",
+		"value": "адреса"
+	},
+	{
+		"name": "estate__26__space",
+		"value": "20"
+	},
+	{
+		"name": "estate__26__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__26__space_comment",
+		"value": " Садовий (дачний) будинок "
+	},
+	{
+		"name": "estate__26__costs",
+		"value": "1000"
+	},
+	{
+		"name": "estate__26__costs_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__26__costs_rent",
+		"value": "1000"
+	},
+	{
+		"name": "estate__26__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__26__region1",
+		"value": "unspecified"
+	},
+	{
+		"name": "estate__26__address1",
+		"value": "це клоноване поле"
+	},
+	{
+		"name": "estate__26__space1",
+		"value": "10"
+	},
+	{
+		"name": "estate__26__space_units1",
+		"value": "meters"
+	},
+	{
+		"name": "estate__26__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__26__costs1",
+		"value": "3000"
+	},
+	{
+		"name": "estate__26__costs_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__26__costs_rent1",
+		"value": "10"
+	},
+	{
+		"name": "estate__26__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__27__region",
+		"value": "nodata"
+	},
+	{
+		"name": "estate__27__address",
+		"value": "Немае адреси гаража"
+	},
+	{
+		"name": "estate__27__space",
+		"value": ""
+	},
+	{
+		"name": "estate__27__space_units",
+		"value": "nodata"
+	},
+	{
+		"name": "estate__27__space_comment",
+		"value": "Площа не вказана"
+	},
+	{
+		"name": "estate__27__costs",
+		"value": "3000"
+	},
+	{
+		"name": "estate__27__costs_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__27__costs_rent",
+		"value": "1000"
+	},
+	{
+		"name": "estate__27__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__28__region",
+		"value": "unspecified"
+	},
+	{
+		"name": "estate__28__address",
+		"value": "Адреа"
+	},
+	{
+		"name": "estate__28__space",
+		"value": "1000"
+	},
+	{
+		"name": "estate__28__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__28__space_comment",
+		"value": " Інше нерухоме майно "
+	},
+	{
+		"name": "estate__28__costs",
+		"value": "1000"
+	},
+	{
+		"name": "estate__28__costs_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__28__costs_rent",
+		"value": "1000"
+	},
+	{
+		"name": "estate__28__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__28__region1",
+		"value": "6"
+	},
+	{
+		"name": "estate__28__address1",
+		"value": "це клоноване поле"
+	},
+	{
+		"name": "estate__28__space1",
+		"value": "10"
+	},
+	{
+		"name": "estate__28__space_units1",
+		"value": "meters"
+	},
+	{
+		"name": "estate__28__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__28__costs1",
+		"value": "10"
+	},
+	{
+		"name": "estate__28__costs_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__28__costs_rent1",
+		"value": "100"
+	},
+	{
+		"name": "estate__28__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__region",
+		"value": "kiev"
+	},
+	{
+		"name": "estate__29__address",
+		"value": "Адреса"
+	},
+	{
+		"name": "estate__29__space",
+		"value": "10"
+	},
+	{
+		"name": "estate__29__space_units",
+		"value": "sotok"
+	},
+	{
+		"name": "estate__29__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__costs_property",
+		"value": "1000"
+	},
+	{
+		"name": "estate__29__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__costs_rent",
+		"value": "120"
+	},
+	{
+		"name": "estate__29__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__region1",
+		"value": "8"
+	},
+	{
+		"name": "estate__29__address1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "estate__29__space1",
+		"value": "10"
+	},
+	{
+		"name": "estate__29__space_units1",
+		"value": "gectars"
+	},
+	{
+		"name": "estate__29__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__costs_property1",
+		"value": "10"
+	},
+	{
+		"name": "estate__29__costs_property_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__29__costs_rent1",
+		"value": "10"
+	},
+	{
+		"name": "estate__29__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__30__region",
+		"value": "12"
+	},
+	{
+		"name": "estate__30__address",
+		"value": "адреса"
+	},
+	{
+		"name": "estate__30__space",
+		"value": "20"
+	},
+	{
+		"name": "estate__30__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__30__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__30__costs_property",
+		"value": "10000"
+	},
+	{
+		"name": "estate__30__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__30__costs_rent",
+		"value": "10"
+	},
+	{
+		"name": "estate__30__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__31__region",
+		"value": "10"
+	},
+	{
+		"name": "estate__31__address",
+		"value": "адресса, коментар"
+	},
+	{
+		"name": "estate__31__space",
+		"value": "10"
+	},
+	{
+		"name": "estate__31__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__31__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__31__costs_property",
+		"value": "100"
+	},
+	{
+		"name": "estate__31__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__31__costs_rent",
+		"value": "300"
+	},
+	{
+		"name": "estate__31__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__32__region",
+		"value": "4"
+	},
+	{
+		"name": "estate__32__address",
+		"value": "адреса"
+	},
+	{
+		"name": "estate__32__space",
+		"value": "10"
+	},
+	{
+		"name": "estate__32__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__32__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__32__costs_property",
+		"value": "100"
+	},
+	{
+		"name": "estate__32__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__32__costs_rent",
+		"value": "100"
+	},
+	{
+		"name": "estate__32__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__33__region",
+		"value": "5"
+	},
+	{
+		"name": "estate__33__address",
+		"value": "Адреса"
+	},
+	{
+		"name": "estate__33__space",
+		"value": "200"
+	},
+	{
+		"name": "estate__33__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__33__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__33__costs_property",
+		"value": "100"
+	},
+	{
+		"name": "estate__33__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__33__costs_rent",
+		"value": "200"
+	},
+	{
+		"name": "estate__33__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__region",
+		"value": "14"
+	},
+	{
+		"name": "estate__34__address",
+		"value": "адреса"
+	},
+	{
+		"name": "estate__34__space",
+		"value": "100"
+	},
+	{
+		"name": "estate__34__space_units",
+		"value": "meters"
+	},
+	{
+		"name": "estate__34__space_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__costs_property",
+		"value": "200"
+	},
+	{
+		"name": "estate__34__costs_property_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__costs_rent",
+		"value": "300"
+	},
+	{
+		"name": "estate__34__costs_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__region1",
+		"value": "14"
+	},
+	{
+		"name": "estate__34__address1",
+		"value": "Це клоноване ооле"
+	},
+	{
+		"name": "estate__34__space1",
+		"value": "10"
+	},
+	{
+		"name": "estate__34__space_units1",
+		"value": "sotok"
+	},
+	{
+		"name": "estate__34__space_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__costs_property1",
+		"value": "100"
+	},
+	{
+		"name": "estate__34__costs_property_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "estate__34__costs_rent1",
+		"value": "10"
+	},
+	{
+		"name": "estate__34__costs_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__35__brand",
+		"value": "Назва марки"
+	},
+	{
+		"name": "vehicle__35__brand_info",
+		"value": "Nissan some name"
+	},
+	{
+		"name": "vehicle__35__year",
+		"value": "2009"
+	},
+	{
+		"name": "vehicle__35__sum",
+		"value": "1000"
+	},
+	{
+		"name": "vehicle__35__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__35__sum_rent",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__35__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__35__brand1",
+		"value": "Назва марки"
+	},
+	{
+		"name": "vehicle__35__brand_info1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "vehicle__35__year1",
+		"value": "2014"
+	},
+	{
+		"name": "vehicle__35__sum1",
+		"value": "100"
+	},
+	{
+		"name": "vehicle__35__sum_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__35__sum_rent1",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__35__sum_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__36__brand",
+		"value": "марка авто"
+	},
+	{
+		"name": "vehicle__36__brand_info",
+		"value": "Автомобілі вантажні (спеціальні)"
+	},
+	{
+		"name": "vehicle__36__year",
+		"value": "2013"
+	},
+	{
+		"name": "vehicle__36__sum",
+		"value": "100"
+	},
+	{
+		"name": "vehicle__36__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__36__sum_rent",
+		"value": "100"
+	},
+	{
+		"name": "vehicle__36__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__37__brand",
+		"value": "назва марки"
+	},
+	{
+		"name": "vehicle__37__brand_info",
+		"value": " Водні засоби "
+	},
+	{
+		"name": "vehicle__37__year",
+		"value": "1994"
+	},
+	{
+		"name": "vehicle__37__sum",
+		"value": "300"
+	},
+	{
+		"name": "vehicle__37__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__37__sum_rent",
+		"value": "100"
+	},
+	{
+		"name": "vehicle__37__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__38__brand",
+		"value": "марка"
+	},
+	{
+		"name": "vehicle__38__brand_info",
+		"value": " Повітряні судна "
+	},
+	{
+		"name": "vehicle__38__year",
+		"value": "2005"
+	},
+	{
+		"name": "vehicle__38__sum",
+		"value": "100"
+	},
+	{
+		"name": "vehicle__38__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__38__sum_rent",
+		"value": "2000"
+	},
+	{
+		"name": "vehicle__38__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__39__brand",
+		"value": "марка"
+	},
+	{
+		"name": "vehicle__39__brand_info",
+		"value": " Інші засоби "
+	},
+	{
+		"name": "vehicle__39__year",
+		"value": "1998"
+	},
+	{
+		"name": "vehicle__39__sum",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__39__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__39__sum_rent",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__39__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__39__brand1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "vehicle__39__brand_info1",
+		"value": " Інші засоби "
+	},
+	{
+		"name": "vehicle__39__year1",
+		"value": "2012"
+	},
+	{
+		"name": "vehicle__39__sum1",
+		"value": "400"
+	},
+	{
+		"name": "vehicle__39__sum_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__39__sum_rent1",
+		"value": "300"
+	},
+	{
+		"name": "vehicle__39__sum_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__40__brand",
+		"value": "назва марки"
+	},
+	{
+		"name": "vehicle__40__brand_info",
+		"value": "another info"
+	},
+	{
+		"name": "vehicle__40__year",
+		"value": "2012"
+	},
+	{
+		"name": "vehicle__40__sum",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__40__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__40__sum_rent",
+		"value": "300"
+	},
+	{
+		"name": "vehicle__40__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__41__brand",
+		"value": "назва марки"
+	},
+	{
+		"name": "vehicle__41__brand_info",
+		"value": "назва"
+	},
+	{
+		"name": "vehicle__41__year",
+		"value": "2011"
+	},
+	{
+		"name": "vehicle__41__sum",
+		"value": "400"
+	},
+	{
+		"name": "vehicle__41__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__41__sum_rent",
+		"value": "5000"
+	},
+	{
+		"name": "vehicle__41__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__42__brand",
+		"value": "назва марки"
+	},
+	{
+		"name": "vehicle__42__brand_info",
+		"value": "інша іноформація"
+	},
+	{
+		"name": "vehicle__42__year",
+		"value": "2013"
+	},
+	{
+		"name": "vehicle__42__sum",
+		"value": "400"
+	},
+	{
+		"name": "vehicle__42__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__42__sum_rent",
+		"value": "200"
+	},
+	{
+		"name": "vehicle__42__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__43__brand",
+		"value": "назва марки"
+	},
+	{
+		"name": "vehicle__43__brand_info",
+		"value": " Повітряні судна "
+	},
+	{
+		"name": "vehicle__43__year",
+		"value": "1991"
+	},
+	{
+		"name": "vehicle__43__sum",
+		"value": "2999"
+	},
+	{
+		"name": "vehicle__43__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__43__sum_rent",
+		"value": "2000"
+	},
+	{
+		"name": "vehicle__43__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__44__brand",
+		"value": "марка"
+	},
+	{
+		"name": "vehicle__44__brand_info",
+		"value": "інша інформація"
+	},
+	{
+		"name": "vehicle__44__year",
+		"value": "2010"
+	},
+	{
+		"name": "vehicle__44__sum",
+		"value": "400"
+	},
+	{
+		"name": "vehicle__44__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__44__sum_rent",
+		"value": "1000"
+	},
+	{
+		"name": "vehicle__44__sum_rent_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__44__brand1",
+		"value": "це клоноване поле"
+	},
+	{
+		"name": "vehicle__44__brand_info1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__44__year1",
+		"value": "2011"
+	},
+	{
+		"name": "vehicle__44__sum1",
+		"value": "900"
+	},
+	{
+		"name": "vehicle__44__sum_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "vehicle__44__sum_rent1",
+		"value": "234"
+	},
+	{
+		"name": "vehicle__44__sum_rent_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__45__sum",
+		"value": "1000"
+	},
+	{
+		"name": "banks__45__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__45__sum_comment",
+		"value": "Коментар до  Сума коштів на рахунках у банках та інших фінансових установах, у т. ч.: "
+	},
+	{
+		"name": "banks__45__sum_forign",
+		"value": "2000"
+	},
+	{
+		"name": "banks__45__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__45__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__45__sum1",
+		"value": "3000"
+	},
+	{
+		"name": "banks__45__sum_units1",
+		"value": "doll"
+	},
+	{
+		"name": "banks__45__sum_comment1",
+		"value": "Це клоноване поле"
+	},
+	{
+		"name": "banks__45__sum_forign1",
+		"value": "2000"
+	},
+	{
+		"name": "banks__45__sum_forign_units1",
+		"value": "euro"
+	},
+	{
+		"name": "banks__45__sum_forign_comment1",
+		"value": "коментар до цього поля"
+	},
+	{
+		"name": "banks__46__sum",
+		"value": "2000"
+	},
+	{
+		"name": "banks__46__sum_units",
+		"value": "euro"
+	},
+	{
+		"name": "banks__46__sum_comment",
+		"value": " вкладених у звітному році "
+	},
+	{
+		"name": "banks__46__sum_forign",
+		"value": "3000"
+	},
+	{
+		"name": "banks__46__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__46__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__47__sum",
+		"value": "300"
+	},
+	{
+		"name": "banks__47__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__47__sum_comment",
+		"value": " Номінальна вартість цінних паперів, у т. ч.: "
+	},
+	{
+		"name": "banks__47__sum_forign",
+		"value": "500"
+	},
+	{
+		"name": "banks__47__sum_forign_units",
+		"value": "euro"
+	},
+	{
+		"name": "banks__47__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__48__sum",
+		"value": "3000"
+	},
+	{
+		"name": "banks__48__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__48__sum_comment",
+		"value": " придбаних у звітному році "
+	},
+	{
+		"name": "banks__48__sum_forign",
+		"value": "234"
+	},
+	{
+		"name": "banks__48__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__48__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__49__sum",
+		"value": "300"
+	},
+	{
+		"name": "banks__49__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__49__sum_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__49__sum_forign",
+		"value": "234"
+	},
+	{
+		"name": "banks__49__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__49__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__50__sum",
+		"value": "3000"
+	},
+	{
+		"name": "banks__50__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__50__sum_comment",
+		"value": "внесених у звітному році "
+	},
+	{
+		"name": "banks__50__sum_forign",
+		"value": "100000"
+	},
+	{
+		"name": "banks__50__sum_forign_units",
+		"value": "other"
+	},
+	{
+		"name": "banks__50__sum_forign_comment",
+		"value": "фунтів"
+	},
+	{
+		"name": "banks__51__sum",
+		"value": "200"
+	},
+	{
+		"name": "banks__51__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__51__sum_comment",
+		"value": " Сума коштів на рахунках у банках та інших фінансових установах "
+	},
+	{
+		"name": "banks__51__sum_forign",
+		"value": "200"
+	},
+	{
+		"name": "banks__51__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__51__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__51__sum1",
+		"value": "230"
+	},
+	{
+		"name": "banks__51__sum_units1",
+		"value": "doll"
+	},
+	{
+		"name": "banks__51__sum_comment1",
+		"value": "це клоноване поле"
+	},
+	{
+		"name": "banks__51__sum_forign1",
+		"value": "234234"
+	},
+	{
+		"name": "banks__51__sum_forign_units1",
+		"value": "euro"
+	},
+	{
+		"name": "banks__51__sum_forign_comment1",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__52__sum",
+		"value": "200"
+	},
+	{
+		"name": "banks__52__sum_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__52__sum_comment",
+		"value": " Номінальна вартість цінних паперів "
+	},
+	{
+		"name": "banks__52__sum_forign",
+		"value": "200"
+	},
+	{
+		"name": "banks__52__sum_forign_units",
+		"value": "doll"
+	},
+	{
+		"name": "banks__52__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "banks__53__sum",
+		"value": "3000"
+	},
+	{
+		"name": "banks__53__sum_units",
+		"value": "grn"
+	},
+	{
+		"name": "banks__53__sum_comment",
+		"value": " Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації "
+	},
+	{
+		"name": "banks__53__sum_forign",
+		"value": "200"
+	},
+	{
+		"name": "banks__53__sum_forign_units",
+		"value": "euro"
+	},
+	{
+		"name": "banks__53__sum_forign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__54__sum",
+		"value": "1000"
+	},
+	{
+		"name": "liabilities__54__sum_comment",
+		"value": " Добровільне страхування "
+	},
+	{
+		"name": "liabilities__54__sum_foreign",
+		"value": "1000"
+	},
+	{
+		"name": "liabilities__54__sum_foreign_comment",
+		"value": "кометар"
+	},
+	{
+		"name": "liabilities__55__sum",
+		"value": "2000"
+	},
+	{
+		"name": "liabilities__55__sum_comment",
+		"value": " Недержавне пенсійне забезпечення "
+	},
+	{
+		"name": "liabilities__55__sum_foreign",
+		"value": "3000"
+	},
+	{
+		"name": "liabilities__55__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__56__sum",
+		"value": "300"
+	},
+	{
+		"name": "liabilities__56__sum_comment",
+		"value": " Утримання зазначеного у розділах ІІІ–V майна "
+	},
+	{
+		"name": "liabilities__56__sum_foreign",
+		"value": "400"
+	},
+	{
+		"name": "liabilities__56__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__57__sum",
+		"value": "30000"
+	},
+	{
+		"name": "liabilities__57__sum_comment",
+		"value": " Погашення основної суми позики (кредиту) "
+	},
+	{
+		"name": "liabilities__57__sum_foreign",
+		"value": "5000"
+	},
+	{
+		"name": "liabilities__57__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__58__sum",
+		"value": "2000"
+	},
+	{
+		"name": "liabilities__58__sum_comment",
+		"value": " Погашення суми процентів за позикою (кредитом) "
+	},
+	{
+		"name": "liabilities__58__sum_foreign",
+		"value": "3000"
+	},
+	{
+		"name": "liabilities__58__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__59__sum",
+		"value": "3000"
+	},
+	{
+		"name": "liabilities__59__sum_comment",
+		"value": " Інші не зазначені у розділах ІІІ–V витрати "
+	},
+	{
+		"name": "liabilities__59__sum_foreign",
+		"value": "50000"
+	},
+	{
+		"name": "liabilities__59__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__60__sum",
+		"value": "2000"
+	},
+	{
+		"name": "liabilities__60__sum_comment",
+		"value": " Добровільне страхування  членів сім’ї"
+	},
+	{
+		"name": "liabilities__60__sum_foreign",
+		"value": "20000"
+	},
+	{
+		"name": "liabilities__60__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__61__sum",
+		"value": "3000"
+	},
+	{
+		"name": "liabilities__61__sum_comment",
+		"value": " Недержавне пенсійне забезпечення "
+	},
+	{
+		"name": "liabilities__61__sum_foreign",
+		"value": "1000"
+	},
+	{
+		"name": "liabilities__61__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__62__sum",
+		"value": "2000"
+	},
+	{
+		"name": "liabilities__62__sum_comment",
+		"value": " Утримання зазначеного у розділах ІІІ–V майна "
+	},
+	{
+		"name": "liabilities__62__sum_foreign",
+		"value": "2000"
+	},
+	{
+		"name": "liabilities__62__sum_foreign_comment",
+		"value": "комнар"
+	},
+	{
+		"name": "liabilities__63__sum",
+		"value": "4000"
+	},
+	{
+		"name": "liabilities__63__sum_comment",
+		"value": " Погашення основної суми позики (кредиту) "
+	},
+	{
+		"name": "liabilities__63__sum_foreign",
+		"value": "6000"
+	},
+	{
+		"name": "liabilities__63__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "liabilities__64__sum",
+		"value": "3000"
+	},
+	{
+		"name": "liabilities__64__sum_comment",
+		"value": " Погашення суми процентів за позикою (кредитом) "
+	},
+	{
+		"name": "liabilities__64__sum_foreign",
+		"value": "8000"
+	},
+	{
+		"name": "liabilities__64__sum_foreign_comment",
+		"value": "коментар"
+	},
+	{
+		"name": "declaration__date_day",
+		"value": "8"
+	},
+	{
+		"name": "declaration__date_month",
+		"value": "07"
+	},
+	{
+		"name": "declaration__date_year",
+		"value": "2013"
+	},
+	{
+		"name": "declaration__notfull",
+		"value": "1"
+	},
+	{
+		"name": "declaration__notfull__lostpages",
+		"value": "невистачало сторінок 1,3"
+	},
+	{
+		"name": "declaration__additional-info",
+		"value": "1"
+	},
+	{
+		"name": "declaration__additional-info__text",
+		"value": "Не вмістилися нулі у відведене поле, тому доклеїли бумажку справа на 2 сторінці. "
+	}
+]
