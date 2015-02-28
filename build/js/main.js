@@ -58,8 +58,19 @@ scripts.Common = {
 				inputActions = input.data('inp-act').split(',');
 
 			$.each(inputActions, function (key, value) {
+				var title;
+
+				switch (value) {
+					case "hidden":
+						var title = 'Це поле скрите';
+						break;
+					case "unclear":
+						var title = 'Це поле нерозбірливе';
+						break;
+				}
+
 				$(input.next('.form__input-w-ico__ico'))
-					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ value +'">' +
+					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
 				'<input type="checkbox" name="'+ inputId + '_' + value +'" tabindex="-1" /></label>');
 			});
 		});
@@ -182,6 +193,17 @@ scripts.Common = {
 
 	},
 
+	testJSON: function () {
+		var form =$('#form-declaration');
+
+		$('<pre id="form-declaration-text"></pre>').insertAfter(form);
+
+		form.on( "submit", function(event) {
+			event.preventDefault();
+			$('#form-declaration-text').text(JSON.stringify($(this).serializeArray(), null, '\t'));
+		});
+	},
+
 	init: function () {
 		var scripts = this;
 
@@ -195,6 +217,7 @@ scripts.Common = {
 			scripts.addAutoComplete("#general__name", ['Аграфена', 'Акакий', 'fffff', 'aaaa', 'kjkjlj']);
 			scripts.addAutoComplete("#general__surname", ['Аграфений', 'Акакиевна', 'fffff']);
 			scripts.dateSelectBoxesInit();
+			scripts.testJSON();
 		});
 
 		return scripts;

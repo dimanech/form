@@ -85,7 +85,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" id="intro__isnotdeclaration" name="intro__isnotdeclaration" autofocus="" />
+			<input type="checkbox" name="intro__isnotdeclaration" id="intro__isnotdeclaration" value="1" autofocus="" />
 		</div>
 	</div>
 
@@ -157,78 +157,80 @@
 		</div>
 	</fieldset>
 
-	<fieldset class="l-form__row js-clone-wrapper">
+	<fieldset class="l-form__row">
 		<legend class="l-form__item form__label">
 			<span>2. Місце проживання</span>
 		</legend>
-		<div class="l-form__item js-toclone">
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place" class="i-wai">Область</label>
-				<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="">Область</option>
-					<option value="nodata">Немає данних</option>
-						<option value="kiev">Київ</option>
-						<option value="1">Івано-Франківська область</option>
-						<option value="2">Вінницька область</option>
-						<option value="3">Волинська область</option>
-						<option value="4">Дніпропетровська область</option>
-						<option value="5">Донецька область</option>
-						<option value="6">Житомирська область</option>
-						<option value="7">Закарпатська область</option>
-						<option value="8">Запорізька область</option>
-						<option value="9">Кіровоградська область</option>
-						<option value="10">Київська область</option>
-						<option value="11">Кримська Автономна Республіка</option>
-						<option value="12">Луганська область</option>
-						<option value="13">Львівська область</option>
-						<option value="14">Миколаївська область</option>
-						<option value="15">Одеська область</option>
-						<option value="16">Полтавська область</option>
-						<option value="17">Рівненська область</option>
-						<option value="18">Сумська область</option>
-						<option value="19">Тернопільська область</option>
-						<option value="20">Харківська область</option>
-						<option value="21">Херсонська область</option>
-						<option value="22">Хмельницька область</option>
-						<option value="23">Черкаська область</option>
-						<option value="24">Чернівецька область</option>
-						<option value="25">Чернігівська область</option>
-				</select>
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_district" class="i-wai">Район</label>
-				<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_city" class="i-wai">Населений пункт</label>
-				<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_city_type" class="i-wai">Имя</label>
-				<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
-					<option value="" selected="">Тип населенного пункту</option>
-					<option value="nodata">Немає данних</option>
-					<option value="city">Город</option>
-					<option value="pgt">ПГТ</option>
-					<option value="village">Село</option>
-				</select>
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_address" class="i-wai">Остальной адрес</label>
-				<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
-			<div class="l-form__item l-form__item_lined">
-				<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-				<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
-					<option value="" selected="">Тип адреси</option>
-					<option value="nodata">Немає данних</option>
-					<option value="registration">Адреса реестрації</option>
-					<option value="actual">Фактична адреса</option>
-				</select>
-			</div>
-			<div class="l-form__item">
-				<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку" role="button">+</span>
+		<div class="js-clone-wrapper">
+			<div class="l-form__item js-toclone">
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place" class="i-wai">Область</label>
+					<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
+						<option value="unspecified" selected="">Область</option>
+						<option value="nodata">Немає данних</option>
+							<option value="kiev">Київ</option>
+							<option value="1">Івано-Франківська область</option>
+							<option value="2">Вінницька область</option>
+							<option value="3">Волинська область</option>
+							<option value="4">Дніпропетровська область</option>
+							<option value="5">Донецька область</option>
+							<option value="6">Житомирська область</option>
+							<option value="7">Закарпатська область</option>
+							<option value="8">Запорізька область</option>
+							<option value="9">Кіровоградська область</option>
+							<option value="10">Київська область</option>
+							<option value="11">Кримська Автономна Республіка</option>
+							<option value="12">Луганська область</option>
+							<option value="13">Львівська область</option>
+							<option value="14">Миколаївська область</option>
+							<option value="15">Одеська область</option>
+							<option value="16">Полтавська область</option>
+							<option value="17">Рівненська область</option>
+							<option value="18">Сумська область</option>
+							<option value="19">Тернопільська область</option>
+							<option value="20">Харківська область</option>
+							<option value="21">Херсонська область</option>
+							<option value="22">Хмельницька область</option>
+							<option value="23">Черкаська область</option>
+							<option value="24">Чернівецька область</option>
+							<option value="25">Чернігівська область</option>
+					</select>
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_district" class="i-wai">Район</label>
+					<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city" class="i-wai">Населений пункт</label>
+					<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city_type" class="i-wai">Имя</label>
+					<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
+						<option value="" selected="">Тип населенного пункту</option>
+						<option value="nodata">Немає данних</option>
+						<option value="city">Город</option>
+						<option value="pgt">ПГТ</option>
+						<option value="village">Село</option>
+					</select>
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address" class="i-wai">Остальной адрес</label>
+					<input type="text" id="general__place_address" name="general__place_address" placeholder="Остальной адрес" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
+					<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
+						<option value="" selected="">Тип адреси</option>
+						<option value="nodata">Немає данних</option>
+						<option value="registration">Адреса реестрації</option>
+						<option value="actual">Фактична адреса</option>
+					</select>
+				</div>
+				<div class="l-form__item">
+					<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
+				</div>
 			</div>
 		</div>
 	</fieldset>
@@ -239,7 +241,7 @@
 		<p class="l-form__item small-note">
 			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
 		</p>
-		<div class="l-form__item js-toclone">
+		<div class="l-form__item">
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general__post_region" data-inp-act="hidden,unclear">
@@ -288,7 +290,7 @@
 		<legend class="form__set-legend">
 			<span>4. Члени сім’ї декларанта:</span>
 		</legend>
-		<table class="table js-clone-wrapper">
+		<table class="table">
 			<colgroup>
 				<col />
 				<col />
@@ -300,51 +302,53 @@
 					<th>
 						Ступінь зв’язку
 						<p class="small-note">
-							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нишче.
+							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нижче. Додати ще члена сім’ї можна, натиснувши на кнопку &laquo;+&raquo; справа
 						</p>
 					</th>
 					<th>
 						Прізвище ініціали, дата народження
 					</th>
 					<th>
-						Реєстраційний номер облікової картки платника податків/ серія та номер паспарта громодянина України
+						Реєстраційний номер облікової картки платника податків/ серія та номер паспорта громадянина України (якщо вказано)
 					</th>
 					<th class="table__cell_bd-l">
 						&nbsp;
 					</th>
 				</tr>
 			</thead>
-			<tr class="js-toclone">
-				<td>
-					<div class="l-form__row js-related-control">
-						<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Ступінь зв’язку</option>
-							<option value="nodata">Немає данних</option>
-							<option value="spouse">Супруг</option>
-							<option value="parents">Батькі</option>
-							<option value="children">Дитина</option>
-							<option value="other">Інше</option>
-						</select>
-					</div>
-					<div class="l-form__row js-related-section">
-						<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
-					</div>
-				</td>
-				<td>
-					<div class="l-form__row">
-						<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear" />
-					</div>
-				</td>
-				<td>
-					<div class="l-form__row">
-						<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
-					</div>
-				</td>
-				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Добавити строку" role="button">+</span>
+			<tbody class="js-clone-wrapper">
+				<tr class="js-toclone">
+					<td>
+						<div class="l-form__row js-related-control">
+							<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
+								<option value="unspecified" selected="">Ступінь зв’язку</option>
+								<option value="nodata">Немає данних</option>
+								<option value="spouse">Супруг</option>
+								<option value="parents">Батькі</option>
+								<option value="children">Дитина</option>
+								<option value="other">Інше</option>
+							</select>
+						</div>
+						<div class="l-form__row js-related-section">
+							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
+						</div>
+					</td>
+					<td>
+						<div class="l-form__row">
+							<input type="text" id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear" />
+						</div>
+					</td>
+					<td>
+						<div class="l-form__row">
+							<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
+						</div>
+					</td>
+					<td class="table__cell_bd-l">
+						<span class="btn btn_small btn_w-30 btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_w-30 btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
-				</td>
-			</tr>
+					</td>
+				</tr>
+			</tbody>
 		</table>
 
 
@@ -478,7 +482,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="table__cell_unspaced">
-				<textarea class="form__textarea form__textarea_lined" name="Назва навчального закладу" id="income__7__education-name" rows="3"></textarea>
+				<textarea class="form__textarea form__textarea_lined" name="income__7__source-name" id="income__7__source-name" rows="3"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -804,7 +808,7 @@
 			</tr>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -841,38 +845,40 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				<span class="js-clone-ignore">
-					21.
-				</span>
-			</td>
-			<th class="table__cell_fwn">
-				<div class="l-form__row">
-					<input type="text" id="income__21__country" name="income__21__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
-				</div>
-				<div class="l-form__row">
-					<textarea id="income__21__country_comment" name="income__21__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-				</div>
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__21__val" name="income__21__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income__21__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+		<tbody class="js-clone-wrapper">
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						21.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<div class="l-form__row">
+						<input type="text" id="income__21__country" name="income__21__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<textarea id="income__21__country_comment" name="income__21__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+					</div>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income__21__cur" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income__21__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
-			</td>
-		</tr>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -909,35 +915,37 @@
 				</th>
 			</tr>
 		</thead>
-		<tr class="js-toclone">
-			<td class="table__cell_bd-r table__psdo-th">
-				<span class="js-clone-ignore">
-					22.
-				</span>
-			</td>
-			<th class="table__cell_fwn">
-				<div class="l-form__row">
-					<input type="text" id="income__22_family__country" name="income__22_family__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
-				</div>
-				<div class="l-form__row">
-					<textarea id="income__22_family__country_comment" name="income__22_family__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-				</div>
-			</th>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__22_family__val" name="income__22_family__val" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td>
-				<div class="l-form__row">
-					<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income__22_family__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
-				</div>
-			</td>
-			<td class="table__cell_bd-l">
-				<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+		<tbody class="js-clone-wrapper">
+			<tr class="js-toclone">
+				<td class="table__cell_bd-r table__psdo-th">
+					<span class="js-clone-ignore">
+						22.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<div class="l-form__row">
+						<input type="text" id="income__22_family__country" name="income__22_family__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<textarea id="income__22_family__country_comment" name="income__22_family__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+					</div>
+				</th>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income__22_family__car" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income__22_family__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+					</div>
+				</td>
+				<td class="table__cell_bd-l">
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
-			</td>
-		</tr>
+				</td>
+			</tr>
+		</tbody>
 	</table>
 
 
@@ -962,7 +970,7 @@
 		<span>Розділ III Відомості про нерухоме майно</span>
 	</legend>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -1007,6 +1015,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1019,7 +1028,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__23__region" id="estate__23__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1055,7 +1064,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__23__space" name="estate__23__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__23__space" name="estate__23__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__23__space_units" id="estate__23__space_units" data-inp-act="hidden,unclear">
@@ -1066,15 +1075,15 @@
 						</select>
 							<p class="small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
 					<div class="l-form__row">
 						<textarea id="estate__23__space_comment" name="estate__23__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
-								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 					</div>
 				</td>
@@ -1095,10 +1104,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1111,7 +1122,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__24__region" id="estate__24__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1147,7 +1158,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__24__space" name="estate__24__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__24__space" name="estate__24__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__24__space_units" id="estate__24__space_units" data-inp-act="hidden,unclear">
@@ -1178,10 +1189,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1194,7 +1207,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__25__region" id="estate__25__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1230,7 +1243,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__25__space" name="estate__25__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__25__space" name="estate__25__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__25__space_units" id="estate__25__space_units" data-inp-act="hidden,unclear">
@@ -1261,10 +1274,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1277,7 +1292,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__26__region" id="estate__26__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1313,7 +1328,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__26__space" name="estate__26__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__26__space" name="estate__26__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__26__space_units" id="estate__26__space_units" data-inp-act="hidden,unclear">
@@ -1344,10 +1359,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1360,7 +1377,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__27__region" id="estate__27__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1396,7 +1413,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__27__space" name="estate__27__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__27__space" name="estate__27__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__27__space_units" id="estate__27__space_units" data-inp-act="hidden,unclear">
@@ -1427,10 +1444,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1443,7 +1462,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__28__region" id="estate__28__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1479,7 +1498,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__28__space" name="estate__28__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__28__space" name="estate__28__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__28__space_units" id="estate__28__space_units" data-inp-act="hidden,unclear">
@@ -1510,13 +1529,14 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -1563,6 +1583,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1575,7 +1596,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__29__region" id="estate__29__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1611,7 +1632,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__29__space" name="estate__29__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__29__space" name="estate__29__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__29__space_units" id="estate__29__space_units" data-inp-act="hidden,unclear">
@@ -1622,15 +1643,15 @@
 						</select>
 							<p class="small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
-								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто выберіть використону зі списку.
+								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
 					<div class="l-form__row">
 						<textarea id="estate__29__space_comment" name="estate__29__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
-								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємл 20 м. - ½ від 40 м. <br />
-								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьома разнім пунктам (буде 3 участка).
+								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
+								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
 							</p>
 					</div>
 				</td>
@@ -1651,10 +1672,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1667,7 +1690,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__30__region" id="estate__30__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1703,7 +1726,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__30__space" name="estate__30__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__30__space" name="estate__30__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__30__space_units" id="estate__30__space_units" data-inp-act="hidden,unclear">
@@ -1734,10 +1757,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1750,7 +1775,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__31__region" id="estate__31__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1786,7 +1811,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__31__space" name="estate__31__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__31__space" name="estate__31__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__31__space_units" id="estate__31__space_units" data-inp-act="hidden,unclear">
@@ -1817,10 +1842,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1833,7 +1860,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__32__region" id="estate__32__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1869,7 +1896,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__32__space" name="estate__32__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__32__space" name="estate__32__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__32__space_units" id="estate__32__space_units" data-inp-act="hidden,unclear">
@@ -1900,10 +1927,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1916,7 +1945,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__33__region" id="estate__33__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1952,7 +1981,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__33__space" name="estate__33__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__33__space" name="estate__33__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__33__space_units" id="estate__33__space_units" data-inp-act="hidden,unclear">
@@ -1983,10 +2012,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -1999,7 +2030,7 @@
 				<td>
 					<div class="l-form__row">
 						<select name="estate__34__region" id="estate__34__region" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місце знаходження обїєкта</option>
+							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -2035,7 +2066,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__34__space" name="estate__34__space" placeholder="Площа" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__34__space" name="estate__34__space" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
 						<select name="estate__34__space_units" id="estate__34__space_units" data-inp-act="hidden,unclear">
@@ -2066,10 +2097,11 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 	</table>
 
 
@@ -2095,7 +2127,7 @@
 		<span>Розділ IV. Відомості про транспортні засоби</span>
 	</legend>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -2140,6 +2172,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2206,10 +2239,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2273,10 +2308,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2340,10 +2377,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2407,10 +2446,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2474,13 +2515,14 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 	</table>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col />
@@ -2525,6 +2567,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2591,10 +2634,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2658,10 +2703,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2725,10 +2772,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2792,10 +2841,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2859,10 +2910,11 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 	</table>
 
 </fieldset>
@@ -2887,7 +2939,7 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</legend>
 
-	<table class="table js-clone-wrapper">
+	<table class="table">
 		<colgroup>
 			<col />
 			<col width="200"  />
@@ -2919,6 +2971,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -2933,7 +2986,7 @@
 						<div class="l-form__item l-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__45__sum" name="banks__45__sum" placeholder="Сума" data-inp-act="hidden,unclear" />
 								<p class="small-note js-clone-ignore">
-									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
+									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
@@ -2944,7 +2997,7 @@
 								<option value="">інша</option>
 							</select>
 								<p class="small-note js-clone-ignore">
-									Якщо валюта не вказана, рахуємо, що це гривні. <br/>
+									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
 						</div>
@@ -2976,10 +3029,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3030,10 +3085,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3084,10 +3141,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3138,10 +3197,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3192,10 +3253,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3246,10 +3309,11 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 	</table>
 
 	<table class="table">
@@ -3284,6 +3348,7 @@
 				</th>
 			</tr>
 		</thead>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3298,7 +3363,7 @@
 						<div class="l-form__item l-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__51__sum" name="banks__51__sum" placeholder="Сума" data-inp-act="hidden,unclear" />
 								<p class="small-note js-clone-ignore">
-									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо.
+									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
@@ -3309,7 +3374,7 @@
 								<option value="">інша</option>
 							</select>
 								<p class="small-note js-clone-ignore">
-									Якщо валюта не вказана, рахуємо, що це гривні. <br/>
+									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
 						</div>
@@ -3341,10 +3406,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3395,10 +3462,12 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
+		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
 				<td class="table__cell_bd-r table__psdo-th">
 					<span class="js-clone-ignore">
@@ -3449,10 +3518,11 @@
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
-					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Добавити строку" role="button">+</span>
+					<span class="btn btn_small btn_fullwidth btn_grey js-clone" title="Додати строку" role="button">+</span>
 <span class="btn btn_small btn_fullwidth btn_grey js-clone-delete" title="Видалити строку" role="button">-</span>
 				</td>
 			</tr>
+		</tbody>
 
 	</table>
 
@@ -3912,18 +3982,18 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" name="declaration__notfull" id="declaration__notfull" />
+			<input type="checkbox" name="declaration__notfull" id="declaration__notfull" value="1" />
 		</div>
 	</div>
 
 	<div class="l-form__row js-related-section">
 		<div class="l-form__item">
-			<label class="form__label" for="declaration__lostpages">
+			<label class="form__label" for="declaration__notfull__lostpages">
 				<span>Яких сторінок (паперових) не вистачало</span>
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="text" id="declaration__lostpages" name="declaration__lostpages" />
+			<input type="text" id="declaration__notfull__lostpages" name="declaration__notfull__lostpages" />
 		</div>
 	</div>
 
@@ -3934,7 +4004,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" id="declaration__additional-info" />
+			<input type="checkbox" name="declaration__additional-info" id="declaration__additional-info" value="1" />
 		</div>
 	</div>
 
@@ -3955,7 +4025,7 @@
 		</div>
 		<!-- to align this on right -->
 		<input type="reset" class="btn btn_small btn_grey js-section-go" data-section-go="0" value="Стерти усі поля" />
-		<input type="submit" class="btn btn_medium btn_blue" value="Отправити форму" title="Отправити форму" />
+		<input type="submit" class="btn btn_medium btn_blue" value="Отправити форму" title="Відправити форму" />
 	</div>
 
 </fieldset>
