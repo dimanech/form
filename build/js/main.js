@@ -232,7 +232,7 @@ scripts.Common = {
 			scripts.addAutoComplete("#general__last-name", '/js/autocomplete/lastname.json');
 			scripts.addAutoComplete("#general__name", '/js/autocomplete/firstname.json');
 			scripts.addAutoComplete("#general__surname", '/js/autocomplete/patronymic.json');
-			scripts.addAutoComplete("#vehicle__35__brand", '/js/autocomplete/cars.json');
+			scripts.addAutoComplete("#vehicle__35__brand", '/js/Kautocomplete/cars.json');
 			scripts.addAutoComplete("#vehicle__36__brand", '/js/autocomplete/trucks.json');
 			scripts.addAutoComplete("#vehicle__37__brand", '/js/autocomplete/boats.json');
 			scripts.addAutoComplete("#vehicle__39__brand", '/js/autocomplete/motos.json');
