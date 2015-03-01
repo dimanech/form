@@ -83,8 +83,26 @@ scripts.Common = {
 		});
 	},
 
+	inputActionsReInit: function(container) {
+		var input = container.find(".form__input-act input[type='checkbox']");
+
+		input.each(function() {
+			var self =$(this);
+
+			if (self.checked) {
+				self.parent().addClass('js-ico-checked');
+				self.parents('.form__input-w-ico').addClass('form__input-act_' + self.data('input-type') );
+			} else {
+				self.parent().removeClass('js-ico-checked');
+				self.parents('.form__input-w-ico').removeClass('form__input-act_' + self.data('input-type') );
+			}
+		});
+	},
+
 	cloneyaInit: function () {
-		$('.js-clone-wrapper').cloneya({
+		var $clonewrapper = $('.js-clone-wrapper');
+
+		$clonewrapper.cloneya({
 			limit: 2000,
 			cloneThis: '.js-toclone',
 			valueClone: false,
@@ -98,6 +116,10 @@ scripts.Common = {
 			defaultRender: true,
 			preserveChildCount: true
 		});
+
+		//$clonewrapper.on( 'clone_clone', function() {
+		//
+		//});
 	},
 
 	addAutoComplete: function(elem, source) {
