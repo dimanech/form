@@ -71,20 +71,15 @@ scripts.Common = {
 
 				$(input.next('.form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="radio" name="'+ inputName + '_' + value +'" tabindex="-1" data-input-type="' + value +'" /></label>');
+				'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
-		$(".form__input-act input[type='radio']").on('click', function() {
-			var self = $(this),
-				container = self.parents('.form__input-w-ico'),
-				selfType = self.data('input-type'),
-				activeClass = 'js-input-act_' + selfType;
+		$(".form__input-act input[type='checkbox']").on('click', function() {
+			var self = $(this);
 
-			if (!self.checked) {
-				container.removeClass('js-input-act_hidden js-input-act_unclear');
-				container.addClass(activeClass);
-			}
+			self.parent().toggleClass('js-ico-checked');
+			self.parents('.form__input-w-ico').toggleClass('form__input-act_' + self.data('input-type') );
 		});
 	},
 
@@ -98,7 +93,7 @@ scripts.Common = {
 			cloneButton: '.js-clone',
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
-			serializeID: true,
+			serializeID: false,
 			ignore: '.form__msg, .js-clone-ignore',
 			defaultRender: true,
 			preserveChildCount: true
@@ -232,7 +227,7 @@ scripts.Common = {
 			scripts.addAutoComplete("#general__last-name", '/js/autocomplete/lastname.json');
 			scripts.addAutoComplete("#general__name", '/js/autocomplete/firstname.json');
 			scripts.addAutoComplete("#general__surname", '/js/autocomplete/patronymic.json');
-			scripts.addAutoComplete("#vehicle__35__brand", '/js/Kautocomplete/cars.json');
+			scripts.addAutoComplete("#vehicle__35__brand", '/js/autocomplete/cars.json');
 			scripts.addAutoComplete("#vehicle__36__brand", '/js/autocomplete/trucks.json');
 			scripts.addAutoComplete("#vehicle__37__brand", '/js/autocomplete/boats.json');
 			scripts.addAutoComplete("#vehicle__39__brand", '/js/autocomplete/motos.json');

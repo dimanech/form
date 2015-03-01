@@ -10,19 +10,19 @@
 		</legend>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__last-name" class="i-wai">Прізвище</label>
-			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general__last-name" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
-			<input class="js-is-LettersOnly" type="text" id="general__name" name="general__name" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__surname" class="i-wai">По батькові</label>
-			<input class="js-is-LettersOnly" type="text" id="general__surname" name="general__surname" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__surname" name="general[surname]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
-			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general__inn" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
+			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 		</div>
 	</fieldset>
 
@@ -34,7 +34,7 @@
 			<div class="l-form__item js-toclone">
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
-					<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
+					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="">Область</option>
 						<option value="nodata">Немає данних</option>
 						<% data.regions.region.each do |option| %>
@@ -44,15 +44,15 @@
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_district" class="i-wai">Район</label>
-					<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city" class="i-wai">Населений пункт</label>
-					<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_city" name="general[addresses][][place_city]" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Имя</label>
-					<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
+					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
 						<option value="" selected="">Тип населенного пункту</option>
 						<option value="nodata">Немає данних</option>
 						<option value="city">Місто</option>
@@ -62,11 +62,11 @@
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address" class="i-wai">Решта адреси</label>
-					<input type="text" id="general__place_address" name="general__place_address" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-					<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
+					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
 						<option value="" selected="">Тип адреси</option>
 						<option value="nodata">Немає данних</option>
 						<option value="registration">Адреса реестрації</option>
@@ -89,7 +89,7 @@
 		<div class="l-form__item">
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general__post_region" data-inp-act="hidden,unclear">
+				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Область</option>
 					<option value="nodata">Немає данних</option>
 					<% data.regions.region.each do |option| %>
@@ -99,11 +99,11 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general__post_office" placeholder="Відомство" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 		</div>
 	</fieldset>
@@ -142,7 +142,7 @@
 				<tr class="js-toclone">
 					<td>
 						<div class="l-form__row js-related-control">
-							<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
+							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="">Ступінь зв’язку</option>
 								<option value="nodata">Немає данних</option>
 								<option value="spouse">Супруг</option>
@@ -152,17 +152,17 @@
 							</select>
 						</div>
 						<div class="l-form__row js-related-section">
-							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
+							<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2" />
 						</div>
 					</td>
 					<td>
 						<div class="l-form__row">
-							<textarea id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</td>
 					<td>
 						<div class="l-form__row">
-							<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
+							<input type="text" id="general__family__inn" name="general[family][][inn]" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td class="table__cell_bd-l">

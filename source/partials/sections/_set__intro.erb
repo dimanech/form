@@ -11,7 +11,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" name="intro__isnotdeclaration" id="intro__isnotdeclaration" value="1" autofocus="" />
+			<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus="" />
 		</div>
 	</div>
 
@@ -22,7 +22,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<select id="intro__declaration-year" name="intro__declaration-year" data-inp-act="hidden,unclear">
+			<select id="intro__declaration-year" name="intro[declaration_year]" data-inp-act="hidden,unclear">
 				<option value="nodata" selected="">Немає данних</option>
 				<% (2015).downto(1991) do |i| %>
 				<option value=<%= "#{i}" %>><%= "#{i}" %></option>
