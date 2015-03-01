@@ -85,7 +85,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" name="intro__isnotdeclaration" id="intro__isnotdeclaration" value="1" autofocus="" />
+			<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus="" />
 		</div>
 	</div>
 
@@ -96,7 +96,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<select id="intro__declaration-year" name="intro__declaration-year" data-inp-act="hidden,unclear">
+			<select id="intro__declaration-year" name="intro[declaration_year]" data-inp-act="hidden,unclear">
 				<option value="nodata" selected="">Немає данних</option>
 				<option value=2015>2015</option>
 				<option value=2014>2014</option>
@@ -142,7 +142,7 @@
 		</legend>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__last-name" class="i-wai">Прізвище</label>
-			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last-name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last_name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
@@ -483,7 +483,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="table__cell_unspaced">
-				<textarea class="form__textarea form__textarea_lined" name="income[7][source-name]" id="income__7__source-name" rows="3"></textarea>
+				<textarea class="form__textarea form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3"></textarea>
 			</td>
 		</tr>
 	</table>
