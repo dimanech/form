@@ -71,7 +71,7 @@ scripts.Common = {
 
 				$(input.next('.form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
-				'<input type="checkbox" name="'+ inputName + '_' + value +'" tabindex="-1" data-input-type="' + value +'" /></label>');
+				'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
@@ -93,7 +93,7 @@ scripts.Common = {
 			cloneButton: '.js-clone',
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
-			serializeID: true,
+			serializeID: false,
 			ignore: '.form__msg, .js-clone-ignore',
 			defaultRender: true,
 			preserveChildCount: true

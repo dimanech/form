@@ -142,19 +142,19 @@
 		</legend>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__last-name" class="i-wai">Прізвище</label>
-			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general__last-name" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__last-name" name="general[last-name]" placeholder="Прізвище" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
-			<input class="js-is-LettersOnly" type="text" id="general__name" name="general__name" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__surname" class="i-wai">По батькові</label>
-			<input class="js-is-LettersOnly" type="text" id="general__surname" name="general__surname" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-LettersOnly" type="text" id="general__surname" name="general[surname]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-form__item l-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
-			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general__inn" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
+			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 		</div>
 	</fieldset>
 
@@ -166,7 +166,7 @@
 			<div class="l-form__item js-toclone">
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
-					<select id="general__place" name="general__place" data-inp-act="hidden,unclear">
+					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="">Область</option>
 						<option value="nodata">Немає данних</option>
 							<option value="kiev">Київ</option>
@@ -199,15 +199,15 @@
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_district" class="i-wai">Район</label>
-					<input type="text" id="general__place_district" name="general__place_district" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city" class="i-wai">Населений пункт</label>
-					<input type="text" id="general__place_city" name="general__place_city" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_city" name="general[addresses][][place_city]" placeholder="Населений пункт" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Имя</label>
-					<select id="general__place_city_type" name="general__place_city_type" data-inp-act="hidden,unclear">
+					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
 						<option value="" selected="">Тип населенного пункту</option>
 						<option value="nodata">Немає данних</option>
 						<option value="city">Місто</option>
@@ -217,11 +217,11 @@
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address" class="i-wai">Решта адреси</label>
-					<input type="text" id="general__place_address" name="general__place_address" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-					<select id="general__place_address_type" name="general__place_address_type" data-inp-act="hidden,unclear">
+					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
 						<option value="" selected="">Тип адреси</option>
 						<option value="nodata">Немає данних</option>
 						<option value="registration">Адреса реестрації</option>
@@ -245,7 +245,7 @@
 		<div class="l-form__item">
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general__post_region" data-inp-act="hidden,unclear">
+				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Область</option>
 					<option value="nodata">Немає данних</option>
 						<option value="kiev">Київ</option>
@@ -278,11 +278,11 @@
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general__post_office" placeholder="Відомство" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 			</div>
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general__post_post" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
 		</div>
 	</fieldset>
@@ -321,7 +321,7 @@
 				<tr class="js-toclone">
 					<td>
 						<div class="l-form__row js-related-control">
-							<select id="general__family__relations" name="general__family__relations" data-inp-act="hidden,unclear">
+							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="">Ступінь зв’язку</option>
 								<option value="nodata">Немає данних</option>
 								<option value="spouse">Супруг</option>
@@ -331,17 +331,17 @@
 							</select>
 						</div>
 						<div class="l-form__row js-related-section">
-							<input type="text" name="general__family__relations_other" placeholder="Iнший тип зв’язку" minlength="2" />
+							<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2" />
 						</div>
 					</td>
 					<td>
 						<div class="l-form__row">
-							<textarea id="general__family__name" name="general__family__name" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</td>
 					<td>
 						<div class="l-form__row">
-							<input type="text" id="general__family__inn" name="general__family__inn" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
+							<input type="text" id="general__family__inn" name="general[family][][inn]" placeholder="ІНН / № Паспорта" minlength="8" maxlength="10" data-inp-act="hidden,unclear" />
 						</div>
 					</td>
 					<td class="table__cell_bd-l">
@@ -413,19 +413,19 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__5" name="income__5" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[5]" name="income[5][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__5_comment" name="income__5_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[5]_comment" name="income[5][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__5_family" name="income__5_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[5]_family" name="income[5][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__5_family_comment" name="income__5_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[5]_family_comment" name="income[5][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 					</div>
 				</td>
@@ -439,18 +439,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__6" name="income__6" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[6]" name="income[6][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__6_comment" name="income__6_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[6]_comment" name="income[6][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__6_family" name="income__6_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[6]_family" name="income[6][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__6_family_comment" name="income__6_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[6]_family_comment" name="income[6][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -463,18 +463,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__7" name="income__7" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[7]" name="income[7][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__7_comment" name="income__7_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[7]_comment" name="income[7][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__7_family" name="income__7_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[7]_family" name="income[7][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__7_family_comment" name="income__7_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[7]_family_comment" name="income[7][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -483,7 +483,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="table__cell_unspaced">
-				<textarea class="form__textarea form__textarea_lined" name="income__7__source-name" id="income__7__source-name" rows="3"></textarea>
+				<textarea class="form__textarea form__textarea_lined" name="income[7][source-name]" id="income__7__source-name" rows="3"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -504,18 +504,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__8" name="income__8" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[8]" name="income[8][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__8_comment" name="income__8_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[8]_comment" name="income[8][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__8_family" name="income__8_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[8]_family" name="income[8][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__8_family_comment" name="income__8_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[8]_family_comment" name="income[8]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -528,18 +528,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__9" name="income__9" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[9]" name="income[9][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__9_comment" name="income__9_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[9]_comment" name="income[9][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__9_family" name="income__9_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[9]_family" name="income[9][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__9_family_comment" name="income__9_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[9]_family_comment" name="income[9]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -552,18 +552,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__10" name="income__10" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[10]" name="income[10][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__10_comment" name="income__10_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[10]_comment" name="income[10][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__10_family" name="income__10_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[10]_family" name="income[10][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__10_family_comment" name="income__10_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[10]_family_comment" name="income[10]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -576,18 +576,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__11" name="income__11" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[11]" name="income[11][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__11_comment" name="income__11_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[11]_comment" name="income[11][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__11_family" name="income__11_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[11]_family" name="income[11][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__11_family_comment" name="income__11_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[11]_family_comment" name="income[11]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -600,18 +600,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__12" name="income__12" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[12]" name="income[12][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__12_comment" name="income__12_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[12]_comment" name="income[12][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__12_family" name="income__12_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[12]_family" name="income[12][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__12_family_comment" name="income__12_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[12]_family_comment" name="income[12]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -624,18 +624,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__13" name="income__13" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[13]" name="income[13][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__13_comment" name="income__13_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[13]_comment" name="income[13][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__13_family" name="income__13_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[13]_family" name="income[13][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__13_family_comment" name="income__13_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[13]_family_comment" name="income[13]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -648,18 +648,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__14" name="income__14" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[14]" name="income[14][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__14_comment" name="income__14_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[14]_comment" name="income[14][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__14_family" name="income__14_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[14]_family" name="income[14][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__14_family_comment" name="income__14_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[14]_family_comment" name="income[14]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -672,18 +672,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__15" name="income__15" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[15]" name="income[15][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__15_comment" name="income__15_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[15]_comment" name="income[15][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__15_family" name="income__15_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[15]_family" name="income[15][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__15_family_comment" name="income__15_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[15]_family_comment" name="income[15]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -696,18 +696,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__16" name="income__16" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[16]" name="income[16][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__16_comment" name="income__16_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[16]_comment" name="income[16][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__16_family" name="income__16_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[16]_family" name="income[16][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__16_family_comment" name="income__16_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[16]_family_comment" name="income[16]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -720,18 +720,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__17" name="income__17" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[17]" name="income[17][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__17_comment" name="income__17_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[17]_comment" name="income[17][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__17_family" name="income__17_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[17]_family" name="income[17][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__17_family_comment" name="income__17_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[17]_family_comment" name="income[17]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -744,18 +744,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__18" name="income__18" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[18]" name="income[18][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__18_comment" name="income__18_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[18]_comment" name="income[18][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__18_family" name="income__18_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[18]_family" name="income[18][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__18_family_comment" name="income__18_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[18]_family_comment" name="income[18]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -768,18 +768,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__19" name="income__19" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[19]" name="income[19][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__19_comment" name="income__19_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[19]_comment" name="income[19][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__19_family" name="income__19_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[19]_family" name="income[19][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__19_family_comment" name="income__19_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[19]_family_comment" name="income[19]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -792,18 +792,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__20" name="income__20" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[20]" name="income[20][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__20_comment" name="income__20_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[20]_comment" name="income[20][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__20_family" name="income__20_family" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income[20]_family" name="income[20][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__20_family_comment" name="income__20_family_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income[20]_family_comment" name="income[20]_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -855,20 +855,20 @@
 				</td>
 				<th class="table__cell_fwn">
 					<div class="l-form__row">
-						<input type="text" id="income__21__country" name="income__21__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+						<input type="text" id="income__21__country" name="income[21][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__21__country_comment" name="income__21__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__21__country_comment" name="income[21][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income__21__cur" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income__21__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income[21][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
@@ -925,20 +925,20 @@
 				</td>
 				<th class="table__cell_fwn">
 					<div class="l-form__row">
-						<input type="text" id="income__22_family__country" name="income__22_family__country" placeholder="Назва країни" data-inp-act="hidden,unclear" />
+						<input type="text" id="income__22_family__country" name="income[22][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="income__22_family__country_comment" name="income__22_family__country_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__22_family__country_comment" name="income[22][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income__22_family__car" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income__22_family__gr-equal" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income[22][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
@@ -5186,6 +5186,7 @@
 		<script src="js/jquery-cloneya.min.js" type="text/javascript"></script>
 		<script src="js/jquery.dateSelectBoxes.js" type="text/javascript"></script>
 		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
+		<script src="js/jquery.serializejson.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 
 	</body>
