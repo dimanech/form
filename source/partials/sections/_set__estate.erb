@@ -62,7 +62,7 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
+						<select id="estate__<%= field.number %>__region" name="estate[<%= field.number %>][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 							<% data.regions.region.each do |option| %>
@@ -71,15 +71,15 @@
 						</select>
 					</div>
 					<div class="l-form__row">
-						<textarea id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__address" name="estate[<%= field.number %>][][address]" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate[<%= field.number %>][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
+						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
@@ -93,7 +93,7 @@
 						<% end %>
 					</div>
 					<div class="l-form__row">
-						<textarea id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__space_comment" name="estate[<%= field.number %>][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
@@ -105,18 +105,18 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs" name="estate__<%= field.number %>__costs" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs" name="estate[<%= field.number %>][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__<%= field.number %>__costs_comment" name="estate__<%= field.number %>__costs_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__costs_comment" name="estate[<%= field.number %>][][costs_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate[<%= field.number %>][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate[<%= field.number %>][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">
@@ -187,7 +187,7 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__region" id="estate__<%= field.number %>__region" data-inp-act="hidden,unclear">
+						<select id="estate__<%= field.number %>__region" name="estate[<%= field.number %>][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 							<% data.regions.region.each do |option| %>
@@ -196,15 +196,15 @@
 						</select>
 					</div>
 					<div class="l-form__row">
-						<textarea id="estate__<%= field.number %>__address" name="estate__<%= field.number %>__address" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__address" name="estate[<%= field.number %>][][address]" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate__<%= field.number %>__space" placeholder="Площа" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate[<%= field.number %>][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<select name="estate__<%= field.number %>__space_units" id="estate__<%= field.number %>__space_units" data-inp-act="hidden,unclear">
+						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
@@ -218,7 +218,7 @@
 						<% end %>
 					</div>
 					<div class="l-form__row">
-						<textarea id="estate__<%= field.number %>__space_comment" name="estate__<%= field.number %>__space_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__space_comment" name="estate[<%= field.number %>][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
@@ -230,18 +230,18 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_property" name="estate__<%= field.number %>__costs_property" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_property" name="estate[<%= field.number %>][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate__<%= field.number %>__costs_property_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate[<%= field.number %>][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate__<%= field.number %>__costs_rent" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate[<%= field.number %>][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate__<%= field.number %>__costs_rent_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate[<%= field.number %>][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td class="table__cell_bd-l">

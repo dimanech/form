@@ -50,7 +50,7 @@
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum" name="banks__<%= field.number %>__sum" placeholder="Сума" data-inp-act="hidden,unclear" />
+							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum" name="banks[<%= field.number %>][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							<% if (index == 0) %>
 								<p class="small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
@@ -58,10 +58,10 @@
 							<% end %>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
-							<select name="banks__<%= field.number %>__sum_units" id="banks__<%= field.number %>__sum_units" data-inp-act="hidden,unclear">
-								<option value="grn">грн.</option>
-								<option value="doll">долл.</option>
-								<option value="euro">евро</option>
+							<select id="banks__<%= field.number %>__sum_units" name="banks[<%= field.number %>][][sum_units]" data-inp-act="hidden,unclear">
+								<option value="uah">грн.</option>
+								<option value="usd">долл.</option>
+								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
 							<% if (index == 0) %>
@@ -74,27 +74,27 @@
 					</div>
 					<div class="l-form__row">
 						<div class="l-form__item">
-							<textarea id="banks__<%= field.number %>__sum_comment" name="banks__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="banks__<%= field.number %>__sum_comment" name="banks[<%= field.number %>][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum_forign" name="banks__<%= field.number %>__sum_forign" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
+							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum_foreign" name="banks[<%= field.number %>][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
-							<select name="banks__<%= field.number %>__sum_forign_units" id="banks__<%= field.number %>__sum_forign_units" data-inp-act="hidden,unclear">
-								<option value="grn">грн.</option>
-								<option value="doll">долл.</option>
-								<option value="euro">евро</option>
+							<select id="banks__<%= field.number %>__sum_foreign_units" name="banks[<%= field.number %>][][sum_foreign_units]" data-inp-act="hidden,unclear">
+								<option value="uah">грн.</option>
+								<option value="usd">долл.</option>
+								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
 					</div>
 					<div class="l-form__row">
 						<div class="l-form__item">
-							<textarea id="banks__<%= field.number %>__sum_forign_comment" name="banks__<%= field.number %>__sum_forign_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="banks__<%= field.number %>__sum_foreign_comment" name="banks[<%= field.number %>][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
@@ -152,7 +152,7 @@
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum" name="banks__<%= field.number %>__sum" placeholder="Сума" data-inp-act="hidden,unclear" />
+							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum" name="banks[<%= field.number %>][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
 							<% if (index == 0) %>
 								<p class="small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
@@ -160,10 +160,10 @@
 							<% end %>
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
-							<select name="banks__<%= field.number %>__sum_units" id="banks__<%= field.number %>__sum_units" data-inp-act="hidden,unclear">
-								<option value="grn">грн.</option>
-								<option value="doll">долл.</option>
-								<option value="euro">евро</option>
+							<select id="banks__<%= field.number %>__sum_units" name="banks[<%= field.number %>][][sum_units]" data-inp-act="hidden,unclear">
+								<option value="uah">грн.</option>
+								<option value="usd">долл.</option>
+								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
 							<% if (index == 0) %>
@@ -176,27 +176,27 @@
 					</div>
 					<div class="l-form__row">
 						<div class="l-form__item">
-							<textarea id="banks__<%= field.number %>__sum_comment" name="banks__<%= field.number %>__sum_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="banks__<%= field.number %>__sum_comment" name="banks[<%= field.number %>][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum_forign" name="banks__<%= field.number %>__sum_forign" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
+							<input class="js-is-DigitsOnly" type="text" id="banks<%= field.number %>__sum_foreign" name="banks[<%= field.number %>][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
-							<select name="banks__<%= field.number %>__sum_forign_units" id="banks__<%= field.number %>__sum_forign_units" data-inp-act="hidden,unclear">
-								<option value="grn">грн.</option>
-								<option value="doll">долл.</option>
-								<option value="euro">евро</option>
+							<select id="banks__<%= field.number %>__sum_foreign_units" name="banks[<%= field.number %>][][sum_foreign_units]" data-inp-act="hidden,unclear">
+								<option value="uah">грн.</option>
+								<option value="usd">долл.</option>
+								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
 						</div>
 					</div>
 					<div class="l-form__row">
 						<div class="l-form__item">
-							<textarea id="banks__<%= field.number %>__sum_forign_comment" name="banks__<%= field.number %>__sum_forign_comment" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+							<textarea id="banks__<%= field.number %>__sum_foreign_comment" name="banks[<%= field.number %>][][sum_foreign_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						</div>
 					</div>
 				</td>

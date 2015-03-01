@@ -94,7 +94,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: false,
-			ignore: '.form__msg, .js-clone-ignore',
+			ignore: '.form__msg, .js-clone-ignore, .form__input-act_unclear, .form__input-act_hidden',
 			defaultRender: true,
 			preserveChildCount: true
 		});
@@ -209,7 +209,7 @@ scripts.Common = {
 
 		form.on( "submit", function(event) {
 			event.preventDefault();
-			$('#form-declaration-text').text(JSON.stringify($(this).serializeArray(), null, '\t'));
+			$('#form-declaration-text').text(JSON.stringify($(this).serializeJSON(), null, '\t'));
 		});
 	},
 

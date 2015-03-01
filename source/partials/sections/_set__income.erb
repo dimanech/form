@@ -44,7 +44,7 @@
 			</tr>
 		</thead>
 		<% data.incomeA.fields.each_with_index do |field, index| %>
-			<% formid = 'income[' + field.number + ']' %>
+			<% formid = field.number %>
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
 					<%= field.number %>.
@@ -54,10 +54,10 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="<%= formid %>" name="<%= formid %>[value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>" name="income[<%= formid %>][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="<%= formid %>_comment" name="<%= formid %>[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__<%= formid %>_comment" name="income[<%= formid %>][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						<% end %>
@@ -65,10 +65,10 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="<%= formid %>_family" name="<%= formid %>[family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>_family" name="income[<%= formid %>][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="<%= formid %>_family_comment" name="<%= formid %>[family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__<%= formid %>_family_comment" name="income[<%= formid %>][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						<% end %>
@@ -81,7 +81,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="table__cell_unspaced">
-				<textarea class="form__textarea form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3"></textarea>
+				<textarea class="form__textarea form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -104,18 +104,18 @@
 				</th>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="<%= formid %>" name="<%= formid %>[value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>" name="income[<%= formid %>][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="<%= formid %>_comment" name="<%= formid %>[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__<%= formid %>_comment" name="income[<%= formid %>][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
 					<div class="l-form__row">
-						<input class="js-is-DigitsOnly" type="text" id="<%= formid %>_family" name="<%= formid %>[family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
+						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>_family" name="income[<%= formid %>][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form__row">
-						<textarea id="<%= formid %>_family_comment" name="<%= formid %>_family[comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="income__<%= formid %>_family_comment" name="income[<%= formid %>][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 			</tr>
@@ -177,6 +177,14 @@
 				<td>
 					<div class="l-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
+							<option value="usd">долл.</option>
+							<option value="eur">евро</option>
+							<option value="gbp">фунти стерлінгів</option>
+							<option value="other">інша</option>
+						</select>
 					</div>
 				</td>
 				<td>
@@ -246,6 +254,14 @@
 				<td>
 					<div class="l-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
+					</div>
+					<div class="l-form__row">
+						<select id="income__22_family__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
+							<option value="usd">долл.</option>
+							<option value="eur">евро</option>
+							<option value="gbp">фунти стерлінгів</option>
+							<option value="other">інша</option>
+						</select>
 					</div>
 				</td>
 				<td>

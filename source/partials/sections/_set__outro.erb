@@ -10,7 +10,7 @@
 		</legend>
 		<div class="l-form__item">
 			<div class="l-form__item">
-				<select name="declaration__date_day" id="declaration__date_day" data-inp-act="hidden,unclear">
+				<select id="declaration__date_day" name="declaration[date_day]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">День</option>
 					<option value="nodata">Немає данних</option>
 					<% 31.times do |i| %>
@@ -19,7 +19,7 @@
 				</select>
 			</div>
 			<div class="l-form__item">
-				<select name="declaration__date_month" id="declaration__date_month" data-inp-act="hidden,unclear">
+				<select id="declaration__date_month" name="declaration[date_month]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Місяць</option>
 					<option value="nodata">Немає данних</option>
 					<option value="01">01 Січень Январь</option>
@@ -37,7 +37,7 @@
 				</select>
 			</div>
 			<div class="l-form__item">
-				<select name="declaration__date_year" id="declaration__date_year" data-inp-act="hidden,unclear">
+				<select id="declaration__date_year" name="declaration[date_year]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="">Рік</option>
 					<option value="nodata">Немає данних</option>
 					<% (2015).downto(1991) do |i| %>
@@ -55,7 +55,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" name="declaration__notfull" id="declaration__notfull" value="1" />
+			<input type="checkbox" id="declaration__notfull" name="declaration[notfull]" value="1" />
 		</div>
 	</div>
 
@@ -66,7 +66,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="text" id="declaration__notfull__lostpages" name="declaration__notfull__lostpages" />
+			<input type="text" id="declaration__notfull__lostpages" name="declaration[notfull_lostpages]" />
 		</div>
 	</div>
 
@@ -77,7 +77,7 @@
 			</label>
 		</div>
 		<div class="l-form__item">
-			<input type="checkbox" name="declaration__additional-info" id="declaration__additional-info" value="1" />
+			<input type="checkbox" id="declaration__additional-info" name="declaration[additional-info]" value="1" />
 		</div>
 	</div>
 
@@ -88,7 +88,7 @@
 			</label>
 		</div>
 		<div class="l-form__row">
-			<textarea name="declaration__additional-info__text" id="declaration__additional-info__text" rows="10"></textarea>
+			<textarea id="declaration__additional-info__text" name="declaration[additional-info_text]" rows="10"></textarea>
 		</div>
 	</div>
 
