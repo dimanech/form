@@ -224,13 +224,13 @@ scripts.Common = {
 			scripts.inputActions();
 			scripts.cloneyaInit();
 			scripts.dateSelectBoxesInit();
-			scripts.addAutoComplete("#general__last-name", '/js/autocomplite/lastname.json');
-			scripts.addAutoComplete("#general__name", '/js/autocomplite/firstname.json');
-			scripts.addAutoComplete("#general__surname", '/js/autocomplite/patronymic.json');
-			scripts.addAutoComplete("#vehicle__35__brand", '/js/autocomplite/cars.json');
-			scripts.addAutoComplete("#vehicle__36__brand", '/js/autocomplite/trucks.json');
-			scripts.addAutoComplete("#vehicle__37__brand", '/js/autocomplite/boats.json');
-			scripts.addAutoComplete("#vehicle__39__brand", '/js/autocomplite/motos.json');
+			scripts.addAutoComplete("#general__last-name", '/js/autocomplete/lastname.json');
+			scripts.addAutoComplete("#general__name", '/js/autocomplete/firstname.json');
+			scripts.addAutoComplete("#general__surname", '/js/autocomplete/patronymic.json');
+			scripts.addAutoComplete("#vehicle__35__brand", '/js/autocomplete/cars.json');
+			scripts.addAutoComplete("#vehicle__36__brand", '/js/autocomplete/trucks.json');
+			scripts.addAutoComplete("#vehicle__37__brand", '/js/autocomplete/boats.json');
+			scripts.addAutoComplete("#vehicle__39__brand", '/js/autocomplete/motos.json');
 			scripts.testJSON();
 		});
 
