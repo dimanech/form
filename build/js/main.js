@@ -94,7 +94,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: false,
-			ignore: '.form__msg, .js-clone-ignore, .form__input-act_unclear, .form__input-act_hidden',
+			ignore: '.form__msg, .js-clone-ignore',
 			defaultRender: true,
 			preserveChildCount: true
 		});

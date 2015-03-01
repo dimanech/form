@@ -123,9 +123,6 @@
 				<tr>
 					<th>
 						Ступінь зв’язку
-						<p class="small-note">
-							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нижче. Додати ще члена сім’ї можна, натиснувши на кнопку &laquo;+&raquo; справа
-						</p>
 					</th>
 					<th>
 						Прізвище ініціали, дата народження
@@ -154,10 +151,14 @@
 						<div class="l-form__row js-related-section">
 							<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2" />
 						</div>
+						<p class="small-note js-clone-ignore">
+							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нижче. Додати ще члена сім’ї можна, натиснувши на кнопку &laquo;+&raquo; справа
+						</p>
 					</td>
 					<td>
 						<div class="l-form__row">
 							<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
+							<p class="small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						</div>
 					</td>
 					<td>
