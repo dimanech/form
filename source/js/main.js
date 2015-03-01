@@ -194,8 +194,8 @@ scripts.Common = {
 			form.validate().resetForm();
 		});
 
-		content.hide();
-		$(content[0]).show();
+		//content.hide();
+		//$(content[0]).show();
 
 		$(".js-section-go").on('click', function(e) {
 			if (!$(this).is('[type="reset"]')) {

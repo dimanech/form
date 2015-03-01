@@ -94,7 +94,7 @@
 			<col width="200" />
 		</colgroup>
 		<% data.income.fields.each do |field| %>
-			<% formid = 'income[' + field.number + ']' %>
+			<% formid = field.number %>
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
 					<%= field.number %>.
