@@ -1,0 +1,131 @@
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ I. Загальні відомості</span>
+	</legend>
+
+	<fieldset class="l-form__row">
+		<legend class="l-form__item form__label">
+			<span>1.</span>
+		</legend>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__last-name" class="i-wai">Прізвище</label>
+			{{ declaration.general.last_name }}
+		</div>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__name" class="i-wai">Ім’я</label>
+			{{ declaration.general.name }}
+		</div>
+		<div class="l-form__item l-form__item_lined">
+			<label for="general__patronymic" class="i-wai">По-батькові</label>
+			{{ declaration.general.patronymic }}
+		</div>
+	</fieldset>
+
+	<fieldset class="l-form__row">
+		<legend class="l-form__item form__label">
+			<span>2. Місце проживання</span>
+		</legend>
+		<div>
+			{% for address in declaration.general.addresses %}
+			<div class="l-form__item">
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place" class="i-wai">Область</label>
+					{{ address.place }}
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_district" class="i-wai">Район</label>
+					{{ address.place_district }}
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city" class="i-wai">Населений пункт</label>
+					{{ address.place_city }}
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
+					{{ address.place_city_type }}
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address" class="i-wai">Решта адреси</label>
+					{{ address.place_address }}
+				</div>
+				<div class="l-form__item l-form__item_lined">
+					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
+					{{ address.place_address_type }}
+				</div>
+			</div>
+			{% endfor %}
+			<div class="l-form__item">
+				{{ declaration.general.addresses_raw }}
+			</div>
+		</div>
+	</fieldset>
+	<fieldset class="l-form__row">
+		<legend class="l-form__item form__label">
+			<span>3. Посада:</span>
+		</legend>
+		<div class="l-form__item">
+			<div class="l-form__item l-form__item_lined">
+				<label for="general__post_region" class="i-wai">Область</label>
+				{{ declaration.general.post.region }}
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="general__post_office" class="i-wai">Відомство</label>
+				{{ declaration.general.post.office }}
+			</div>
+			<div class="l-form__item l-form__item_lined">
+				<label for="general__post_post" class="i-wai">Посада</label>
+				{{ declaration.general.post.post }}
+			</div>
+		</div>
+		<div class="l-form__item">
+			<div class="l-form__item l-form__item_lined">
+				{{ declaration.general.post.post_raw }}
+			</div>
+		</div>
+	</fieldset>
+
+	<fieldset class="form__set">
+		<legend class="form__set-legend">
+			<span>4. Члени сім’ї декларанта:</span>
+		</legend>
+		<table class="table">
+			<colgroup>
+				<col width="200" />
+				<col />
+			</colgroup>
+			<thead>
+				<tr>
+					<th>
+						Ступінь зв’язку
+					</th>
+					<th>
+						Прізвище ініціали, дата народження
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				{% for member in family %}
+				<tr>
+					<td>
+						<div class="l-form__row">
+							{{ member.relations }}{{ member.relations_other }}
+						</div>
+					</td>
+					<td>
+						<div class="l-form__row">
+							{{ member.family_name }}
+						</div>
+					</td>
+				</tr>
+				{% endfor %}
+				<tr>
+					<td colspan="2">
+						<div class="l-form__row">
+							{{ declaration.general.family_raw }}
+						</div>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</fieldset>
+</fieldset>

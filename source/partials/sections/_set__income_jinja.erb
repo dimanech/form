@@ -1,0 +1,255 @@
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ II. Відомості про доходи</span>
+	</legend>
+
+	<table class="table">
+		<colgroup>
+			<col />
+			<col />
+			<col width="200" />
+			<col width="200" />
+		</colgroup>
+		<caption>
+			А. Одержані (нараховані) з усіх джерел України
+		</caption>
+		<tfoot>
+			<tr>
+				<td colspan="4">
+					(назва закладу, установи тощо, в яких одержано (нараховано) зазначені у цій позиції доходи)
+				</td>
+			</tr>
+		</tfoot>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік доходів
+				</th>
+				<th colspan="2">
+					Сума одержаного (нарахованого) доходу
+				</th>
+			</tr>
+			<tr>
+				<th>
+					декларанта
+				</th>
+				<th>
+					членів сім’ї
+				</th>
+			</tr>
+		</thead>
+		<% data.incomeA.fields.each_with_index do |field, index| %>
+			<% formid = field.number %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].value }}
+					</div>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].family }}
+					</div>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].family_comment }}
+					</div>
+				</td>
+			</tr>
+		<% end %>
+		<tr>
+			<td class="table__cell_bd-r table__psdo-th">
+				&nbsp;
+			</td>
+			<td colspan="3" class="table__cell_unspaced">
+				{{ declaration.income['7'].source_name }}
+			</td>
+		</tr>
+	</table>
+
+	<table class="table">
+		<colgroup>
+			<col />
+			<col />
+			<col width="200" />
+			<col width="200" />
+		</colgroup>
+		<% data.income.fields.each do |field| %>
+			<% formid = field.number %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].value }}
+					</div>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].family }}
+					</div>
+					<div class="l-form__row">
+						{{ declaration.income['<%= formid %>'].family_comment }}
+					</div>
+				</td>
+			</tr>
+		<% end %>
+	</table>
+
+	<table class="table">
+		<colgroup>
+			<col width="20" />
+			<col />
+			<col width="200" />
+			<col width="200" />
+		</colgroup>
+		<caption>
+			Б. Одержані (нараховані) з джерел за межами України декларантом
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Назва країни
+				</th>
+				<th colspan="2">
+					Розмір доходу
+				</th>
+			</tr>
+			<tr>
+				<th>
+					в іноземній валюті
+				</th>
+				<th>
+					перерахованого у гривні
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for income in declaration.income['21'] %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						21.
+					</span>
+				</td>
+				<td class="table__cell_fwn">
+					<div class="l-form__row">
+						{{ income.country }}
+					</div>
+					<div class="l-form__row">
+						{{ income.country_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ income.cur }}
+					</div>
+					<div class="l-form__row">
+						{{ income.cur_units }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ income.uah_equal }}
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+	<table class="table">
+		<colgroup>
+			<col width="20" />
+			<col />
+			<col width="200" />
+			<col width="200" />
+		</colgroup>
+		<caption>
+			В. Одержані (нараховані) з джерел за межами України членами сім’ї декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Назва країни
+				</th>
+				<th colspan="2">
+					Розмір доходу
+				</th>
+			</tr>
+			<tr>
+				<th>
+					в іноземній валюті
+				</th>
+				<th>
+					перерахованого у гривні
+				</th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for income in declaration.income['22'] %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						22.
+					</span>
+				</td>
+				<td class="table__cell_fwn">
+					<div class="l-form__row">
+						{{ income.country }}
+					</div>
+					<div class="l-form__row">
+						{{ income.country_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ income.cur }}
+					</div>
+					<div class="l-form__row">
+						{{ income.cur_units }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ income.uah_equal }}
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+	</table>
+
+
+</fieldset>
+

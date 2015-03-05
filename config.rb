@@ -16,6 +16,10 @@ with_layout :main do
   page "*"
 end
 
+with_layout :blank do
+  page "jinja/*"
+end
+
 # page "index.html", :layout => :front
 
 ################################################################################
