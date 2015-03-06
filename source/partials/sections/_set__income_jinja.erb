@@ -3,9 +3,9 @@
 		<span>Розділ II. Відомості про доходи</span>
 	</legend>
 
-	<table class="table">
+	<table class="decl-table">
 		<colgroup>
-			<col />
+			<col width="35" />
 			<col />
 			<col width="200" />
 			<col width="200" />
@@ -80,9 +80,9 @@
 		</tr>
 	</table>
 
-	<table class="table">
+	<table class="decl-table">
 		<colgroup>
-			<col />
+			<col width="20" />
 			<col />
 			<col width="200" />
 			<col width="200" />
@@ -116,7 +116,7 @@
 		<% end %>
 	</table>
 
-	<table class="table">
+	<table class="decl-table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -150,7 +150,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for income in declaration.income['21'] %}
+            {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
 					<span>
@@ -161,16 +161,15 @@
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
+					{% if income.country_comment %}
 					<div class="l-form__row">
 						{{ income.country_comment }}
 					</div>
+					{% endif %}
 				</td>
 				<td>
 					<div class="l-form__row">
-						{{ income.cur }}
-					</div>
-					<div class="l-form__row">
-						{{ income.cur_units }}
+						{{ income.cur }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
@@ -179,11 +178,34 @@
 					</div>
 				</td>
 			</tr>
-			{% endfor %}
-		</tbody>
+            {% else %}
+            <tr>
+                <td class="table__cell_bd-r table__psdo-th">
+                    <span>
+                        21.
+                    </span>
+                </td>
+                <td class="table__cell_fwn">
+                    <div class="l-form__row">
+                        &ndash;
+                    </div>
+                </td>
+                <td>
+                    <div class="l-form__row">
+                        0
+                    </div>
+                </td>
+                <td>
+                    <div class="l-form__row">
+                        0
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
 	</table>
 
-	<table class="table">
+	<table class="decl-table">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -217,7 +239,7 @@
 			</tr>
 		</thead>
 		<tbody>
-			{% for income in declaration.income['22'] %}
+            {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
 					<span>
@@ -228,16 +250,15 @@
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
+					{% if income.country_comment %}
 					<div class="l-form__row">
 						{{ income.country_comment }}
 					</div>
+					{% endif %}
 				</td>
 				<td>
 					<div class="l-form__row">
-						{{ income.cur }}
-					</div>
-					<div class="l-form__row">
-						{{ income.cur_units }}
+						{{ income.cur }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
@@ -246,10 +267,30 @@
 					</div>
 				</td>
 			</tr>
-			{% endfor %}
+            {% else %}
+            <tr>
+                <td class="table__cell_bd-r table__psdo-th">
+                    <span>
+                        22.
+                    </span>
+                </td>
+                <td class="table__cell_fwn">
+                    <div class="l-form__row">
+                        &ndash;
+                    </div>
+                </td>
+                <td>
+                    <div class="l-form__row">
+                        0
+                    </div>
+                </td>
+                <td>
+                    <div class="l-form__row">
+                        0
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
 		</tbody>
 	</table>
-
-
 </fieldset>
-

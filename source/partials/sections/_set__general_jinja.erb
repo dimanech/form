@@ -88,7 +88,7 @@
 		<legend class="form__set-legend">
 			<span>4. Члени сім’ї декларанта:</span>
 		</legend>
-		<table class="table">
+		<table class="decl-table">
 			<colgroup>
 				<col width="200" />
 				<col />
@@ -104,16 +104,16 @@
 				</tr>
 			</thead>
 			<tbody>
-				{% for member in family %}
+				{% for member in declaration.general.family %}
 				<tr>
 					<td>
 						<div class="l-form__row">
-							{{ member.relations }}{{ member.relations_other }}
+							{{ member.relations }}{{ member.relations_other|default("") }}
 						</div>
 					</td>
 					<td>
 						<div class="l-form__row">
-							{{ member.family_name }}
+							{{ member.family_name|default("") }}
 						</div>
 					</td>
 				</tr>
