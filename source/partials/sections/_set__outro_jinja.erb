@@ -1,0 +1,71 @@
+<fieldset class="form__set form__set_main form__set_notes">
+	<legend class="i-wai">
+		<span>Додаткове про декларацію</span>
+	</legend>
+
+	<fieldset class="l-form__row js-data-note js-clone-wrapper">
+		<legend class="l-form__item form__label">
+			<span>Дата заповнення декларантом</span>
+		</legend>
+		<div class="l-form__item">
+			{{ declaration.declaration.date }}
+		</div>
+	</fieldset>
+
+	<div class="l-form__row js-related-control">
+		<div class="l-form__item">
+			<label class="form__label" for="declaration__notfull">
+				<span>Декларація була не повна</span>
+			</label>
+		</div>
+		<div class="l-form__item">
+			{% if declaration.declaration.notfull == "true" %}
+				Так
+			{% else %}
+				Ні
+			{% endif %}
+		</div>
+	</div>
+
+	{% if declaration.declaration.notfull == "true" %}
+	<div class="l-form__row js-related-section">
+		<div class="l-form__item">
+			<label class="form__label" for="declaration__notfull__lostpages">
+				<span>Яких сторінок (паперових) не вистачало</span>
+			</label>
+		</div>
+		<div class="l-form__item">
+			{{ declaration.declaration.notfull_lostpages }}
+		</div>
+	</div>
+	{% endif %}
+
+	<div class="l-form__row js-related-control">
+		<div class="l-form__item">
+			<label class="form__label" for="declaration__additional-info">
+				<span>Є додаткова інформація</span>
+			</label>
+		</div>
+		<div class="l-form__item">
+			{% if declaration.declaration.additional_info == "true" %}
+				Так
+			{% else %}
+				Ні
+			{% endif %}
+		</div>
+	</div>
+
+	{% if declaration.declaration.additional_info == "true" %}
+	<div class="js-related-section">
+		<div class="l-form__row">
+			<label class="form__label" for="declaration__additional-info__text">
+				<span>Що саме не вмістилось</span>
+			</label>
+		</div>
+		<div class="l-form__row">
+			{{ declaration.declaration.additional_info_text }}
+		</div>
+	</div>
+	{% endif %}
+</fieldset>
+

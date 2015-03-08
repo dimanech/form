@@ -1,0 +1,125 @@
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
+	</legend>
+
+	<table class="decl-table">
+		<colgroup>
+			<col />
+			<col />
+			<col />
+			<col />
+		</colgroup>
+		<caption>
+			А. Фінансові зобов’язання декларанта та інші його витрати (грн)
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th>
+					Перелік фінансових зобов’язань
+				</th>
+				<th>
+					Усього
+				</th>
+				<th>
+					у тому числі за кордоном
+				</th>
+			</tr>
+		</thead>
+		<% data.liabilities.fields.each do |field| %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum }}
+					</div>
+					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum_comment }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
+					</div>
+					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum_foreign_comment }}
+					</div>
+					{% endif %}
+				</td>
+			</tr>
+		<% end %>
+	</table>
+
+	<table class="decl-table">
+		<colgroup>
+			<col />
+			<col />
+			<col />
+			<col />
+		</colgroup>
+		<caption>
+			Б. Фінансові зобов’язання членів сім’ї декларанта (грн)
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th>
+					Перелік фінансових зобов’язань
+				</th>
+				<th>
+					Усього
+				</th>
+				<th>
+					у тому числі за кордоном
+				</th>
+			</tr>
+		</thead>
+		<% data.liabilitiesB.fields.each do |field| %>
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<%= field.number %>.
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum }}
+					</div>
+					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum_comment }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
+					</div>
+					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
+					<div class="l-form__row">
+						{{ declaration.liabilities['<%= field.number %>'].sum_foreign_comment }}
+					</div>
+					{% endif %}
+				</td>
+			</tr>
+		<% end %>
+	</table>
+</fieldset>

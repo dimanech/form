@@ -1,0 +1,235 @@
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ IV. Відомості про транспортні засоби</span>
+	</legend>
+
+	<table class="decl-table">
+		<colgroup>
+			<col width="35" />
+			<col />
+			<col />
+			<col width="120" />
+			<col width="150" />
+			<col width="150" />
+		</colgroup>
+		<caption>
+			А. Транспортні засоби, що перебувають у властності, в оренді чи на іншому праві користування декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік транспортних засобів
+				</th>
+				<th rowspan="2">
+					Марка/модель (об’єм циліндрів двигуна, куб. см, потужність двигуна, кВт, довжина, см)
+				</th>
+				<th rowspan="2">
+					Рік випуску
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання у власність
+				</th>
+				<th>
+					оренду чи на інше право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.vehicle.fields.each_with_index do |field, index| %>
+		<tbody>
+			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.brand }}
+					</div>
+					{% if vehicle.brand_info %}
+					<div class="l-form__row">
+						{{ vehicle.brand_info }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					{{ vehicle.year }}
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.sum }}
+					</div>
+					{% if vehicle.sum_comment %}
+					<div class="l-form__row">
+						{{ vehicle.sum_comment }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.sum_rent }}
+					</div>
+					{% if vehicle.sum_rent_comment %}
+					<div class="l-form__row">
+						{{ vehicle.sum_rent_comment }}
+					</div>
+					{% endif %}
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+				&ndash;
+				</td>
+				<td>
+				&ndash;
+				</td>
+				<td>
+				0
+				</td>
+				<td>
+				0
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		<% end %>
+	</table>
+
+	<table class="decl-table">
+		<colgroup>
+			<col width="35" />
+			<col />
+			<col />
+			<col width="120" />
+			<col width="150" />
+			<col width="150" />
+		</colgroup>
+		<caption>
+			Б. Транспортні засоби, що перебувають у власності, в оренді чи на іншому праві користування членів сім’ї декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік транспортних засобів
+				</th>
+				<th rowspan="2">
+					Марка/модель (об’єм циліндрів двигуна, куб. см, потужність двигуна, кВт, довжина, см)
+				</th>
+				<th rowspan="2">
+					Рік випуску
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання у власність
+				</th>
+				<th>
+					оренду чи на інше право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.vehicleB.fields.each_with_index do |field, index| %>
+		<tbody>
+			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.brand }}
+					</div>
+					{% if vehicle.brand_info %}
+					<div class="l-form__row">
+						{{ vehicle.brand_info }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					{{ vehicle.year }}
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.sum }}
+					</div>
+					{% if vehicle.sum_comment %}
+					<div class="l-form__row">
+						{{ vehicle.sum_comment }}
+					</div>
+					{% endif %}
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ vehicle.sum_rent }}
+					</div>
+					{% if vehicle.sum_rent_comment %}
+					<div class="l-form__row">
+						{{ vehicle.sum_rent_comment }}
+					</div>
+					{% endif %}
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+				&ndash;
+				</td>
+				<td>
+				&ndash;
+				</td>
+				<td>
+				0
+				</td>
+				<td>
+				0
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		<% end %>
+	</table>
+</fieldset>

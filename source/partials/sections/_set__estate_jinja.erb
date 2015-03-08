@@ -1,0 +1,250 @@
+<fieldset class="form__set form__set_main form__set_paper">
+	<legend class="form__set-legend form__set-legend_main">
+		<span>Розділ III Відомості про нерухоме майно</span>
+	</legend>
+
+	<table class="decl-table">
+		<colgroup>
+			<col width="35" />
+			<col />
+			<col />
+			<col width="200" />
+			<col width="150" />
+			<col width="150" />
+		</colgroup>
+		<caption>
+			А. Майно, що перебуває у власності, в оренді чи на іншому праві користування декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік об’єктів
+				</th>
+				<th rowspan="2">
+					Місце знаходження об’єкта (країна, адреса)
+				</th>
+				<th rowspan="2">
+					Загальна площа (кв. м)
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання у власність
+				</th>
+				<th>
+					оренду чи на інше право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.estate.fields.each_with_index do |field, index| %>
+		<tbody>
+			{% for estate in declaration.estate['<%= field.number %>'] if estate.space or estate.costs or estate.region %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ estate.region }}
+					</div>
+					<div class="l-form__row">
+						{{ estate.address }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
+					</div>
+					<div class="l-form__row">
+						{{ estate.space_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ estate.costs }}
+					</div>
+					<div class="l-form_row">
+						{{ estate.costs_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ estate.costs_rent }}
+					</div>
+					<div class="l-form_row">
+						{{ estate.costs_rent_comment }}
+					</div>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						&ndash;
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
+		<% end %>
+	</table>
+
+	<table class="decl-table">
+		<colgroup>
+			<col width="35" />
+			<col />
+			<col />
+			<col width="150" />
+			<col width="150" />
+			<col width="150" />
+		</colgroup>
+		<caption>
+			Б. Майно, що перебуває у власності, в оренді чи на іншому праві користування сім’ї декларанта
+		</caption>
+		<thead>
+			<tr>
+				<th rowspan="2" class="table__cell_bd-r">
+					<span class="i-wai">
+						№
+					</span>
+				</th>
+				<th rowspan="2">
+					Перелік об’єктів
+				</th>
+				<th rowspan="2">
+					Місце знаходження об’єкта (країна, адреса)
+				</th>
+				<th rowspan="2">
+					Загальна площа (кв. м)
+				</th>
+				<th colspan="2">
+					Сума витрат (грн) на
+				</th>
+			</tr>
+			<tr>
+				<th>
+					придбання
+					у власність
+				</th>
+				<th>
+					оренду чи на інше
+					право користування
+				</th>
+			</tr>
+		</thead>
+		<% data.estateB.fields.each_with_index do |field, index| %>
+		<tbody>
+			{% for estate in declaration.estate['<%= field.number %>'] if estate.space or estate.costs or estate.region %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						{{ estate.region }}
+					</div>
+					<div class="l-form__row">
+						{{ estate.address }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
+					</div>
+					<div class="l-form__row">
+						{{ estate.space_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ estate.costs_property }}
+					</div>
+					<div class="l-form_row">
+						{{ estate.costs_property_comment }}
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						{{ estate.costs_rent }}
+					</div>
+					<div class="l-form_row">
+						{{ estate.costs_rent_comment }}
+					</div>
+				</td>
+			</tr>
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					<span>
+						<%= field.number %>.
+					</span>
+				</td>
+				<th class="table__cell_fwn">
+					<%= field.name %>
+				</th>
+				<td>
+					<div class="l-form__row">
+						&ndash;
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+	                    0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		<% end %>
+	</table>
+</fieldset>
