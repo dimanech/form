@@ -15,17 +15,9 @@
 	width: 100%;
 	empty-cells: hide;
 
-	caption {
-		@include adjust-font-size-to($h5-font-size, 1.2);
-		font-weight: bold;
-		margin-bottom: 1em;
-	}
-
 	td,
 	th {
 		vertical-align: middle;
-		padding: 5px;
-		border: 1px solid $baseColor;
 		text-align: left;
 	}
 
@@ -60,10 +52,10 @@
 
 /* @end */
 
-/* @group Table styling
+/* @group Table helpers
   --------------------------------------------------------------------------- */
 
-.table {
+.table { // overwrite specifity
 
 	.table__cell_unstyled {
 		border-color: transparent;
@@ -92,6 +84,23 @@
 	}
 }
 
+/* @end */
 
+/* @group Table styling
+  --------------------------------------------------------------------------- */
+
+.table_decl {
+	caption {
+		@include adjust-font-size-to($h5-font-size, 1.2);
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
+
+	td,
+	th {
+		padding: 5px;
+		border: 1px solid $baseColor;
+	}
+}
 
 /* @end */

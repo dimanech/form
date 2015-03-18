@@ -1,9 +1,9 @@
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<section class="form__set form__set_main form__set_paper">
+	<h2 class="form__set-legend form__set-legend_main">
 		<span>Розділ IV. Відомості про транспортні засоби</span>
-	</legend>
+	</h2>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -49,9 +49,7 @@
 			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
@@ -93,24 +91,22 @@
 			{% else %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
-				&ndash;
+					&ndash;
 				</td>
 				<td>
-				&ndash;
+					&ndash;
 				</td>
 				<td>
-				0
+					0
 				</td>
 				<td>
-				0
+					0
 				</td>
 			</tr>
 			{% endfor %}
@@ -118,7 +114,7 @@
 		<% end %>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -164,9 +160,7 @@
 			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
@@ -208,28 +202,26 @@
 			{% else %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
-				&ndash;
+					&ndash;
 				</td>
 				<td>
-				&ndash;
+					&ndash;
 				</td>
 				<td>
-				0
+					0
 				</td>
 				<td>
-				0
+					0
 				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
 		<% end %>
 	</table>
-</fieldset>
+</section>

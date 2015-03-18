@@ -1,9 +1,9 @@
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<section class="form__set form__set_main form__set_paper">
+	<h2 class="form__set-legend form__set-legend_main">
 		<span>Розділ II. Відомості про доходи</span>
-	</legend>
+	</h2>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -80,7 +80,7 @@
 		</tr>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -116,7 +116,7 @@
 		<% end %>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -153,9 +153,7 @@
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						21.
-					</span>
+					21.
 				</td>
 				<td class="table__cell_fwn">
 					<div class="l-form__row">
@@ -178,34 +176,32 @@
 					</div>
 				</td>
 			</tr>
-            {% else %}
-            <tr>
-                <td class="table__cell_bd-r table__psdo-th">
-                    <span>
-                        21.
-                    </span>
-                </td>
-                <td class="table__cell_fwn">
-                    <div class="l-form__row">
-                        &ndash;
-                    </div>
-                </td>
-                <td>
-                    <div class="l-form__row">
-                        0
-                    </div>
-                </td>
-                <td>
-                    <div class="l-form__row">
-                        0
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					21.
+				</td>
+				<td class="table__cell_fwn">
+					<div class="l-form__row">
+						&ndash;
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
+		</tbody>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -242,9 +238,7 @@
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						22.
-					</span>
+					22.
 				</td>
 				<td class="table__cell_fwn">
 					<div class="l-form__row">
@@ -267,30 +261,28 @@
 					</div>
 				</td>
 			</tr>
-            {% else %}
-            <tr>
-                <td class="table__cell_bd-r table__psdo-th">
-                    <span>
-                        22.
-                    </span>
-                </td>
-                <td class="table__cell_fwn">
-                    <div class="l-form__row">
-                        &ndash;
-                    </div>
-                </td>
-                <td>
-                    <div class="l-form__row">
-                        0
-                    </div>
-                </td>
-                <td>
-                    <div class="l-form__row">
-                        0
-                    </div>
-                </td>
-            </tr>
-            {% endfor %}
+			{% else %}
+			<tr>
+				<td class="table__cell_bd-r table__psdo-th">
+					22.
+				</td>
+				<td class="table__cell_fwn">
+					<div class="l-form__row">
+						&ndash;
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+				<td>
+					<div class="l-form__row">
+						0
+					</div>
+				</td>
+			</tr>
+			{% endfor %}
 		</tbody>
 	</table>
-</fieldset>
+</section>

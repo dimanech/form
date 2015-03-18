@@ -3,7 +3,7 @@
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
 	</legend>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -63,7 +63,7 @@
 		<% end %>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -111,7 +111,7 @@
 				</td>
 				<td>
 					<div class="l-form__row">
-	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
+						{{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
 					<div class="l-form__row">

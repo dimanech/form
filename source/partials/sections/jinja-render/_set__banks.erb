@@ -1,9 +1,9 @@
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<section class="form__set form__set_main form__set_paper">
+	<h2 class="form__set-legend form__set-legend_main">
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
-	</legend>
+	</h2>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200"  />
@@ -52,20 +52,24 @@
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-form__row">
-						{{ banks.sum_comment }}
+						<div class="l-form__item">
+							{{ banks.sum_comment }}
+						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							{{ banks.sum_foreign}}
+							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-form__row">
-						{{ banks.sum_foreign_comment }}
+						<div class="l-form__item">
+							{{ banks.sum_foreign_comment }}
+						</div>
 					</div>
 					{% endif %}
 				</td>
@@ -88,7 +92,7 @@
 		<% end %>
 	</table>
 
-	<table class="decl-table">
+	<table class="table table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200" />
@@ -121,9 +125,7 @@
 			{% for banks in declaration.banks['<%= field.number %>'] if banks.sum != "0" and banks.sum %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
@@ -137,20 +139,24 @@
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-form__row">
-						{{ banks.sum_comment }}
+						<div class="l-form__item">
+							{{ banks.sum_comment }}
+						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
 					<div class="l-form__row">
 						<div class="l-form__item l-form__item_w-p50">
-							{{ banks.sum_foreign}}
+							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-form__row">
-						{{ banks.sum_foreign_comment }}
+						<div class="l-form__item">
+							{{ banks.sum_foreign_comment }}
+						</div>
 					</div>
 					{% endif %}
 				</td>
@@ -158,9 +164,7 @@
 			{% else %}
 			<tr>
 				<td class="table__cell_bd-r table__psdo-th">
-					<span>
-						<%= field.number %>.
-					</span>
+					<%= field.number %>.
 				</td>
 				<th class="table__cell_fwn">
 					<%= field.name %>
@@ -172,4 +176,4 @@
 		</tbody>
 		<% end %>
 	</table>
-</fieldset>
+</section>

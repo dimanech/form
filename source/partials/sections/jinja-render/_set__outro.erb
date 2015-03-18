@@ -1,0 +1,63 @@
+<section class="form__set form__set_main form__set_notes">
+	<h2 class="i-wai">
+		<span>Додаткове про декларацію</span>
+	</h2>
+
+	<p class="l-form__row">
+		<strong class="l-form__item">
+			Дата заповнення декларантом
+		</strong>
+		<span class="l-form__item">
+			{{ declaration.declaration.date }}
+		</span>
+	</p>
+
+	<p class="l-form__row">
+		<strong class="l-form__item">
+			Декларація була не повна
+		</strong>
+		<span class="l-form__item">
+			{% if declaration.declaration.notfull == "true" %}
+				Так
+			{% else %}
+				Ні
+			{% endif %}
+		</span>
+	</p>
+
+	{% if declaration.declaration.notfull == "true" %}
+	<p class="l-form__row">
+		<strong class="l-form__item">
+			Яких сторінок (паперових) не вистачало
+		</strong>
+		<span class="l-form__item">
+			{{ declaration.declaration.notfull_lostpages }}
+		</span>
+	</p>
+	{% endif %}
+
+	<p class="l-form__row">
+		<strong class="l-form__item">
+			Є додаткова інформація
+		</strong>
+		<span class="l-form__item">
+			{% if declaration.declaration.additional_info == "true" %}
+				Так
+			{% else %}
+				Ні
+			{% endif %}
+		</span>
+	</p>
+
+	{% if declaration.declaration.additional_info == "true" %}
+	<p class="js-related-section">
+		<strong class="l-form__row">
+			Що саме не вмістилось
+		</strong>
+		<span class="l-form__row">
+			{{ declaration.declaration.additional_info_text }}
+		</span>
+	</p>
+	{% endif %}
+</section>
+

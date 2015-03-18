@@ -56,6 +56,17 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 /* @end */
 
+/* @group Declaration body
+  --------------------------------------------------------------------------- */
+
+.declaration-body {
+	font-size: $base-font-size;
+	@include adjust-leading-to(1);
+	font-family: $baseFontFamily;
+}
+
+/* @end */
+
 /* @group data-notes
   --------------------------------------------------------------------------- */
 

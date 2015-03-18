@@ -107,7 +107,7 @@ $formColor: $baseColor;
 		color: $formColor;
 		font-style: italic;
 		box-shadow: 0 0 15px 3px transparent;
-		@include transition(box-shadow);
+		@include transition(box-shadow linear .2s);
 
 		&:hover {
 			border-color: lighten(#a4a4a4, 5%);
@@ -178,12 +178,16 @@ $formColor: $baseColor;
 	// Generic
 
 	.form__set { // <fieldset>
+		margin: 0;
 		padding: 20px 0 0;
+		border: none;
+		position: relative;
 	}
 
 	.form__set-legend { // <legend>
-		font-size: $h3-font-size;
-		font-weight: bold;
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+		border: none; // Corrects color not being inherited in IE 8/9.
+		font: bold $h3-font-size $serif;
 
 		span {
 			display: block;
@@ -246,12 +250,14 @@ $formColor: $baseColor;
 
 .l-form__row {
 	@extend .i-clfx;
+	display: block;
 	margin: $formRowMargin 0;
 	position: relative;
 //	line-height: 1px; // fix inline box
 }
 
 .l-form__item {
+	display: block;
 	float: left;
 	padding: 0 $formItemSpacing 0 0;
 	line-height: $inputHeight;
