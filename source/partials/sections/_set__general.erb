@@ -35,7 +35,7 @@
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
-						<option value="unspecified" selected="">Область</option>
+						<option value="unspecified" selected="" disabled="">Область</option>
 						<option value="nodata">Немає данних</option>
 						<% data.regions.region.each do |option| %>
 							<option value="<%= option.value %>"><%= option.name %></option>
@@ -53,7 +53,7 @@
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
 					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="">Тип населенного пункту</option>
+						<option value="" selected="" disabled="">Тип населенного пункту</option>
 						<option value="nodata">Немає данних</option>
 						<option value="city">Місто</option>
 						<option value="pgt">ПГТ</option>
@@ -67,7 +67,7 @@
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
 					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="">Тип адреси</option>
+						<option value="" selected="" disabled="">Тип адреси</option>
 						<option value="nodata">Немає данних</option>
 						<option value="registration">Адреса реестрації</option>
 						<option value="actual">Фактична адреса</option>
@@ -90,7 +90,7 @@
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="">Область</option>
+					<option value="unspecified" selected="" disabled="">Область</option>
 					<option value="nodata">Немає данних</option>
 					<% data.regions.region.each do |option| %>
 						<option value="<%= option.value %>"><%= option.name %></option>
