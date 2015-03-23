@@ -7,11 +7,10 @@
 
 /* @group Global sprite
   --------------------------------------------------------------------------- */
-
 $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 .i-ico {
-	background: $icons-map;
+	background: inline-sprite($icons-map);
 	background-repeat: no-repeat;
 	display: inline-block;
 	vertical-align: top;
@@ -22,18 +21,9 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	unclear
 {
 	.i-ico_#{$ico-name} {
-		@include sprite($icons-map, ico-#{$ico-name}, true);
+		background-position: sprite-position($icons-map, ico-#{$ico-name});
 	}
 }
-
-//.i-ico_dimensions {
-//	@include sprite($icons-map, ico-file-doc, true);
-//}
-//
-//.i-ico_position {
-//	//background-position: sprite-position($icons-map, ico-file-doc-hover);
-//	background-position: sprite-position($icons-map, ico-file-doc-hover, 3px, -2px);
-//}
 
 /* @end */
 

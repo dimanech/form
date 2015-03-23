@@ -5,14 +5,14 @@ require 'susy'
 ################################################################################
 
 compass_config do |config|
-  config.output_style = :compact
+  config.output_style = :expanded
 end
 
 ################################################################################
 # Page options, layouts, aliases and proxies
 ################################################################################
 
-with_layout :blank do
+with_layout :main do
   page "*"
 end
 
@@ -59,7 +59,7 @@ end
 
 configure :build do
     compass_config do |config|
-        # config.output_style = :compressed
+        config.output_style = :expanded
         config.sass_options = {:debug_info => false}
         config.sass_options = {:line_comments => false}
     end

@@ -50,7 +50,10 @@
 		<style>/* ============================================================================
 
 __  __  __    _
-\ \/  \/ /__ (_) __  __                /\ \  /\  / -_)| |(__ (__            /\ /  \/\ \/  \/\___||_| __) __) css helper    /\/\ \ http://dimanech.github.com/weiss/  \ \
+\ \/  \/ /__ (_) __  __                /\
+ \  /\  / -_)| |(__ (__            /\ /  \/\
+  \/  \/\___||_| __) __) css helper    /\/\ \
+        http://dimanech.github.com/weiss/  \ \
 
 The MIT License (MIT)
 
@@ -89,235 +92,732 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 /* ============================================================================
 		GLOBAL
 ============================================================================= */
-article, aside, details, figcaption, figure, footer, header, hgroup, nav, section { display: block; }
+article, aside, details, figcaption, figure,
+footer, header, hgroup, nav, section {
+  display: block;
+}
 
-html { -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html {
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+}
 
-body { font-size: 14px; line-height: 1.28571em; margin: 0; }
+body {
+  font-size: 14px;
+  line-height: 1.28571em;
+  margin: 0;
+}
 
 /* ============================================================================
 		Typography
 ============================================================================= */
-h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6 { margin: 0; font-weight: bold; font-family: Arial, FreeSans, sans-serif; }
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  margin: 0;
+  font-weight: bold;
+  font-family: Arial, FreeSans, sans-serif;
+}
 
-h1, .h1 { font-size: 2.429em; line-height: 1.1645em; margin-bottom: 0.52932em; }
+h1, .h1 {
+  font-size: 2.429em;
+  line-height: 1.1645em;
+  margin-bottom: 0.52932em;
+}
 
-h2, .h2 { font-size: 2.25em; line-height: 1.14286em; margin-bottom: 0.57143em; }
+h2, .h2 {
+  font-size: 2.25em;
+  line-height: 1.14286em;
+  margin-bottom: 0.57143em;
+}
 
-h3, .h3 { font-size: 1.619em; line-height: 1.35004em; margin-bottom: 0.79414em; }
+h3, .h3 {
+  font-size: 1.619em;
+  line-height: 1.35004em;
+  margin-bottom: 0.79414em;
+}
 
-h4, .h4 { font-size: 1.5em; line-height: 1.28571em; margin-bottom: 0.85714em; }
+h4, .h4 {
+  font-size: 1.5em;
+  line-height: 1.28571em;
+  margin-bottom: 0.85714em;
+}
 
-h5, .h5 { font-size: 1.079em; line-height: 1.4299em; margin-bottom: 1.19158em; }
+h5, .h5 {
+  font-size: 1.079em;
+  line-height: 1.4299em;
+  margin-bottom: 1.19158em;
+}
 
-h6, .h6 { font-size: 1em; line-height: 1.28571em; margin-bottom: 1.28571em; }
+h6, .h6 {
+  font-size: 1em;
+  line-height: 1.28571em;
+  margin-bottom: 1.28571em;
+}
 
-hr, .hr { height: 1px; border: none; background: #666; width: 100%; clear: both; margin: 1.28571em 0; }
+hr, .hr {
+  height: 1px;
+  border: none;
+  background: #666;
+  width: 100%;
+  clear: both;
+  margin: 1.28571em 0;
+}
 
-p, pre, blockquote, table { margin: 0; margin-bottom: 1.28571em; }
+p,
+pre,
+blockquote,
+table {
+  margin: 0;
+  margin-bottom: 1.28571em;
+}
 
-blockquote, q { quotes: none; }
-blockquote:before, blockquote:after, q:before, q:after { content: ''; }
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before,
+q:after {
+  content: '';
+}
 
-blockquote { margin: 1.28571em 4.2em 0; }
+blockquote {
+  margin: 1.28571em 4.2em 0;
+}
 
-a { color: #09f; }
-a:hover, a:active { color: #4db8ff; outline: none; }
+a {
+  color: #09f;
+}
+a:hover, a:active {
+  color: #4db8ff;
+  outline: none;
+}
 
-.ie6-7 a * { cursor: pointer; }
+.ie6-7 a * {
+  cursor: pointer;
+}
 
 /* ============================================================================
 		Layout: global
 ============================================================================= */
-.l-main-aux__inner, .l-global-header, .l-global-footer__inner { width: 59em; margin: 0 auto; }
+.l-main-aux__inner, .l-global-header, .l-global-footer__inner {
+  width: 59em;
+  margin: 0 auto;
+}
 
-body { min-width: 59em; }
+body {
+  min-width: 59em;
+}
 
-.l-main-aux { background-color: #fff; }
+.l-main-aux {
+  background-color: #fff;
+}
 
-.l-main-aux__inner { position: relative; background-color: #fff; }
+.l-main-aux__inner {
+  position: relative;
+  background-color: #fff;
+}
 
-/* @group layout header --------------------------------------------------------------------------- */
+/* @group layout header
+  --------------------------------------------------------------------------- */
 /* @end */
-/* @group layout footer --------------------------------------------------------------------------- */
-.l-global-footer { clear: both; overflow: hidden; }
+/* @group layout footer
+  --------------------------------------------------------------------------- */
+.l-global-footer {
+  clear: both;
+  overflow: hidden;
+}
 
 /* @end */
-/* ============================================================================ Embed content
+/* ============================================================================
+   Embed content
 ============================================================================= */
-img { font-size: 1em; color: #434343; }
-a img { border: none; }
+img {
+  font-size: 1em;
+  color: #434343;
+}
+a img {
+  border: none;
+}
 
-figure { margin: 0; }
+figure {
+  margin: 0;
+}
 
-/* ============================================================================ Table support
+/* ============================================================================
+  Table support
 ============================================================================ */
-/* @group Table generic --------------------------------------------------------------------------- */
-.table_weiss { border-collapse: collapse; border-spacing: 0; border-width: 0; width: 100%; empty-cells: hide; }
-.table_weiss td, .table_weiss th { vertical-align: middle; text-align: left; }
-.table_weiss thead td, .table_weiss thead th { font-weight: bold; text-align: center; }
-.table_weiss tfoot { font-size: .9em; }
-.table_weiss tfoot td { text-align: center; border: none; }
+/* @group Table generic
+  --------------------------------------------------------------------------- */
+.table_weiss {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+  width: 100%;
+  empty-cells: hide;
+}
+.table_weiss td,
+.table_weiss th {
+  vertical-align: middle;
+  text-align: left;
+}
+.table_weiss thead td,
+.table_weiss thead th {
+  font-weight: bold;
+  text-align: center;
+}
+.table_weiss tfoot {
+  font-size: .9em;
+}
+.table_weiss tfoot td {
+  text-align: center;
+  border: none;
+}
 
 /* @end */
-/* @group Table mod: cell fixed width --------------------------------------------------------------------------- */
-.table_fixed { table-layout: fixed; word-wrap: break-word; width: auto; }
+/* @group Table mod: cell fixed width
+  --------------------------------------------------------------------------- */
+.table_fixed {
+  table-layout: fixed;
+  word-wrap: break-word;
+  width: auto;
+}
 
 /* @end */
-/* @group Table helpers --------------------------------------------------------------------------- */
-.table_weiss .table__cell_unstyled { border-color: transparent; }
-.table_weiss .table__cell_unspaced { padding: 0; }
-.table_weiss .table__cell_bd-r { border-color: transparent; border-right: 1px solid #434343; }
-.table_weiss .table__cell_bd-l { border-color: transparent; border-left: 1px solid #434343; }
-.table_weiss .table__cell_fwn { font-weight: normal; }
-.table_weiss .table__psdo-th { font-weight: bold; }
+/* @group Table helpers
+  --------------------------------------------------------------------------- */
+.table_weiss .table__cell_unstyled {
+  border-color: transparent;
+}
+.table_weiss .table__cell_unspaced {
+  padding: 0;
+}
+.table_weiss .table__cell_bd-r {
+  border-color: transparent;
+  border-right: 1px solid #434343;
+}
+.table_weiss .table__cell_bd-l {
+  border-color: transparent;
+  border-left: 1px solid #434343;
+}
+.table_weiss .table__cell_fwn {
+  font-weight: normal;
+}
+.table_weiss .table__psdo-th {
+  font-weight: bold;
+}
 
 /* @end */
-/* @group Table styling --------------------------------------------------------------------------- */
-.table_decl caption { font-size: 1.079em; line-height: 1.4299em; font-weight: bold; margin-bottom: 1em; }
-.table_decl td, .table_decl th { padding: 5px; border: 1px solid #434343; }
+/* @group Table styling
+  --------------------------------------------------------------------------- */
+.table_decl caption {
+  font-size: 1.079em;
+  line-height: 1.4299em;
+  font-weight: bold;
+  margin-bottom: 1em;
+}
+.table_decl td,
+.table_decl th {
+  padding: 5px;
+  border: 1px solid #434343;
+}
 
 /* @end */
-/* ============================================================================ Form support
+/* ============================================================================
+   Form support
 ============================================================================ */
-/* @group Forms generic reset --------------------------------------------------------------------------- */
-.form { border: none; margin: 0; }
-.form button, .form input, .form select, .form textarea { margin: 0; padding: 0; vertical-align: baseline; }
-.form input[type="button"], .form input[type="submit"], .form input[type="reset"] { -webkit-appearance: button; }
-.form input[type="checkbox"], .form input[type="radio"] { box-sizing: border-box; padding: 0; }
-.form input[type="radio"] { vertical-align: text-top; }
-.form input[type="checkbox"] { vertical-align: middle; }
-.form button[disabled], .form input[disabled] { cursor: default; }
-.form button::-moz-focus-inner, .form input::-moz-focus-inner { border: none; padding: 0; }
+/* @group Forms generic reset
+  --------------------------------------------------------------------------- */
+.form {
+  border: none;
+  margin: 0;
+}
+.form button,
+.form input,
+.form select,
+.form textarea {
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline;
+}
+.form input[type="button"], .form input[type="submit"], .form input[type="reset"] {
+  -webkit-appearance: button;
+}
+.form input[type="checkbox"], .form input[type="radio"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+.form input[type="radio"] {
+  vertical-align: text-top;
+}
+.form input[type="checkbox"] {
+  vertical-align: middle;
+}
+.form button[disabled],
+.form input[disabled] {
+  cursor: default;
+}
+.form button::-moz-focus-inner,
+.form input::-moz-focus-inner {
+  border: none;
+  padding: 0;
+}
 
 /* @end */
 /* @group Form generic themed styles
 	--------------------------------------------------------------------------- */
-.form button, .form input, .form select, .form textarea { font: 14px/18px Times New Roman, Times, FreeSerif, Nimbus Roman No9 L, serif; }
-.form label, .form .form__label { display: block; line-height: 30px; -moz-user-select: none; -webkit-user-select: none; user-select: none; font-weight: bold; }
-.form label > span, .form .form__label > span { display: inline-block; vertical-align: middle; line-height: 18px; }
-.form input[type="password"], .form input[type="search"], .form input[type="text"], .form select, .form textarea { padding: 0 14px; margin: 0; height: 30px; line-height: 30px; width: 100%; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; border: 1px solid #a4a4a4; background: #fff; color: #434343; font-style: italic; box-shadow: 0 0 15px 3px transparent; -moz-transition: box-shadow linear 0.2s; -webkit-transition: box-shadow linear 0.2s; transition: box-shadow linear 0.2s; }
-.form input[type="password"]:hover, .form input[type="search"]:hover, .form input[type="text"]:hover, .form select:hover, .form textarea:hover { border-color: #b1b1b1; }
-.form input[type="password"]:focus, .form input[type="search"]:focus, .form input[type="text"]:focus, .form select:focus, .form textarea:focus { outline: none; border-color: #bebebe; box-shadow: 0 0 0 3px #EBE66F; }
-.form textarea { overflow: auto; vertical-align: top; height: auto; min-height: 4em; line-height: 18px; padding: 5px 14px; resize: vertical; }
-.form select { display: inline-block; padding-right: 15px; height: 30px; line-height: 26px; background: #fff url("../images/bg-select-arrow.png") right center no-repeat; -webkit-appearance: none; -moz-appearance: none; -ms-appearance: none; appearance: none; }
-.form select .ie8 { padding-right: 0; }
-.form select[multiple="multiple"] { height: auto; }
+.form button,
+.form input,
+.form select,
+.form textarea {
+  font: 14px/18px Times New Roman, Times, FreeSerif, Nimbus Roman No9 L, serif;
+}
+.form label,
+.form .form__label {
+  display: block;
+  line-height: 30px;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  user-select: none;
+  font-weight: bold;
+}
+.form label > span,
+.form .form__label > span {
+  display: inline-block;
+  vertical-align: middle;
+  line-height: 18px;
+}
+.form input[type="password"],
+.form input[type="search"],
+.form input[type="text"],
+.form select,
+.form textarea {
+  padding: 0 14px;
+  margin: 0;
+  height: 30px;
+  line-height: 30px;
+  width: 100%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  border: 1px solid #a4a4a4;
+  background: #fff;
+  color: #434343;
+  font-style: italic;
+  box-shadow: 0 0 15px 3px transparent;
+  -moz-transition: box-shadow linear 0.2s;
+  -webkit-transition: box-shadow linear 0.2s;
+  transition: box-shadow linear 0.2s;
+}
+.form input[type="password"]:hover,
+.form input[type="search"]:hover,
+.form input[type="text"]:hover,
+.form select:hover,
+.form textarea:hover {
+  border-color: #b1b1b1;
+}
+.form input[type="password"]:focus,
+.form input[type="search"]:focus,
+.form input[type="text"]:focus,
+.form select:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: #bebebe;
+  box-shadow: 0 0 0 3px #EBE66F;
+}
+.form textarea {
+  overflow: auto;
+  vertical-align: top;
+  height: auto;
+  min-height: 4em;
+  line-height: 18px;
+  padding: 5px 14px;
+  resize: vertical;
+}
+.form select {
+  display: inline-block;
+  padding-right: 15px;
+  height: 30px;
+  line-height: 26px;
+  background: #fff url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA0AAAAICAYAAAAiJnXPAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wIcFSoQJ4ICygAAAGhJREFUGNO9kDEOQFAQRB9ROorWKXT6uYHWHf49Jiqlxr1EI5FoSOQHobHNTHZ2M7MLf1UiqQLChRZsd1dLGTACA5BEWn/nlNpegSbqt7aX23gHkTQBOTDbzp9uSk+83LH49BVJ9Zu5DSsxFJZO4zsDAAAAAElFTkSuQmCC') right center no-repeat;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+.form select .ie8 {
+  padding-right: 0;
+}
+.form select[multiple="multiple"] {
+  height: auto;
+}
 
 /* @end */
-/* @group Form field sets --------------------------------------------------------------------------- */
-.form fieldset { margin: 0; padding: 0; border: none; position: relative; }
-.form legend { border: none; padding: 0; display: inline; margin-bottom: 0; width: auto; }
-.form .form__set { margin: 0; padding: 20px 0 0; border: none; position: relative; }
-.form .form__set-legend { padding: 0; border: none; font: bold 22.666px "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif; }
-.form .form__set-legend span { display: block; position: absolute; top: 0; left: 0; width: 100%; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+/* @group Form field sets
+  --------------------------------------------------------------------------- */
+.form fieldset {
+  margin: 0;
+  padding: 0;
+  border: none;
+  position: relative;
+}
+.form legend {
+  border: none;
+  padding: 0;
+  display: inline;
+  margin-bottom: 0;
+  width: auto;
+}
+.form .form__set {
+  margin: 0;
+  padding: 20px 0 0;
+  border: none;
+  position: relative;
+}
+.form .form__set-legend {
+  padding: 0;
+  border: none;
+  font: bold 22.666px "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+}
+.form .form__set-legend span {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
 
 /* @end */
-/* @group Form Placeholders --------------------------------------------------------------------------- */
-.form input::-webkit-input-placeholder { font-style: italic; color: #5d5d5d; }
-.form input:-moz-placeholder { font-style: italic; color: #5d5d5d; }
-.form input::-ms-input-placeholder { font-style: italic; color: #5d5d5d; }
-.form input:focus::-webkit-input-placeholder { color: #909090; }
-.form input:focus:-moz-placeholder { color: #909090; }
-.form input:focus::-ms-input-placeholder { color: #5d5d5d; }
+/* @group Form Placeholders
+  --------------------------------------------------------------------------- */
+.form input::-webkit-input-placeholder {
+  font-style: italic;
+  color: #5d5d5d;
+}
+.form input:-moz-placeholder {
+  font-style: italic;
+  color: #5d5d5d;
+}
+.form input::-ms-input-placeholder {
+  font-style: italic;
+  color: #5d5d5d;
+}
+.form input:focus::-webkit-input-placeholder {
+  color: #909090;
+}
+.form input:focus:-moz-placeholder {
+  color: #909090;
+}
+.form input:focus::-ms-input-placeholder {
+  color: #5d5d5d;
+}
 
 /* @end */
-/* @group Form Layout --------------------------------------------------------------------------- */
-.l-form__row { display: block; margin: 10px 0; position: relative; }
+/* @group Form Layout
+  --------------------------------------------------------------------------- */
+.l-form__row {
+  display: block;
+  margin: 10px 0;
+  position: relative;
+}
 
-.l-form__item { display: block; float: left; padding: 0 5px 0 0; line-height: 30px; position: relative; }
+.l-form__item {
+  display: block;
+  float: left;
+  padding: 0 5px 0 0;
+  line-height: 30px;
+  position: relative;
+}
 
-.l-form__item_w-30 { width: 30px; }
+.l-form__item_w-30 {
+  width: 30px;
+}
 
-.l-form__item_w-100 { width: 100px; }
+.l-form__item_w-100 {
+  width: 100px;
+}
 
-.l-form__item_w-p50 { width: 48%; }
+.l-form__item_w-p50 {
+  width: 48%;
+}
 
-table.l-form__row { border-collapse: collapse; border-spacing: 0; border-width: 0; }
-.ie6-7 table.l-form__row { display: table-row; }
+table.l-form__row {
+  border-collapse: collapse;
+  border-spacing: 0;
+  border-width: 0;
+}
+.ie6-7 table.l-form__row {
+  display: table-row;
+}
 
-td.l-form__item { float: none; vertical-align: middle; }
+td.l-form__item {
+  float: none;
+  vertical-align: middle;
+}
 
-.form fieldset.l-form__row { margin: 10px 0; }
-.form legend.l-form__item { padding: 0 5px 0 0; }
+.form fieldset.l-form__row {
+  margin: 10px 0;
+}
+.form legend.l-form__item {
+  padding: 0 5px 0 0;
+}
 
 /* @end */
-/* @group Form Elements --------------------------------------------------------------------------- */
-.form__notes { font-size: .8em; }
+/* @group Form Elements
+  --------------------------------------------------------------------------- */
+.form__notes {
+  font-size: .8em;
+}
 
-.form__req-sign { color: red; }
+.form__req-sign {
+  color: red;
+}
 
-.i-inputs_disabled { color: #ccc; }
-.i-inputs_disabled input, .i-inputs_disabled select, .i-inputs_disabled textarea { opacity: 0.3; }
+.i-inputs_disabled {
+  color: #ccc;
+}
+.i-inputs_disabled input,
+.i-inputs_disabled select,
+.i-inputs_disabled textarea {
+  opacity: 0.3;
+}
 
 /* @end */
-/* ============================================================================= Stylization
+/* =============================================================================
+    Stylization
 ============================================================================= */
-.l-form__item_lined { border-bottom: 1px solid #434343; margin-bottom: 3px; }
+.l-form__item_lined {
+  border-bottom: 1px solid #434343;
+  margin-bottom: 3px;
+}
 
-.l-form__row_submit_right { text-align: right; }
+.l-form__row_submit_right {
+  text-align: right;
+}
 
-/* @group form__input-w-ico --------------------------------------------------------------------------- */
-.form__input-w-ico { display: block; position: relative; }
+/* @group form__input-w-ico
+  --------------------------------------------------------------------------- */
+.form__input-w-ico {
+  display: block;
+  position: relative;
+}
 
-.form__input-w-ico__ico { position: absolute; top: 2px; right: 4px; bottom: 1px; z-index: 5; padding: 0 10px 0 20px; line-height: 30px; text-align: center; }
-.form__input-w-ico__ico .i-ico { vertical-align: text-top; }
+.form__input-w-ico__ico {
+  position: absolute;
+  top: 2px;
+  right: 4px;
+  bottom: 1px;
+  z-index: 5;
+  padding: 0 10px 0 20px;
+  line-height: 30px;
+  text-align: center;
+}
+.form__input-w-ico__ico .i-ico {
+  vertical-align: text-top;
+}
 
 /* @end */
-/* @group form__input-act --------------------------------------------------------------------------- */
-.form__input-act { padding: 0 8px; top: 0; right: -55px; bottom: auto; background-color: #fff; border-radius: 3px; box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5); display: none; }
-.form__input-act:before { content: ' '; width: 0; height: 0; border-style: solid; border-width: 10px 10px 10px 0; border-color: transparent #fff transparent transparent; position: absolute; left: -6px; top: 50%; margin-top: -10px; }
-.form__input-act label.i-ico { display: inline-block; width: 15px; height: 15px; margin-left: 3px; cursor: pointer; opacity: .4; }
-.form__input-act label.i-ico input { border: none; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; }
+/* @group form__input-act
+  --------------------------------------------------------------------------- */
+.form__input-act {
+  padding: 0 8px;
+  top: 0;
+  right: -55px;
+  bottom: auto;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5);
+  display: none;
+}
+.form__input-act:before {
+  content: ' ';
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px 10px 10px 0;
+  border-color: transparent #fff transparent transparent;
+  position: absolute;
+  left: -6px;
+  top: 50%;
+  margin-top: -10px;
+}
+.form__input-act label.i-ico {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  margin-left: 3px;
+  cursor: pointer;
+  opacity: .4;
+}
+.form__input-act label.i-ico input {
+  border: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+}
 
-input:focus + .form__input-act, select:focus + .form__input-act, textarea:focus + .form__input-act { display: block; }
-input:focus + .form__input-act label.i-ico:hover, select:focus + .form__input-act label.i-ico:hover, textarea:focus + .form__input-act label.i-ico:hover { opacity: 1; }
+input:focus + .form__input-act,
+select:focus + .form__input-act,
+textarea:focus + .form__input-act {
+  display: block;
+}
+input:focus + .form__input-act label.i-ico:hover,
+select:focus + .form__input-act label.i-ico:hover,
+textarea:focus + .form__input-act label.i-ico:hover {
+  opacity: 1;
+}
 
-.form__input-act:hover { display: block; }
+.form__input-act:hover {
+  display: block;
+}
 
-.js-ico-checked { opacity: 1 !important; }
+.js-ico-checked {
+  opacity: 1 !important;
+}
 
-.form__input-act_hidden input, .form__input-act_hidden select, .form__input-act_hidden textarea { background: url("../images/icons/ico-hidden.png") right center no-repeat !important; }
+.form__input-act_hidden input,
+.form__input-act_hidden select,
+.form__input-act_hidden textarea {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wIIEDoB3kAySgAAAQtJREFUKM+d0r8rxWEUBvCP6978jgwSGSySzT/ARJLFIhnYhMmfYDT4C0jZxcRqIZuSX1luJKWwSUTu13LU2+1S7qlTb89z3uc87zkv1GMUjf4ZNejEBY4wiVbMowN5fOEGB7iqJNKD54RcR5ZkCR/YqXS5H09RuBeOetGM9sBKwT9EM8LeXVmnk+AGsRbnrYS/REsOS4nSOxbQhluc4Q2L2A4eBjANxUTxJemW4RA5dGMo+CzhTCTAJ2bQl2DXqMNYMrwsxOSxkRQfh+0adMWaHsPuXNSsptNuwmYiUMQyprAS2DkaMP7bhxrGftnk07wPp39GLr7sLEZQiwJO8RrPqSp2f9ZUTRTCmW9M1VPJE9NvwgAAAABJRU5ErkJggg==') right center no-repeat !important;
+}
 
-.form__input-act_unclear input, .form__input-act_unclear select, .form__input-act_unclear textarea { background: url("../images/icons/ico-unclear.png") right center no-repeat !important; }
+.form__input-act_unclear input,
+.form__input-act_unclear select,
+.form__input-act_unclear textarea {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAAOCAYAAADwikbvAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wIIEDkzPbowCQAAAONJREFUKM+t0itOg1EQBeCP0hCSCkAieBSFRNTXsIUSElbBBrBViEokgsAGMIRgMJWYChYArQGSpiEFkrZmmvy5+S8COmYm587jnDvDP2ypEDdwgj30cBUeWtjGCNcYpo0+cYk2nvCDg3h7xBTv2C1jsYHlYFNHP5rBfRS/YGdeUC0UfxTicSQPf9NcyeAdrISErFVLsFs0cYjXwOYMRvjONTsKuscJfh54F2s52vvhbxL8OSYOYiuldoq3vx7NOraS44GL2P0dNnPFZ/EpqZyH0DwoHkmatIpayeSv0DzGxCJsBrLZL/nJo0AjAAAAAElFTkSuQmCC') right center no-repeat !important;
+}
 
 /* @end */
-/* @group Form Fieldsets --------------------------------------------------------------------------- */
-.form_declaration { margin: 20px auto; background: white; padding: 10px 20px; width: 850px; font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif; color: #434343; }
+/* @group Form Fieldsets
+  --------------------------------------------------------------------------- */
+.form_declaration {
+  margin: 20px auto;
+  background: white;
+  padding: 10px 20px;
+  width: 850px;
+  font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+  color: #434343;
+}
 
-.form .form__set.form__set_paper { padding: 25px 0 0; margin: 1em 0; }
-.form .form__set-legend span { font-size: 15.106px; font-weight: bold; }
-.form .form__set_main.form__set_paper { padding: 40px 10px 10px; border: 1px solid #434343; }
-.form .form__set_main.form__set_paper > .form__set-legend span { font-size: 15.106px; line-height: 26px; border-bottom: 1px solid #434343; text-align: center; }
+.form .form__set.form__set_paper {
+  padding: 25px 0 0;
+  margin: 1em 0;
+}
+.form .form__set-legend span {
+  font-size: 15.106px;
+  font-weight: bold;
+}
+.form .form__set_main.form__set_paper {
+  padding: 40px 10px 10px;
+  border: 1px solid #434343;
+}
+.form .form__set_main.form__set_paper > .form__set-legend span {
+  font-size: 15.106px;
+  line-height: 26px;
+  border-bottom: 1px solid #434343;
+  text-align: center;
+}
 
-.form__set_paper input[type="password"], .form__set_paper input[type="search"], .form__set_paper input[type="text"], .form__set_paper select, .form__set_paper textarea { border-color: transparent; }
-.form__set_paper input[type="password"]:hover, .form__set_paper input[type="search"]:hover, .form__set_paper input[type="text"]:hover, .form__set_paper select:hover, .form__set_paper textarea:hover { border-color: #d7d7d7; }
-.form__set_paper textarea { height: 30px; min-height: 30px; }
-.form__set_paper .form__label { font-size: 15.106px; font-weight: bold; }
+.form__set_paper input[type="password"],
+.form__set_paper input[type="search"],
+.form__set_paper input[type="text"],
+.form__set_paper select,
+.form__set_paper textarea {
+  border-color: transparent;
+}
+.form__set_paper input[type="password"]:hover,
+.form__set_paper input[type="search"]:hover,
+.form__set_paper input[type="text"]:hover,
+.form__set_paper select:hover,
+.form__set_paper textarea:hover {
+  border-color: #d7d7d7;
+}
+.form__set_paper textarea {
+  height: 30px;
+  min-height: 30px;
+}
+.form__set_paper .form__label {
+  font-size: 15.106px;
+  font-weight: bold;
+}
 
-textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 0 19px repeat; min-height: 5em; }
+textarea.form__textarea_lined {
+  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAUCAYAAABMDlehAAAABmJLR0QA/wD/AP+gvaeTAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAB3RJTUUH3wIHEgg5QNUanQAAAB1pVFh0Q29tbWVudAAAAAAAQ3JlYXRlZCB3aXRoIEdJTVBkLmUHAAAADUlEQVQI12NgoDn4DwABYwEAG9aaMQAAAABJRU5ErkJggg==') 0 19px repeat;
+  min-height: 5em;
+}
 
-.form__set_notes.form__set { font-family: Arial, FreeSans, sans-serif; background-color: lightyellow; padding: 20px; }
+.form__set_notes.form__set {
+  font-family: Arial, FreeSans, sans-serif;
+  background-color: lightyellow;
+  padding: 20px;
+}
 
 /* @end */
 /* ============================================================================
 		INCLUDE CLASSES A
 ============================================================================= */
-.i-clfx:before, .l-form__row:before, .i-clfx:after, .l-form__row:after { content: ""; display: table; }
-.i-clfx:after, .l-form__row:after { clear: both; }
-.ie6-7 .i-clfx, .ie6-7 .l-form__row { zoom: 1; }
+.i-clfx:before, .l-form__row:before, .i-clfx:after, .l-form__row:after {
+  content: "";
+  display: table;
+}
+.i-clfx:after, .l-form__row:after {
+  clear: both;
+}
+.ie6-7 .i-clfx, .ie6-7 .l-form__row {
+  zoom: 1;
+}
 
-.i-wai { border: none; clip: rect(1px, 1px, 1px, 1px); width: 1px; height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute !important; }
+.i-wai {
+  border: none;
+  clip: rect(1px, 1px, 1px, 1px);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute !important;
+}
 
-/* @group i-psln --------------------------------------------------------------------------- */
-.i-psln { color: #09f; text-decoration: none; border-bottom: 1px dashed; position: relative; cursor: pointer; }
-.i-psln:hover, .i-psln:focus { color: #4db8ff; }
+/* @group i-psln
+  --------------------------------------------------------------------------- */
+.i-psln {
+  color: #09f;
+  text-decoration: none;
+  border-bottom: 1px dashed;
+  position: relative;
+  cursor: pointer;
+}
+.i-psln:hover, .i-psln:focus {
+  color: #4db8ff;
+}
 
 /* @end */
-/* @group i-img-container --------------------------------------------------------------------------- */
-.i-img-aux { overflow: hidden; display: inline-block; vertical-align: top; }
-.ie6-7 .i-img-aux { display: inline; zoom: 1; }
-.i-img-aux img { line-height: 1px; position: static; }
+/* @group i-img-container
+  --------------------------------------------------------------------------- */
+.i-img-aux {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: top;
+}
+.ie6-7 .i-img-aux {
+  display: inline;
+  zoom: 1;
+}
+.i-img-aux img {
+  line-height: 1px;
+  position: static;
+}
 
 /* @end */
 </style>
@@ -439,7 +939,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
-						<option value="unspecified" selected="">Область</option>
+						<option value="unspecified" selected="" disabled="">Область</option>
 						<option value="nodata">Немає данних</option>
 							<option value="kiev">Київ</option>
 							<option value="1">Івано-Франківська область</option>
@@ -480,7 +980,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
 					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="">Тип населенного пункту</option>
+						<option value="" selected="" disabled="">Тип населенного пункту</option>
 						<option value="nodata">Немає данних</option>
 						<option value="city">Місто</option>
 						<option value="pgt">ПГТ</option>
@@ -494,7 +994,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<div class="l-form__item l-form__item_lined">
 					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
 					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="">Тип адреси</option>
+						<option value="" selected="" disabled="">Тип адреси</option>
 						<option value="nodata">Немає данних</option>
 						<option value="registration">Адреса реестрації</option>
 						<option value="actual">Фактична адреса</option>
@@ -518,7 +1018,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 			<div class="l-form__item l-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="">Область</option>
+					<option value="unspecified" selected="" disabled="">Область</option>
 					<option value="nodata">Немає данних</option>
 						<option value="kiev">Київ</option>
 						<option value="1">Івано-Франківська область</option>
@@ -1140,7 +1640,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 					</div>
 					<div class="l-form__row">
 						<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
-							<option value="usd">долл.</option>
+							<option value="usd" selected="">долл.</option>
 							<option value="eur">евро</option>
 							<option value="gbp">фунти стерлінгів</option>
 							<option value="other">інша</option>
@@ -1218,7 +1718,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 					</div>
 					<div class="l-form__row">
 						<select id="income__22_family__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
-							<option value="usd">долл.</option>
+							<option value="usd" selected="">долл.</option>
 							<option value="eur">евро</option>
 							<option value="gbp">фунти стерлінгів</option>
 							<option value="other">інша</option>
@@ -1318,7 +1818,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__23__region" name="estate[23][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1412,7 +1912,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__24__region" name="estate[24][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1497,7 +1997,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__25__region" name="estate[25][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1582,7 +2082,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__26__region" name="estate[26][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1667,7 +2167,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__27__region" name="estate[27][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1752,7 +2252,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__28__region" name="estate[28][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1886,7 +2386,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__29__region" name="estate[29][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -1980,7 +2480,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__30__region" name="estate[30][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -2065,7 +2565,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__31__region" name="estate[31][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -2150,7 +2650,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__32__region" name="estate[32][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -2235,7 +2735,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__33__region" name="estate[33][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -2320,7 +2820,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 				<td>
 					<div class="l-form__row">
 						<select id="estate__34__region" name="estate[34][][region]" data-inp-act="hidden,unclear">
-							<option value="unspecified" selected="">Місцезнаходження об’єкта</option>
+							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
 								<option value="kiev">Київ</option>
 								<option value="1">Івано-Франківська область</option>
@@ -4401,7 +4901,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__45__sum_units" name="banks[45][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4425,7 +4925,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__45__sum_foreign_units" name="banks[45][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4461,7 +4961,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__46__sum_units" name="banks[46][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4481,7 +4981,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__46__sum_foreign_units" name="banks[46][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4517,7 +5017,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__47__sum_units" name="banks[47][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4537,7 +5037,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__47__sum_foreign_units" name="banks[47][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4573,7 +5073,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__48__sum_units" name="banks[48][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4593,7 +5093,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__48__sum_foreign_units" name="banks[48][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4629,7 +5129,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__49__sum_units" name="banks[49][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4649,7 +5149,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__49__sum_foreign_units" name="banks[49][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4685,7 +5185,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__50__sum_units" name="banks[50][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4705,7 +5205,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__50__sum_foreign_units" name="banks[50][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4778,7 +5278,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__51__sum_units" name="banks[51][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4802,7 +5302,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__51__sum_foreign_units" name="banks[51][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4838,7 +5338,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__52__sum_units" name="banks[52][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4858,7 +5358,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__52__sum_foreign_units" name="banks[52][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4894,7 +5394,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__53__sum_units" name="banks[53][][sum_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
@@ -4914,7 +5414,7 @@ textarea.form__textarea_lined { background: url(../images/bg-form-textarea.png) 
 						</div>
 						<div class="l-form__item l-form__item_w-p50">
 							<select id="banks__53__sum_foreign_units" name="banks[53][][sum_foreign_units]" data-inp-act="hidden,unclear">
-								<option value="uah">грн.</option>
+								<option value="uah" selected="">грн.</option>
 								<option value="usd">долл.</option>
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
