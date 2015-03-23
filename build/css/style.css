@@ -391,6 +391,23 @@ dd {
 }
 
 /* @end */
+.declaration-action {
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin: 0 0 20px;
+  padding: 20px 20px 10px;
+  text-align: center;
+  font-family: Arial, FreeSans, sans-serif;
+}
+.declaration-action p {
+  margin: 0 0 10px;
+}
+
+.declaration-action_head {
+  font-weight: bold;
+  font-size: 1.4em;
+}
+
 /* ============================================================================
    Generic button
 ============================================================================ */

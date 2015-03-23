@@ -172,3 +172,26 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 }
 
 /* @end */
+
+// @group declaration-action
+//------------------------------------------------------------------------------
+
+.declaration-action {
+	border: 2px solid #ccc;
+	border-radius: 4px;
+	margin: 0 0 20px;
+	padding: 20px 20px 10px;
+	text-align: center;
+	font-family: $sans;
+	
+	p {
+		margin: 0 0 10px;
+	}
+}
+
+.declaration-action_head {
+	font-weight: bold;
+	font-size: 1.4em;
+}
+
+// @end

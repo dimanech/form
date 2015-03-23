@@ -156,12 +156,12 @@ a:hover, a:active {
 		Layout: global
 ============================================================================= */
 .l-main-aux__inner, .l-global-header, .l-global-footer__inner {
-  width: 59em;
+  width: 890px;
   margin: 0 auto;
 }
 
 body {
-  min-width: 59em;
+  min-width: 890px;
 }
 
 .l-main-aux {

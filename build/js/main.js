@@ -14921,6 +14921,25 @@ scripts.Common = {
 		]
 	},
 
+	vulikEventsHandling: function () {
+		var $form =$('#form-declaration');
+
+		$(document.body).on("vulyk.next", function (data) {
+
+			$('.js-declaration-pdf').attr('href', data);
+			$form.reset().validate().resetForm();
+
+		}).on("vulyk.save", function (callback) {
+
+			callback($form.serializeJSON());
+
+		}).on("vulyk.skip", function (callback) {
+
+			callback();
+
+		});
+	},
+
 	testJSON: function () {
 		var form =$('#form-declaration');
 
@@ -14950,7 +14969,8 @@ scripts.Common = {
 			scripts.addAutoComplete("#vehicle__36__brand", scripts.autocompliteData.trucks);
 			scripts.addAutoComplete("#vehicle__37__brand", scripts.autocompliteData.boats);
 			scripts.addAutoComplete("#vehicle__39__brand", scripts.autocompliteData.motos);
-			scripts.testJSON();
+			scripts.vulikEventsHandling();
+			//scripts.testJSON();
 		});
 
 		return scripts;
