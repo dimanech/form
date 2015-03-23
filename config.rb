@@ -12,7 +12,7 @@ end
 # Page options, layouts, aliases and proxies
 ################################################################################
 
-with_layout :main do
+with_layout :blank do
   page "*"
 end
 
