@@ -173,6 +173,9 @@ $formColor: $baseColor;
 	legend {
 		border: none; // Corrects color not being inherited in IE 8/9.
 		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+		display: inline;
+		margin-bottom: 0;
+		width: auto;
 	}
 
 	// Generic
@@ -457,7 +460,12 @@ textarea {
   --------------------------------------------------------------------------- */
 
 .form_declaration {
-	margin: 20px 0;
+	margin: 20px auto;
+	background: white;
+	padding: 10px 20px;
+	width: 850px;
+	font-family: $baseFontFamily;
+	color: $baseColor;
 }
 
 .form {

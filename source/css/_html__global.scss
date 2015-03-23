@@ -19,9 +19,6 @@ html {
 body {
 	font-size: $base-font-size;
 	@include adjust-leading-to(1);
-	font-family: $baseFontFamily;
-	color: $baseColor;
-	background: $mainBgColor;
 	margin: 0;	// Removes default margin.
 }
 
