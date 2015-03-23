@@ -59,7 +59,7 @@ end
 
 configure :build do
     compass_config do |config|
-        config.output_style = :compressed
+        # config.output_style = :compressed
         config.sass_options = {:debug_info => false}
         config.sass_options = {:line_comments => false}
     end

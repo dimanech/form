@@ -8,7 +8,7 @@
 /* @group Table generic
   --------------------------------------------------------------------------- */
 
-.table {
+.table_weiss {
 	border-collapse: collapse;	//Remove most spacing between table cells.
 	border-spacing: 0;	//Remove most spacing between table cells.
 	border-width: 0;
@@ -55,7 +55,7 @@
 /* @group Table helpers
   --------------------------------------------------------------------------- */
 
-.table { // overwrite specifity
+.table_weiss { // overwrite specifity
 
 	.table__cell_unstyled {
 		border-color: transparent;
