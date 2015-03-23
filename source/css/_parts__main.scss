@@ -9,9 +9,13 @@
   --------------------------------------------------------------------------- */
 $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
-.i-ico {
+.i-ico-extend {
 	background: inline-sprite($icons-map);
 	background-repeat: no-repeat;
+}
+
+.i-ico {
+	@extend .i-ico-extend;
 	display: inline-block;
 	vertical-align: top;
 }

@@ -438,7 +438,8 @@ textarea {
 	opacity: 1 !important;
 }
 
-.form__input-act_hidden {
+.form__input-act_hidden,
+.form__input-act_unclear {
 	input,
 	select,
 	textarea {
@@ -451,6 +452,14 @@ textarea {
 	select,
 	textarea {
 		background: inline-image('../images/icons/ico-unclear.png') right center no-repeat !important;
+	}
+}
+
+.form__input-act_hidden.form__input-act_unclear {
+	input,
+	select,
+	textarea {
+		background: inline-image('../images/icons/ico-unclear.png') right top no-repeat, inline-image('../images/icons/ico-hidden.png') right bottom no-repeat !important;
 	}
 }
 

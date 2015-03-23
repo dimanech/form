@@ -237,9 +237,12 @@ dd {
 ============================================================================= */
 /* @group Global sprite
   --------------------------------------------------------------------------- */
-.i-ico {
+.i-ico-extend, .i-ico {
   background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA8AAAA6CAQAAADFaMvfAAAB8ElEQVR42u2VS0hVURSGPy8bFYpyEKJEEZqgoqT0MoiaONFqYJEW4oMeQhJmRA5y0FAcRTRKhCzIBEUHFqQDUVEJHyiIgjQwELymkGhm17paf9tz7z1Kt3GDuzb7sM/691rrX+vAfwyxnGOAdf5qhjiaBRewnwri9b7JLD1MB+AFshlninSOctv6fuGnkyvbMOyRI423XKKOJaJ5RT6X8XKKOaOE3RzQpQuMclyZirlIE2Uk8J4cQyWHBPqopoZPJCvuDq0UiXI61wwltp6fYTp4QC/nSdQlv/WWGu6JBrqbRoPgs+J8jEz2ik8UtUYVGrklindFyKPIQebEp1z16+k3SlMt9w3OMMYz5nnJYybFekmFbGPfuKlmahT9xBlWBh858qe+cRx9Wh5y1Y5XM/MwwgopzBvXgLc0gW3bJIt2fYsWQzgr0iXCwz8DM/+HReAIHIH/A/iExC5JwvlaG65ymDXesBqA+yV009KWh5xkgirJ1zJdIfigjlvStSHuSy435PkuXQsmX7ZPn1yr4ak9lRrXhYPfSU1zJXvYDGv8cMOFInadD/Y8a8utu+FU7RbnPKPIhZ3wV74EyzRo7ar9gjYJtG2G55xmUQ16Q3CVJHefA6dI0T8T446O1Q8nyjlvqLZPY3LBj7QClhfq+zec24Vya8n6YgAAAABJRU5ErkJggg==');
   background-repeat: no-repeat;
+}
+
+.i-ico {
   display: inline-block;
   vertical-align: top;
 }
