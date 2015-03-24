@@ -223,7 +223,7 @@ scripts.Common = {
 	},
 
 	autocompliteData: {
-		// Temporary we moved autocomplite data here
+		// Autocomplite data temporary moved here
 		"boats": [
 			"Maker Model",
 			"Mercury 10M",
@@ -14924,18 +14924,17 @@ scripts.Common = {
 	vulikEventsHandling: function () {
 		var $form =$('#form-declaration');
 
-		$(document.body).on("vulyk.next", function (data) {
+		$(document.body).on('click', '.js-vulik-next', function (e) {
+			e.preventDefault();
 
-			$('.js-declaration-pdf').attr('href', data);
-			$form.reset().validate().resetForm();
+			$('.js-declaration-pdf').attr('href', 'next-url');
 
-		}).on("vulyk.save", function (callback) {
+			$form[0].reset();
+			$form.validate().resetForm();
 
-			callback($form.serializeJSON());
+		}).on('submit', $form, function () {
 
-		}).on("vulyk.skip", function (callback) {
-
-			callback();
+			$form.serializeJSON();
 
 		});
 	},
