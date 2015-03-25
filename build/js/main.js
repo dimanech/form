@@ -14931,7 +14931,7 @@ scripts.Common = {
 	vulikEventsHandling: function () {
 		var $form =$('#form-declaration');
 
-		$this.$cache.body.on('click', '.js-vulik-next', function (e) {
+		this.$cache.body.on('click', '.js-vulik-next', function (e) {
 			e.preventDefault();
 
 			$('.js-declaration-pdf').attr('href', 'next-url');
