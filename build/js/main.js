@@ -2,8 +2,19 @@
 var scripts = scripts || {};
 
 scripts.Common = {
+
+	initializeCache: function() {
+
+		var $cache = {};
+
+		$cache.html = $('html');
+		$cache.body = $('body');
+
+		this.$cache = $cache;
+	},
+
 	detecting: function () {
-		$('html').removeClass('no-js');
+		this.$cache.html.removeClass('no-js');
 	},
 
 	isModernBrowser: function () {
@@ -75,7 +86,7 @@ scripts.Common = {
 			});
 		});
 
-		$(".form__input-act input[type='checkbox']").on('click', function() {
+		$('body').on('click', ".form__input-act input[type='checkbox']", function() {
 			var self = $(this);
 
 			self.parent().toggleClass('js-ico-checked');
@@ -116,10 +127,6 @@ scripts.Common = {
 			defaultRender: true,
 			preserveChildCount: true
 		});
-
-		//$clonewrapper.on( 'clone_clone', function() {
-		//
-		//});
 	},
 
 	addAutoComplete: function(elem, source) {
@@ -188,14 +195,14 @@ scripts.Common = {
 			current = 0,
 			content = $('.js-tab-content');
 
-		form.on('reset', function () {
+		this.$cache.body.on('reset', form, function () {
 			form.validate().resetForm();
 		});
 
 		content.hide();
 		$(content[0]).show();
 
-		$(".js-section-go").on('click', function(e) {
+		this.$cache.body.on('click', '.js-section-go', function(e) {
 			if (!$(this).is('[type="reset"]')) {
 				e.preventDefault();
 			}
@@ -14924,7 +14931,7 @@ scripts.Common = {
 	vulikEventsHandling: function () {
 		var $form =$('#form-declaration');
 
-		$(document.body).on('click', '.js-vulik-next', function (e) {
+		$this.$cache.body.on('click', '.js-vulik-next', function (e) {
 			e.preventDefault();
 
 			$('.js-declaration-pdf').attr('href', 'next-url');
@@ -14953,9 +14960,10 @@ scripts.Common = {
 	init: function () {
 		var scripts = this;
 
+		scripts.initializeCache();
 		scripts.detecting();
 
-		$(function () {
+		$(function () { // DOM Ready
 			scripts.jqueryValidateInit();
 			scripts.toggleFormSection();
 			scripts.inputActions();
