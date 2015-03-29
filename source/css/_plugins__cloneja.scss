@@ -3,10 +3,9 @@
 
 // Even if the first row has deleted, the user should still be able to see the row number
 .js-clone-wrapper {
-
-  tr + tr .weiss-table__cell_bd-r span {
-    display: none;
-  }
+	tr + tr .weiss-table__cell_bd-r span {
+		display: none;
+	}
 }
 
 /* @end */

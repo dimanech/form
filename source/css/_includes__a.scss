@@ -2,31 +2,31 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-		INCLUDE CLASSES A
+	INCLUDE CLASSES A
 ============================================================================= */
 
 .i-clfx {
-  @include i-clfx;
+	@include i-clfx;
 }
 
 .i-wai {
-  @include i-hide_vis;
+	@include i-hide_vis;
 }
 
 /* @group i-psln
   --------------------------------------------------------------------------- */
 
 .i-psln {
-  position: relative;
-  cursor: pointer;
-  text-decoration: none;
-  color: $lnColor;
-  border-bottom: 1px dashed;
+	position: relative;
+	cursor: pointer;
+	text-decoration: none;
+	color: $lnColor;
+	border-bottom: 1px dashed;
 
-  &:hover,
-  &:focus {
-    color: $lnHoverColor;
-  }
+	&:hover	,
+	&:focus {
+		color: $lnHoverColor;
+	}
 }
 
 /* @end */
@@ -35,20 +35,20 @@
   --------------------------------------------------------------------------- */
 
 .i-img-aux {
-  display: inline-block;
-  // image wrapper
-  overflow: hidden;
-  vertical-align: top;
+	display: inline-block;
+	// image wrapper
+	overflow: hidden;
+	vertical-align: top;
 
-  .ie6-7 & {
-    display: inline;
-    zoom: 1;
-  }
+	.ie6-7 & {
+		display: inline;
+		zoom: 1;
+	}
 
-  img {
-    line-height: 1px;
-    position: static;
-  }
+	img {
+		line-height: 1px;
+		position: static;
+	}
 }
 
 /* @end */

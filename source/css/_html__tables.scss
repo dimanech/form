@@ -9,35 +9,35 @@
   --------------------------------------------------------------------------- */
 
 .weiss-table {
-  width: 100%;
-  empty-cells: hide;
-  border-spacing: 0; //Remove most spacing between table cells.
-  border-collapse: collapse; //Remove most spacing between table cells.
-  border-width: 0;
-  margin-bottom: 15px;
+	width: 100%;
+	margin-bottom: 15px;
+	empty-cells: hide;
+	border-spacing: 0; //Remove most spacing between table cells.
+	border-collapse: collapse; //Remove most spacing between table cells.
+	border-width: 0;
 
-  td,
-  th {
-    text-align: left;
-    vertical-align: middle;
-  }
+	td	,
+	th {
+		text-align: left;
+		vertical-align: middle;
+	}
 
-  thead {
-    td,
-    th {
-      font-weight: bold;
-      text-align: center;
-    }
-  }
+	thead {
+		td	,
+		th {
+			font-weight: bold;
+			text-align: center;
+		}
+	}
 
-  tfoot {
-    font-size: .9em;
+	tfoot {
+		font-size: .9em;
 
-    td {
-      text-align: center;
-      border: none;
-    }
-  }
+		td {
+			text-align: center;
+			border: none;
+		}
+	}
 }
 
 /* @end */
@@ -46,9 +46,9 @@
   --------------------------------------------------------------------------- */
 
 .weiss-table_fixed {
-  width: auto;
-  table-layout: fixed;
-  word-wrap: break-word;
+	width: auto;
+	table-layout: fixed;
+	word-wrap: break-word;
 }
 
 /* @end */
@@ -57,33 +57,34 @@
   --------------------------------------------------------------------------- */
 
 .weiss-table {
-  // overwrite specifity
+	// overwrite specifity
 
-  .weiss-table__cell_unstyled {
-    border-color: transparent;
-  }
+	.weiss-table__cell_unstyled {
+		border-color: transparent;
+	}
 
-  .weiss-table__cell_unspaced {
-    padding: 0;
-  }
+	.weiss-table__cell_unspaced {
+		padding: 0;
+	}
 
-  .weiss-table__cell_bd-r { // see styles in cloneja for specific behaviour with plugin
-    border-color: transparent;
-    border-right: 1px solid $baseColor;
-  }
+	.weiss-table__cell_bd-r {
+		// see styles in cloneja for specific behaviour with plugin
+		border-color: transparent;
+		border-right: 1px solid $baseColor;
+	}
 
-  .weiss-table__cell_bd-l {
-    border-color: transparent;
-    border-left: 1px solid $baseColor;
-  }
+	.weiss-table__cell_bd-l {
+		border-color: transparent;
+		border-left: 1px solid $baseColor;
+	}
 
-  .weiss-table__cell_fwn {
-    font-weight: normal;
-  }
+	.weiss-table__cell_fwn {
+		font-weight: normal;
+	}
 
-  .weiss-table__psdo-th {
-    font-weight: bold;
-  }
+	.weiss-table__psdo-th {
+		font-weight: bold;
+	}
 }
 
 /* @end */
@@ -92,17 +93,17 @@
   --------------------------------------------------------------------------- */
 
 .weiss-table_decl {
-  caption {
-    @include adjust-font-size-to($h5-font-size, 1.2);
-    font-weight: bold;
-    margin-bottom: 1em;
-  }
+	caption {
+		@include adjust-font-size-to($h5-font-size, 1.2);
+		font-weight: bold;
+		margin-bottom: 1em;
+	}
 
-  td,
-  th {
-    padding: 5px;
-    border: 1px solid $baseColor;
-  }
+	td	,
+	th {
+		padding: 5px;
+		border: 1px solid $baseColor;
+	}
 }
 
 /* @end */

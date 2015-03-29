@@ -2,32 +2,32 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-		GLOBAL
+	GLOBAL
 ============================================================================= */
 
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-nav,
+article	,
+aside	,
+details	,
+figcaption	,
+figure	,
+footer	,
+header	,
+hgroup	,
+nav	,
 section {
-  display: block;
-  // Corrects `block` display not defined in IE 9.
+	display: block;
+	// Corrects `block` display not defined in IE 9.
 }
 
 html {
-  -webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
-  -ms-text-size-adjust: 100%;
+	-webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
+	-ms-text-size-adjust: 100%;
 }
 
 body {
-  @include adjust-leading-to(1);
-  font-size: $base-font-size;
-  margin: 0;	// Removes default margin.
+	@include adjust-leading-to(1);
+	font-size: $base-font-size;
+	margin: 0;	// Removes default margin.
 }
 
 ///* @group selection fixes

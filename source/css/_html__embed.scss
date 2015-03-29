@@ -2,18 +2,18 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-   Embed content
+	Embed content
 ============================================================================= */
 
 img {
-  font-size: 1em;
-  color: $baseColor;
-  // alt text style
+	font-size: 1em;
+	color: $baseColor;
+	// alt text style
 
-  a & {
-    border: none;
-    // remove border if in <a> elem
-  }
+	a & {
+		border: none;
+		// remove border if in <a> elem
+	}
 }
 
 //@media #{$media-grace-mobile} {
@@ -31,5 +31,5 @@ img {
 //}
 
 figure {
-  margin: 0;
+	margin: 0;
 }

@@ -2,7 +2,7 @@
 @import "weiss__mixins";
 
 /* ============================================================================
-   Form support
+	Form support
 ============================================================================ */
 
 $inputPadding: 14px;
@@ -15,51 +15,51 @@ $formColor: $baseColor;
   --------------------------------------------------------------------------- */
 
 .weiss-form {
-  margin: 0; // IE7
-  border: none;
+	margin: 0; // IE7
+	border: none;
 
-  button,
-  input,
-  select,
-  textarea {
-    margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
-    padding: 0;
-    vertical-align: baseline;
-  }
+	button	,
+	input	,
+	select	,
+	textarea {
+		margin: 0; // Addresses margins set differently in Firefox 4+, Safari 5, and Chrome
+		padding: 0;
+		vertical-align: baseline;
+	}
 
-  input {
-    &[type="button"],
-    &[type="submit"],
-    &[type="reset"] {
-      -webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
-    }
+	input {
+		&[type="button"]	,
+		&[type="submit"]	,
+		&[type="reset"] {
+			-webkit-appearance: button; //Corrects inability to style clickable 'input' types in iOS
+		}
 
-    &[type="checkbox"],
-    &[type="radio"] {
-      box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
-      padding: 0; // Removes excess padding in IE 8/9.
-    }
+		&[type="checkbox"]	,
+		&[type="radio"] {
+			box-sizing: border-box; // Addresses box sizing set to `content-box` in IE 8/9.
+			padding: 0; // Removes excess padding in IE 8/9.
+		}
 
-    &[type="radio"] {
-      vertical-align: text-top;
-    }
+		&[type="radio"] {
+			vertical-align: text-top;
+		}
 
-    &[type="checkbox"] {
-      vertical-align: middle;
-    }
-  }
+		&[type="checkbox"] {
+			vertical-align: middle;
+		}
+	}
 
-  button,
-  input {
-    &[disabled] {
-      cursor: default;
-    }
+	button	,
+	input {
+		&[disabled] {
+			cursor: default;
+		}
 
-    &::-moz-focus-inner {
-      padding: 0;
-      border: none; // Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
-    }
-  }
+		&::-moz-focus-inner {
+			padding: 0;
+			border: none; // Removes inner padding and border in FF3+ www.sitepen.com/blog/2008/05/14/the-devils-in-the-details-fixing-dojos-toolbar-buttons/
+		}
+	}
 }
 
 /* @end */
@@ -68,88 +68,88 @@ $formColor: $baseColor;
 	--------------------------------------------------------------------------- */
 
 .weiss-form {
-  button,
-  input,
-  select,
-  textarea {
-    font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
-  }
+	button	,
+	input	,
+	select	,
+	textarea {
+		font: #{$base-font-size}/#{$base-line-height} #{$baseFontFamily};
+	}
 
-  label,
-  .weiss-form__label {
-    @include vendor(user-select, none);
-    font-weight: bold;
-    line-height: $inputHeight;
-    display: block;
+	label	,
+	.weiss-form__label {
+		@include vendor(user-select, none);
+		font-weight: bold;
+		line-height: $inputHeight;
+		display: block;
 
-    > span {
-      line-height: $base-line-height;
-      display: inline-block;
-      vertical-align: middle;
-    }
-  }
+		> span {
+			line-height: $base-line-height;
+			display: inline-block;
+			vertical-align: middle;
+		}
+	}
 
-  input[type="password"],
-  input[type="search"],
-  input[type="text"],
-  select,
-  textarea {
-    @include vendor(box-sizing, border-box);
-    @include transition(box-shadow linear .2s);
-    font-style: italic;
-    line-height: $inputHeight;
-    width: 100%;
-    height: $inputHeight;
-    margin: 0;
-    padding: 0 $inputPadding;
-    color: $formColor;
-    border: 1px solid #a4a4a4;
-    background: #fff;
-    box-shadow: 0 0 15px 3px transparent;
+	input[type="password"]	,
+	input[type="search"]	,
+	input[type="text"]	,
+	select	,
+	textarea {
+		@include vendor(box-sizing, border-box);
+		@include transition(box-shadow linear .2s);
+		font-style: italic;
+		line-height: $inputHeight;
+		width: 100%;
+		height: $inputHeight;
+		margin: 0;
+		padding: 0 $inputPadding;
+		color: $formColor;
+		border: 1px solid #a4a4a4;
+		background: #fff;
+		box-shadow: 0 0 15px 3px transparent;
 
-    &:hover {
-      border-color: lighten(#a4a4a4, 5%);
-    }
+		&:hover {
+			border-color: lighten(#a4a4a4, 5%);
+		}
 
-    &:focus {
-      border-color: lighten(#a4a4a4, 10%);
-      outline: none;
-      box-shadow: 0 0 0 3px #ebe66f; //#E4E4E4;
-    }
-  }
+		&:focus {
+			border-color: lighten(#a4a4a4, 10%);
+			outline: none;
+			box-shadow: 0 0 0 3px #ebe66f; //#E4E4E4;
+		}
+	}
 
-  textarea {
-    line-height: $base-line-height;
-    overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
-    height: auto; // overwrite theming on form element
-    min-height: 4em;
-    padding: 5px $inputPadding;
-    resize: vertical;
-    vertical-align: top; //Improves readability and alignment in all browsers
-  }
+	textarea {
+		line-height: $base-line-height;
+		overflow: auto; //Removes default vertical scrollbar in IE6/7/8/9
+		height: auto; // overwrite theming on form element
+		min-height: 4em;
+		padding: 5px $inputPadding;
+		resize: vertical;
+		vertical-align: top; //Improves readability and alignment in all browsers
+	}
 
-  select {
-    line-height: 26px;
-    display: inline-block;
-    height: 30px;
-    padding-right: 15px;
-    background: #fff inline-image("../images/bg-select-arrow.png") right center no-repeat;
+	select {
+		line-height: 26px;
+		display: inline-block;
+		height: 30px;
+		padding-right: 15px;
+		background: #fff inline-image("../images/bg-select-arrow.png") right center no-repeat;
 
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    -ms-appearance: none;
-    appearance: none;
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
 
-    .ie8 {
-      padding-right: 0;
-    }
-  }
+		.ie8 {
+			padding-right: 0;
+		}
+	}
 
-  select {
-    &[multiple="multiple"] {
-      height: auto; // overwrite theming on form element
-    }
-  }
+	select {
+		&[multiple="multiple"] {
+			height: auto; // overwrite theming on form element
+		}
+	}
 }
 
 /* @end */
@@ -158,51 +158,51 @@ $formColor: $baseColor;
   --------------------------------------------------------------------------- */
 
 .weiss-form {
-  // Reset
+	// Reset
 
-  fieldset {
-    margin: 0;
-    padding: 0;
-    position: relative;
-    border: none;
-  }
+	fieldset {
+		margin: 0;
+		padding: 0;
+		position: relative;
+		border: none;
+	}
 
-  legend {
-    display: inline;
-    width: auto;
-    margin-bottom: 0;
-    padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
-    border: none; // Corrects color not being inherited in IE 8/9.
-  }
+	legend {
+		display: inline;
+		width: auto;
+		margin-bottom: 0;
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+		border: none; // Corrects color not being inherited in IE 8/9.
+	}
 
-  // Generic
+	// Generic
 
-  .weiss-form__set {
-    // <fieldset>
-    margin: 0;
-    padding: 20px 0 0;
-    position: relative;
-    border: none;
-  }
+	.weiss-form__set {
+		// <fieldset>
+		margin: 0;
+		padding: 20px 0 0;
+		position: relative;
+		border: none;
+	}
 
-  .weiss-form__set-legend {
-    font: bold $h3-font-size $serif;
-    // <legend>
-    margin: 0;
-    padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
-    border: none; // Corrects color not being inherited in IE 8/9.
+	.weiss-form__set-legend {
+		font: bold $h3-font-size $serif;
+		// <legend>
+		margin: 0;
+		padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
+		border: none; // Corrects color not being inherited in IE 8/9.
 
-    span {
-      display: block;
-      overflow: hidden;
-      width: 100%;
-      position: absolute;
-      top: 0;
-      left: 0;
-      white-space: nowrap;
-      text-overflow: ellipsis;
-    }
-  }
+		span {
+			display: block;
+			overflow: hidden;
+			width: 100%;
+			position: absolute;
+			top: 0;
+			left: 0;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+	}
 }
 
 /* @end */
@@ -211,36 +211,36 @@ $formColor: $baseColor;
   --------------------------------------------------------------------------- */
 
 .weiss-form {
-  input {
-    &::-webkit-input-placeholder {
-      font-style: italic;
-      color: lighten($formColor, 10%);
-    }
+	input {
+		&::-webkit-input-placeholder {
+			font-style: italic;
+			color: lighten($formColor, 10%);
+		}
 
-    &:-moz-placeholder {
-      font-style: italic;
-      color: lighten($formColor, 10%);
-    }
+		&:-moz-placeholder {
+			font-style: italic;
+			color: lighten($formColor, 10%);
+		}
 
-    &::-ms-input-placeholder {
-      font-style: italic;
-      color: lighten($formColor, 10%);
-    }
+		&::-ms-input-placeholder {
+			font-style: italic;
+			color: lighten($formColor, 10%);
+		}
 
-    &:focus {
-      &::-webkit-input-placeholder {
-        color: lighten($formColor, 30%);
-      }
+		&:focus {
+			&::-webkit-input-placeholder {
+				color: lighten($formColor, 30%);
+			}
 
-      &:-moz-placeholder {
-        color: lighten($formColor, 30%);
-      }
+			&:-moz-placeholder {
+				color: lighten($formColor, 30%);
+			}
 
-      &::-ms-input-placeholder {
-        color: lighten($formColor, 10%);
-      }
-    }
-  }
+			&::-ms-input-placeholder {
+				color: lighten($formColor, 10%);
+			}
+		}
+	}
 }
 
 /* @end */
@@ -249,59 +249,59 @@ $formColor: $baseColor;
   --------------------------------------------------------------------------- */
 
 .l-weiss-form__row {
-  @extend .i-clfx;
-  display: block;
-  margin: $formRowMargin 0;
-  position: relative;
-  //	line-height: 1px; // fix inline box
+	@extend .i-clfx;
+	display: block;
+	margin: $formRowMargin 0;
+	position: relative;
+	//	line-height: 1px; // fix inline box
 }
 
 .l-weiss-form__item {
-  line-height: $inputHeight;
-  display: block;
-  float: left;
-  padding: 0 $formItemSpacing 0 0;
-  position: relative;
+	line-height: $inputHeight;
+	display: block;
+	float: left;
+	padding: 0 $formItemSpacing 0 0;
+	position: relative;
 }
 
 @each $itemWidth in 30, 100 {
-  .l-weiss-form__item_w-#{$itemWidth} {
-    width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
-  }
+	.l-weiss-form__item_w-#{$itemWidth} {
+		width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
+	}
 }
 
 .l-weiss-form__item_w-p50 {
-  width: 48%;
+	width: 48%;
 }
 
 // table mods
 
 table.l-weiss-form__row {
-  border-spacing: 0;	//Remove most spacing between table cells.
-  border-collapse: collapse;	//Remove most spacing between table cells.
-  border-width: 0;
-  //width: 100%; // add this if width in percentage
+	border-spacing: 0;	//Remove most spacing between table cells.
+	border-collapse: collapse;	//Remove most spacing between table cells.
+	border-width: 0;
+	//width: 100%; // add this if width in percentage
 
-  .ie6-7 & {
-    display: table-row; // Fix IE7 wired indent of input
-  }
+	.ie6-7 & {
+		display: table-row; // Fix IE7 wired indent of input
+	}
 }
 
 td.l-weiss-form__item {
-  float: none;
-  vertical-align: middle;
+	float: none;
+	vertical-align: middle;
 }
 
 // fieldset mod
 
 .weiss-form {
-  fieldset.l-weiss-form__row {
-    margin: $formRowMargin 0;
-  }
+	fieldset.l-weiss-form__row {
+		margin: $formRowMargin 0;
+	}
 
-  legend.l-weiss-form__item {
-    padding: 0 $formItemSpacing 0 0;
-  }
+	legend.l-weiss-form__item {
+		padding: 0 $formItemSpacing 0 0;
+	}
 }
 
 /* @end */
@@ -310,21 +310,21 @@ td.l-weiss-form__item {
   --------------------------------------------------------------------------- */
 
 .weiss-form__notes {
-  font-size: .8em;
+	font-size: .8em;
 }
 
 .weiss-form__req-sign {
-  color: red;
+	color: red;
 }
 
 .i-inputs_disabled {
-  color: #ccc;
+	color: #ccc;
 
-  input,
-  select,
-  textarea {
-    opacity: .3;
-  }
+	input	,
+	select	,
+	textarea {
+		opacity: .3;
+	}
 }
 
 /* @end */
@@ -334,36 +334,36 @@ td.l-weiss-form__item {
 ============================================================================= */
 
 .l-weiss-form__item_lined {
-  margin-bottom: 3px;
-  border-bottom: 1px solid $baseColor;
+	margin-bottom: 3px;
+	border-bottom: 1px solid $baseColor;
 }
 
 .l-weiss-form__row_submit_right {
-  text-align: right;
+	text-align: right;
 }
 
 /* @group weiss-form__input-w-ico
   --------------------------------------------------------------------------- */
 
 .weiss-form__input-w-ico {
-  display: block;
-  position: relative;
+	display: block;
+	position: relative;
 }
 
 .weiss-form__input-w-ico__ico {
-  line-height: $inputHeight;
-  //	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
-  padding: 0 10px 0 20px;
-  position: absolute;
-  z-index: 5;
-  top: 2px;
-  right: 4px;
-  bottom: 1px;
-  text-align: center;
+	line-height: $inputHeight;
+	//	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
+	padding: 0 10px 0 20px;
+	position: absolute;
+	z-index: 5;
+	top: 2px;
+	right: 4px;
+	bottom: 1px;
+	text-align: center;
 
-  .i-weiss-ico {
-    vertical-align: text-top;
-  }
+	.i-weiss-ico {
+		vertical-align: text-top;
+	}
 }
 
 /* @end */
@@ -372,89 +372,89 @@ td.l-weiss-form__item {
   --------------------------------------------------------------------------- */
 
 .weiss-form__input-act {
-  display: none;
-  padding: 0 8px;
-  top: 0;
-  right: -55px;
-  bottom: auto;
-  border-radius: 3px;
-  background-color: #fff;
-  box-shadow: 0 8px 30px -5px rgba(#000,.5);
+	display: none;
+	padding: 0 8px;
+	top: 0;
+	right: -55px;
+	bottom: auto;
+	border-radius: 3px;
+	background-color: #fff;
+	box-shadow: 0 8px 30px -5px rgba(#000,.5);
 
-  &:before {
-    width: 0;
-    height: 0;
-    margin-top: -10px;
-    position: absolute;
-    top: 50%;
-    left: -6px;
-    content: " ";
-    border-width: 10px 10px 10px 0;
-    border-style: solid;
-    border-color: transparent #fff transparent transparent;
-  }
+	&:before {
+		width: 0;
+		height: 0;
+		margin-top: -10px;
+		position: absolute;
+		top: 50%;
+		left: -6px;
+		content: " ";
+		border-width: 10px 10px 10px 0;
+		border-style: solid;
+		border-color: transparent #fff transparent transparent;
+	}
 
-  label.i-weiss-ico {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    margin-left: 3px;
-    cursor: pointer;
-    opacity: .4;
+	label.i-weiss-ico {
+		display: inline-block;
+		width: 15px;
+		height: 15px;
+		margin-left: 3px;
+		cursor: pointer;
+		opacity: .4;
 
-    input {
-      @include i-hide_vis;
-    }
-  }
+		input {
+			@include i-hide_vis;
+		}
+	}
 }
 
-input,
-select,
+input	,
+select	,
 textarea {
-  &:focus {
-    + .weiss-form__input-act {
-      display: block;
+	&:focus {
+		+ .weiss-form__input-act {
+			display: block;
 
-      label.i-weiss-ico {
-        &:hover {
-          opacity: 1;
-        }
-      }
-    }
-  }
+			label.i-weiss-ico {
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+	}
 }
 
 .weiss-form__input-act:hover {
-  display: block;
+	display: block;
 }
 
 .js-ico-checked {
-  opacity: 1 !important;
+	opacity: 1 !important;
 }
 
-.weiss-form__input-act_hidden,
+.weiss-form__input-act_hidden	,
 .weiss-form__input-act_unclear {
-  input,
-  select,
-  textarea {
-    background: inline-image("../images/icons/ico-hidden.png") right center no-repeat !important;
-  }
+	input	,
+	select	,
+	textarea {
+		background: inline-image("../images/icons/ico-hidden.png") right center no-repeat !important;
+	}
 }
 
 .weiss-form__input-act_unclear {
-  input,
-  select,
-  textarea {
-    background: inline-image("../images/icons/ico-unclear.png") right center no-repeat !important;
-  }
+	input	,
+	select	,
+	textarea {
+		background: inline-image("../images/icons/ico-unclear.png") right center no-repeat !important;
+	}
 }
 
 .weiss-form__input-act_hidden.weiss-form__input-act_unclear {
-  input,
-  select,
-  textarea {
-    background: inline-image("../images/icons/ico-unclear.png") right top no-repeat, inline-image("../images/icons/ico-hidden.png") right bottom no-repeat !important;
-  }
+	input	,
+	select	,
+	textarea {
+		background: inline-image("../images/icons/ico-unclear.png") right top no-repeat, inline-image("../images/icons/ico-hidden.png") right bottom no-repeat !important;
+	}
 }
 
 /* @end */
@@ -463,76 +463,76 @@ textarea {
   --------------------------------------------------------------------------- */
 
 .weiss-form_declaration {
-  font-family: $baseFontFamily;
-  width: 850px;
-  margin: 20px auto;
-  padding: 10px 20px;
-  color: $baseColor;
-  background: white;
+	font-family: $baseFontFamily;
+	width: 850px;
+	margin: 20px auto;
+	padding: 10px 20px;
+	color: $baseColor;
+	background: white;
 }
 
 .weiss-form {
-  .weiss-form__set.weiss-form__set_paper {
-    margin: 1em 0;
-    padding: 25px 0 0;
-  }
+	.weiss-form__set.weiss-form__set_paper {
+		margin: 1em 0;
+		padding: 25px 0 0;
+	}
 
-  .weiss-form__set-legend {
-    span {
-      font-size: $h5-font-size;
-      font-weight: bold;
-    }
-  }
+	.weiss-form__set-legend {
+		span {
+			font-size: $h5-font-size;
+			font-weight: bold;
+		}
+	}
 
-  // main fieldset block
-  .weiss-form__set_main.weiss-form__set_paper {
-    padding: 40px 10px 10px;
-    border: 1px solid $baseColor;
+	// main fieldset block
+	.weiss-form__set_main.weiss-form__set_paper {
+		padding: 40px 10px 10px;
+		border: 1px solid $baseColor;
 
-    > .weiss-form__set-legend {
-      span {
-        font-size: $h5-font-size;
-        line-height: 26px;
-        text-align: center;
-        border-bottom: 1px solid $baseColor;
-      }
-    }
-  }
+		> .weiss-form__set-legend {
+			span {
+				font-size: $h5-font-size;
+				line-height: 26px;
+				text-align: center;
+				border-bottom: 1px solid $baseColor;
+			}
+		}
+	}
 }
 
 .weiss-form__set_paper {
-  input[type="password"],
-  input[type="search"],
-  input[type="text"],
-  select,
-  textarea {
-    border-color: transparent;
+	input[type="password"]	,
+	input[type="search"]	,
+	input[type="text"]	,
+	select	,
+	textarea {
+		border-color: transparent;
 
-    &:hover {
-      border-color: lighten(#a4a4a4, 20%);
-    }
-  }
+		&:hover {
+			border-color: lighten(#a4a4a4, 20%);
+		}
+	}
 
-  textarea {
-    height: $inputHeight;
-    min-height: $inputHeight;
-  }
+	textarea {
+		height: $inputHeight;
+		min-height: $inputHeight;
+	}
 
-  .weiss-form__label {
-    font-size: $h5-font-size;
-    font-weight: bold;
-  }
+	.weiss-form__label {
+		font-size: $h5-font-size;
+		font-weight: bold;
+	}
 }
 
 textarea.weiss-form__textarea_lined {
-  min-height: 5em;
-  background: inline-image("../images/bg-form-textarea.png") 0 19px repeat;
+	min-height: 5em;
+	background: inline-image("../images/bg-form-textarea.png") 0 19px repeat;
 }
 
 .weiss-form__set_notes.weiss-form__set {
-  font-family: $sans;
-  padding: 20px;
-  background-color: lightyellow;
+	font-family: $sans;
+	padding: 20px;
+	background-color: lightyellow;
 }
 
 /* @end */
