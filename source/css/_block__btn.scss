@@ -5,7 +5,7 @@
    Generic button
 ============================================================================ */
 
-.btn {
+.weiss-btn {
   @include vendor(box-sizing, border-box);
   @include vendor(user-select, none);
   display: inline-block;
@@ -82,19 +82,19 @@
   }
 }
 
-.btn_grey {
+.weiss-btn_grey {
   @include button-colors(#fff);
 }
 
-.btn_blue {
+.weiss-btn_blue {
   @include button-colors($accentColor);
 }
 
-.btn_red {
+.weiss-btn_red {
   @include button-colors(#b33d5d);
 }
 
-.btn_green {
+.weiss-btn_green {
   @include button-colors(#51a351);
 }
 
@@ -110,24 +110,24 @@
   height: $height;
   padding: 0 $padding;
 
-  .form & {
+  .weiss-form & {
     padding: 0 $padding;
   }
 }
 
-.btn_small {
+.weiss-btn_small {
   @include button-size(10px, 24px, 13px, 100px);
 }
 
-.btn_medium {
+.weiss-btn_medium {
   @include button-size(14px, 34px, 13px, 100px);
 }
 
-.btn_big {
+.weiss-btn_big {
   @include button-size(16px, 48px, 13px, 100px);
 }
 
-.btn_huge {
+.weiss-btn_huge {
   @include button-size(18px, 56px, 13px, 100px);
 }
 
@@ -136,12 +136,12 @@
 /* @group Btn width
   --------------------------------------------------------------------------- */
 
-.btn_fullwidth {
+.weiss-btn_fullwidth {
   width: 100%;
   min-width: 10px;
 }
 
-.btn_w-30 {
+.weiss-btn_w-30 {
   width: 30px;
   min-width: 10px;
 }
@@ -151,11 +151,11 @@
 /* @group Btn with ico
   --------------------------------------------------------------------------- */
 
-.btn__ico {
+.weiss-btn__ico {
   vertical-align: middle;
 }
 
-.btn__inner {
+.weiss-btn__inner {
   margin: 0 10px;
 }
 
