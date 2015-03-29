@@ -635,7 +635,7 @@ td.l-weiss-form__item {
   bottom: 1px;
   text-align: center;
 }
-.weiss-form__input-w-ico__ico .i-ico {
+.weiss-form__input-w-ico__ico .i-weiss-ico {
   vertical-align: text-top;
 }
 
@@ -664,7 +664,7 @@ td.l-weiss-form__item {
   border-style: solid;
   border-color: transparent #fff transparent transparent;
 }
-.weiss-form__input-act label.i-ico {
+.weiss-form__input-act label.i-weiss-ico {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -672,7 +672,7 @@ td.l-weiss-form__item {
   cursor: pointer;
   opacity: .4;
 }
-.weiss-form__input-act label.i-ico input {
+.weiss-form__input-act label.i-weiss-ico input {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
@@ -688,9 +688,9 @@ select:focus + .weiss-form__input-act,
 textarea:focus + .weiss-form__input-act {
   display: block;
 }
-input:focus + .weiss-form__input-act label.i-ico:hover,
-select:focus + .weiss-form__input-act label.i-ico:hover,
-textarea:focus + .weiss-form__input-act label.i-ico:hover {
+input:focus + .weiss-form__input-act label.i-weiss-ico:hover,
+select:focus + .weiss-form__input-act label.i-weiss-ico:hover,
+textarea:focus + .weiss-form__input-act label.i-weiss-ico:hover {
   opacity: 1;
 }
 
@@ -1041,7 +1041,7 @@ textarea.weiss-form__textarea_lined {
 		<legend class="l-weiss-form__item weiss-form__label">
 			<span>3. Посада:</span>
 		</legend>
-		<p class="l-weiss-form__item small-note">
+		<p class="l-weiss-form__item declaration-small-note">
 			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
 		</p>
 		<div class="l-weiss-form__item">
@@ -1132,14 +1132,14 @@ textarea.weiss-form__textarea_lined {
 						<div class="l-weiss-form__row js-related-section">
 							<input type="text" name="general[family][][relations_other]" placeholder="Iнший тип зв’язку" minlength="2" />
 						</div>
-						<p class="small-note js-clone-ignore">
+						<p class="declaration-small-note js-clone-ignore">
 							Оберіть ступінь зв’язку члена сім’ї декларанта зі списку. Якщо вказано іншого члена сім’ї, оберіть &laquo;Інше&raquo; і впишить в поле &laquo;Інший тип зв’язку&raquo; нижче. Додати ще члена сім’ї можна, натиснувши на кнопку &laquo;+&raquo; справа
 						</p>
 					</td>
 					<td>
 						<div class="l-weiss-form__row">
 							<textarea id="general__family__name" name="general[family][][name]" placeholder="Прізвище ініціали, дата народження" minlength="2" data-inp-act="hidden,unclear"></textarea>
-							<p class="small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="declaration-small-note js-clone-ignore">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						</div>
 					</td>
 					<td>
@@ -1220,7 +1220,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<textarea id="income__5_comment" name="income[5][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="l-weiss-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 					</div>
 				</td>
 				<td>
@@ -1229,7 +1229,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<textarea id="income__5_family_comment" name="income[5][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="l-weiss-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="l-weiss-form__item declaration-small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 					</div>
 				</td>
 			</tr>
@@ -1777,12 +1777,12 @@ textarea.weiss-form__textarea_lined {
 		</div>
 	</div>
 	<div id="section-1" class="js-tab-content">
-		<ul class="progress-indicator">
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="progress-indicator__step progress-indicator__step_cur">2</li>
-			<li class="progress-indicator__step">3</li>
-			<li class="progress-indicator__step">4</li>
-			<li class="progress-indicator__step">5</li>
+		<ul class="declaration-progress-indicator">
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">2</li>
+			<li class="declaration-progress-indicator__step">3</li>
+			<li class="declaration-progress-indicator__step">4</li>
+			<li class="declaration-progress-indicator__step">5</li>
 		</ul>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
@@ -1893,14 +1893,14 @@ textarea.weiss-form__textarea_lined {
 							<option value="sotok">соток</option>
 							<option value="nodata">Немає данних</option>
 						</select>
-							<p class="small-note js-clone-ignore">
+							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
 					<div class="l-weiss-form__row">
 						<textarea id="estate__23__space_comment" name="estate[23][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="small-note js-clone-ignore">
+							<p class="declaration-small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
 								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
@@ -2461,14 +2461,14 @@ textarea.weiss-form__textarea_lined {
 							<option value="sotok">соток</option>
 							<option value="nodata">Немає данних</option>
 						</select>
-							<p class="small-note js-clone-ignore">
+							<p class="declaration-small-note js-clone-ignore">
 								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
 					<div class="l-weiss-form__row">
 						<textarea id="estate__29__space_comment" name="estate[29][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
-							<p class="small-note js-clone-ignore">
+							<p class="declaration-small-note js-clone-ignore">
 								Сюди записуються доповненя типу &laquo;спадщина&raquo;, &laquo;½ частина та інше&raquo;. <br />
 								Якщо вказано, наприклад, &laquo;20 м - ½ від 40 м.&raquo;, то у полі площі вводимо 20 метрів, а у коментарі записуємо 20 м. - ½ від 40 м. <br />
 								Якщо вказано &laquo;0,5 га + 0,3 га + 0,2 га&raquo;, то треба рознести це по трьом різним пунктам (буде 3 ділянки).
@@ -2934,12 +2934,12 @@ textarea.weiss-form__textarea_lined {
 		</div>
 	</div>
 	<div id="section-2" class="js-tab-content">
-		<ul class="progress-indicator">
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="progress-indicator__step progress-indicator__step_cur">3</li>
-			<li class="progress-indicator__step">4</li>
-			<li class="progress-indicator__step">5</li>
+		<ul class="declaration-progress-indicator">
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">3</li>
+			<li class="declaration-progress-indicator__step">4</li>
+			<li class="declaration-progress-indicator__step">5</li>
 		</ul>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
@@ -3009,7 +3009,7 @@ textarea.weiss-form__textarea_lined {
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__35__brand_info" name="vehicle[35][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
-						<p class="small-note js-clone-ignore">
+						<p class="declaration-small-note js-clone-ignore">
 							Іностранні марки записуйте латиницею
 						</p>
 				</td>
@@ -3964,7 +3964,7 @@ textarea.weiss-form__textarea_lined {
 					<div class="l-weiss-form__row">
 						<input type="text" id="vehicle__40__brand_info" name="vehicle[40][][brand_info]" placeholder="Інша інформація про модель" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
-						<p class="small-note js-clone-ignore">
+						<p class="declaration-small-note js-clone-ignore">
 							Іностранні марки записуйте латиницею
 						</p>
 				</td>
@@ -4866,12 +4866,12 @@ textarea.weiss-form__textarea_lined {
 		</div>
 	</div>
 	<div id="section-3" class="js-tab-content">
-		<ul class="progress-indicator">
-			<li class="progress-indicator__step progress-indicator__step_inactive  js-section-go" data-section-go="0">1</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
-			<li class="progress-indicator__step progress-indicator__step_cur">4</li>
-			<li class="progress-indicator__step">5</li>
+		<ul class="declaration-progress-indicator">
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive  js-section-go" data-section-go="0">1</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">4</li>
+			<li class="declaration-progress-indicator__step">5</li>
 		</ul>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
@@ -4925,7 +4925,7 @@ textarea.weiss-form__textarea_lined {
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__45__sum" name="banks[45][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
-								<p class="small-note js-clone-ignore">
+								<p class="declaration-small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
 						</div>
@@ -4936,7 +4936,7 @@ textarea.weiss-form__textarea_lined {
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
-								<p class="small-note js-clone-ignore">
+								<p class="declaration-small-note js-clone-ignore">
 									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
@@ -5302,7 +5302,7 @@ textarea.weiss-form__textarea_lined {
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__51__sum" name="banks[51][][sum]" placeholder="Сума" data-inp-act="hidden,unclear" />
-								<p class="small-note js-clone-ignore">
+								<p class="declaration-small-note js-clone-ignore">
 									Якщо вказано декілька сум через кому або знак &laquo;+&raquo;, вони вводяться окремо (додайте строку, натиснувши на кнопку &laquo;+&raquo; справа).
 								</p>
 						</div>
@@ -5313,7 +5313,7 @@ textarea.weiss-form__textarea_lined {
 								<option value="eur">евро</option>
 								<option value="other">інша</option>
 							</select>
-								<p class="small-note js-clone-ignore">
+								<p class="declaration-small-note js-clone-ignore">
 									Якщо валюта не вказана, вважаємо, що це гривні. <br/>
 									Якщо вказана сума в валюті, і тут же вказано перерахування у гривні, вводимо тільки суму у валюті.
 								</p>
@@ -5476,12 +5476,12 @@ textarea.weiss-form__textarea_lined {
 		</div>
 	</div>
 	<div id="section-4" class="js-tab-content">
-		<ul class="progress-indicator">
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
-			<li class="progress-indicator__step progress-indicator__step_inactive js-section-go" data-section-go="3">4</li>
-			<li class="progress-indicator__step progress-indicator__step_cur">5</li>
+		<ul class="declaration-progress-indicator">
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="0">1</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="1">2</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="2">3</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_inactive js-section-go" data-section-go="3">4</li>
+			<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur">5</li>
 		</ul>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">

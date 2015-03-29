@@ -14,7 +14,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   background-repeat: no-repeat;
 }
 
-.i-ico {
+.i-weiss-ico {
   @extend .i-ico-extend;
   display: inline-block;
   vertical-align: top;
@@ -23,7 +23,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 @each $ico-name in
 	hidden,
 	unclear {
-  .i-ico_#{$ico-name} {
+  .i-weiss-ico_#{$ico-name} {
     background-position: sprite-position($icons-map, ico-#{$ico-name});
   }
 }
@@ -63,7 +63,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 /* @group data-notes
   --------------------------------------------------------------------------- */
 
-.small-note {
+.declaration-small-note {
   font: normal normal 13px/16px $sans;
   margin: 0;
   padding: 2px 4px;
@@ -136,17 +136,17 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 /* @end */
 
-/* @group progress-indicator
+/* @group declaration-progress-indicator
   --------------------------------------------------------------------------- */
 
-.progress-indicator {
+.declaration-progress-indicator {
   display: block;
   margin: 0 0 20px;
   padding: 0;
   text-align: center;
 }
 
-.progress-indicator__step {
+.declaration-progress-indicator__step {
   @include transition();
   display: inline-block;
   overflow: hidden;
@@ -157,7 +157,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   background: #ccc;
 }
 
-.progress-indicator__step_inactive {
+.declaration-progress-indicator__step_inactive {
   cursor: pointer;
   background: #eee;
 
@@ -166,7 +166,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   }
 }
 
-.progress-indicator__step_cur {
+.declaration-progress-indicator__step_cur {
   background: $accentColor;
 }
 

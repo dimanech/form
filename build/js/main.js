@@ -81,12 +81,12 @@ scripts.Common = {
 				}
 
 				$(input.next('.weiss-form__input-w-ico__ico'))
-					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
+					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
 				'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
-		$('body').on('click', ".weiss-form__input-act input[type='checkbox']", function() {
+        this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
 			var self = $(this);
 
 			self.parent().toggleClass('js-ico-checked');

@@ -360,7 +360,7 @@ td.l-weiss-form__item {
   bottom: 1px;
   text-align: center;
 
-  .i-ico {
+  .i-weiss-ico {
     vertical-align: text-top;
   }
 }
@@ -393,7 +393,7 @@ td.l-weiss-form__item {
     border-color: transparent #fff transparent transparent;
   }
 
-  label.i-ico {
+  label.i-weiss-ico {
     display: inline-block;
     width: 15px;
     height: 15px;
@@ -414,7 +414,7 @@ textarea {
     + .weiss-form__input-act {
       display: block;
 
-      label.i-ico {
+      label.i-weiss-ico {
         &:hover {
           opacity: 1;
         }

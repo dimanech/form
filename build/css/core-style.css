@@ -586,7 +586,7 @@ td.l-weiss-form__item {
   bottom: 1px;
   text-align: center;
 }
-.weiss-form__input-w-ico__ico .i-ico {
+.weiss-form__input-w-ico__ico .i-weiss-ico {
   vertical-align: text-top;
 }
 
@@ -615,7 +615,7 @@ td.l-weiss-form__item {
   border-style: solid;
   border-color: transparent #fff transparent transparent;
 }
-.weiss-form__input-act label.i-ico {
+.weiss-form__input-act label.i-weiss-ico {
   display: inline-block;
   width: 15px;
   height: 15px;
@@ -623,7 +623,7 @@ td.l-weiss-form__item {
   cursor: pointer;
   opacity: .4;
 }
-.weiss-form__input-act label.i-ico input {
+.weiss-form__input-act label.i-weiss-ico input {
   overflow: hidden;
   clip: rect(1px, 1px, 1px, 1px);
   width: 1px;
@@ -639,9 +639,9 @@ select:focus + .weiss-form__input-act,
 textarea:focus + .weiss-form__input-act {
   display: block;
 }
-input:focus + .weiss-form__input-act label.i-ico:hover,
-select:focus + .weiss-form__input-act label.i-ico:hover,
-textarea:focus + .weiss-form__input-act label.i-ico:hover {
+input:focus + .weiss-form__input-act label.i-weiss-ico:hover,
+select:focus + .weiss-form__input-act label.i-weiss-ico:hover,
+textarea:focus + .weiss-form__input-act label.i-weiss-ico:hover {
   opacity: 1;
 }
 
