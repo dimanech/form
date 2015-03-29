@@ -4,7 +4,7 @@
 		<span>Розділ III Відомості про нерухоме майно</span>
 	</legend>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -19,7 +19,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -36,7 +36,7 @@
 				<th colspan="2">
 					Сума витрат (грн) на
 				</th>
-				<th rowspan="2" class="table__cell_bd-l">
+				<th rowspan="2" class="weiss-table__cell_bd-l">
 					&nbsp;
 				</th>
 			</tr>
@@ -52,12 +52,12 @@
 		<% data.estate.fields.each_with_index do |field, index| %>
 		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span class="js-clone-ignore">
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -119,7 +119,7 @@
 						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate[<%= field.number %>][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
-				<td class="table__cell_bd-l">
+				<td class="weiss-table__cell_bd-l">
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
@@ -127,7 +127,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -142,7 +142,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -159,7 +159,7 @@
 				<th colspan="2">
 					Сума витрат (грн) на
 				</th>
-				<th rowspan="2" class="table__cell_bd-l">
+				<th rowspan="2" class="weiss-table__cell_bd-l">
 					&nbsp;
 				</th>
 			</tr>
@@ -177,12 +177,12 @@
 		<% data.estateB.fields.each_with_index do |field, index| %>
 		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span class="js-clone-ignore">
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -244,7 +244,7 @@
 						<textarea id="estate__<%= field.number %>__costs_rent_comment" name="estate[<%= field.number %>][][costs_rent_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
-				<td class="table__cell_bd-l">
+				<td class="weiss-table__cell_bd-l">
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>

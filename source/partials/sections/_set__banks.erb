@@ -4,7 +4,7 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</legend>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col width="200"  />
@@ -17,7 +17,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -31,7 +31,7 @@
 				<th>
 					у тому числі за кордоном
 				</th>
-				<th class="table__cell_bd-l">
+				<th class="weiss-table__cell_bd-l">
 					&nbsp;
 				</th>
 			</tr>
@@ -39,12 +39,12 @@
 		<% data.banks.fields.each_with_index do |field, index| %>
 		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span class="js-clone-ignore">
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -98,7 +98,7 @@
 						</div>
 					</div>
 				</td>
-				<td class="table__cell_bd-l">
+				<td class="weiss-table__cell_bd-l">
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>
@@ -106,7 +106,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col width="200"  />
@@ -119,7 +119,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -133,7 +133,7 @@
 				<th>
 					у тому числі за кордоном
 				</th>
-				<th class="table__cell_bd-l">
+				<th class="weiss-table__cell_bd-l">
 					&nbsp;
 				</th>
 			</tr>
@@ -141,12 +141,12 @@
 		<% data.banksB.fields.each_with_index do |field, index| %>
 		<tbody class="js-clone-wrapper">
 			<tr class="js-toclone">
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span class="js-clone-ignore">
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -200,7 +200,7 @@
 						</div>
 					</div>
 				</td>
-				<td class="table__cell_bd-l">
+				<td class="weiss-table__cell_bd-l">
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'btn_fullwidth'}) %>
 				</td>
 			</tr>

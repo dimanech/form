@@ -8,7 +8,7 @@
 /* @group Table generic
   --------------------------------------------------------------------------- */
 
-.table_weiss {
+.weiss-table {
   width: 100%;
   empty-cells: hide;
   border-spacing: 0;	//Remove most spacing between table cells.
@@ -44,7 +44,7 @@
 /* @group Table mod: cell fixed width
   --------------------------------------------------------------------------- */
 
-.table_fixed {
+.weiss-table_fixed {
   width: auto;
   table-layout: fixed;
   word-wrap: break-word;
@@ -55,32 +55,32 @@
 /* @group Table helpers
   --------------------------------------------------------------------------- */
 
-.table_weiss {
+.weiss-table {
   // overwrite specifity
 
-  .table__cell_unstyled {
+  .weiss-table__cell_unstyled {
     border-color: transparent;
   }
 
-  .table__cell_unspaced {
+  .weiss-table__cell_unspaced {
     padding: 0;
   }
 
-  .table__cell_bd-r {
+  .weiss-table__cell_bd-r {
     border-color: transparent;
     border-right: 1px solid $baseColor;
   }
 
-  .table__cell_bd-l {
+  .weiss-table__cell_bd-l {
     border-color: transparent;
     border-left: 1px solid $baseColor;
   }
 
-  .table__cell_fwn {
+  .weiss-table__cell_fwn {
     font-weight: normal;
   }
 
-  .table__psdo-th {
+  .weiss-table__psdo-th {
     font-weight: bold;
   }
 }
@@ -90,7 +90,7 @@
 /* @group Table styling
   --------------------------------------------------------------------------- */
 
-.table_decl {
+.weiss-table_decl {
   caption {
     @include adjust-font-size-to($h5-font-size, 1.2);
     font-weight: bold;

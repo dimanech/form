@@ -3,7 +3,7 @@
 		<span>Розділ II. Відомості про доходи</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -22,7 +22,7 @@
 		</tfoot>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -46,10 +46,10 @@
 		<% data.incomeA.fields.each_with_index do |field, index| %>
 			<% formid = field.number %>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -71,16 +71,16 @@
 			</tr>
 		<% end %>
 		<tr>
-			<td class="table__cell_bd-r table__psdo-th">
+			<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 				&nbsp;
 			</td>
-			<td colspan="3" class="table__cell_unspaced">
+			<td colspan="3" class="weiss-table__cell_unspaced">
 				{{ declaration.income['7'].source_name }}
 			</td>
 		</tr>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -90,10 +90,10 @@
 		<% data.income.fields.each do |field| %>
 			<% formid = field.number %>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -116,7 +116,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -128,7 +128,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -152,10 +152,10 @@
 		<tbody>
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					21.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
@@ -178,10 +178,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					21.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						&ndash;
 					</div>
@@ -201,7 +201,7 @@
 		</tbody>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -213,7 +213,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -237,10 +237,10 @@
 		<tbody>
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					22.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
@@ -263,10 +263,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					22.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						&ndash;
 					</div>

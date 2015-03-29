@@ -4,7 +4,7 @@
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
 	</legend>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -16,7 +16,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -34,10 +34,10 @@
 		</thead>
 		<% data.liabilities.fields.each do |field| %>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -60,7 +60,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -72,7 +72,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -90,10 +90,10 @@
 		</thead>
 		<% data.liabilitiesB.fields.each do |field| %>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>

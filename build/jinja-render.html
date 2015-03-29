@@ -19,7 +19,7 @@
 	<link href="css/style.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<form class="form form_decloration declaration-body" id="form-decloration" action="" method="get" accept-charset="utf-8">
+	<section class="declaration-block">
 	<h1 class="declaration-head">
 		<strong class="declaration-head__em">Декларація</strong>
 		про майно, доходи, витрати і зобов’язання фінансового характеру за {{ declaration.intro.declaration_year }} рік
@@ -114,7 +114,7 @@
 		<div class="form__set-legend">
 			<span>4. Члени сім’ї декларанта:</span>
 		</div>
-		<table class="table_weiss table_decl">
+		<table class="weiss-table weiss-table_decl">
 			<colgroup>
 				<col width="200" />
 				<col />
@@ -162,7 +162,7 @@
 		<span>Розділ II. Відомості про доходи</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -181,7 +181,7 @@
 		</tfoot>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -203,10 +203,10 @@
 			</tr>
 		</thead>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					5.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Загальна сума сукупного доходу, гривні, у т.ч.
 				</th>
 				<td>
@@ -227,10 +227,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					6.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Заробітна плата, інші виплати та винагороди, нараховані (виплачені) декларанту відповідно до умов трудового або цивільно-правового договору <em>(крім виплат, зазначених у позиціях 7, 8)</em>
 				</th>
 				<td>
@@ -251,10 +251,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					7.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Дохід від викладацької, наукової і творчої діяльності, медичної практики, інструкторіської та суддівської практики із спорту
 				</th>
 				<td>
@@ -275,16 +275,16 @@
 				</td>
 			</tr>
 		<tr>
-			<td class="table__cell_bd-r table__psdo-th">
+			<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 				&nbsp;
 			</td>
-			<td colspan="3" class="table__cell_unspaced">
+			<td colspan="3" class="weiss-table__cell_unspaced">
 				{{ declaration.income['7'].source_name }}
 			</td>
 		</tr>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -292,10 +292,10 @@
 			<col width="200" />
 		</colgroup>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					8.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					авторська винагорода, інші доходи від реалізації майнових прав інтелектуальної власності
 				</th>
 				<td>
@@ -316,10 +316,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					9.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дивіденди, проценти
 				</th>
 				<td>
@@ -340,10 +340,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					10.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					матеріальна допомога
 				</th>
 				<td>
@@ -364,10 +364,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					11.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дарунки, призи, виграші
 				</th>
 				<td>
@@ -388,10 +388,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					12.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					допомога по безробіттю
 				</th>
 				<td>
@@ -412,10 +412,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					13.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					аліменти
 				</th>
 				<td>
@@ -436,10 +436,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					14.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					спадщина
 				</th>
 				<td>
@@ -460,10 +460,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					15.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					страхові виплати, страхові відшкодування, викупні суми та пенсійні виплати, що сплачені декларанту за договором страхування, недержавного пенсійного забезпечення та пенсійного вкладу
 				</th>
 				<td>
@@ -484,10 +484,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					16.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дохід від відчуження рухомого та нерухомого майна
 				</th>
 				<td>
@@ -508,10 +508,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					17.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дохід від провадження підприємницької та незалежної професійної діяльності
 				</th>
 				<td>
@@ -532,10 +532,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					18.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дохід від відчуження цінних паперів та корпоративних прав
 				</th>
 				<td>
@@ -556,10 +556,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					19.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					дохід від передачі в оренду (строкове володіння та/або користування) майна
 				</th>
 				<td>
@@ -580,10 +580,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					20.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					інші види доходів (не зазначені у позиціях 6–19)
 				</th>
 				<td>
@@ -605,7 +605,7 @@
 			</tr>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -617,7 +617,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -641,10 +641,10 @@
 		<tbody>
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					21.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
@@ -667,10 +667,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					21.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						&ndash;
 					</div>
@@ -690,7 +690,7 @@
 		</tbody>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="20" />
 			<col />
@@ -702,7 +702,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -726,10 +726,10 @@
 		<tbody>
             {% for income in declaration.income['22'] if income.cur != "0" or income.cur != "0" %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					22.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						{{ income.country }}
 					</div>
@@ -752,10 +752,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					22.
 				</td>
-				<td class="table__cell_fwn">
+				<td class="weiss-table__cell_fwn">
 					<div class="l-form__row">
 						&ndash;
 					</div>
@@ -782,7 +782,7 @@
 		<span>Розділ III Відомості про нерухоме майно</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -796,7 +796,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -826,10 +826,10 @@
 		<tbody>
 			{% for estate in declaration.estate['23'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					23.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Земельні ділянки
 				</th>
 				<td>
@@ -867,10 +867,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					23.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Земельні ділянки
 				</th>
 				<td>
@@ -899,10 +899,10 @@
 		<tbody>
 			{% for estate in declaration.estate['24'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					24.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Житлові будинки
 				</th>
 				<td>
@@ -940,10 +940,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					24.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Житлові будинки
 				</th>
 				<td>
@@ -972,10 +972,10 @@
 		<tbody>
 			{% for estate in declaration.estate['25'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					25.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Квартири
 				</th>
 				<td>
@@ -1013,10 +1013,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					25.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Квартири
 				</th>
 				<td>
@@ -1045,10 +1045,10 @@
 		<tbody>
 			{% for estate in declaration.estate['26'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					26.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Садовий (дачний) будинок
 				</th>
 				<td>
@@ -1086,10 +1086,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					26.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Садовий (дачний) будинок
 				</th>
 				<td>
@@ -1118,10 +1118,10 @@
 		<tbody>
 			{% for estate in declaration.estate['27'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					27.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Гаражі
 				</th>
 				<td>
@@ -1159,10 +1159,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					27.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Гаражі
 				</th>
 				<td>
@@ -1191,10 +1191,10 @@
 		<tbody>
 			{% for estate in declaration.estate['28'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					28.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інше нерухоме майно
 				</th>
 				<td>
@@ -1232,10 +1232,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					28.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інше нерухоме майно
 				</th>
 				<td>
@@ -1263,7 +1263,7 @@
 		</tbody>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -1277,7 +1277,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -1309,10 +1309,10 @@
 		<tbody>
 			{% for estate in declaration.estate['29'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					29.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Земельні ділянки
 				</th>
 				<td>
@@ -1350,12 +1350,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						29.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Земельні ділянки
 				</th>
 				<td>
@@ -1383,10 +1383,10 @@
 		<tbody>
 			{% for estate in declaration.estate['30'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					30.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Житлові будинки
 				</th>
 				<td>
@@ -1424,12 +1424,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						30.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Житлові будинки
 				</th>
 				<td>
@@ -1457,10 +1457,10 @@
 		<tbody>
 			{% for estate in declaration.estate['31'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					31.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Квартири
 				</th>
 				<td>
@@ -1498,12 +1498,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						31.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Квартири
 				</th>
 				<td>
@@ -1531,10 +1531,10 @@
 		<tbody>
 			{% for estate in declaration.estate['32'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					32.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Садовий (дачний) будинок
 				</th>
 				<td>
@@ -1572,12 +1572,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						32.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Садовий (дачний) будинок
 				</th>
 				<td>
@@ -1605,10 +1605,10 @@
 		<tbody>
 			{% for estate in declaration.estate['33'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					33.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Гаражі
 				</th>
 				<td>
@@ -1646,12 +1646,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						33.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Гаражі
 				</th>
 				<td>
@@ -1679,10 +1679,10 @@
 		<tbody>
 			{% for estate in declaration.estate['34'] if estate.space or estate.costs or estate.region %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					34.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інше нерухоме майно
 				</th>
 				<td>
@@ -1720,12 +1720,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						34.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інше нерухоме майно
 				</th>
 				<td>
@@ -1759,7 +1759,7 @@
 		<span>Розділ IV. Відомості про транспортні засоби</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -1773,7 +1773,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -1803,10 +1803,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['35'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					35.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі легкові
 				</th>
 				<td>
@@ -1845,10 +1845,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					35.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі легкові
 				</th>
 				<td>
@@ -1869,10 +1869,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['36'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					36.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
@@ -1911,10 +1911,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					36.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
@@ -1935,10 +1935,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['37'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					37.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Водні засоби
 				</th>
 				<td>
@@ -1977,10 +1977,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					37.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Водні засоби
 				</th>
 				<td>
@@ -2001,10 +2001,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['38'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					38.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Повітряні судна
 				</th>
 				<td>
@@ -2043,10 +2043,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					38.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Повітряні судна
 				</th>
 				<td>
@@ -2067,10 +2067,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['39'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					39.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інші засоби
 				</th>
 				<td>
@@ -2109,10 +2109,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					39.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інші засоби
 				</th>
 				<td>
@@ -2132,7 +2132,7 @@
 		</tbody>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -2146,7 +2146,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -2176,10 +2176,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['40'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					40.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі легкові
 				</th>
 				<td>
@@ -2218,10 +2218,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					40.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі легкові
 				</th>
 				<td>
@@ -2242,10 +2242,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['41'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					41.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
@@ -2284,10 +2284,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					41.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
@@ -2308,10 +2308,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['42'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					42.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Водні засоби
 				</th>
 				<td>
@@ -2350,10 +2350,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					42.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Водні засоби
 				</th>
 				<td>
@@ -2374,10 +2374,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['43'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					43.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Повітряні судна
 				</th>
 				<td>
@@ -2416,10 +2416,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					43.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Повітряні судна
 				</th>
 				<td>
@@ -2440,10 +2440,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['44'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					44.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інші засоби
 				</th>
 				<td>
@@ -2482,10 +2482,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					44.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інші засоби
 				</th>
 				<td>
@@ -2512,7 +2512,7 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200"  />
@@ -2524,7 +2524,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -2543,12 +2543,12 @@
 		<tbody>
 			{% for banks in declaration.banks['45'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						45.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Сума коштів на рахунках у банках та інших фінансових установах, у т. ч.:
 				</th>
 				<td>
@@ -2584,12 +2584,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						45.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Сума коштів на рахунках у банках та інших фінансових установах, у т. ч.:
 				</th>
 				<td>0</td>
@@ -2600,12 +2600,12 @@
 		<tbody>
 			{% for banks in declaration.banks['46'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						46.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					вкладених у звітному році
 				</th>
 				<td>
@@ -2641,12 +2641,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						46.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					вкладених у звітному році
 				</th>
 				<td>0</td>
@@ -2657,12 +2657,12 @@
 		<tbody>
 			{% for banks in declaration.banks['47'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						47.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Номінальна вартість цінних паперів, у т. ч.:
 				</th>
 				<td>
@@ -2698,12 +2698,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						47.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Номінальна вартість цінних паперів, у т. ч.:
 				</th>
 				<td>0</td>
@@ -2714,12 +2714,12 @@
 		<tbody>
 			{% for banks in declaration.banks['48'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						48.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					придбаних у звітному році
 				</th>
 				<td>
@@ -2755,12 +2755,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						48.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					придбаних у звітному році
 				</th>
 				<td>0</td>
@@ -2771,12 +2771,12 @@
 		<tbody>
 			{% for banks in declaration.banks['49'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						49.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації, у т. ч.:
 				</th>
 				<td>
@@ -2812,12 +2812,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						49.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації, у т. ч.:
 				</th>
 				<td>0</td>
@@ -2828,12 +2828,12 @@
 		<tbody>
 			{% for banks in declaration.banks['50'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						50.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					внесених у звітному році
 				</th>
 				<td>
@@ -2869,12 +2869,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						50.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					внесених у звітному році
 				</th>
 				<td>0</td>
@@ -2884,7 +2884,7 @@
 		</tbody>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200" />
@@ -2896,7 +2896,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -2915,10 +2915,10 @@
 		<tbody>
 			{% for banks in declaration.banks['51'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					51.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Сума коштів на рахунках у банках та інших фінансових установах
 				</th>
 				<td>
@@ -2954,10 +2954,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					51.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Сума коштів на рахунках у банках та інших фінансових установах
 				</th>
 				<td>0</td>
@@ -2968,10 +2968,10 @@
 		<tbody>
 			{% for banks in declaration.banks['52'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					52.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Номінальна вартість цінних паперів
 				</th>
 				<td>
@@ -3007,10 +3007,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					52.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Номінальна вартість цінних паперів
 				</th>
 				<td>0</td>
@@ -3021,10 +3021,10 @@
 		<tbody>
 			{% for banks in declaration.banks['53'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					53.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації
 				</th>
 				<td>
@@ -3060,10 +3060,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					53.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації
 				</th>
 				<td>0</td>
@@ -3080,7 +3080,7 @@
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
 	</legend>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -3092,7 +3092,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -3109,10 +3109,10 @@
 			</tr>
 		</thead>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					54.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Добровільне страхування
 				</th>
 				<td>
@@ -3137,10 +3137,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					55.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Недержавне пенсійне забезпечення
 				</th>
 				<td>
@@ -3165,10 +3165,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					56.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Утримання зазначеного у розділах ІІІ–V майна
 				</th>
 				<td>
@@ -3193,10 +3193,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					57.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Погашення основної суми позики (кредиту)
 				</th>
 				<td>
@@ -3221,10 +3221,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					58.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Погашення суми процентів за позикою (кредитом)
 				</th>
 				<td>
@@ -3249,10 +3249,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					59.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Інші не зазначені у розділах ІІІ–V витрати
 				</th>
 				<td>
@@ -3278,7 +3278,7 @@
 			</tr>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col />
 			<col />
@@ -3290,7 +3290,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -3307,10 +3307,10 @@
 			</tr>
 		</thead>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					60.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Добровільне страхування
 				</th>
 				<td>
@@ -3335,10 +3335,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					61.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Недержавне пенсійне забезпечення
 				</th>
 				<td>
@@ -3363,10 +3363,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					62.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Утримання зазначеного у розділах ІІІ–V майна
 				</th>
 				<td>
@@ -3391,10 +3391,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					63.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Погашення основної суми позики (кредиту)
 				</th>
 				<td>
@@ -3419,10 +3419,10 @@
 				</td>
 			</tr>
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					64.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					Погашення суми процентів за позикою (кредитом)
 				</th>
 				<td>
@@ -3515,7 +3515,7 @@
 
 
 		</div>
-</form>
+</section>
 
 </body>
 </html>

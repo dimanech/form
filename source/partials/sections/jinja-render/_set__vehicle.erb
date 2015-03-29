@@ -3,7 +3,7 @@
 		<span>Розділ IV. Відомості про транспортні засоби</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -17,7 +17,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -48,10 +48,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -90,10 +90,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -114,7 +114,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col />
@@ -128,7 +128,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -159,10 +159,10 @@
 		<tbody>
 			{% for vehicle in declaration.vehicle['<%= field.number %>'] if vehicle.brand or vehicle.brand_info %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -201,10 +201,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>

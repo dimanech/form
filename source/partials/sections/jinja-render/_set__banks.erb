@@ -3,7 +3,7 @@
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</h2>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200"  />
@@ -15,7 +15,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -35,12 +35,12 @@
 		<tbody>
 			{% for banks in declaration.banks['<%= field.number %>'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -76,12 +76,12 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<span>
 						<%= field.number %>.
 					</span>
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>0</td>
@@ -92,7 +92,7 @@
 		<% end %>
 	</table>
 
-	<table class="table_weiss table_decl">
+	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
 			<col width="200" />
@@ -104,7 +104,7 @@
 		</caption>
 		<thead>
 			<tr>
-				<th rowspan="2" class="table__cell_bd-r">
+				<th rowspan="2" class="weiss-table__cell_bd-r">
 					<span class="i-wai">
 						№
 					</span>
@@ -124,10 +124,10 @@
 		<tbody>
 			{% for banks in declaration.banks['<%= field.number %>'] if banks.sum != "0" and banks.sum %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>
@@ -163,10 +163,10 @@
 			</tr>
 			{% else %}
 			<tr>
-				<td class="table__cell_bd-r table__psdo-th">
+				<td class="weiss-table__cell_bd-r weiss-table__psdo-th">
 					<%= field.number %>.
 				</td>
-				<th class="table__cell_fwn">
+				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
 				<td>0</td>
