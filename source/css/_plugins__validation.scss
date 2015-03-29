@@ -2,83 +2,82 @@
   --------------------------------------------------------------------------- */
 
 .form__msg {
-
 }
 
 // Message content
 
 .form__msg {
-	width: 100%;
-	box-sizing: border-box;
-	margin: 0 0 39px;
-	font: 13px/15px $sans;
-	position: absolute;
-	bottom: 0;
-	z-index: 6;
-	padding: 10px 14px;
-	border-radius: 3px;
-	box-shadow: 0 8px 30px -5px rgba(#000,.5);
-	cursor: default;
-	@include vendor(animation, fadeIn ease-out .5s);
+  @include vendor(animation, fadeIn ease-out .5s);
+  font: 13px/15px $sans;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 0 39px;
+  padding: 10px 14px;
+  position: absolute;
+  z-index: 6;
+  bottom: 0;
+  cursor: default;
+  border-radius: 3px;
+  box-shadow: 0 8px 30px -5px rgba(#000,.5);
 
-	&:after {
-		content: "";
-		display: block;
-		width: 0;
-		height: 0;
-		border-left: 7px solid transparent;
-		border-right: 7px solid transparent;
-		border-top: 8px solid #ff1b1b;
-		position: absolute;
-		bottom: -8px;
-		left: 10px;
-		z-index: 1;
-	}
-	
-	&:hover {
-		z-index: 999; // show it on hover
-	}
+  &:after {
+    display: block;
+    width: 0;
+    height: 0;
+    position: absolute;
+    z-index: 1;
+    bottom: -8px;
+    left: 10px;
+    content: "";
+    border-top: 8px solid #ff1b1b;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+  }
+
+  &:hover {
+    z-index: 999; // show it on hover
+  }
 }
 
 // Message types
 
 .form__msg_error {
-	background: #ff1b1b;
-	color: #fff;
+  color: #fff;
+  background: #ff1b1b;
 
-	&:after {
-		border-top: 8px solid #ff1b1b;
-	}
+  &:after {
+    border-top: 8px solid #ff1b1b;
+  }
 
-	& + input[type='text'].js-invalid {
-		border-color: #ff1b1b !important;
-	}
+  & + input[type="text"].js-invalid {
+    border-color: #ff1b1b !important;
+  }
 }
 
 .form__msg_warn {
-	background: #FA3;
-	color: #fff;
+  color: #fff;
+  background: #fa3;
 
-	&:after {
-		border-top: 8px solid #FA3;
-	}
+  &:after {
+    border-top: 8px solid #fa3;
+  }
 
-	& + input[type='text'].js-invalid {
-		border-color: #FA3 !important;
-	}
+  & + input[type="text"].js-invalid {
+    border-color: #fa3 !important;
+  }
 }
 
 // Animations
 
 @include keyframes(fadeIn) {
-	from {
-		@include vendor(transform, translateY(60px) rotateX(40deg));
-		opacity: 0;
-	}
-	to {
-		@include vendor(transform, translateY(0px) rotateX(0deg));
-		opacity: 1;
-	}
+  from {
+    @include vendor(transform, translateY(60px) rotateX(40deg));
+    opacity: 0;
+  }
+  to {
+    @include vendor(transform, translateY(0px) rotateX(0deg));
+    opacity: 1;
+  }
 }
 
 /* @end */

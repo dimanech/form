@@ -9,34 +9,34 @@
   --------------------------------------------------------------------------- */
 
 .table_weiss {
-	border-collapse: collapse;	//Remove most spacing between table cells.
-	border-spacing: 0;	//Remove most spacing between table cells.
-	border-width: 0;
-	width: 100%;
-	empty-cells: hide;
+  width: 100%;
+  empty-cells: hide;
+  border-spacing: 0;	//Remove most spacing between table cells.
+  border-collapse: collapse;	//Remove most spacing between table cells.
+  border-width: 0;
 
-	td,
-	th {
-		vertical-align: middle;
-		text-align: left;
-	}
+  td,
+  th {
+    text-align: left;
+    vertical-align: middle;
+  }
 
-	thead {
-		td,
-		th {
-			font-weight: bold;
-			text-align: center;
-		}
-	}
+  thead {
+    td,
+    th {
+      font-weight: bold;
+      text-align: center;
+    }
+  }
 
-	tfoot {
-		font-size: .9em;
+  tfoot {
+    font-size: .9em;
 
-		td {
-			text-align: center;
-			border: none;
-		}
-	}
+    td {
+      text-align: center;
+      border: none;
+    }
+  }
 }
 
 /* @end */
@@ -45,9 +45,9 @@
   --------------------------------------------------------------------------- */
 
 .table_fixed {
-	table-layout: fixed;
-	word-wrap: break-word;
-	width: auto;
+  width: auto;
+  table-layout: fixed;
+  word-wrap: break-word;
 }
 
 /* @end */
@@ -55,33 +55,34 @@
 /* @group Table helpers
   --------------------------------------------------------------------------- */
 
-.table_weiss { // overwrite specifity
+.table_weiss {
+  // overwrite specifity
 
-	.table__cell_unstyled {
-		border-color: transparent;
-	}
+  .table__cell_unstyled {
+    border-color: transparent;
+  }
 
-	.table__cell_unspaced {
-		padding: 0;
-	}
+  .table__cell_unspaced {
+    padding: 0;
+  }
 
-	.table__cell_bd-r {
-		border-color: transparent;
-		border-right: 1px solid $baseColor;
-	}
+  .table__cell_bd-r {
+    border-color: transparent;
+    border-right: 1px solid $baseColor;
+  }
 
-	.table__cell_bd-l {
-		border-color: transparent;
-		border-left: 1px solid $baseColor;
-	}
+  .table__cell_bd-l {
+    border-color: transparent;
+    border-left: 1px solid $baseColor;
+  }
 
-	.table__cell_fwn {
-		font-weight: normal;
-	}
+  .table__cell_fwn {
+    font-weight: normal;
+  }
 
-	.table__psdo-th {
-		font-weight: bold;
-	}
+  .table__psdo-th {
+    font-weight: bold;
+  }
 }
 
 /* @end */
@@ -90,17 +91,17 @@
   --------------------------------------------------------------------------- */
 
 .table_decl {
-	caption {
-		@include adjust-font-size-to($h5-font-size, 1.2);
-		font-weight: bold;
-		margin-bottom: 1em;
-	}
+  caption {
+    @include adjust-font-size-to($h5-font-size, 1.2);
+    font-weight: bold;
+    margin-bottom: 1em;
+  }
 
-	td,
-	th {
-		padding: 5px;
-		border: 1px solid $baseColor;
-	}
+  td,
+  th {
+    padding: 5px;
+    border: 1px solid $baseColor;
+  }
 }
 
 /* @end */

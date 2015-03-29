@@ -6,29 +6,29 @@
 ============================================================================= */
 
 %container {
-	width: 890px;
-	margin: 0 auto;
+  width: 890px;
+  margin: 0 auto;
 }
 
 body {
-	min-width: 890px;
+  min-width: 890px;
 }
 
 .l-main-aux {
-	background-color: $mainFgColor;
+  background-color: $mainFgColor;
 }
 
 .l-main-aux__inner {
-	position: relative;
-	background-color: $mainBgColor;
-	@extend %container;
+  @extend %container;
+  position: relative;
+  background-color: $mainBgColor;
 }
 
 /* @group layout header
   --------------------------------------------------------------------------- */
 
 .l-global-header {
-	@extend %container;
+  @extend %container;
 }
 
 /* @end */
@@ -37,12 +37,12 @@ body {
   --------------------------------------------------------------------------- */
 
 .l-global-footer {
-	clear: both;
-	overflow: hidden;
+  clear: both;
+  overflow: hidden;
 }
 
 .l-global-footer__inner {
-	@extend %container;
+  @extend %container;
 }
 
 /* @end */

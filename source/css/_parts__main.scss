@@ -10,23 +10,22 @@
 $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 .i-ico-extend {
-	background: inline-sprite($icons-map);
-	background-repeat: no-repeat;
+  background: inline-sprite($icons-map);
+  background-repeat: no-repeat;
 }
 
 .i-ico {
-	@extend .i-ico-extend;
-	display: inline-block;
-	vertical-align: top;
+  @extend .i-ico-extend;
+  display: inline-block;
+  vertical-align: top;
 }
 
 @each $ico-name in
 	hidden,
-	unclear
-{
-	.i-ico_#{$ico-name} {
-		background-position: sprite-position($icons-map, ico-#{$ico-name});
-	}
+	unclear {
+  .i-ico_#{$ico-name} {
+    background-position: sprite-position($icons-map, ico-#{$ico-name});
+  }
 }
 
 /* @end */
@@ -35,17 +34,17 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .declaration-head {
-	font-size: $base-font-size;
-	font-family: $serif;
-	text-align: center;
-	margin: 1em 0 2em;
-	font-weight: normal;
+  font-family: $serif;
+  font-size: $base-font-size;
+  font-weight: normal;
+  margin: 1em 0 2em;
+  text-align: center;
 }
 
 .declaration-head__em {
-	display: block;
-	text-transform: uppercase;
-	@include adjust-font-size-to($h3-font-size, 1.7);
+  @include adjust-font-size-to($h3-font-size, 1.7);
+  display: block;
+  text-transform: uppercase;
 }
 
 /* @end */
@@ -54,9 +53,9 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .declaration-body {
-	font-size: $base-font-size;
-	@include adjust-leading-to(1);
-	font-family: $baseFontFamily;
+  @include adjust-leading-to(1);
+  font-family: $baseFontFamily;
+  font-size: $base-font-size;
 }
 
 /* @end */
@@ -65,26 +64,26 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .small-note {
-	position: relative;
-	font: normal normal 13px/16px $sans;
-	background-color: #fa3;
-	color: #fff;
-	margin: 0;
-	padding: 2px 4px;
-	text-align: left;
-	border-radius: 3px;
+  font: normal normal 13px/16px $sans;
+  margin: 0;
+  padding: 2px 4px;
+  position: relative;
+  text-align: left;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #fa3;
 
-	&:before {
-		content: '';
-		position: absolute;
-		top: -8px;
-		left: 4px;
-		width: 0;
-		height: 0;
-		border-style: solid;
-		border-width: 0 0 8px 8px;
-		border-color: transparent transparent #fa3 transparent;
-	}
+  &:before {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: -8px;
+    left: 4px;
+    content: "";
+    border-width: 0 0 8px 8px;
+    border-style: solid;
+    border-color: transparent transparent #fa3 transparent;
+  }
 }
 
 /* @end */
@@ -93,35 +92,35 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .ui-autocomplete {
-	background: #fff;
-	box-shadow: 0 8px 30px -5px rgba(#000,.5);
-	margin: 0;
-	padding: 0;
-	list-style: none;
-	position: absolute;
-	z-index: 999;
-	font: normal normal $base-font-size/$base-line-height $sans;
-	
-	li {
-		margin: 0;
-		padding: 0 10px;
-		cursor: default;
-	}
+  font: normal normal $base-font-size/$base-line-height $sans;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  z-index: 999;
+  list-style: none;
+  background: #fff;
+  box-shadow: 0 8px 30px -5px rgba(#000,.5);
 
-	.ui-state-hover,
-	.ui-widget-content .ui-state-hover,
-	.ui-widget-header .ui-state-hover,
-	.ui-state-focus,
-	.ui-widget-content .ui-state-focus,
-	.ui-widget-header .ui-state-focus {
-		background-color: $accentColor;
-		color: #fff;
-	}
+  li {
+    margin: 0;
+    padding: 0 10px;
+    cursor: default;
+  }
+
+  .ui-state-hover,
+  .ui-widget-content .ui-state-hover,
+  .ui-widget-header .ui-state-hover,
+  .ui-state-focus,
+  .ui-widget-content .ui-state-focus,
+  .ui-widget-header .ui-state-focus {
+    color: #fff;
+    background-color: $accentColor;
+  }
 }
 
 
 .ui-helper-hidden-accessible {
-	@include i-hide_vis();
+  @include i-hide_vis();
 }
 
 /* @end */
@@ -130,9 +129,9 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .declaration-nav {
-	background: #FFFFE0;
-	padding: 20px;
-	text-align: right;
+  padding: 20px;
+  text-align: right;
+  background: #ffffe0;
 }
 
 /* @end */
@@ -141,34 +140,34 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .progress-indicator {
-	display: block;
-	margin: 0 0 20px;
-	padding: 0;
-	text-align: center;
+  display: block;
+  margin: 0 0 20px;
+  padding: 0;
+  text-align: center;
 }
 
 .progress-indicator__step {
-	display: inline-block;
-	vertical-align: middle;
-	width: 50px;
-	height: 10px;
-	background: #ccc;
-	overflow: hidden;
-	text-indent: -999px;
-	@include transition();
+  @include transition();
+  display: inline-block;
+  overflow: hidden;
+  width: 50px;
+  height: 10px;
+  vertical-align: middle;
+  text-indent: -999px;
+  background: #ccc;
 }
 
 .progress-indicator__step_inactive {
-	background: #eee;
-	cursor: pointer;
-	
-	&:hover {
-		background: lighten($accentColor, 20%);
-	}
+  cursor: pointer;
+  background: #eee;
+
+  &:hover {
+    background: lighten($accentColor, 20%);
+  }
 }
 
 .progress-indicator__step_cur {
-	background: $accentColor;
+  background: $accentColor;
 }
 
 /* @end */
@@ -177,21 +176,21 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 //------------------------------------------------------------------------------
 
 .declaration-action {
-	border: 2px solid #ccc;
-	border-radius: 4px;
-	margin: 0 0 20px;
-	padding: 20px 20px 10px;
-	text-align: center;
-	font-family: $sans;
-	
-	p {
-		margin: 0 0 10px;
-	}
+  font-family: $sans;
+  margin: 0 0 20px;
+  padding: 20px 20px 10px;
+  text-align: center;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+
+  p {
+    margin: 0 0 10px;
+  }
 }
 
 .declaration-action_head {
-	font-weight: bold;
-	font-size: 1.4em;
+  font-size: 1.4em;
+  font-weight: bold;
 }
 
 // @end

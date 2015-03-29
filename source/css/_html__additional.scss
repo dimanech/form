@@ -8,41 +8,41 @@
 // Prevents sub and sup affecting line-height in all browsers
 sup,
 sub {
-	vertical-align: baseline;
-	position: relative;
-	font-size: .8em;
-	font-weight: inherit;
+  font-size: .8em;
+  font-weight: inherit;
+  position: relative;
+  vertical-align: baseline;
 }
 
 sup {
-	top: -0.5em;
+  top: -.5em;
 }
 
 sub {
-	bottom: -0.25em;
+  bottom: -.25em;
 }
 
 small {
-	font-size: .75em;
+  font-size: .75em;
 }
 
 u {
-	text-decoration: none;
-	// remove textdecoration for save <a> style
+  text-decoration: none;
+  // remove textdecoration for save <a> style
 }
 
 // definition list
 
 dl {
-	margin: rhythm(1) 0;
-	padding-left: 1.5em;
+  margin: rhythm(1) 0;
+  padding-left: 1.5em;
 }
 
 dt {
-	font-weight: bold;
-	font-style: italic;
+  font-weight: bold;
+  font-style: italic;
 }
 
 dd {
-	margin-left: 1.5em;
+  margin-left: 1.5em;
 }

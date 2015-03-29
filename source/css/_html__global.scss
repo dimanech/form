@@ -5,21 +5,29 @@
 		GLOBAL
 ============================================================================= */
 
-article, aside, details, figcaption, figure,
-footer, header, hgroup, nav, section {
-	display: block;
-	// Corrects `block` display not defined in IE 9.
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section {
+  display: block;
+  // Corrects `block` display not defined in IE 9.
 }
 
 html {
-	-webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
-	-ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;	// Prevents iOS text size adjust after orientation change, without disabling user zoom.
+  -ms-text-size-adjust: 100%;
 }
 
 body {
-	font-size: $base-font-size;
-	@include adjust-leading-to(1);
-	margin: 0;	// Removes default margin.
+  @include adjust-leading-to(1);
+  font-size: $base-font-size;
+  margin: 0;	// Removes default margin.
 }
 
 ///* @group selection fixes
@@ -38,5 +46,3 @@ body {
 // }
 //
 ///* @end */
-
-
