@@ -103,11 +103,6 @@
 				{{ declaration.general.post.post }}
 			</span>
 		</span>
-		<span class="l-weiss-form__item">
-			<span class="l-weiss-form__item l-weiss-form__item_lined">
-				{{ declaration.general.post.post_raw }}
-			</span>
-		</span>
 	</p>
 
 	<div class="weiss-form__set">
@@ -286,7 +281,7 @@
 
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
-			<col width="20" />
+			<col width="35" />
 			<col />
 			<col width="200" />
 			<col width="200" />
@@ -607,7 +602,7 @@
 
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
-			<col width="20" />
+			<col width="35" />
 			<col />
 			<col width="200" />
 			<col width="200" />
@@ -692,7 +687,7 @@
 
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
-			<col width="20" />
+			<col width="35" />
 			<col />
 			<col width="200" />
 			<col width="200" />
@@ -787,7 +782,7 @@
 			<col width="35" />
 			<col />
 			<col />
-			<col width="200" />
+			<col width="150" />
 			<col width="150" />
 			<col width="150" />
 		</colgroup>
@@ -2515,7 +2510,7 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
-			<col width="200"  />
+			<col width="400"  />
 			<col />
 			<col width="265" />
 		</colgroup>
@@ -2887,7 +2882,7 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
-			<col width="200" />
+			<col width="400" />
 			<col />
 			<col width="265" />
 		</colgroup>
@@ -3075,17 +3070,17 @@
 </section>
 		</div>
 		<div id="section-5">
-			<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
-	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
-	</legend>
+	</h2>
 
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
+			<col width="35" />
+			<col width="400" />
 			<col />
-			<col />
-			<col />
-			<col />
+			<col width="265" />
 		</colgroup>
 		<caption>
 			А. Фінансові зобов’язання декларанта та інші його витрати (грн)
@@ -3280,10 +3275,10 @@
 
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
-			<col />
-			<col />
-			<col />
-			<col />
+            <col width="35" />
+            <col width="400" />
+            <col />
+            <col width="265" />
 		</colgroup>
 		<caption>
 			Б. Фінансові зобов’язання членів сім’ї декларанта (грн)
@@ -3447,7 +3442,7 @@
 				</td>
 			</tr>
 	</table>
-</fieldset>
+</section>
 		</div>
 		<div id="section-6">
 			<section class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
@@ -3457,7 +3452,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Дата заповнення декларантом
+			Дата заповнення декларантом:
 		</strong>
 		<span class="l-weiss-form__item">
 			{{ declaration.declaration.date }}
@@ -3466,7 +3461,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Декларація була не повна
+			Декларація була не повна:
 		</strong>
 		<span class="l-weiss-form__item">
 			{% if declaration.declaration.notfull == "true" %}
@@ -3480,7 +3475,7 @@
 	{% if declaration.declaration.notfull == "true" %}
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Яких сторінок (паперових) не вистачало
+			Яких сторінок (паперових) не вистачало:
 		</strong>
 		<span class="l-weiss-form__item">
 			{{ declaration.declaration.notfull_lostpages }}
@@ -3490,7 +3485,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Є додаткова інформація
+			Є додаткова інформація:
 		</strong>
 		<span class="l-weiss-form__item">
 			{% if declaration.declaration.additional_info == "true" %}
@@ -3504,7 +3499,7 @@
 	{% if declaration.declaration.additional_info == "true" %}
 	<p class="js-related-section">
 		<strong class="l-weiss-form__row">
-			Що саме не вмістилось
+			Що саме не вмістилось:
 		</strong>
 		<span class="l-weiss-form__row">
 			{{ declaration.declaration.additional_info_text }}

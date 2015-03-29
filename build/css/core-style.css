@@ -447,6 +447,7 @@ figure {
 }
 .weiss-form .weiss-form__set-legend {
   font: bold 22.666px "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+  margin: 0;
   padding: 0;
   border: none;
 }

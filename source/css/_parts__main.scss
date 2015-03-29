@@ -30,6 +30,17 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 /* @end */
 
+// @group declaration-block
+//------------------------------------------------------------------------------
+
+.declaration-block {
+  font-family: $baseFontFamily;
+  @include adjust-leading-to(1);
+  font-size: $base-font-size;
+}
+
+// @end
+
 /* @group Declaration-head
   --------------------------------------------------------------------------- */
 
@@ -45,17 +56,6 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   @include adjust-font-size-to($h3-font-size, 1.7);
   display: block;
   text-transform: uppercase;
-}
-
-/* @end */
-
-/* @group Declaration body
-  --------------------------------------------------------------------------- */
-
-.declaration-body {
-  @include adjust-leading-to(1);
-  font-family: $baseFontFamily;
-  font-size: $base-font-size;
 }
 
 /* @end */

@@ -263,6 +263,12 @@ dd {
 }
 
 /* @end */
+.declaration-block {
+  font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
+  line-height: 1.28571em;
+  font-size: 14px;
+}
+
 /* @group Declaration-head
   --------------------------------------------------------------------------- */
 .declaration-head {
@@ -278,15 +284,6 @@ dd {
   line-height: 1.35004em;
   display: block;
   text-transform: uppercase;
-}
-
-/* @end */
-/* @group Declaration body
-  --------------------------------------------------------------------------- */
-.declaration-body {
-  line-height: 1.28571em;
-  font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
-  font-size: 14px;
 }
 
 /* @end */

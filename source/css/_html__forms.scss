@@ -188,6 +188,7 @@ $formColor: $baseColor;
   .weiss-form__set-legend {
     font: bold $h3-font-size $serif;
     // <legend>
+    margin: 0;
     padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
     border: none; // Corrects color not being inherited in IE 8/9.
 

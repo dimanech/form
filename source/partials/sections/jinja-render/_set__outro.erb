@@ -5,7 +5,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Дата заповнення декларантом
+			Дата заповнення декларантом:
 		</strong>
 		<span class="l-weiss-form__item">
 			{{ declaration.declaration.date }}
@@ -14,7 +14,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Декларація була не повна
+			Декларація була не повна:
 		</strong>
 		<span class="l-weiss-form__item">
 			{% if declaration.declaration.notfull == "true" %}
@@ -28,7 +28,7 @@
 	{% if declaration.declaration.notfull == "true" %}
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Яких сторінок (паперових) не вистачало
+			Яких сторінок (паперових) не вистачало:
 		</strong>
 		<span class="l-weiss-form__item">
 			{{ declaration.declaration.notfull_lostpages }}
@@ -38,7 +38,7 @@
 
 	<p class="l-weiss-form__row">
 		<strong class="l-weiss-form__item">
-			Є додаткова інформація
+			Є додаткова інформація:
 		</strong>
 		<span class="l-weiss-form__item">
 			{% if declaration.declaration.additional_info == "true" %}
@@ -52,7 +52,7 @@
 	{% if declaration.declaration.additional_info == "true" %}
 	<p class="js-related-section">
 		<strong class="l-weiss-form__row">
-			Що саме не вмістилось
+			Що саме не вмістилось:
 		</strong>
 		<span class="l-weiss-form__row">
 			{{ declaration.declaration.additional_info_text }}
