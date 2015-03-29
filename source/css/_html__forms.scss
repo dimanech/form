@@ -14,7 +14,7 @@ $formColor: $baseColor;
 /* @group Forms generic reset
   --------------------------------------------------------------------------- */
 
-.form {
+.weiss-form {
   margin: 0; // IE7
   border: none;
 
@@ -67,7 +67,7 @@ $formColor: $baseColor;
 /* @group Form generic themed styles
 	--------------------------------------------------------------------------- */
 
-.form {
+.weiss-form {
   button,
   input,
   select,
@@ -76,7 +76,7 @@ $formColor: $baseColor;
   }
 
   label,
-  .form__label {
+  .weiss-form__label {
     @include vendor(user-select, none);
     font-weight: bold;
     line-height: $inputHeight;
@@ -157,7 +157,7 @@ $formColor: $baseColor;
 /* @group Form field sets
   --------------------------------------------------------------------------- */
 
-.form {
+.weiss-form {
   // Reset
 
   fieldset {
@@ -177,7 +177,7 @@ $formColor: $baseColor;
 
   // Generic
 
-  .form__set {
+  .weiss-form__set {
     // <fieldset>
     margin: 0;
     padding: 20px 0 0;
@@ -185,7 +185,7 @@ $formColor: $baseColor;
     border: none;
   }
 
-  .form__set-legend {
+  .weiss-form__set-legend {
     font: bold $h3-font-size $serif;
     // <legend>
     padding: 0; // Remove padding so people aren't caught out if they zero out fieldsets.
@@ -209,7 +209,7 @@ $formColor: $baseColor;
 /* @group Form Placeholders
   --------------------------------------------------------------------------- */
 
-.form {
+.weiss-form {
   input {
     &::-webkit-input-placeholder {
       font-style: italic;
@@ -247,7 +247,7 @@ $formColor: $baseColor;
 /* @group Form Layout
   --------------------------------------------------------------------------- */
 
-.l-form__row {
+.l-weiss-form__row {
   @extend .i-clfx;
   display: block;
   margin: $formRowMargin 0;
@@ -255,7 +255,7 @@ $formColor: $baseColor;
   //	line-height: 1px; // fix inline box
 }
 
-.l-form__item {
+.l-weiss-form__item {
   line-height: $inputHeight;
   display: block;
   float: left;
@@ -264,18 +264,18 @@ $formColor: $baseColor;
 }
 
 @each $itemWidth in 30, 100 {
-  .l-form__item_w-#{$itemWidth} {
+  .l-weiss-form__item_w-#{$itemWidth} {
     width: #{$itemWidth}px; //percentage(($itemWidth - 5) / 710);
   }
 }
 
-.l-form__item_w-p50 {
+.l-weiss-form__item_w-p50 {
   width: 48%;
 }
 
 // table mods
 
-table.l-form__row {
+table.l-weiss-form__row {
   border-spacing: 0;	//Remove most spacing between table cells.
   border-collapse: collapse;	//Remove most spacing between table cells.
   border-width: 0;
@@ -286,19 +286,19 @@ table.l-form__row {
   }
 }
 
-td.l-form__item {
+td.l-weiss-form__item {
   float: none;
   vertical-align: middle;
 }
 
 // fieldset mod
 
-.form {
-  fieldset.l-form__row {
+.weiss-form {
+  fieldset.l-weiss-form__row {
     margin: $formRowMargin 0;
   }
 
-  legend.l-form__item {
+  legend.l-weiss-form__item {
     padding: 0 $formItemSpacing 0 0;
   }
 }
@@ -308,11 +308,11 @@ td.l-form__item {
 /* @group Form Elements
   --------------------------------------------------------------------------- */
 
-.form__notes {
+.weiss-form__notes {
   font-size: .8em;
 }
 
-.form__req-sign {
+.weiss-form__req-sign {
   color: red;
 }
 
@@ -332,24 +332,24 @@ td.l-form__item {
     Stylization
 ============================================================================= */
 
-.l-form__item_lined {
+.l-weiss-form__item_lined {
   margin-bottom: 3px;
   border-bottom: 1px solid $baseColor;
 }
 
-.l-form__row_submit_right {
+.l-weiss-form__row_submit_right {
   text-align: right;
 }
 
-/* @group form__input-w-ico
+/* @group weiss-form__input-w-ico
   --------------------------------------------------------------------------- */
 
-.form__input-w-ico {
+.weiss-form__input-w-ico {
   display: block;
   position: relative;
 }
 
-.form__input-w-ico__ico {
+.weiss-form__input-w-ico__ico {
   line-height: $inputHeight;
   //	background: url(../images/bg-form-icons-mask.png) 0 0 no-repeat;
   padding: 0 10px 0 20px;
@@ -367,10 +367,10 @@ td.l-form__item {
 
 /* @end */
 
-/* @group form__input-act
+/* @group weiss-form__input-act
   --------------------------------------------------------------------------- */
 
-.form__input-act {
+.weiss-form__input-act {
   display: none;
   padding: 0 8px;
   top: 0;
@@ -411,7 +411,7 @@ input,
 select,
 textarea {
   &:focus {
-    + .form__input-act {
+    + .weiss-form__input-act {
       display: block;
 
       label.i-ico {
@@ -423,7 +423,7 @@ textarea {
   }
 }
 
-.form__input-act:hover {
+.weiss-form__input-act:hover {
   display: block;
 }
 
@@ -431,8 +431,8 @@ textarea {
   opacity: 1 !important;
 }
 
-.form__input-act_hidden,
-.form__input-act_unclear {
+.weiss-form__input-act_hidden,
+.weiss-form__input-act_unclear {
   input,
   select,
   textarea {
@@ -440,7 +440,7 @@ textarea {
   }
 }
 
-.form__input-act_unclear {
+.weiss-form__input-act_unclear {
   input,
   select,
   textarea {
@@ -448,7 +448,7 @@ textarea {
   }
 }
 
-.form__input-act_hidden.form__input-act_unclear {
+.weiss-form__input-act_hidden.weiss-form__input-act_unclear {
   input,
   select,
   textarea {
@@ -461,7 +461,7 @@ textarea {
 /* @group Form Fieldsets
   --------------------------------------------------------------------------- */
 
-.form_declaration {
+.weiss-form_declaration {
   font-family: $baseFontFamily;
   width: 850px;
   margin: 20px auto;
@@ -470,13 +470,13 @@ textarea {
   background: white;
 }
 
-.form {
-  .form__set.form__set_paper {
+.weiss-form {
+  .weiss-form__set.weiss-form__set_paper {
     margin: 1em 0;
     padding: 25px 0 0;
   }
 
-  .form__set-legend {
+  .weiss-form__set-legend {
     span {
       font-size: $h5-font-size;
       font-weight: bold;
@@ -484,11 +484,11 @@ textarea {
   }
 
   // main fieldset block
-  .form__set_main.form__set_paper {
+  .weiss-form__set_main.weiss-form__set_paper {
     padding: 40px 10px 10px;
     border: 1px solid $baseColor;
 
-    > .form__set-legend {
+    > .weiss-form__set-legend {
       span {
         font-size: $h5-font-size;
         line-height: 26px;
@@ -499,7 +499,7 @@ textarea {
   }
 }
 
-.form__set_paper {
+.weiss-form__set_paper {
   input[type="password"],
   input[type="search"],
   input[type="text"],
@@ -517,18 +517,18 @@ textarea {
     min-height: $inputHeight;
   }
 
-  .form__label {
+  .weiss-form__label {
     font-size: $h5-font-size;
     font-weight: bold;
   }
 }
 
-textarea.form__textarea_lined {
+textarea.weiss-form__textarea_lined {
   min-height: 5em;
   background: inline-image("../images/bg-form-textarea.png") 0 19px repeat;
 }
 
-.form__set_notes.form__set {
+.weiss-form__set_notes.weiss-form__set {
   font-family: $sans;
   padding: 20px;
   background-color: lightyellow;

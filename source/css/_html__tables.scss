@@ -11,9 +11,10 @@
 .weiss-table {
   width: 100%;
   empty-cells: hide;
-  border-spacing: 0;	//Remove most spacing between table cells.
-  border-collapse: collapse;	//Remove most spacing between table cells.
+  border-spacing: 0; //Remove most spacing between table cells.
+  border-collapse: collapse; //Remove most spacing between table cells.
   border-width: 0;
+  margin-bottom: 15px;
 
   td,
   th {

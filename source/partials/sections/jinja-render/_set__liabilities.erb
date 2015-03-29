@@ -1,5 +1,5 @@
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
 	</legend>
 
@@ -40,21 +40,21 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -100,21 +100,21 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['<%= field.number %>'].sum_foreign_comment }}
 					</div>
 					{% endif %}

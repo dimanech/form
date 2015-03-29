@@ -26,92 +26,92 @@
 	</h1>
 
 		<div id="section-0">
-			<section class="form__set form__set_main form__set_paper">
-	<h2 class="form__set-legend form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ I. Загальні відомості</span>
 	</h2>
 
-	<p class="l-form__row">
-		<span class="l-form__item form__label">
+	<p class="l-weiss-form__row">
+		<span class="l-weiss-form__item weiss-form__label">
 			<strong>1.</strong>
 		</span>
-		<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item l-weiss-form__item_lined">
 			<label  class="i-wai">Прізвище</label>
 			{{ declaration.general.last_name }}
 		</span>
-		<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item l-weiss-form__item_lined">
 			<label  class="i-wai">Ім’я</label>
 			{{ declaration.general.name }}
 		</span>
-		<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item l-weiss-form__item_lined">
 			<label  class="i-wai">По-батькові</label>
 			{{ declaration.general.patronymic }}
 		</span>
 	</p>
 
-	<p class="l-form__row">
-		<span class="l-form__item form__label">
+	<p class="l-weiss-form__row">
+		<span class="l-weiss-form__item weiss-form__label">
 			<strong>2. Місце проживання</strong>
 		</span>
 		{% for address in declaration.general.addresses %}
-		<span class="l-form__item">
-			<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Область</span>
 				{{ address.place }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Район</span>
 				{{ address.place_district }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Населений пункт</span>
 				{{ address.place_city }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Тип населенного пункту</span>
 				{{ address.place_city_type }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Решта адреси</span>
 				{{ address.place_address }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Тип адреси</span>
 				{{ address.place_address_type }}
 			</span>
 		</span>
 		{% endfor %}
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{{ declaration.general.addresses_raw }}
 		</span>
 	</p>
-	<p class="l-form__row">
-		<span class="l-form__item form__label">
+	<p class="l-weiss-form__row">
+		<span class="l-weiss-form__item weiss-form__label">
 			<strong>3. Посада:</strong>
 		</span>
-		<span class="l-form__item">
-			<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Область</span>
 				{{ declaration.general.post.region }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Відомство</span>
 				{{ declaration.general.post.office }}
 			</span>
-			<span class="l-form__item l-form__item_lined">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				<span  class="i-wai">Посада</span>
 				{{ declaration.general.post.post }}
 			</span>
 		</span>
-		<span class="l-form__item">
-			<span class="l-form__item l-form__item_lined">
+		<span class="l-weiss-form__item">
+			<span class="l-weiss-form__item l-weiss-form__item_lined">
 				{{ declaration.general.post.post_raw }}
 			</span>
 		</span>
 	</p>
 
-	<div class="form__set">
-		<div class="form__set-legend">
+	<div class="weiss-form__set">
+		<div class="weiss-form__set-legend">
 			<span>4. Члени сім’ї декларанта:</span>
 		</div>
 		<table class="weiss-table weiss-table_decl">
@@ -133,12 +133,12 @@
 				{% for member in declaration.general.family %}
 				<tr>
 					<td>
-						<div class="l-form__row">
+						<div class="l-weiss-form__row">
 							{{ member.relations }}{{ member.relations_other|default("") }}
 						</div>
 					</td>
 					<td>
-						<div class="l-form__row">
+						<div class="l-weiss-form__row">
 							{{ member.family_name|default("") }}
 						</div>
 					</td>
@@ -146,7 +146,7 @@
 				{% endfor %}
 				<tr>
 					<td colspan="2">
-						<div class="l-form__row">
+						<div class="l-weiss-form__row">
 							{{ declaration.general.family_raw }}
 						</div>
 					</td>
@@ -157,8 +157,8 @@
 </section>
 		</div>
 		<div id="section-1">
-			<section class="form__set form__set_main form__set_paper">
-	<h2 class="form__set-legend form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ II. Відомості про доходи</span>
 	</h2>
 
@@ -210,18 +210,18 @@
 					Загальна сума сукупного доходу, гривні, у т.ч.
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['5'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['5'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['5'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['5'].family_comment }}
 					</div>
 				</td>
@@ -234,18 +234,18 @@
 					Заробітна плата, інші виплати та винагороди, нараховані (виплачені) декларанту відповідно до умов трудового або цивільно-правового договору <em>(крім виплат, зазначених у позиціях 7, 8)</em>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['6'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['6'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['6'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['6'].family_comment }}
 					</div>
 				</td>
@@ -258,18 +258,18 @@
 					Дохід від викладацької, наукової і творчої діяльності, медичної практики, інструкторіської та суддівської практики із спорту
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['7'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['7'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['7'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['7'].family_comment }}
 					</div>
 				</td>
@@ -299,18 +299,18 @@
 					авторська винагорода, інші доходи від реалізації майнових прав інтелектуальної власності
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['8'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['8'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['8'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['8'].family_comment }}
 					</div>
 				</td>
@@ -323,18 +323,18 @@
 					дивіденди, проценти
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['9'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['9'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['9'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['9'].family_comment }}
 					</div>
 				</td>
@@ -347,18 +347,18 @@
 					матеріальна допомога
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['10'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['10'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['10'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['10'].family_comment }}
 					</div>
 				</td>
@@ -371,18 +371,18 @@
 					дарунки, призи, виграші
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['11'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['11'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['11'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['11'].family_comment }}
 					</div>
 				</td>
@@ -395,18 +395,18 @@
 					допомога по безробіттю
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['12'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['12'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['12'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['12'].family_comment }}
 					</div>
 				</td>
@@ -419,18 +419,18 @@
 					аліменти
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['13'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['13'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['13'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['13'].family_comment }}
 					</div>
 				</td>
@@ -443,18 +443,18 @@
 					спадщина
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['14'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['14'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['14'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['14'].family_comment }}
 					</div>
 				</td>
@@ -467,18 +467,18 @@
 					страхові виплати, страхові відшкодування, викупні суми та пенсійні виплати, що сплачені декларанту за договором страхування, недержавного пенсійного забезпечення та пенсійного вкладу
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['15'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['15'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['15'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['15'].family_comment }}
 					</div>
 				</td>
@@ -491,18 +491,18 @@
 					дохід від відчуження рухомого та нерухомого майна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['16'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['16'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['16'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['16'].family_comment }}
 					</div>
 				</td>
@@ -515,18 +515,18 @@
 					дохід від провадження підприємницької та незалежної професійної діяльності
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['17'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['17'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['17'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['17'].family_comment }}
 					</div>
 				</td>
@@ -539,18 +539,18 @@
 					дохід від відчуження цінних паперів та корпоративних прав
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['18'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['18'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['18'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['18'].family_comment }}
 					</div>
 				</td>
@@ -563,18 +563,18 @@
 					дохід від передачі в оренду (строкове володіння та/або користування) майна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['19'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['19'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['19'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['19'].family_comment }}
 					</div>
 				</td>
@@ -587,18 +587,18 @@
 					інші види доходів (не зазначені у позиціях 6–19)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['20'].value }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['20'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['20'].family }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.income['20'].family_comment }}
 					</div>
 				</td>
@@ -645,22 +645,22 @@
 					21.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.country_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.cur }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.uah_equal }}
 					</div>
 				</td>
@@ -671,17 +671,17 @@
 					21.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -730,22 +730,22 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.country_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.cur }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ income.uah_equal }}
 					</div>
 				</td>
@@ -756,17 +756,17 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -777,8 +777,8 @@
 </section>
 		</div>
 		<div id="section-2">
-			<section class="form__set form__set_main form__set_paper">
-	<h2 class="form__set-legend form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ III Відомості про нерухоме майно</span>
 	</h2>
 
@@ -833,23 +833,23 @@
 					Земельні ділянки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -857,7 +857,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -874,22 +874,22 @@
 					Земельні ділянки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -906,23 +906,23 @@
 					Житлові будинки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -930,7 +930,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -947,22 +947,22 @@
 					Житлові будинки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -979,23 +979,23 @@
 					Квартири
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -1003,7 +1003,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1020,22 +1020,22 @@
 					Квартири
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1052,23 +1052,23 @@
 					Садовий (дачний) будинок
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -1076,7 +1076,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1093,22 +1093,22 @@
 					Садовий (дачний) будинок
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1125,23 +1125,23 @@
 					Гаражі
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -1149,7 +1149,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1166,22 +1166,22 @@
 					Гаражі
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1198,23 +1198,23 @@
 					Інше нерухоме майно
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs }}
 					</div>
 					<div class="l-form_row">
@@ -1222,7 +1222,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1239,22 +1239,22 @@
 					Інше нерухоме майно
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1316,23 +1316,23 @@
 					Земельні ділянки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1340,7 +1340,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1359,22 +1359,22 @@
 					Земельні ділянки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1390,23 +1390,23 @@
 					Житлові будинки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1414,7 +1414,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1433,22 +1433,22 @@
 					Житлові будинки
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1464,23 +1464,23 @@
 					Квартири
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1488,7 +1488,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1507,22 +1507,22 @@
 					Квартири
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1538,23 +1538,23 @@
 					Садовий (дачний) будинок
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1562,7 +1562,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1581,22 +1581,22 @@
 					Садовий (дачний) будинок
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1612,23 +1612,23 @@
 					Гаражі
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1636,7 +1636,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1655,22 +1655,22 @@
 					Гаражі
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1686,23 +1686,23 @@
 					Інше нерухоме майно
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.region }}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.address }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_property }}
 					</div>
 					<div class="l-form_row">
@@ -1710,7 +1710,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ estate.costs_rent }}
 					</div>
 					<div class="l-form_row">
@@ -1729,22 +1729,22 @@
 					Інше нерухоме майно
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						&ndash;
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
@@ -1754,8 +1754,8 @@
 </section>
 		</div>
 		<div id="section-3">
-			<section class="form__set form__set_main form__set_paper">
-	<h2 class="form__set-legend form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ IV. Відомості про транспортні засоби</span>
 	</h2>
 
@@ -1810,11 +1810,11 @@
 					Автомобілі легкові
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -1823,21 +1823,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -1876,11 +1876,11 @@
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -1889,21 +1889,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -1942,11 +1942,11 @@
 					Водні засоби
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -1955,21 +1955,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2008,11 +2008,11 @@
 					Повітряні судна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2021,21 +2021,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2074,11 +2074,11 @@
 					Інші засоби
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2087,21 +2087,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2183,11 +2183,11 @@
 					Автомобілі легкові
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2196,21 +2196,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2249,11 +2249,11 @@
 					Автомобілі вантажні (спеціальні)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2262,21 +2262,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2315,11 +2315,11 @@
 					Водні засоби
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2328,21 +2328,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2381,11 +2381,11 @@
 					Повітряні судна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2394,21 +2394,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2447,11 +2447,11 @@
 					Інші засоби
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand }}
 					</div>
 					{% if vehicle.brand_info %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.brand_info }}
 					</div>
 					{% endif %}
@@ -2460,21 +2460,21 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum }}
 					</div>
 					{% if vehicle.sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ vehicle.sum_rent_comment }}
 					</div>
 					{% endif %}
@@ -2507,8 +2507,8 @@
 </section>
 		</div>
 		<div id="section-4">
-			<section class="form__set form__set_main form__set_paper">
-	<h2 class="form__set-legend form__set-legend_main">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<h2 class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ V. Відомості про вклади у банках, цінні папери та інші активи</span>
 	</h2>
 
@@ -2552,30 +2552,30 @@
 					Сума коштів на рахунках у банках та інших фінансових установах, у т. ч.:
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2609,30 +2609,30 @@
 					вкладених у звітному році
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2666,30 +2666,30 @@
 					Номінальна вартість цінних паперів, у т. ч.:
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2723,30 +2723,30 @@
 					придбаних у звітному році
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2780,30 +2780,30 @@
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації, у т. ч.:
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2837,30 +2837,30 @@
 					внесених у звітному році
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2922,30 +2922,30 @@
 					Сума коштів на рахунках у банках та інших фінансових установах
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -2975,30 +2975,30 @@
 					Номінальна вартість цінних паперів
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -3028,30 +3028,30 @@
 					Розмір внесків до статутного (складеного) капіталу товариства, підприємства, організації
 				</th>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum }}
 							{{ banks.sum_units }}
 						</div>
 					</div>
 					{% if banks.sum_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_comment }}
 						</div>
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
-						<div class="l-form__item l-form__item_w-p50">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							{{ banks.sum_foreign }}
 							{{ banks.sum_foreign_units }}
 						</div>
 					</div>
 					{% if banks.sum_foreign_comment %}
-					<div class="l-form__row">
-						<div class="l-form__item">
+					<div class="l-weiss-form__row">
+						<div class="l-weiss-form__item">
 							{{ banks.sum_foreign_comment }}
 						</div>
 					</div>
@@ -3075,8 +3075,8 @@
 </section>
 		</div>
 		<div id="section-5">
-			<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+			<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ VI. Відомості про фінансові зобов’язання</span>
 	</legend>
 
@@ -3116,21 +3116,21 @@
 					Добровільне страхування
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['54'].sum }}
 					</div>
 					{% if declaration.liabilities['54'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['54'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['54'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['54'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['54'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3144,21 +3144,21 @@
 					Недержавне пенсійне забезпечення
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['55'].sum }}
 					</div>
 					{% if declaration.liabilities['55'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['55'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['55'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['55'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['55'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3172,21 +3172,21 @@
 					Утримання зазначеного у розділах ІІІ–V майна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['56'].sum }}
 					</div>
 					{% if declaration.liabilities['56'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['56'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['56'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['56'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['56'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3200,21 +3200,21 @@
 					Погашення основної суми позики (кредиту)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['57'].sum }}
 					</div>
 					{% if declaration.liabilities['57'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['57'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['57'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['57'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['57'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3228,21 +3228,21 @@
 					Погашення суми процентів за позикою (кредитом)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['58'].sum }}
 					</div>
 					{% if declaration.liabilities['58'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['58'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['58'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['58'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['58'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3256,21 +3256,21 @@
 					Інші не зазначені у розділах ІІІ–V витрати
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['59'].sum }}
 					</div>
 					{% if declaration.liabilities['59'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['59'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 	                    {{ declaration.liabilities['59'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['59'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['59'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3314,21 +3314,21 @@
 					Добровільне страхування
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['60'].sum }}
 					</div>
 					{% if declaration.liabilities['60'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['60'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['60'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['60'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['60'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3342,21 +3342,21 @@
 					Недержавне пенсійне забезпечення
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['61'].sum }}
 					</div>
 					{% if declaration.liabilities['61'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['61'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['61'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['61'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['61'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3370,21 +3370,21 @@
 					Утримання зазначеного у розділах ІІІ–V майна
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['62'].sum }}
 					</div>
 					{% if declaration.liabilities['62'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['62'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['62'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['62'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['62'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3398,21 +3398,21 @@
 					Погашення основної суми позики (кредиту)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['63'].sum }}
 					</div>
 					{% if declaration.liabilities['63'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['63'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['63'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['63'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['63'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3426,21 +3426,21 @@
 					Погашення суми процентів за позикою (кредитом)
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['64'].sum }}
 					</div>
 					{% if declaration.liabilities['64'].sum_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['64'].sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['64'].sum_foreign }}
 					</div>
 					{% if declaration.liabilities['64'].sum_foreign_comment %}
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						{{ declaration.liabilities['64'].sum_foreign_comment }}
 					</div>
 					{% endif %}
@@ -3450,25 +3450,25 @@
 </fieldset>
 		</div>
 		<div id="section-6">
-			<section class="form__set form__set_main form__set_notes">
+			<section class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 	<h2 class="i-wai">
 		<span>Додаткове про декларацію</span>
 	</h2>
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Дата заповнення декларантом
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{{ declaration.declaration.date }}
 		</span>
 	</p>
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Декларація була не повна
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{% if declaration.declaration.notfull == "true" %}
 				Так
 			{% else %}
@@ -3478,21 +3478,21 @@
 	</p>
 
 	{% if declaration.declaration.notfull == "true" %}
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Яких сторінок (паперових) не вистачало
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{{ declaration.declaration.notfull_lostpages }}
 		</span>
 	</p>
 	{% endif %}
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Є додаткова інформація
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{% if declaration.declaration.additional_info == "true" %}
 				Так
 			{% else %}
@@ -3503,10 +3503,10 @@
 
 	{% if declaration.declaration.additional_info == "true" %}
 	<p class="js-related-section">
-		<strong class="l-form__row">
+		<strong class="l-weiss-form__row">
 			Що саме не вмістилось
 		</strong>
-		<span class="l-form__row">
+		<span class="l-weiss-form__row">
 			{{ declaration.declaration.additional_info_text }}
 		</span>
 	</p>

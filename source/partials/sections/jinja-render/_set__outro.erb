@@ -1,22 +1,22 @@
-<section class="form__set form__set_main form__set_notes">
+<section class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 	<h2 class="i-wai">
 		<span>Додаткове про декларацію</span>
 	</h2>
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Дата заповнення декларантом
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{{ declaration.declaration.date }}
 		</span>
 	</p>
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Декларація була не повна
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{% if declaration.declaration.notfull == "true" %}
 				Так
 			{% else %}
@@ -26,21 +26,21 @@
 	</p>
 
 	{% if declaration.declaration.notfull == "true" %}
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Яких сторінок (паперових) не вистачало
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{{ declaration.declaration.notfull_lostpages }}
 		</span>
 	</p>
 	{% endif %}
 
-	<p class="l-form__row">
-		<strong class="l-form__item">
+	<p class="l-weiss-form__row">
+		<strong class="l-weiss-form__item">
 			Є додаткова інформація
 		</strong>
-		<span class="l-form__item">
+		<span class="l-weiss-form__item">
 			{% if declaration.declaration.additional_info == "true" %}
 				Так
 			{% else %}
@@ -51,10 +51,10 @@
 
 	{% if declaration.declaration.additional_info == "true" %}
 	<p class="js-related-section">
-		<strong class="l-form__row">
+		<strong class="l-weiss-form__row">
 			Що саме не вмістилось
 		</strong>
-		<span class="l-form__row">
+		<span class="l-weiss-form__row">
 			{{ declaration.declaration.additional_info_text }}
 		</span>
 	</p>

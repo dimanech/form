@@ -1,27 +1,27 @@
 
-<fieldset class="form__set form__set_main form__set_notes">
+<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 	<legend class="i-wai">
 		<span>Загальне про декларацію</span>
 	</legend>
 
-	<div class="l-form__row">
-		<div class="l-form__item">
-			<label class="form__label" for="intro__isnotdeclaration">
+	<div class="l-weiss-form__row">
+		<div class="l-weiss-form__item">
+			<label class="weiss-form__label" for="intro__isnotdeclaration">
 				<span>Це не декларація</span>
 			</label>
 		</div>
-		<div class="l-form__item">
+		<div class="l-weiss-form__item">
 			<input type="checkbox" name="intro[isnotdeclaration]" id="intro__isnotdeclaration" value="1" autofocus="" />
 		</div>
 	</div>
 
-	<div class="l-form__row">
-		<div class="l-form__item">
-			<label class="form__label" for="intro__declaration-year">
+	<div class="l-weiss-form__row">
+		<div class="l-weiss-form__item">
+			<label class="weiss-form__label" for="intro__declaration-year">
 				<span>Це декларація за рік</span>
 			</label>
 		</div>
-		<div class="l-form__item">
+		<div class="l-weiss-form__item">
 			<select id="intro__declaration-year" name="intro[declaration_year]" data-inp-act="hidden,unclear">
 				<option value="nodata" selected="">Немає данних</option>
 				<% (2015).downto(1991) do |i| %>

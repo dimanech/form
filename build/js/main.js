@@ -60,8 +60,8 @@ scripts.Common = {
 	inputActions: function() {
 		var inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
 
-		inputs.wrap("<span class='form__input-w-ico'></span>");
-		$('<i class="form__input-w-ico__ico form__input-act"></i>').insertAfter(inputs);
+		inputs.wrap("<span class='weiss-form__input-w-ico'></span>");
+		$('<i class="weiss-form__input-w-ico__ico weiss-form__input-act"></i>').insertAfter(inputs);
 
 		inputs.each(function() {
 			var input = $(this),
@@ -80,32 +80,32 @@ scripts.Common = {
 						break;
 				}
 
-				$(input.next('.form__input-w-ico__ico'))
+				$(input.next('.weiss-form__input-w-ico__ico'))
 					.append('<label class="i-ico i-ico_'+ value +'" role="button" title="'+ title +'">' +
 				'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
 		});
 
-		$('body').on('click', ".form__input-act input[type='checkbox']", function() {
+		$('body').on('click', ".weiss-form__input-act input[type='checkbox']", function() {
 			var self = $(this);
 
 			self.parent().toggleClass('js-ico-checked');
-			self.parents('.form__input-w-ico').toggleClass('form__input-act_' + self.data('input-type') );
+			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
 		});
 	},
 
 	inputActionsReInit: function(container) {
-		var input = container.find(".form__input-act input[type='checkbox']");
+		var input = container.find(".weiss-form__input-act input[type='checkbox']");
 
 		input.each(function() {
 			var self =$(this);
 
 			if (self.checked) {
 				self.parent().addClass('js-ico-checked');
-				self.parents('.form__input-w-ico').addClass('form__input-act_' + self.data('input-type') );
+				self.parents('.weiss-form__input-w-ico').addClass('weiss-form__input-act_' + self.data('input-type') );
 			} else {
 				self.parent().removeClass('js-ico-checked');
-				self.parents('.form__input-w-ico').removeClass('form__input-act_' + self.data('input-type') );
+				self.parents('.weiss-form__input-w-ico').removeClass('weiss-form__input-act_' + self.data('input-type') );
 			}
 		});
 	},
@@ -123,7 +123,7 @@ scripts.Common = {
 			deleteButton: '.js-clone-delete',
 			clonePosition: 'after',
 			serializeID: false,
-			ignore: '.form__msg, .js-clone-ignore',
+			ignore: '.weiss-form__msg, .js-clone-ignore',
 			defaultRender: true,
 			preserveChildCount: true
 		});
@@ -175,9 +175,9 @@ scripts.Common = {
 				errorElement: "p",
 				errorPlacement: function (error, element) {
 					if (element.attr('required')) {
-						error.insertBefore(element).addClass('form__msg form__msg_error');
+						error.insertBefore(element).addClass('weiss-form__msg weiss-form__msg_error');
 					} else {
-						error.insertBefore(element).addClass('form__msg form__msg_warn');
+						error.insertBefore(element).addClass('weiss-form__msg weiss-form__msg_warn');
 					}
 				},
 				focusInvalid: false,

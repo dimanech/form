@@ -1,6 +1,6 @@
 
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ III Відомості про нерухоме майно</span>
 	</legend>
 
@@ -61,7 +61,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__region" name="estate[<%= field.number %>][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
@@ -70,15 +70,15 @@
 							<% end %>
 						</select>
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="estate__<%= field.number %>__address" name="estate[<%= field.number %>][][address]" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate[<%= field.number %>][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
@@ -92,7 +92,7 @@
 							</p>
 						<% end %>
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="estate__<%= field.number %>__space_comment" name="estate[<%= field.number %>][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
@@ -104,7 +104,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs" name="estate[<%= field.number %>][][costs]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
@@ -112,7 +112,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate[<%= field.number %>][][costs_rent]" minlength="2" placeholder="Сума витрат (оренда)" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
@@ -186,7 +186,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__region" name="estate[<%= field.number %>][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
 							<option value="nodata">Немає данних</option>
@@ -195,15 +195,15 @@
 							<% end %>
 						</select>
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="estate__<%= field.number %>__address" name="estate[<%= field.number %>][][address]" placeholder="Адреса/Коментар" minlength="2" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__space" name="estate[<%= field.number %>][][space]" placeholder="Площа" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
 							<option value="meters" selected="">м3</option>
 							<option value="gectars">га</option>
@@ -217,7 +217,7 @@
 							</p>
 						<% end %>
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="estate__<%= field.number %>__space_comment" name="estate[<%= field.number %>][][space_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
 							<p class="small-note js-clone-ignore">
@@ -229,7 +229,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_property" name="estate[<%= field.number %>][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
@@ -237,7 +237,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_rent" name="estate[<%= field.number %>][][costs_rent]" placeholder="Сума витрат (оренда)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">

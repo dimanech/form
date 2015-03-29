@@ -134,7 +134,7 @@ dd {
 /* @end */
 /* @group Form Validation styles
   --------------------------------------------------------------------------- */
-.form__msg {
+.weiss-form__msg {
   -moz-animation: fadeIn ease-out 0.5s;
   -webkit-animation: fadeIn ease-out 0.5s;
   animation: fadeIn ease-out 0.5s;
@@ -150,7 +150,7 @@ dd {
   border-radius: 3px;
   box-shadow: 0 8px 30px -5px rgba(0, 0, 0, 0.5);
 }
-.form__msg:after {
+.weiss-form__msg:after {
   display: block;
   width: 0;
   height: 0;
@@ -163,29 +163,29 @@ dd {
   border-right: 7px solid transparent;
   border-left: 7px solid transparent;
 }
-.form__msg:hover {
+.weiss-form__msg:hover {
   z-index: 999;
 }
 
-.form__msg_error {
+.weiss-form__msg_error {
   color: #fff;
   background: #ff1b1b;
 }
-.form__msg_error:after {
+.weiss-form__msg_error:after {
   border-top: 8px solid #ff1b1b;
 }
-.form__msg_error + input[type="text"].js-invalid {
+.weiss-form__msg_error + input[type="text"].js-invalid {
   border-color: #ff1b1b !important;
 }
 
-.form__msg_warn {
+.weiss-form__msg_warn {
   color: #fff;
   background: #fa3;
 }
-.form__msg_warn:after {
+.weiss-form__msg_warn:after {
   border-top: 8px solid #fa3;
 }
-.form__msg_warn + input[type="text"].js-invalid {
+.weiss-form__msg_warn + input[type="text"].js-invalid {
   border-color: #fa3 !important;
 }
 

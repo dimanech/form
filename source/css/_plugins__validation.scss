@@ -1,12 +1,12 @@
 /* @group Form Validation styles
   --------------------------------------------------------------------------- */
 
-.form__msg {
+.weiss-form__msg {
 }
 
 // Message content
 
-.form__msg {
+.weiss-form__msg {
   @include vendor(animation, fadeIn ease-out .5s);
   font: 13px/15px $sans;
   box-sizing: border-box;
@@ -41,7 +41,7 @@
 
 // Message types
 
-.form__msg_error {
+.weiss-form__msg_error {
   color: #fff;
   background: #ff1b1b;
 
@@ -54,7 +54,7 @@
   }
 }
 
-.form__msg_warn {
+.weiss-form__msg_warn {
   color: #fff;
   background: #fa3;
 

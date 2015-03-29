@@ -1,5 +1,5 @@
-<fieldset class="form__set form__set_main form__set_paper">
-	<legend class="form__set-legend form__set-legend_main">
+<fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_paper">
+	<legend class="weiss-form__set-legend weiss-form__set-legend_main">
 		<span>Розділ II. Відомості про доходи</span>
 	</legend>
 
@@ -53,24 +53,24 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>" name="income[<%= formid %>][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__<%= formid %>_comment" name="income[<%= formid %>][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
-							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="l-weiss-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						<% end %>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>_family" name="income[<%= formid %>][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__<%= formid %>_family_comment" name="income[<%= formid %>][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 						<% if (index == 0) %>
-							<p class="l-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
+							<p class="l-weiss-form__item small-note">Ви можите збільшити це поле потягнувши за правий нижній кут.</p>
 						<% end %>
 					</div>
 				</td>
@@ -81,7 +81,7 @@
 				&nbsp;
 			</td>
 			<td colspan="3" class="weiss-table__cell_unspaced">
-				<textarea class="form__textarea form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear"></textarea>
+				<textarea class="weiss-form__textarea weiss-form__textarea_lined" name="income[7][source_name]" id="income__7__source-name" rows="3" data-inp-act="hidden,unclear"></textarea>
 			</td>
 		</tr>
 	</table>
@@ -103,18 +103,18 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>" name="income[<%= formid %>][value]" placeholder="Сума доходу декларанта" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__<%= formid %>_comment" name="income[<%= formid %>][comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__<%= formid %>_family" name="income[<%= formid %>][family]" placeholder="Сума доходу сім’ї" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__<%= formid %>_family_comment" name="income[<%= formid %>][family_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
@@ -167,18 +167,18 @@
 					</span>
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input type="text" id="income__21__country" name="income[21][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__21__country_comment" name="income[21][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__21__cur" name="income[21][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="income__21__cur_units" name="income[21][][cur_units]" data-inp-act="hidden,unclear">
 							<option value="usd" selected="">долл.</option>
 							<option value="eur">евро</option>
@@ -188,7 +188,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__21__gr-equal" name="income[21][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
@@ -244,18 +244,18 @@
 					</span>
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input type="text" id="income__22_family__country" name="income[22][][country]" placeholder="Назва країни" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<textarea id="income__22_family__country_comment" name="income[22][][country_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__22_family__cur" name="income[22][][cur]" placeholder="Доход в іноземній валюті" data-inp-act="hidden,unclear" />
 					</div>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<select id="income__22_family__cur_units" name="income[22][][cur_units]" data-inp-act="hidden,unclear">
 							<option value="usd" selected="">долл.</option>
 							<option value="eur">евро</option>
@@ -265,7 +265,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-form__row">
+					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="income__22_family__gr-equal" name="income[22][][uah_equal]" placeholder="Перерахування в гривню" data-inp-act="hidden,unclear" />
 					</div>
 				</td>
