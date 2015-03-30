@@ -84,7 +84,7 @@ CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
 ============================================================================= */
 /* ============================================================================
-		GLOBAL
+	GLOBAL
 ============================================================================= */
 article,
 aside,
@@ -111,7 +111,7 @@ body {
 }
 
 /* ============================================================================
-		Typography
+	Typography
 ============================================================================= */
 h1,
 .h1,
@@ -217,7 +217,7 @@ a:hover, a:active {
 }
 
 /* ============================================================================
-		Layout: global
+	Layout: global
 ============================================================================= */
 .l-main-aux__inner, .l-global-header, .l-global-footer__inner {
   width: 890px;
@@ -249,7 +249,7 @@ body {
 
 /* @end */
 /* ============================================================================
-   Embed content
+	Embed content
 ============================================================================= */
 img {
   font-size: 1em;
@@ -270,11 +270,11 @@ figure {
   --------------------------------------------------------------------------- */
 .weiss-table {
   width: 100%;
+  margin-bottom: 15px;
   empty-cells: hide;
   border-spacing: 0;
   border-collapse: collapse;
   border-width: 0;
-  margin-bottom: 15px;
 }
 .weiss-table td,
 .weiss-table th {
@@ -344,7 +344,7 @@ figure {
 
 /* @end */
 /* ============================================================================
-   Form support
+	Form support
 ============================================================================ */
 /* @group Forms generic reset
   --------------------------------------------------------------------------- */
@@ -791,7 +791,7 @@ textarea.weiss-form__textarea_lined {
 
 /* @end */
 /* ============================================================================
-		INCLUDE CLASSES A
+	INCLUDE CLASSES A
 ============================================================================= */
 .i-clfx:before, .l-weiss-form__row:before, .i-clfx:after, .l-weiss-form__row:after {
   display: table;
@@ -1122,7 +1122,7 @@ textarea.weiss-form__textarea_lined {
 					<td>
 						<div class="l-weiss-form__row js-related-control">
 							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
-								<option value="unspecified" selected="">Ступінь зв’язку</option>
+								<option value="unspecified" selected="" disabled="">Ступінь зв’язку</option>
 								<option value="nodata">Немає данних</option>
 								<option value="spouse">Супруг</option>
 								<option value="parents">Батькі</option>
