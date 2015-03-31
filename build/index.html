@@ -1,19 +1,6 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7]>
-<html class="iem7 no-js" lang="en-US" dir="ltr"><![endif]-->
-<!--[if (lte IE 6)&(!IEMobile)]>
-<html class="ie6 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]>
-<html class="ie7 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
-<!--[if (IE 8)&(!IEMobile)]>
-<html class="ie8 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html class="no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
-	<!--<![endif]-->
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
+<script id="decl_form_template" type="text/x-handlebars-template">
+	{% raw %}
+		<form class="weiss-form weiss-form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
 
 		<!-- Social meta schema.org -->
 <meta itemprop="name" content="Declaration form" />
@@ -872,8 +859,7 @@ textarea.weiss-form__textarea_lined {
 	<div id="section-0" class="js-tab-content">
 		<div class="declaration-action">
 			<p class="declaration-action_head">Завантажити pdf декларацію</p>
-			<p><a class="js-declaration-pdf" href="">Декларація</a></p>
-			<p><button class="js-vulik-next weiss-btn weiss-btn_small weiss-btn_grey">Завантажити іншу декларацію</button></p>
+			<p><a class="js-declaration-pdf" href="{{ link }}">Декларація</a></p>
 		</div>
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
@@ -6018,6 +6004,8 @@ textarea.weiss-form__textarea_lined {
 	</div>
 
 </form>
+	{% endraw %}
+</script>
 
 						</div>
 						<!-- /.region-main__content -->
@@ -6049,7 +6037,6 @@ textarea.weiss-form__textarea_lined {
 		<script src="js/jquery.dateSelectBoxes.js" type="text/javascript"></script>
 		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 		<script src="js/jquery.serializejson.js" type="text/javascript"></script>
-		<script src="js/data.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 
 	</body>
