@@ -1,25 +1,7 @@
-<!DOCTYPE html>
-<!--[if IEMobile 7]>
-<html class="iem7 no-js"><![endif]-->
-<!--[if (lte IE 6)&(!IEMobile)]>
-<html class="ie6 ie6-7 ie6-8 no-js"><![endif]-->
-<!--[if (IE 7)&(!IEMobile)]>
-<html class="ie7 ie6-7 ie6-8 no-js"><![endif]-->
-<!--[if (IE 8)&(!IEMobile)]>
-<html class="ie8 ie6-8 no-js"><![endif]-->
-<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
-<html class="no-js">
-<!--<![endif]-->
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
-	<title>Declaration form</title>
-	<link href="css/core-style.css" rel="stylesheet" type="text/css" />
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-</head>
-<body>
-	<section class="declaration-block">
+<script id="decl_form_template" type="text/x-handlebars-template">
+	{% raw %}
+		<a href="{{ link }}">{{ link }}</a>
+		<section class="declaration-block">
 	<h1 class="declaration-head">
 		<strong class="declaration-head__em">Декларація</strong>
 		про майно, доходи, витрати і зобов’язання фінансового характеру за {{ declaration.intro.declaration_year }} рік
@@ -3512,5 +3494,8 @@
 		</div>
 </section>
 
-</body>
-</html>
+	{% endraw %}
+</script>
+
+<div id="form-wrapper">
+</div>
