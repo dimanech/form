@@ -64,48 +64,41 @@
 					<label for="general__place_address" class="i-wai">Решта адреси</label>
 					<input type="text" id="general__place_address" name="general[addresses][][place_address]" placeholder="Решта адреси" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
-				<div class="l-weiss-form__item l-weiss-form__item_lined">
-					<label for="general__place_address_type" class="i-wai">Тип адреси</label>
-					<select id="general__place_address_type" name="general[addresses][][place_address_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="" disabled="">Тип адреси</option>
-						<option value="nodata">Немає данних</option>
-						<option value="registration">Адреса реестрації</option>
-						<option value="actual">Фактична адреса</option>
-					</select>
-				</div>
 				<div class="l-weiss-form__item">
 					<%= partial("partials/blocks/block_clone", :locals => {:width => 'weiss-btn_w-30'}) %>
 				</div>
 			</div>
 		</div>
 	</fieldset>
-	<fieldset class="l-weiss-form__row">
-		<legend class="l-weiss-form__item weiss-form__label">
-			<span>3. Посада:</span>
-		</legend>
-		<p class="l-weiss-form__item declaration-small-note">
-			У полі &laquo;посада&raquo; запишить посаду так, як її вказав декларант (повністью). У полі &laquo;Відомство&raquo; виберіть відомство у якому працює декларант. У полі &laquo;Область&raquo; вибиріть область у якій знаходиться відомство (якщо це зрозуміло із назви).
-		</p>
-		<div class="l-weiss-form__item">
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
+	<fieldset>
+		<div class="l-weiss-form__row">
+			<legend class="l-weiss-form__item weiss-form__label">
+				<span>3. Посада:</span>
+			</legend>
+			<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
+				<label for="general__post_post" class="i-wai">Посада</label>
+				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+			</div>
+		</div>
+		<div class="l-weiss-form__row">
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="" disabled="">Область</option>
 					<option value="nodata">Немає данних</option>
 					<% data.regions.region.each do |option| %>
-						<option value="<%= option.value %>"><%= option.name %></option>
+					<option value="<%= option.value %>"><%= option.name %></option>
 					<% end %>
 				</select>
 			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
 				<label for="general__post_office" class="i-wai">Відомство</label>
 				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_lined">
-				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
-			</div>
 		</div>
+		<p class="l-weiss-form__item declaration-small-note">
+			Запишіть посаду так, як її вказав декларант (повністю). Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте «Структуру органів державної влади (лінк)», або погугліть. Якщо нічого не допомогло - вводіть що бачите в посаді. У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними.
+		</p>
 	</fieldset>
 
 	<fieldset class="weiss-form__set">
@@ -125,7 +118,7 @@
 						Ступінь зв’язку
 					</th>
 					<th>
-						Прізвище ініціали, дата народження
+						ПІБ, дата народження
 					</th>
 					<th>
 						Реєстраційний номер облікової картки платника податків/ серія та номер паспорта громадянина України (якщо вказано)
@@ -142,7 +135,7 @@
 							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Ступінь зв’язку</option>
 								<option value="nodata">Немає данних</option>
-								<option value="spouse">Супруг</option>
+								<option value="spouse">Подружжя</option>
 								<option value="parents">Батькі</option>
 								<option value="children">Дитина</option>
 								<option value="other">Інше</option>

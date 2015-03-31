@@ -69,13 +69,14 @@
 					</div>
 					<% if (index == 0) %>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 					<% end %>
 				</td>
 				<td>
 					<select id="vehicle__<%= field.number %>__year" name="vehicle[<%= field.number %>][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<% (2015).downto(1880) do |i| %>
 						<option value=<%= "#{i}" %>><%= "#{i}" %></option>
 						<% end %>
@@ -170,13 +171,14 @@
 					</div>
 					<% if (index == 0) %>
 						<p class="declaration-small-note js-clone-ignore">
-							Іностранні марки записуйте латиницею
+							Іноземні марки записуйте латиницею
 						</p>
 					<% end %>
 				</td>
 				<td>
 					<select id="vehicle__<%= field.number %>__year" name="vehicle[<%= field.number %>][][year]" data-inp-act="hidden,unclear">
-						<option value="nodata">Рік випуску</option>
+						<option selected="" disabled="">Рік випуску</option>
+						<option value="nodata">Невідомий</option>
 						<% (2015).downto(1880) do |i| %>
 						<option value=<%= "#{i}" %>><%= "#{i}" %></option>
 						<% end %>

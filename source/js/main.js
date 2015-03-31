@@ -72,10 +72,10 @@ scripts.Common = {
 
 				switch (value) {
 					case "hidden":
-						var title = 'Це поле скрите';
+						var title = 'Поле містить приховану інформацію';
 						break;
 					case "unclear":
-						var title = 'Це поле нерозбірливе';
+						var title = 'Поле містить нерозбірливу інформацію';
 						break;
 				}
 
