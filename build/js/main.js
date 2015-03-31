@@ -72,10 +72,10 @@ scripts.Common = {
 
 				switch (value) {
 					case "hidden":
-						var title = 'Це поле скрите';
+						var title = 'Поле містить приховану інформацію';
 						break;
 					case "unclear":
-						var title = 'Це поле нерозбірливе';
+						var title = 'Поле містить нерозбірливу інформацію';
 						break;
 				}
 
@@ -156,12 +156,19 @@ scripts.Common = {
 	jqueryValidateInit: function () {
 
 		$.validator.addMethod("lettersonly", function(value, element) {
-			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z]+$/i.test(value);
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
+		}, "Tільки букви, будьласка");
+
+		$.validator.addMethod("lastnameonly", function(value, element) {
+			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
+			},
+			'js-is-lastnameonly': {
+				lastnameonly: true
 			},
 			'js-is-DigitsOnly': {
 				digits: true
