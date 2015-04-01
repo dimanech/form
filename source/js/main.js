@@ -182,7 +182,7 @@ scripts.Common = {
 			}
 		});
 
-		var form = $('#form-declaration'),
+		var $form = $('#form-declaration'),
 			validateSettings = {
 				errorClass: "js-invalid",
 				errorElement: "p",
@@ -204,13 +204,23 @@ scripts.Common = {
 
 				}
 			},
-			validateThis = form.validate(validateSettings),
+			validateThis = $form.validate(validateSettings),
 			current = 0,
 			content = $('.js-tab-content');
 
-		this.$cache.body.on('reset', form, function () {
-			form.validate().resetForm();
+		// events
+
+		this.$cache.body.on('reset', $form, function () {
+			$form.validate().resetForm();
+		}).on('click', '#intro__isnotdeclaration', function () {
+			if($(this).is(':checked')) {
+				$form.validate().settings.ignore = "*"; // disable all validation
+			} else {
+				$form.validate().settings.ignore = "";
+			}
 		});
+
+		// form sections
 
 		content.hide();
 		$(content[0]).show();
