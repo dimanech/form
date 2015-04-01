@@ -1,6 +1,19 @@
-<script id="decl_form_template" type="text/x-handlebars-template">
-	{% raw %}
-		<form class="weiss-form weiss-form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
+<!DOCTYPE html>
+<!--[if IEMobile 7]>
+<html class="iem7 no-js" lang="en-US" dir="ltr"><![endif]-->
+<!--[if (lte IE 6)&(!IEMobile)]>
+<html class="ie6 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (IE 7)&(!IEMobile)]>
+<html class="ie7 ie6-7 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (IE 8)&(!IEMobile)]>
+<html class="ie8 ie6-8 no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#"><![endif]-->
+<!--[if (gte IE 9)|(gt IEMobile 7)]><!-->
+<html class="no-js" lang="en-US" dir="ltr" itemscope itemtype="http://schema.org/Thing" xmlns:og="http://ogp.me/ns#">
+	<!--<![endif]-->
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="IE=5, IE=8, IE=9, IE=10" />
 
 		<!-- Social meta schema.org -->
 <meta itemprop="name" content="Declaration form" />
@@ -947,7 +960,7 @@ textarea.weiss-form__textarea_lined {
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
-			<input class="js-is-DigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
+			<input class="js-is-strictDigitsOnly" type="text" id="general__inn" name="general[inn]" placeholder="ІНН" minlength="10" maxlength="10" data-inp-act="hidden,unclear" />
 		</div>
 	</fieldset>
 
@@ -1790,9 +1803,9 @@ textarea.weiss-form__textarea_lined {
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
+			<col width="100" />
 			<col />
-			<col />
-			<col width="200" />
+			<col width="150" />
 			<col width="150" />
 			<col width="150" />
 			<col width="30" />
@@ -1886,13 +1899,13 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__23__space_units" name="estate[23][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м2</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
@@ -1981,7 +1994,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__24__space_units" name="estate[24][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2067,7 +2080,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__25__space_units" name="estate[25][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2153,7 +2166,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__26__space_units" name="estate[26][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2239,7 +2252,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__27__space_units" name="estate[27][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2325,7 +2338,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__28__space_units" name="estate[28][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2362,7 +2375,7 @@ textarea.weiss-form__textarea_lined {
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
-			<col />
+			<col width="100" />
 			<col />
 			<col width="150" />
 			<col width="150" />
@@ -2460,13 +2473,13 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__29__space_units" name="estate[29][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м2</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 					</div>
@@ -2484,7 +2497,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__29__costs_property" name="estate[29][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__29__costs_property_comment" name="estate[29][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2555,7 +2568,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__30__space_units" name="estate[30][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2570,7 +2583,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__30__costs_property" name="estate[30][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__30__costs_property_comment" name="estate[30][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2641,7 +2654,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__31__space_units" name="estate[31][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2656,7 +2669,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__31__costs_property" name="estate[31][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__31__costs_property_comment" name="estate[31][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2727,7 +2740,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__32__space_units" name="estate[32][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2742,7 +2755,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__32__costs_property" name="estate[32][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__32__costs_property_comment" name="estate[32][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2813,7 +2826,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__33__space_units" name="estate[33][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2828,7 +2841,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__33__costs_property" name="estate[33][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__33__costs_property_comment" name="estate[33][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -2899,7 +2912,7 @@ textarea.weiss-form__textarea_lined {
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__34__space_units" name="estate[34][][space_units]" data-inp-act="hidden,unclear">
-							<option value="meters" selected="">м3</option>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
@@ -2914,7 +2927,7 @@ textarea.weiss-form__textarea_lined {
 						<input class="js-is-DigitsOnly" type="text" id="estate__34__costs_property" name="estate[34][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__34__costs_property_comment" name="estate[34][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
@@ -6004,8 +6017,6 @@ textarea.weiss-form__textarea_lined {
 	</div>
 
 </form>
-	{% endraw %}
-</script>
 
 						</div>
 						<!-- /.region-main__content -->
@@ -6037,6 +6048,7 @@ textarea.weiss-form__textarea_lined {
 		<script src="js/jquery.dateSelectBoxes.js" type="text/javascript"></script>
 		<script src="js/jquery.placeholder.min.js" type="text/javascript"></script>
 		<script src="js/jquery.serializejson.js" type="text/javascript"></script>
+		<script src="js/data.js" type="text/javascript"></script>
 		<script src="js/main.js" type="text/javascript"></script>
 
 	</body>

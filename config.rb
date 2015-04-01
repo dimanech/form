@@ -1,4 +1,3 @@
-require 'susy'
 
 ################################################################################
 # Compass
@@ -12,7 +11,7 @@ end
 # Page options, layouts, aliases and proxies
 ################################################################################
 
-with_layout :minimal do
+with_layout :main do
   page "*"
 end
 
