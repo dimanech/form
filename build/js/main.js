@@ -163,21 +163,14 @@ scripts.Common = {
 			return this.optional(element) || /^[а-яА-ЯёЁіІїЇєЄ’`'ґҐa-zA-Z\-]+$/i.test(value);
 		}, "Tільки букви, будьласка");
 
-		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри");
-
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
 			},
-			'js-is-DigitsOnly': {
-				fractdigitsonly: true
-			},
 			'js-is-lastnameonly': {
 				lastnameonly: true
 			},
-			'js-is-strictDigitsOnly': {
+			'js-is-DigitsOnly': {
 				digits: true
 			}
 		});
@@ -242,35 +235,6 @@ scripts.Common = {
 
 	},
 
-	vulikEventsHandling: function () {
-		var $form =$('#form-declaration');
-
-		this.$cache.body.on('click', '.js-vulik-next', function (e) {
-			e.preventDefault();
-
-			$('.js-declaration-pdf').attr('href', 'next-url');
-
-			$form[0].reset();
-			$form.validate().resetForm();
-
-		}).on('submit', $form, function () {
-
-			$form.serializeJSON();
-
-		});
-	},
-
-	testJSON: function () {
-		var form =$('#form-declaration');
-
-		$('<pre id="form-declaration-text"></pre>').insertAfter(form);
-
-		form.on( "submit", function(event) {
-			event.preventDefault();
-			$('#form-declaration-text').text(JSON.stringify($(this).serializeJSON(), null, '\t'));
-		});
-	},
-
 	init: function () {
 		var scrpt = this;
 
@@ -278,23 +242,37 @@ scripts.Common = {
 		scrpt.detecting();
 
 		$(function () { // DOM Ready
-			scrpt.jqueryValidateInit();
-			scrpt.toggleFormSection();
-			scrpt.inputActions();
-			scrpt.cloneyaInit();
-			scrpt.dateSelectBoxesInit();
-			scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-			scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
-			scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
-			scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
-			scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
-			scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
-			scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
-			scrpt.vulikEventsHandling();
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
+				scrpt.$cache.html.scrollTop(0);
+				output.html(template(data.result.task.data));
+				scrpt.jqueryValidateInit();
+				scrpt.toggleFormSection();
+				scrpt.inputActions();
+				scrpt.cloneyaInit();
+				scrpt.dateSelectBoxesInit();
+				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
+				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
+				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
+				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
+				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
+				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
+				scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
+				scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
 			}).on("vulyk.save", function(e, callback) {
+				var $form = $('#form-declaration'),
+					data = $form.serializeJSON();
+
+				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
+					$form.remove();
+					callback(data);
+				} else {
+					scrpt.$cache.html.scrollTop(0);
+				}
 			}).on("vulyk.skip", function(e, callback) {
+				$('#form-declaration').remove();
 				callback();
 			});
 		});
