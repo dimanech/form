@@ -7,9 +7,9 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
+			<col width="100" />
 			<col />
-			<col />
-			<col width="200" />
+			<col width="150" />
 			<col width="150" />
 			<col width="150" />
 			<col width="30" />
@@ -80,18 +80,14 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
-							<% if (index == 0) %>
-							<option value="meters" selected="">м2</option>
-							<% else %>
-							<option value="meters" selected="">м3</option>
-							<% end %>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 						<% if (index == 0) %>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 						<% end %>
@@ -134,7 +130,7 @@
 	<table class="weiss-table weiss-table_decl">
 		<colgroup>
 			<col width="35" />
-			<col />
+			<col width="100" />
 			<col />
 			<col width="150" />
 			<col width="150" />
@@ -209,18 +205,14 @@
 					</div>
 					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__space_units" name="estate[<%= field.number %>][][space_units]" data-inp-act="hidden,unclear">
-							<% if (index == 0) %>
-							<option value="meters" selected="">м2</option>
-							<% else %>
-							<option value="meters" selected="">м3</option>
-							<% end %>
+							<option value="meters" selected="">м²</option>
 							<option value="gectars">га</option>
 							<option value="sotok">соток</option>
 							<option value="other">інше</option>
 						</select>
 						<% if (index == 0) %>
 							<p class="declaration-small-note js-clone-ignore">
-								Якщо одиниці вимірювання не вказані, беремо, що це м<sup>3</sup><br/>
+								Якщо одиниці вимірювання не вказані, беремо, що це м²<br/>
 								Якщо площа вказана в інших одиницях вимірювання &mdash; не треба їх переводити, просто виберіть використану зі списку.
 							</p>
 						<% end %>
@@ -241,7 +233,7 @@
 						<input class="js-is-DigitsOnly" type="text" id="estate__<%= field.number %>__costs_property" name="estate[<%= field.number %>][][costs_property]" placeholder="Сума витрат (власність)" minlength="2" data-inp-act="hidden,unclear" />
 					</div>
 					<div class="l-form_row">
-						<textarea type="text" id="estate__<%= field.number %>__costs_property_comment" name="estate[<%= field.number %>][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
+						<textarea id="estate__<%= field.number %>__costs_property_comment" name="estate[<%= field.number %>][][costs_property_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
 					</div>
 				</td>
 				<td>
