@@ -254,6 +254,7 @@ scripts.Common = {
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
 				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
+				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
 				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
 				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
@@ -264,7 +265,7 @@ scripts.Common = {
 				var $form = $('#form-declaration'),
 					data = $form.serializeJSON();
 
-				if ($("#section-4").is(":visible")) {
+				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
 					$form.remove();
 					callback(data);
 				} else {

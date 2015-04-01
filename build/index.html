@@ -5,11 +5,11 @@
 	<div id="section-0" class="js-tab-content">
 		<div class="declaration-action">
 			<p class="declaration-action_head">Завантажити pdf декларацію</p>
-			<p><a class="js-declaration-pdf" href="{{ link }}">Декларація</a></p>
+			<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
 		</div>
 		<h1 class="declaration-head">
 			<strong class="declaration-head__em">Декларація</strong>
-			про майно, доходи, витрати і зобов’язання фінансового характеру за 20__ рік
+			про майно, доходи, витрати і зобов’язання фінансового характеру
 		</h1>
 		
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
@@ -37,7 +37,6 @@
 		<div class="l-weiss-form__item">
 			<select id="intro__declaration-year" name="intro[declaration_year]" data-inp-act="hidden,unclear">
 				<option value="nodata" selected="">Немає данних</option>
-				<option value=2015>2015</option>
 				<option value=2014>2014</option>
 				<option value=2013>2013</option>
 				<option value=2012>2012</option>
@@ -45,23 +44,6 @@
 				<option value=2010>2010</option>
 				<option value=2009>2009</option>
 				<option value=2008>2008</option>
-				<option value=2007>2007</option>
-				<option value=2006>2006</option>
-				<option value=2005>2005</option>
-				<option value=2004>2004</option>
-				<option value=2003>2003</option>
-				<option value=2002>2002</option>
-				<option value=2001>2001</option>
-				<option value=2000>2000</option>
-				<option value=1999>1999</option>
-				<option value=1998>1998</option>
-				<option value=1997>1997</option>
-				<option value=1996>1996</option>
-				<option value=1995>1995</option>
-				<option value=1994>1994</option>
-				<option value=1993>1993</option>
-				<option value=1992>1992</option>
-				<option value=1991>1991</option>
 			</select>
 		</div>
 	</div>
@@ -85,11 +67,11 @@
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__name" class="i-wai">Ім’я</label>
-			<input class="js-is-LettersOnly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__name" name="general[name]" placeholder="Ім’я" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__patronymic" class="i-wai">По батькові</label>
-			<input class="js-is-LettersOnly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
@@ -174,6 +156,15 @@
 			<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
 				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+			</div>
+		</div>
+		<div class="l-weiss-form__row">
+			<legend class="l-weiss-form__item weiss-form__label">
+				<span>Претендент:</span>
+			</legend>
+			<div class="l-weiss-form__item">
+				<label for="general__post_candidate" class="i-wai">Претендент</label>
+				<input type="checkbox" id="general__post_candidate" name="general[post][candidate]" value="1" />
 			</div>
 		</div>
 		<div class="l-weiss-form__row">
