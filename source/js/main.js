@@ -249,19 +249,6 @@ scripts.Common = {
 		scrpt.detecting();
 
 		$(function () { // DOM Ready
-			scrpt.jqueryValidateInit();
-			scrpt.toggleFormSection();
-			scrpt.inputActions();
-			scrpt.cloneyaInit();
-			scrpt.dateSelectBoxesInit();
-			scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-			scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
-			scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
-			scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
-			scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
-			scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
-			scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
-			scrpt.vulikEventsHandling();
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
