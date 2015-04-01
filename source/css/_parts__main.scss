@@ -151,10 +151,11 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	display: inline-block;
 	overflow: hidden;
 	width: 50px;
-	height: 10px;
+	height: 18px;
 	vertical-align: middle;
-	text-indent: -999px;
 	background: #ccc;
+	color: #fff;
+	font: bold 12px/18px $sans;
 }
 
 .declaration-progress-indicator__step_inactive {

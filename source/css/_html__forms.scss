@@ -274,6 +274,10 @@ $formColor: $baseColor;
 	width: 48%;
 }
 
+.l-weiss-form__item_w-p88 {
+	width: 87.5%;
+}
+
 // table mods
 
 table.l-weiss-form__row {
@@ -525,8 +529,8 @@ textarea {
 }
 
 textarea.weiss-form__textarea_lined {
-	min-height: 5em;
-	background: inline-image("../images/bg-form-textarea.png") 0 19px repeat;
+	min-height: 90px;
+	background: inline-image("../images/bg-form-textarea.png") 0 21px repeat;
 }
 
 .weiss-form__set_notes.weiss-form__set {
