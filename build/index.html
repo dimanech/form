@@ -565,8 +565,8 @@ figure {
   width: 48%;
 }
 
-.l-weiss-form__item_w-p88 {
-  width: 87.5%;
+.l-weiss-form__item_w-post-input {
+  width: 75%;
 }
 
 table.l-weiss-form__row {
@@ -934,7 +934,7 @@ textarea.weiss-form__textarea_lined {
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__patronymic" class="i-wai">По батькові</label>
-			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" required="" minlength="2" data-inp-act="hidden,unclear" />
+			<input class="js-is-lastnameonly" type="text" id="general__patronymic" name="general[patronymic]" placeholder="По батькові" minlength="2" data-inp-act="hidden,unclear" />
 		</div>
 		<div class="l-weiss-form__item l-weiss-form__item_lined">
 			<label for="general__inn" class="i-wai">ІНН</label>
@@ -1016,17 +1016,12 @@ textarea.weiss-form__textarea_lined {
 			<legend class="l-weiss-form__item weiss-form__label">
 				<span>3. Посада:</span>
 			</legend>
-			<div class="l-weiss-form__item l-weiss-form__item_w-p88 l-weiss-form__item_lined">
+			<div class="l-weiss-form__item l-weiss-form__item_w-post-input l-weiss-form__item_lined">
 				<label for="general__post_post" class="i-wai">Посада</label>
 				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
 			</div>
-		</div>
-		<div class="l-weiss-form__row">
-			<legend class="l-weiss-form__item weiss-form__label">
-				<span>Претендент:</span>
-			</legend>
+			<label class="l-weiss-form__item" for="general__post_candidate">Претендент:</label>
 			<div class="l-weiss-form__item">
-				<label for="general__post_candidate" class="i-wai">Претендент</label>
 				<input type="checkbox" id="general__post_candidate" name="general[post][candidate]" value="1" />
 			</div>
 		</div>
