@@ -28,6 +28,15 @@ scripts.Common = {
 		}
 	},
 
+	globalInit: function() {
+		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
+			var self = $(this);
+
+			self.parent().toggleClass('js-ico-checked');
+			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
+		});
+	},
+
 	jsPlaceholderInit: function () {
 		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
@@ -57,17 +66,17 @@ scripts.Common = {
 	},
 
 	inputActions: function() {
-		var inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
+		var $inputs = $('input[data-inp-act], select[data-inp-act], textarea[data-inp-act]');
 
-		inputs.wrap("<span class='weiss-form__input-w-ico'></span>");
-		$('<i class="weiss-form__input-w-ico__ico weiss-form__input-act"></i>').insertAfter(inputs);
+		$inputs.wrap("<span class='weiss-form__input-w-ico'></span>");
+		$('<i class="weiss-form__input-w-ico__ico weiss-form__input-act"></i>').insertAfter($inputs);
 
-		inputs.each(function() {
-			var input = $(this),
-				inputName = input.attr('name'),
-				inputActions = input.data('inp-act').split(',');
+		$inputs.each(function() {
+			var $input = $(this),
+				$inputName = $input.attr('name'),
+				$inputActions = $input.data('inp-act').split(',');
 
-			$.each(inputActions, function (key, value) {
+			$.each($inputActions, function (key, value) {
 				var title;
 
 				switch (value) {
@@ -79,17 +88,10 @@ scripts.Common = {
 						break;
 				}
 
-				$(input.next('.weiss-form__input-w-ico__ico'))
+				$($input.next('.weiss-form__input-w-ico__ico'))
 					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
-					'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
+					'<input type="checkbox" name="'+ $inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
-		});
-
-		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
-			var self = $(this);
-
-			self.parent().toggleClass('js-ico-checked');
-			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
 		});
 	},
 
@@ -129,7 +131,7 @@ scripts.Common = {
 	},
 
 	addAutoComplete: function(elem, source) {
-		var elemPar = $(elem).parent();
+		var $elemPar = $(elem).parent();
 
 		$(elem).autocomplete({
 			source: function(request, response) {
@@ -137,7 +139,7 @@ scripts.Common = {
 
 				response(results.slice(0, 7));
 			},
-			appendTo: elemPar
+			appendTo: $elemPar
 		});
 	},
 
@@ -208,8 +210,6 @@ scripts.Common = {
 			current = 0,
 			content = $('.js-tab-content');
 
-		// events
-
 		this.$cache.body.on('reset', $form, function () {
 			$form.validate().resetForm();
 		}).on('click', '#intro__isnotdeclaration', function () {
@@ -219,8 +219,6 @@ scripts.Common = {
 				$form.validate().settings.ignore = "";
 			}
 		});
-
-		// form sections
 
 		content.hide();
 		$(content[0]).show();
@@ -257,8 +255,11 @@ scripts.Common = {
 
 		scrpt.initializeCache();
 		scrpt.detecting();
+		scrpt.globalInit();
 
 		$(function () { // DOM Ready
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
@@ -269,9 +270,9 @@ scripts.Common = {
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
 				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
 				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
+				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
 				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
 				scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);

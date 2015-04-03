@@ -84,6 +84,10 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 		border-style: solid;
 		border-color: transparent transparent #fa3 transparent;
 	}
+	
+	a {
+		color: #fff;
+	}
 }
 
 /* @end */
