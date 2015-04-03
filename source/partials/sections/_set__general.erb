@@ -36,7 +36,7 @@
 					<label for="general__place" class="i-wai">Область</label>
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="" disabled="">Область</option>
-						<option value="nodata">Немає данних</option>
+						<option value="nodata">Немає даних</option>
 						<% data.regions.region.each do |option| %>
 							<option value="<%= option.value %>"><%= option.name %></option>
 						<% end %>
@@ -54,7 +54,7 @@
 					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
 					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
 						<option value="" selected="" disabled="">Тип населенного пункту</option>
-						<option value="nodata">Немає данних</option>
+						<option value="nodata">Немає даних</option>
 						<option value="city">Місто</option>
 						<option value="pgt">ПГТ</option>
 						<option value="village">Село</option>
@@ -89,7 +89,7 @@
 				<label for="general__post_region" class="i-wai">Область</label>
 				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="" disabled="">Область</option>
-					<option value="nodata">Немає данних</option>
+					<option value="nodata">Немає даних</option>
 					<% data.regions.region.each do |option| %>
 					<option value="<%= option.value %>"><%= option.name %></option>
 					<% end %>
@@ -138,7 +138,7 @@
 						<div class="l-weiss-form__row js-related-control">
 							<select id="general__family__relations" name="general[family][][relations]" data-inp-act="hidden,unclear">
 								<option value="unspecified" selected="" disabled="">Ступінь зв’язку</option>
-								<option value="nodata">Немає данних</option>
+								<option value="nodata">Немає даних</option>
 								<option value="spouse">Подружжя</option>
 								<option value="parents">Батькі</option>
 								<option value="children">Дитина</option>

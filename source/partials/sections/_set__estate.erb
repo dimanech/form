@@ -64,7 +64,7 @@
 					<div class="l-weiss-form__row">
 						<select id="estate__<%= field.number %>__region" name="estate[<%= field.number %>][][region]" data-inp-act="hidden,unclear">
 							<option value="unspecified" selected="" disabled="">Місцезнаходження об’єкта</option>
-							<option value="nodata">Немає данних</option>
+							<option value="nodata">Немає даних</option>
 							<% data.regions.region.each do |option| %>
 								<option value="<%= option.value %>"><%= option.name %></option>
 							<% end %>

@@ -28,6 +28,15 @@ scripts.Common = {
 		}
 	},
 
+	globalInit: function() {
+		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
+			var self = $(this);
+
+			self.parent().toggleClass('js-ico-checked');
+			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
+		});
+	},
+
 	jsPlaceholderInit: function () {
 		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
@@ -83,13 +92,6 @@ scripts.Common = {
 					.append('<label class="i-weiss-ico i-weiss-ico_'+ value +'" role="button" title="'+ title +'">' +
 					'<input type="checkbox" name="'+ inputName.replace(/\]$/, "") + '_' + value +']" tabindex="-1" data-input-type="' + value +'" /></label>');
 			});
-		});
-
-		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
-			var self = $(this);
-
-			self.parent().toggleClass('js-ico-checked');
-			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
 		});
 	},
 
@@ -182,7 +184,7 @@ scripts.Common = {
 			}
 		});
 
-		var $form = $('#form-declaration'),
+		var form = $('#form-declaration'),
 			validateSettings = {
 				errorClass: "js-invalid",
 				errorElement: "p",
@@ -204,23 +206,13 @@ scripts.Common = {
 
 				}
 			},
-			validateThis = $form.validate(validateSettings),
+			validateThis = form.validate(validateSettings),
 			current = 0,
 			content = $('.js-tab-content');
 
-		// events
-
-		this.$cache.body.on('reset', $form, function () {
-			$form.validate().resetForm();
-		}).on('click', '#intro__isnotdeclaration', function () {
-			if($(this).is(':checked')) {
-				$form.validate().settings.ignore = "*"; // disable all validation
-			} else {
-				$form.validate().settings.ignore = "";
-			}
+		this.$cache.body.on('reset', form, function () {
+			form.validate().resetForm();
 		});
-
-		// form sections
 
 		content.hide();
 		$(content[0]).show();
@@ -257,8 +249,11 @@ scripts.Common = {
 
 		scrpt.initializeCache();
 		scrpt.detecting();
+		scrpt.globalInit();
 
 		$(function () { // DOM Ready
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
