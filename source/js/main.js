@@ -1,4 +1,5 @@
 ;
+var scripts = scripts || {};
 
 scripts.Common = {
 
@@ -272,6 +273,7 @@ scripts.Common = {
 				scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
 				scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
 				scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
+				scrpt.addAutoComplete("#general__place_district", scripts.Data.autocompliteData.districts);
 				scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
 				scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
 				scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
