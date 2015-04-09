@@ -1,0 +1,23 @@
+<div class="declaration-nav">
+	<div class="declaration-nav__l">
+		<% if (currentSection > 0) %>
+		<button class="weiss-btn weiss-btn_grey weiss-btn_small js-section-go" data-section-go="<%= currentSection - 1 %>">Попередній розділ</button>
+		<% end %>
+	</div>
+	<div class="declaration-nav__c">
+		<ul class="declaration-progress-indicator">
+			<% data.sections.sections.each_with_index do |name, index| %>
+				<% if (index == currentSection) %>
+				<li class="declaration-progress-indicator__step declaration-progress-indicator__step_cur" title="<%= name %>"><%= index + 1 %></li>
+				<% else %>
+				<li class="declaration-progress-indicator__step js-section-go" data-section-go="<%= index %>" title="<%= name %>"><%= index + 1 %></li>
+				<% end %>
+			<% end %>
+		</ul>
+	</div>
+	<div class="declaration-nav__r">
+		<% if (currentSection < data.sections.sections.length - 1) %>
+		<button class="weiss-btn weiss-btn_blue weiss-btn_small js-section-go" data-section-go="<%= currentSection + 1 %>">Наступний розділ</button>
+		<% end %>
+	</div>
+</div>

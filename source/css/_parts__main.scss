@@ -84,7 +84,7 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 		border-style: solid;
 		border-color: transparent transparent #fa3 transparent;
 	}
-	
+
 	a {
 		color: #fff;
 	}
@@ -106,10 +106,10 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	box-shadow: 0 8px 30px -5px rgba(#000,.5);
 
 	li {
+		line-height: 1;
 		margin: 0;
 		padding: 10px;
 		cursor: default;
-		line-height: 1;
 	}
 
 	.ui-state-hover,
@@ -134,9 +134,29 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
   --------------------------------------------------------------------------- */
 
 .declaration-nav {
-	padding: 20px;
-	text-align: right;
+	display: table;
+	width: 100%;
+	table-layout: fixed;
 	background: #ffffe0;
+}
+
+.declaration-nav__l,
+.declaration-nav__c,
+.declaration-nav__r {
+	display: table-cell;
+	padding: 10px;
+}
+
+.declaration-nav__l {
+	text-align: left;
+}
+
+.declaration-nav__c {
+	text-align: center;
+}
+
+.declaration-nav__r {
+	text-align: right;
 }
 
 /* @end */
@@ -146,34 +166,38 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 
 .declaration-progress-indicator {
 	display: block;
-	margin: 0 0 20px;
+	margin: 0;
 	padding: 0;
 	text-align: center;
+	white-space: nowrap;
 }
 
 .declaration-progress-indicator__step {
 	@include transition();
+	font: bold 12px/18px $sans;
 	display: inline-block;
 	overflow: hidden;
 	width: 50px;
 	height: 18px;
-	vertical-align: middle;
-	background: #ccc;
-	color: #fff;
-	font: bold 12px/18px $sans;
-}
-
-.declaration-progress-indicator__step_inactive {
 	cursor: pointer;
+	vertical-align: middle;
+	color: $baseColor;
 	background: #eee;
+	border-radius: 2px;
 
 	&:hover {
-		background: lighten($accentColor, 20%);
+		background: darken(#eee, 10%);
 	}
 }
 
 .declaration-progress-indicator__step_cur {
+	cursor: default;
+	color: #fff;
 	background: $accentColor;
+
+	&:hover {
+		background: $accentColor;
+	}
 }
 
 /* @end */
