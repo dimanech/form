@@ -75,9 +75,14 @@
 			<legend class="l-weiss-form__item weiss-form__label">
 				<span>3. Посада:</span>
 			</legend>
-			<div class="l-weiss-form__item l-weiss-form__item_w-post-input l-weiss-form__item_lined">
-				<label for="general__post_post" class="i-wai">Посада</label>
-				<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+			<div class="l-weiss-form__item l-weiss-form__item_w-post-input">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_post" class="i-wai">Посада</label>
+					<input type="text" id="general__post_post" name="general[post][post]" placeholder="Посада" minlength="2" data-inp-act="hidden,unclear" />
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					Запишіть посаду так, як її вказав декларант (повністю)
+				</p>
 			</div>
 			<label class="l-weiss-form__item" for="general__post_candidate">Претендент:</label>
 			<div class="l-weiss-form__item">
@@ -85,25 +90,32 @@
 			</div>
 		</div>
 		<div class="l-weiss-form__row">
-			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
-				<label for="general__post_region" class="i-wai">Область</label>
-				<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
-					<option value="unspecified" selected="" disabled="">Область</option>
-					<option value="nodata">Немає даних</option>
-					<option value="ukraine">Загальнодержавний регіон</option>
-					<% data.regions.region.each do |option| %>
-					<option value="<%= option.value %>"><%= option.name %></option>
-					<% end %>
-				</select>
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_region" class="i-wai">Область</label>
+					<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
+						<option value="unspecified" selected="" disabled="">Область</option>
+						<option value="nodata">Немає даних</option>
+						<option value="ukraine">Загальнодержавний регіон</option>
+						<% data.regions.region.each do |option| %>
+						<option value="<%= option.value %>"><%= option.name %></option>
+						<% end %>
+					</select>
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними
+				</p>
 			</div>
-			<div class="l-weiss-form__item l-weiss-form__item_w-p50 l-weiss-form__item_lined">
-				<label for="general__post_office" class="i-wai">Відомство</label>
-				<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
+			<div class="l-weiss-form__item l-weiss-form__item_w-p50">
+				<div class="l-weiss-form__item_lined">
+					<label for="general__post_office" class="i-wai">Відомство</label>
+					<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
+				</div>
+				<p class="l-weiss-form__item declaration-small-note">
+					Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта і нема жодної динамічної підказки - вводіть що бачите в посаді
+				</p>
 			</div>
 		</div>
-		<p class="l-weiss-form__item declaration-small-note">
-			Запишіть посаду так, як її вказав декларант (повністю). Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank">«Структуру органів державної влади»</a>, або погугліть. Якщо нічого не допомогло - вводіть що бачите в посаді. У полі «Область» оберіть область, у якій знаходиться відомство (якщо це зрозуміло із назви), або Загальнодержавний округ, якщо це центральний орган влади. Увага Міністерства та центральні відомства хоч і знаходяться в Києві є Загальнодержавними.
-		</p>
 	</fieldset>
 
 	<fieldset class="weiss-form__set">
