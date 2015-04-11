@@ -35,7 +35,7 @@
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place" class="i-wai">Область</label>
 					<select id="general__place" name="general[addresses][][place]" data-inp-act="hidden,unclear">
-						<option value="unspecified" selected="" disabled="">Область</option>
+						<option value="unspecified" selected="">Область</option>
 						<option value="nodata">Немає даних</option>
 						<% data.regions.region.each do |option| %>
 							<option value="<%= option.value %>"><%= option.name %></option>
@@ -44,7 +44,7 @@
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_district" class="i-wai">Район</label>
-					<input type="text" id="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
+					<input type="text" id="general__place_district" class="general__place_district" name="general[addresses][][place_district]" placeholder="Район" minlength="2" data-inp-act="hidden,unclear" />
 				</div>
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_city" class="i-wai">Населений пункт</label>
@@ -53,7 +53,7 @@
 				<div class="l-weiss-form__item l-weiss-form__item_lined">
 					<label for="general__place_city_type" class="i-wai">Тип населенного пункту</label>
 					<select id="general__place_city_type" name="general[addresses][][place_city_type]" data-inp-act="hidden,unclear">
-						<option value="" selected="" disabled="">Тип населенного пункту</option>
+						<option value="unspecified" selected="" disabled="">Тип населенного пункту</option>
 						<option value="nodata">Немає даних</option>
 						<option value="city">Місто</option>
 						<option value="pgt">ПГТ</option>
