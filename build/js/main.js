@@ -112,7 +112,7 @@ scripts.Common = {
 		});
 	},
 
-	cloneyaInit: function () {
+	autocompliteCloneyaInit: function () {
 		var autoCompliteData = {
 				"#general__last-name": scripts.Data.autocompliteData.lastname,
 				"#general__name": scripts.Data.autocompliteData.firstname,
@@ -134,69 +134,35 @@ scripts.Common = {
 				});
 			};
 
-		$.each (autoCompliteData, function (id, data) {
-			addAutoComplite(id, data);
-		});
+		$.each(autoCompliteData, addAutoComplite);
 
-
-
-		var $clonewrapper = $('.js-clone-wrapper');
-
-		$clonewrapper.cloneya({
+		$('.js-clone-wrapper').cloneya({
+			serializeID: false,
 			cloneThis: '.js-toclone',
-			valueClone: false,
-			dataClone: false,
-			deepClone: false,
 			cloneButton: '.js-clone',
 			deleteButton: '.js-clone-delete',
-			clonePosition: 'after',
-			serializeID: false,
-			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete',
-			preserveChildCount: true
-		}).on('clone_after_append', function (event, toclone, newclone) {
-			var $container = $(newclone).parent('.js-clone-wrapper');
+			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete'
+		})
+			.on('clone_before_clone', function (event, toclone) {
+				$.each(autoCompliteData, function(element, data) {
+					var $elem = toclone.find(element);
 
-			$(newclone).addClass('js-cloned');
-
-			$.each(autoCompliteData, function(element, data) {
-				var $elem = $container.find(element);
-
-				if ($elem.length > 0) {
-					$elem.autocomplete('destroy');
-					addAutoComplite($elem, data);
-				}
-
-			});
-		});
-	},
-
-	autoCompleteInit: function() {
-		var autoCompliteData = {
-				"#general__last-name": scripts.Data.autocompliteData.lastname,
-				"#general__name": scripts.Data.autocompliteData.firstname,
-				"#general__patronymic": scripts.Data.autocompliteData.patronymic,
-				".general__place_district": scripts.Data.autocompliteData.districts,
-				"#general__post_office": scripts.Data.autocompliteData.offices,
-				".vehicle__35__brand": scripts.Data.autocompliteData.cars,
-				".vehicle__36__brand": scripts.Data.autocompliteData.trucks,
-				".vehicle__37__brand": scripts.Data.autocompliteData.boats,
-				".vehicle__39__brand": scripts.Data.autocompliteData.motos
-			},
-			addAutoComplite = function (selector, data) {
-				$(selector).each(function(){
-					$(this).autocomplete({
-						source: function(request, response) {
-							var results = $.ui.autocomplete.filter(data, request.term);
-							response(results.slice(0, 7));
-						},
-						appendTo: $(selector).parent()
-					});
+					if ($elem.length > 0)
+						$elem.autocomplete('destroy');
 				});
-			};
+			})
+			.on('clone_after_append', function (event, toclone, newclone) {
+				//newclone.addClass('js-cloned');
+				var $container = $(newclone).parent('.js-clone-wrapper');
 
-		$.each (autoCompliteData, function (id, data) {
-			addAutoComplite(id, data);
-		});
+				$.each(autoCompliteData, function(element, data) {
+					var $elem = $container.find(element);
+
+					if ($elem.length > 0) {
+						addAutoComplite($elem, data);
+					}
+				});
+			});
 	},
 
 	dateSelectBoxesInit: function () {
@@ -314,9 +280,8 @@ scripts.Common = {
 			scrpt.jqueryValidateInit();
 			scrpt.toggleFormSection();
 			scrpt.inputActions();
-			scrpt.cloneyaInit();
+			scrpt.autocompliteCloneyaInit();
 			scrpt.dateSelectBoxesInit();
-			//scrpt.autoCompleteInit();
 
 			//var template = Handlebars.compile($('#decl_form_template').html()),
 			//	output = $("#form-wrapper");
@@ -327,7 +292,7 @@ scripts.Common = {
 			//	scrpt.jqueryValidateInit();
 			//	scrpt.toggleFormSection();
 			//	scrpt.inputActions();
-			//	scrpt.cloneyaInit();
+			//	scrpt.autocompliteCloneyaInit();
 			//	scrpt.dateSelectBoxesInit();
 			//	scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
 			//	scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
