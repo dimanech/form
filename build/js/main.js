@@ -277,46 +277,31 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			scrpt.jqueryValidateInit();
-			scrpt.toggleFormSection();
-			scrpt.inputActions();
-			scrpt.autocompliteCloneyaInit();
-			scrpt.dateSelectBoxesInit();
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
 
-			//var template = Handlebars.compile($('#decl_form_template').html()),
-			//	output = $("#form-wrapper");
-			//
-			//scrpt.$cache.body.on("vulyk.next", function(e, data) {
-			//	scrpt.$cache.html.scrollTop(0);
-			//	output.html(template(data.result.task.data));
-			//	scrpt.jqueryValidateInit();
-			//	scrpt.toggleFormSection();
-			//	scrpt.inputActions();
-			//	scrpt.autocompliteCloneyaInit();
-			//	scrpt.dateSelectBoxesInit();
-			//	scrpt.addAutoComplete("#general__last-name", scripts.Data.autocompliteData.lastname);
-			//	scrpt.addAutoComplete("#general__name", scripts.Data.autocompliteData.firstname);
-			//	scrpt.addAutoComplete("#general__patronymic", scripts.Data.autocompliteData.patronymic);
-			//	scrpt.addAutoComplete("#general__place_district", scripts.Data.autocompliteData.districts);
-			//	scrpt.addAutoComplete("#general__post_office", scripts.Data.autocompliteData.offices);
-			//	scrpt.addAutoComplete("#vehicle__35__brand", scripts.Data.autocompliteData.cars);
-			//	scrpt.addAutoComplete("#vehicle__36__brand", scripts.Data.autocompliteData.trucks);
-			//	scrpt.addAutoComplete("#vehicle__37__brand", scripts.Data.autocompliteData.boats);
-			//	scrpt.addAutoComplete("#vehicle__39__brand", scripts.Data.autocompliteData.motos);
-			//}).on("vulyk.save", function(e, callback) {
-			//	var $form = $('#form-declaration'),
-			//		data = $form.serializeJSON();
-			//
-			//	if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
-			//		$form.remove();
-			//		callback(data);
-			//	} else {
-			//		scrpt.$cache.html.scrollTop(0);
-			//	}
-			//}).on("vulyk.skip", function(e, callback) {
-			//	$('#form-declaration').remove();
-			//	callback();
-			//});
+			scrpt.$cache.body.on("vulyk.next", function(e, data) {
+				scrpt.$cache.html.scrollTop(0);
+				output.html(template(data.result.task.data));
+				scrpt.jqueryValidateInit();
+				scrpt.toggleFormSection();
+				scrpt.inputActions();
+				scrpt.autocompliteCloneyaInit();
+				scrpt.dateSelectBoxesInit();
+			}).on("vulyk.save", function(e, callback) {
+				var $form = $('#form-declaration'),
+					data = $form.serializeJSON();
+
+				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
+					$form.remove();
+					callback(data);
+				} else {
+					scrpt.$cache.html.scrollTop(0);
+				}
+			}).on("vulyk.skip", function(e, callback) {
+				$('#form-declaration').remove();
+				callback();
+			});
 		});
 
 		return scrpt;
