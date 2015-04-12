@@ -5,16 +5,16 @@
 	GLOBAL
 ============================================================================= */
 
-article	,
-aside	,
-details	,
-figcaption	,
-figure	,
-footer	,
-header	,
-hgroup	,
-nav	,
-section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+nav,
+section{
 	display: block;
 	// Corrects `block` display not defined in IE 9.
 }
