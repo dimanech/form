@@ -869,6 +869,10 @@ textarea.weiss-form__textarea_lined {
 						<div class="region-main__content">
 							<form class="weiss-form weiss-form_declaration" id="form-declaration" action="" method="post" accept-charset="utf-8">
 	<div id="section-0" class="js-tab-content">
+		<h1 class="declaration-head">
+			<strong class="declaration-head__em">Декларація</strong>
+			про майно, доходи, витрати і зобов’язання фінансового характеру
+		</h1>
 		<div class="declaration-nav">
 	<div class="declaration-nav__l">
 	</div>
@@ -889,7 +893,7 @@ textarea.weiss-form__textarea_lined {
 <fieldset class="weiss-form__set weiss-form__set_main weiss-form__set_notes">
 
 	<div class="declaration-action">
-		<p class="declaration-action_head">Завантажити pdf декларацію</p>
+		<p class="declaration-action_head">Завантажити декларацію для розшифровки</p>
 		<p><a class="js-declaration-pdf" href="{{ link }}" target="_blank">Декларація</a></p>
 	</div>
 
@@ -1054,7 +1058,7 @@ textarea.weiss-form__textarea_lined {
 					<select id="general__post_region" name="general[post][region]" data-inp-act="hidden,unclear">
 						<option value="unspecified" selected="" disabled="">Область</option>
 						<option value="nodata">Немає даних</option>
-						<option value="virtualregion">Загальнодержавний регіон</option>
+						<option value="ukraine">Загальнодержавний регіон</option>
 						<option value="kiev">м. Київ</option>
 						<option value="1">Івано-Франківська область</option>
 						<option value="2">Вінницька область</option>
@@ -1094,7 +1098,7 @@ textarea.weiss-form__textarea_lined {
 					<input type="text" id="general__post_office" name="general[post][office]" placeholder="Відомство" data-inp-act="hidden,unclear" />
 				</div>
 				<p class="l-weiss-form__item declaration-small-note">
-					Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта і нема жодної динамічної підказки - вводіть що бачите в посаді
+					Додатково у полі «Відомство» оберіть відомство. Список містить лише основні органи влади, яким підпорядковуються решта структур, установ та підприємств. У випадку, якщо ви не знаєте, кому підпорядковується відомство вашого декларанта - перегляньте <a href="https://docs.google.com/spreadsheets/d/13bn_WPAAE2bxwWXnSk2pH5hVA596hcJZn0ZTlPUfEzE/edit?usp=sharing" target="_blank">«Структуру органів державної влади»</a>,
 				</p>
 			</div>
 		</div>

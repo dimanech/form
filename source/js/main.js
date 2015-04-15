@@ -9,6 +9,7 @@ scripts.Common = {
 
 		$cache.html = $('html');
 		$cache.body = $('body');
+		$cache.cloneWrapper = $('.js-clone-wrapper');
 
 		this.$cache = $cache;
 	},
@@ -112,7 +113,7 @@ scripts.Common = {
 		});
 	},
 
-	autocompliteCloneyaInit: function () {
+	autoCompliteInit: function () {
 		var autoCompliteData = {
 				"#general__last-name": scripts.Data.autocompliteData.lastname,
 				"#general__name": scripts.Data.autocompliteData.firstname,
@@ -136,13 +137,7 @@ scripts.Common = {
 
 		$.each(autoCompliteData, addAutoComplite);
 
-		$('.js-clone-wrapper').cloneya({
-			serializeID: false,
-			cloneThis: '.js-toclone',
-			cloneButton: '.js-clone',
-			deleteButton: '.js-clone-delete',
-			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete'
-		})
+		this.$cache.cloneWrapper
 			.on('clone_before_clone', function (event, toclone) {
 				$.each(autoCompliteData, function(element, data) {
 					var $elem = toclone.find(element);
@@ -163,6 +158,16 @@ scripts.Common = {
 					}
 				});
 			});
+	},
+
+	cloneyaInit: function () {
+		this.$cache.cloneWrapper.cloneya({
+			serializeID: false,
+			cloneThis: '.js-toclone',
+			cloneButton: '.js-clone',
+			deleteButton: '.js-clone-delete',
+			ignore: '.weiss-form__msg, .js-clone-ignore, .ui-autocomplete'
+		});
 	},
 
 	dateSelectBoxesInit: function () {
@@ -286,7 +291,8 @@ scripts.Common = {
 				scrpt.jqueryValidateInit();
 				scrpt.toggleFormSection();
 				scrpt.inputActions();
-				scrpt.autocompliteCloneyaInit();
+				scrpt.autoCompliteInit();
+				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
 			}).on("vulyk.save", function(e, callback) {
 				var $form = $('#form-declaration'),
