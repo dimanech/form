@@ -69,7 +69,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ vehicle.sum }}
+						{{ vehicle.sum|curformat() }}
 					</div>
 					{% if vehicle.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -79,7 +79,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ vehicle.sum_rent }}
+						{{ vehicle.sum_rent|curformat() }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
 					<div class="l-weiss-form__row">
@@ -180,7 +180,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ vehicle.sum }}
+						{{ vehicle.sum|curformat() }}
 					</div>
 					{% if vehicle.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -190,7 +190,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ vehicle.sum_rent }}
+						{{ vehicle.sum_rent|curformat() }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
 					<div class="l-weiss-form__row">

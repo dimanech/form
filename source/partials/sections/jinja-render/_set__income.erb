@@ -54,7 +54,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ declaration.income['<%= formid %>'].value }}
+						{{ declaration.income['<%= formid %>'].value|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].comment }}
@@ -62,7 +62,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ declaration.income['<%= formid %>'].family }}
+						{{ declaration.income['<%= formid %>'].family|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].family_comment }}
@@ -98,7 +98,7 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ declaration.income['<%= formid %>'].value }}
+						{{ declaration.income['<%= formid %>'].value|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].comment }}
@@ -106,7 +106,7 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ declaration.income['<%= formid %>'].family }}
+						{{ declaration.income['<%= formid %>'].family|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].family_comment }}
@@ -167,12 +167,12 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ income.cur }} {{ income.cur_units|default('') }}
+						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ income.uah_equal }}
+						{{ income.uah_equal|curformat() }}
 					</div>
 				</td>
 			</tr>
@@ -252,12 +252,12 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ income.cur }} {{ income.cur_units|default('') }}
+						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ income.uah_equal }}
+						{{ income.uah_equal|curformat() }}
 					</div>
 				</td>
 			</tr>

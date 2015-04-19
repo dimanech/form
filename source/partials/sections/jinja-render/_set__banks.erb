@@ -45,31 +45,23 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-							{{ banks.sum }}
-							{{ banks.sum_units }}
-						</div>
+						{{ banks.sum|curformat() }}
+						{{ banks.sum_units }}
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item">
-							{{ banks.sum_comment }}
-						</div>
+						{{ banks.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-							{{ banks.sum_foreign }}
-							{{ banks.sum_foreign_units }}
-						</div>
+						{{ banks.sum_foreign|curformat() }}
+						{{ banks.sum_foreign_units }}
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item">
-							{{ banks.sum_foreign_comment }}
-						</div>
+						{{ banks.sum_foreign_comment }}
 					</div>
 					{% endif %}
 				</td>
@@ -132,31 +124,23 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-							{{ banks.sum }}
-							{{ banks.sum_units }}
-						</div>
+						{{ banks.sum|curformat() }}
+						{{ banks.sum_units }}
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item">
-							{{ banks.sum_comment }}
-						</div>
+						{{ banks.sum_comment }}
 					</div>
 					{% endif %}
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
-							{{ banks.sum_foreign }}
-							{{ banks.sum_foreign_units }}
-						</div>
+						{{ banks.sum_foreign|curformat() }}
+						{{ banks.sum_foreign_units }}
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
-						<div class="l-weiss-form__item">
-							{{ banks.sum_foreign_comment }}
-						</div>
+						{{ banks.sum_foreign_comment }}
 					</div>
 					{% endif %}
 				</td>
