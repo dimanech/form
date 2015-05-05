@@ -44,7 +44,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ banks.sum|curformat() }}
 						{{ banks.sum_units }}
 					</div>
@@ -55,7 +55,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ banks.sum_foreign|curformat() }}
 						{{ banks.sum_foreign_units }}
 					</div>
@@ -76,8 +76,8 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td>0</td>
-				<td>0</td>
+				<td class="weiss-table__cell_tar">0</td>
+				<td class="weiss-table__cell_tar">0</td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -123,7 +123,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ banks.sum|curformat() }}
 						{{ banks.sum_units }}
 					</div>
@@ -134,7 +134,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ banks.sum_foreign|curformat() }}
 						{{ banks.sum_foreign_units }}
 					</div>
@@ -153,8 +153,8 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td>0</td>
-				<td>0</td>
+				<td class="weiss-table__cell_tar">0</td>
+				<td class="weiss-table__cell_tar">0</td>
 			</tr>
 			{% endfor %}
 		</tbody>

@@ -40,7 +40,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ declaration.liabilities['<%= field.number %>'].sum|curformat() }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
@@ -50,7 +50,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign|curformat() }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
@@ -100,7 +100,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ declaration.liabilities['<%= field.number %>'].sum|curformat() }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
@@ -110,7 +110,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row">
+					<div class="l-weiss-form__row weiss-table__cell_tar">
 						{{ declaration.liabilities['<%= field.number %>'].sum_foreign|curformat() }}
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
