@@ -224,3 +224,15 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 }
 
 // @end
+
+// @group Currency align
+//  ----------------------------------------------------------------------------
+
+.currency-empty {
+	display: block;
+	text-align: center;
+	font-style: normal;
+	font-family: $serif;
+}
+
+// @end
