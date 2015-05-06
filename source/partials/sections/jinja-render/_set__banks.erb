@@ -44,9 +44,9 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
-						{{ banks.sum|curformat() }}
+					<div class="l-weiss-form__row weiss-currency">
 						{{ banks.sum_units }}
+						{{ banks.sum|curformat() }}
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -55,9 +55,9 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
-						{{ banks.sum_foreign|curformat() }}
+					<div class="l-weiss-form__row weiss-currency">
 						{{ banks.sum_foreign_units }}
+						{{ banks.sum_foreign|curformat() }}
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
@@ -76,8 +76,12 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td class="weiss-table__cell_tar">0</td>
-				<td class="weiss-table__cell_tar">0</td>
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
+				</td>
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
+				</td>
 			</tr>
 			{% endfor %}
 		</tbody>
@@ -123,9 +127,9 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
-						{{ banks.sum|curformat() }}
+					<div class="l-weiss-form__row weiss-currency">
 						{{ banks.sum_units }}
+						{{ banks.sum|curformat() }}
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -134,9 +138,9 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
-						{{ banks.sum_foreign|curformat() }}
+					<div class="l-weiss-form__row weiss-currency">
 						{{ banks.sum_foreign_units }}
+						{{ banks.sum_foreign|curformat() }}
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
@@ -153,8 +157,12 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td class="weiss-table__cell_tar">0</td>
-				<td class="weiss-table__cell_tar">0</td>
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
+				</td>
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
+				</td>
 			</tr>
 			{% endfor %}
 		</tbody>

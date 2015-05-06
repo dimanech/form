@@ -53,7 +53,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ declaration.income['<%= formid %>'].value|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
@@ -61,7 +61,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ declaration.income['<%= formid %>'].family|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
@@ -97,7 +97,7 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ declaration.income['<%= formid %>'].value|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
@@ -105,7 +105,7 @@
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ declaration.income['<%= formid %>'].family|curformat() }}
 					</div>
 					<div class="l-weiss-form__row">
@@ -165,12 +165,12 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						{{ income.uah_equal|curformat() }}
 					</div>
@@ -186,12 +186,12 @@
 						&ndash;
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						0
 					</div>
@@ -241,7 +241,7 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}
@@ -250,12 +250,12 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						{{ income.uah_equal|curformat() }}
 					</div>
@@ -271,12 +271,12 @@
 						&ndash;
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						0
 					</div>
 				</td>
-				<td class="weiss-table__cell_tar">
+				<td class="weiss-currency">
 					<div class="l-weiss-form__row">
 						0
 					</div>

@@ -228,11 +228,15 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 // @group Currency align
 //  ----------------------------------------------------------------------------
 
-.currency-empty {
+.weiss-currency {
+	text-align: right;
+	font: 14px/1.2 $monospSans;
+}
+
+.weiss-currency__empty {
 	display: block;
 	text-align: center;
 	font-style: normal;
-	font-family: $serif;
 }
 
 // @end

@@ -68,7 +68,7 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ vehicle.sum|curformat() }}
 					</div>
 					{% if vehicle.sum_comment %}
@@ -78,7 +78,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ vehicle.sum_rent|curformat() }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
@@ -102,11 +102,11 @@
 				<td>
 					&ndash;
 				</td>
-				<td class="weiss-table__cell_tar">
-					0
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
 				</td>
-				<td class="weiss-table__cell_tar">
-					0
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
 				</td>
 			</tr>
 			{% endfor %}
@@ -179,7 +179,7 @@
 					{{ vehicle.year }}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ vehicle.sum|curformat() }}
 					</div>
 					{% if vehicle.sum_comment %}
@@ -189,7 +189,7 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-table__cell_tar">
+					<div class="l-weiss-form__row weiss-currency">
 						{{ vehicle.sum_rent|curformat() }}
 					</div>
 					{% if vehicle.sum_rent_comment %}
@@ -213,11 +213,11 @@
 				<td>
 					&ndash;
 				</td>
-				<td class="weiss-table__cell_tar">
-					0
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
 				</td>
-				<td class="weiss-table__cell_tar">
-					0
+				<td class="weiss-currency">
+					<div class="l-weiss-form__row">0</div>
 				</td>
 			</tr>
 			{% endfor %}
