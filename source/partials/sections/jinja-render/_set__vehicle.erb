@@ -65,11 +65,16 @@
 					{% endif %}
 				</td>
 				<td>
-					{{ vehicle.year }}
+					<%= partial("partials/blocks/block_digit", :locals => {
+						:content => "{{ vehicle.year }}"
+					}) %>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ vehicle.sum|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ vehicle.sum|curformat() }}"
+						}) %>
 					</div>
 					{% if vehicle.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -78,8 +83,11 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ vehicle.sum_rent|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ vehicle.sum_rent|curformat() }}"
+						}) %>
 					</div>
 					{% if vehicle.sum_rent_comment %}
 					<div class="l-weiss-form__row">
@@ -100,13 +108,21 @@
 					—
 				</td>
 				<td>
-					—
+					<%= partial("partials/blocks/block_digit", :locals => {}) %>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
 			</tr>
 			{% endfor %}
@@ -176,11 +192,16 @@
 					{% endif %}
 				</td>
 				<td>
-					{{ vehicle.year }}
+					<%= partial("partials/blocks/block_digit", :locals => {
+						:content => "{{ vehicle.year }}"
+					}) %>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ vehicle.sum|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ vehicle.sum|curformat() }}"
+						}) %>
 					</div>
 					{% if vehicle.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -189,8 +210,11 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ vehicle.sum_rent|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ vehicle.sum_rent|curformat() }}"
+						}) %>
 					</div>
 					{% if vehicle.sum_rent_comment %}
 					<div class="l-weiss-form__row">
@@ -211,13 +235,21 @@
 					—
 				</td>
 				<td>
-					—
+					<%= partial("partials/blocks/block_digit", :locals => {}) %>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
 			</tr>
 			{% endfor %}

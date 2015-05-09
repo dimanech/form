@@ -64,23 +64,31 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-	                    {{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:content => '{{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}'
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ estate.costs|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ estate.costs|curformat() }}'
+						}) %>
 					</div>
 					<div class="l-form_row">
 						{{ estate.costs_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ estate.costs_rent|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ estate.costs_rent|curformat() }}'
+						}) %>
 					</div>
 					<div class="l-form_row">
 						{{ estate.costs_rent_comment }}
@@ -97,22 +105,28 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit") %>
 					</div>
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-	                    —
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
 			</tr>
@@ -155,12 +169,10 @@
 			</tr>
 			<tr>
 				<th>
-					придбання
-					у власність
+					придбання у власність
 				</th>
 				<th>
-					оренду чи на інше
-					право користування
+					оренду чи на інше право користування
 				</th>
 			</tr>
 		</thead>
@@ -184,7 +196,9 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-	                    {{ estate.space }}  {% if estate.space_units %}({{ estate.space_units }}){% endif %}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:content => '{{ estate.space }} {% if estate.space_units %}({{ estate.space_units }}){% endif %}'
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ estate.space_comment }}
@@ -192,15 +206,20 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ estate.costs_property }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:content => '{{ estate.costs_property }}'
+						}) %>
 					</div>
 					<div class="l-form_row">
 						{{ estate.costs_property_comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ estate.costs_rent|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ estate.costs_rent|curformat() }}'
+						}) %>
 					</div>
 					<div class="l-form_row">
 						{{ estate.costs_rent_comment }}
@@ -219,22 +238,28 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit") %>
 					</div>
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-	                    —
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
 					</div>
 				</td>
 			</tr>

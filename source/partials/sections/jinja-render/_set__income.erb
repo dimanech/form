@@ -53,16 +53,26 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.income['<%= formid %>'].value|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContent = "{{ declaration.income['" + field.number + "'].value|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContent
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.income['<%= formid %>'].family|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContentFam = "{{ declaration.income['" + field.number + "'].family|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContentFam
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].family_comment }}
@@ -97,16 +107,26 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.income['<%= formid %>'].value|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContent = "{{ declaration.income['" + field.number + "'].value|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContent
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].comment }}
 					</div>
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.income['<%= formid %>'].family|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContentFam = "{{ declaration.income['" + field.number + "'].family|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContentFam
+						}) %>
 					</div>
 					<div class="l-weiss-form__row">
 						{{ declaration.income['<%= formid %>'].family_comment }}
@@ -165,14 +185,20 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ income.cur|curformat() }} {{ income.cur_units|default('') }}"
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						{{ income.uah_equal|curformat() }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ income.uah_equal|curformat() }}"
+						}) %>
 					</div>
 				</td>
 			</tr>
@@ -186,14 +212,18 @@
 						—
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
 					</div>
 				</td>
 			</tr>
@@ -241,7 +271,7 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-weiss-form__row weiss-currency">
+					<div class="l-weiss-form__row">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}
@@ -250,14 +280,20 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ income.cur|curformat() }} {{ income.cur_units|default('') }}"
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						{{ income.uah_equal|curformat() }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => "{{ income.uah_equal|curformat() }}"
+						}) %>
 					</div>
 				</td>
 			</tr>
@@ -271,14 +307,18 @@
 						—
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
 					</div>
 				</td>
-				<td class="weiss-currency">
+				<td>
 					<div class="l-weiss-form__row">
-						—
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
 					</div>
 				</td>
 			</tr>
