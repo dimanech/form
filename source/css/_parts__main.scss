@@ -228,7 +228,9 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 // @group Currency align
 //  ----------------------------------------------------------------------------
 
-.weiss-digit {}
+.weiss-digit {
+	display: block;
+}
 
 .weiss-digit__empty {
 	display: block;

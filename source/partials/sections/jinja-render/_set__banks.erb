@@ -47,7 +47,7 @@
 					<div class="l-weiss-form__row">
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => '{{ banks.sum_units }}{{ banks.sum|curformat() }}'
+							:content => '{{ banks.sum_units }} {{ banks.sum|curformat() }}'
 						}) %>
 					</div>
 					{% if banks.sum_comment %}
@@ -60,7 +60,7 @@
 					<div class="l-weiss-form__row">
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => '{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}'
+							:content => '{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}'
 						}) %>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -142,7 +142,7 @@
 					<div class="l-weiss-form__row">
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => '{{ banks.sum_units }}{{ banks.sum|curformat() }}'
+							:content => '{{ banks.sum_units }} {{ banks.sum|curformat() }}'
 						}) %>
 					</div>
 					{% if banks.sum_comment %}
@@ -155,7 +155,7 @@
 					<div class="l-weiss-form__row">
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => '{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}'
+							:content => '{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}'
 						}) %>
 					</div>
 					{% if banks.sum_foreign_comment %}

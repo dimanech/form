@@ -71,7 +71,7 @@
 
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => digitContent
+							:content => digitContentFam
 						}) %>
 					</div>
 					<div class="l-weiss-form__row">
@@ -125,7 +125,7 @@
 
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
-							:content => digitContent
+							:content => digitContentFam
 						}) %>
 					</div>
 					<div class="l-weiss-form__row">
@@ -185,7 +185,7 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<%= partial("partials/blocks/block_digit", :locals => {
 							:type => 'currency',
@@ -271,7 +271,7 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-weiss-form__row weiss-digit weiss-digit_currency">
+					<div class="l-weiss-form__row">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}

@@ -440,6 +440,10 @@ dd {
   font-weight: bold;
 }
 
+.weiss-digit {
+  display: block;
+}
+
 .weiss-digit__empty {
   display: block;
   font-style: normal;

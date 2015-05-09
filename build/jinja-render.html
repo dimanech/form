@@ -198,7 +198,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['5'].value|curformat() }}
+		{{ declaration.income['5'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -228,7 +228,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['6'].value|curformat() }}
+		{{ declaration.income['6'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -258,7 +258,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['7'].value|curformat() }}
+		{{ declaration.income['7'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -305,7 +305,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['8'].value|curformat() }}
+		{{ declaration.income['8'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -335,7 +335,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['9'].value|curformat() }}
+		{{ declaration.income['9'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -365,7 +365,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['10'].value|curformat() }}
+		{{ declaration.income['10'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -395,7 +395,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['11'].value|curformat() }}
+		{{ declaration.income['11'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -425,7 +425,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['12'].value|curformat() }}
+		{{ declaration.income['12'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -455,7 +455,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['13'].value|curformat() }}
+		{{ declaration.income['13'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -485,7 +485,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['14'].value|curformat() }}
+		{{ declaration.income['14'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -515,7 +515,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['15'].value|curformat() }}
+		{{ declaration.income['15'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -545,7 +545,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['16'].value|curformat() }}
+		{{ declaration.income['16'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -575,7 +575,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['17'].value|curformat() }}
+		{{ declaration.income['17'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -605,7 +605,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['18'].value|curformat() }}
+		{{ declaration.income['18'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -635,7 +635,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['19'].value|curformat() }}
+		{{ declaration.income['19'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -665,7 +665,7 @@
 					<div class="l-weiss-form__row">
 
 						<span class="weiss-digit weiss-digit_currency">
-		{{ declaration.income['20'].value|curformat() }}
+		{{ declaration.income['20'].family|curformat() }}
 </span>
 					</div>
 					<div class="l-weiss-form__row">
@@ -724,7 +724,7 @@
 					</div>
 					{% endif %}
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		{{ income.cur|curformat() }} {{ income.cur_units|default('') }}
@@ -808,7 +808,7 @@
 					22.
 				</td>
 				<td class="weiss-table__cell_fwn">
-					<div class="l-weiss-form__row weiss-digit weiss-digit_currency">
+					<div class="l-weiss-form__row">
 						{{ income.country }}
 					</div>
 					{% if income.country_comment %}
@@ -979,14 +979,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1066,14 +1066,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1153,14 +1153,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1240,14 +1240,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1327,14 +1327,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1414,14 +1414,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1546,14 +1546,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1634,14 +1634,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1722,14 +1722,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1810,14 +1810,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1898,14 +1898,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -1986,14 +1986,14 @@
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
 </span>
 					</div>
 				</td>
-				<td class="weiss-digit ">
+				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
 		<i class="weiss-digit__empty">—</i>
@@ -2966,7 +2966,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -2978,7 +2978,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3029,7 +3029,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3041,7 +3041,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3092,7 +3092,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3104,7 +3104,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3155,7 +3155,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3167,7 +3167,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3218,7 +3218,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3230,7 +3230,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3281,7 +3281,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3293,7 +3293,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3372,7 +3372,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3384,7 +3384,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3431,7 +3431,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3443,7 +3443,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
@@ -3490,7 +3490,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_units }}{{ banks.sum|curformat() }}
+		{{ banks.sum_units }} {{ banks.sum|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_comment %}
@@ -3502,7 +3502,7 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<span class="weiss-digit weiss-digit_currency">
-		{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}
+		{{ banks.sum_foreign_units }} {{ banks.sum_foreign|curformat() }}
 </span>
 					</div>
 					{% if banks.sum_foreign_comment %}
