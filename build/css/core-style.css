@@ -277,6 +277,15 @@ figure {
 .weiss-table .weiss-table__psdo-th {
   font-weight: bold;
 }
+.weiss-table .weiss-table__cell_tar {
+  text-align: right;
+}
+.weiss-table .weiss-table__cell_tal {
+  text-align: left;
+}
+.weiss-table .weiss-table__cell_tac {
+  text-align: center;
+}
 
 /* @end */
 /* @group Table styling
