@@ -44,9 +44,11 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ banks.sum_units }}
-						{{ banks.sum|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ banks.sum_units }}{{ banks.sum|curformat() }}'
+						}) %>
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -55,9 +57,11 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ banks.sum_foreign_units }}
-						{{ banks.sum_foreign|curformat() }}
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}'
+						}) %>
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
@@ -76,11 +80,19 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
+					</div>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency'
+						}) %>
+					</div>
 				</td>
 			</tr>
 			{% endfor %}
@@ -128,8 +140,10 @@
 				</th>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ banks.sum|curformat() }}
-						{{ banks.sum_units }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ banks.sum_units }}{{ banks.sum|curformat() }}'
+						}) %>
 					</div>
 					{% if banks.sum_comment %}
 					<div class="l-weiss-form__row">
@@ -139,8 +153,10 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row">
-						{{ banks.sum_foreign|curformat() }}
-						{{ banks.sum_foreign_units }}
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => '{{ banks.sum_foreign_units }}{{ banks.sum_foreign|curformat() }}'
+						}) %>
 					</div>
 					{% if banks.sum_foreign_comment %}
 					<div class="l-weiss-form__row">
@@ -157,11 +173,19 @@
 				<th class="weiss-table__cell_fwn">
 					<%= field.name %>
 				</th>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
-				<td class="weiss-currency">
-					<div class="l-weiss-form__row">—</div>
+				<td>
+					<div class="l-weiss-form__row">
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+						}) %>
+					</div>
 				</td>
 			</tr>
 			{% endfor %}

@@ -440,15 +440,17 @@ dd {
   font-weight: bold;
 }
 
-.weiss-currency {
-  text-align: right;
-  font: 14px/1.2 "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
+.weiss-digit__empty {
+  display: block;
+  font-style: normal;
+  text-align: center;
+  color: #5B5B5B;
+  font-family: "Times New Roman", Times, "FreeSerif", "Nimbus Roman No9 L", serif;
 }
 
-.weiss-currency__empty {
-  display: block;
-  text-align: center;
-  font-style: normal;
+.weiss-digit_currency {
+  text-align: right;
+  font: 14px/1.2 "Lucida Console", Monaco, "DejaVu Sans Mono", "Bitstream Vera Sans Mono", monospace;
 }
 
 /* ============================================================================

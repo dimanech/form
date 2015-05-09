@@ -1,0 +1,12 @@
+<% if (locals.key?(:type) && type == 'currency') %>
+	<% currencyClass = 'weiss-digit_currency' %>
+<% else %>
+	<% currencyClass = '' %>
+<% end %>
+<span class="weiss-digit <%= currencyClass %>">
+	<% if (locals.key?(:content)) %>
+		<%= content %>
+	<% else %>
+		<i class="weiss-digit__empty">—</i>
+	<% end %>
+</span>

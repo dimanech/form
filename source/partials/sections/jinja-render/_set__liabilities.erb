@@ -40,8 +40,13 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.liabilities['<%= field.number %>'].sum|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContent = "{{ declaration.liabilities['" + field.number + "'].sum|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContent
+						}) %>
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
 					<div class="l-weiss-form__row">
@@ -51,7 +56,12 @@
 				</td>
 				<td>
 					<div class="l-weiss-form__row weiss-currency">
-	                    {{ declaration.liabilities['<%= field.number %>'].sum_foreign|curformat() }}
+						<% digitContentFor = "{{ declaration.liabilities['" + field.number + "'].sum_foreign|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContentFor
+						}) %>
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
 					<div class="l-weiss-form__row">
@@ -100,8 +110,13 @@
 					<%= field.name %>
 				</th>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.liabilities['<%= field.number %>'].sum|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContent = "{{ declaration.liabilities['" + field.number + "'].sum|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContent
+						}) %>
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_comment %}
 					<div class="l-weiss-form__row">
@@ -110,8 +125,13 @@
 					{% endif %}
 				</td>
 				<td>
-					<div class="l-weiss-form__row weiss-currency">
-						{{ declaration.liabilities['<%= field.number %>'].sum_foreign|curformat() }}
+					<div class="l-weiss-form__row">
+						<% digitContentFor = "{{ declaration.liabilities['" + field.number + "'].sum_foreign|curformat() }}" %>
+
+						<%= partial("partials/blocks/block_digit", :locals => {
+							:type => 'currency',
+							:content => digitContentFor
+						}) %>
 					</div>
 					{% if declaration.liabilities['<%= field.number %>'].sum_foreign_comment %}
 					<div class="l-weiss-form__row">
