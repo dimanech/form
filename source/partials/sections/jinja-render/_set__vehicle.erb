@@ -66,7 +66,7 @@
 				</td>
 				<td>
 					<%= partial("partials/blocks/block_digit", :locals => {
-						:content => "{{ vehicle.year }}"
+						:content => "{{ vehicle.year|emptyformat }}"
 					}) %>
 				</td>
 				<td>
@@ -195,7 +195,7 @@
 				</td>
 				<td>
 					<%= partial("partials/blocks/block_digit", :locals => {
-						:content => "{{ vehicle.year }}"
+						:content => "{{ vehicle.year|emptyformat }}"
 					}) %>
 				</td>
 				<td>
