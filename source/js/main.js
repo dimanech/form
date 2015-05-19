@@ -20,9 +20,9 @@ scripts.Common = {
 
 	isModernBrowser: function () {
 		if ( // modernizer alternative
-		'querySelector' in document &&
-		'localStorage' in window &&
-		'addEventListener' in window
+			'querySelector' in document &&
+			'localStorage' in window &&
+			'addEventListener' in window
 		) {
 			return true;
 		} else {
@@ -123,7 +123,11 @@ scripts.Common = {
 				".vehicle__35__brand": scripts.Data.autocompliteData.cars,
 				".vehicle__36__brand": scripts.Data.autocompliteData.trucks,
 				".vehicle__37__brand": scripts.Data.autocompliteData.boats,
-				".vehicle__39__brand": scripts.Data.autocompliteData.motos
+				".vehicle__39__brand": scripts.Data.autocompliteData.motos,
+				".vehicle__40__brand": scripts.Data.autocompliteData.cars,
+				".vehicle__41__brand": scripts.Data.autocompliteData.trucks,
+				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
+				".vehicle__44__brand": scripts.Data.autocompliteData.motos
 			},
 			addAutoComplite = function (selector, data) {
 				$(selector).autocomplete({
@@ -131,7 +135,8 @@ scripts.Common = {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					appendTo: $(selector).parent()
+					appendTo: $(selector).parent(),
+					autoFocus: true
 				});
 			};
 
@@ -282,8 +287,6 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			var template = Handlebars.compile($('#decl_form_template').html()),
-				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
