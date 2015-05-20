@@ -129,14 +129,30 @@ scripts.Common = {
 				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
 				".vehicle__44__brand": scripts.Data.autocompliteData.motos
 			},
+			focus_next = function(current) {
+				var selectables = $(":tabbable").not(":checkbox")
+						.not(".ui-menu-item").not(".ui-autocomplete"),
+					nextIndex = 0;
+
+				if (current.length === 1) {
+					var currentIndex = selectables.index(current);
+					if (currentIndex + 1 < selectables.length) {
+						nextIndex = currentIndex + 1;
+					}
+				}
+
+				selectables.eq(nextIndex).focus();
+			},
 			addAutoComplite = function (selector, data) {
 				$(selector).autocomplete({
 					source: function(request, response) {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
+					select: function(event, ui) {
+						focus_next($(event.target));
+					},
 					appendTo: $(selector).parent(),
-					autoFocus: true
 				});
 			};
 
