@@ -287,6 +287,8 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
