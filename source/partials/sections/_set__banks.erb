@@ -87,6 +87,9 @@
 					<div class="l-weiss-form__row">
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<input class="js-is-DigitsOnly" type="text" id="banks__<%= field.number %>__sum_foreign" name="banks[<%= field.number %>][][sum_foreign]" placeholder="Сума за кордоном" data-inp-act="hidden,unclear" />
+                            <% if (index == 0) %>
+                                <p class="js-clone-ignore declaration-small-note">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
+                            <% end %>
 						</div>
 						<div class="l-weiss-form__item l-weiss-form__item_w-p50">
 							<select id="banks__<%= field.number %>__sum_foreign_units" name="banks[<%= field.number %>][][sum_foreign_units]" data-inp-act="hidden,unclear">

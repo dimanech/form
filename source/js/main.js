@@ -206,8 +206,8 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри");
+			return this.optional(element) || /^\d+([,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри. Використовуйте кому");
 
 		$.validator.addMethod("nocurrency", function(value, element) {
 			return this.optional(element) || /^[\D]+$/i.test(value);

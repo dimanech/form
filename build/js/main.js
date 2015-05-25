@@ -19,15 +19,7 @@ scripts.Common = {
 	},
 
 	isModernBrowser: function () {
-		if ( // modernizer alternative
-			'querySelector' in document &&
-			'localStorage' in window &&
-			'addEventListener' in window
-		) {
-			return true;
-		} else {
-			return false;
-		}
+		return 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window
 	},
 
 	globalInit: function() {
@@ -152,7 +144,7 @@ scripts.Common = {
 					select: function(event, ui) {
 						focus_next($(event.target));
 					},
-					appendTo: $(selector).parent(),
+					appendTo: $(selector).parent()
 				});
 			};
 
@@ -214,8 +206,8 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри");
+			return this.optional(element) || /^\d+([,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри. Використовуйте кому");
 
 		$.validator.addMethod("nocurrency", function(value, element) {
 			return this.optional(element) || /^[\D]+$/i.test(value);

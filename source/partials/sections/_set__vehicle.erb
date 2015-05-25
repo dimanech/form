@@ -85,6 +85,9 @@
 				<td>
 					<div class="l-weiss-form__row">
 						<input class="js-is-DigitsOnly" type="text" id="vehicle__<%= field.number %>__sum" name="vehicle[<%= field.number %>][][sum]" placeholder="Сума витрат" minlength="2" data-inp-act="hidden,unclear" />
+                        <% if (index == 0) %>
+                            <p class="declaration-small-note js-clone-ignore">Суми з копійками треба вводити через кому, наприклад: 10000,27</p>
+                        <% end %>
 					</div>
 					<div class="l-weiss-form__row">
 						<textarea class="js-is-nocurrency" id="vehicle__<%= field.number %>__sum_comment" name="vehicle[<%= field.number %>][][sum_comment]" placeholder="Коментар" data-inp-act="hidden,unclear"></textarea>
