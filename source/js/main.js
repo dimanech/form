@@ -19,15 +19,7 @@ scripts.Common = {
 	},
 
 	isModernBrowser: function () {
-		if ( // modernizer alternative
-			'querySelector' in document &&
-			'localStorage' in window &&
-			'addEventListener' in window
-		) {
-			return true;
-		} else {
-			return false;
-		}
+		return 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window
 	},
 
 	globalInit: function() {
@@ -152,7 +144,7 @@ scripts.Common = {
 					select: function(event, ui) {
 						focus_next($(event.target));
 					},
-					appendTo: $(selector).parent(),
+					appendTo: $(selector).parent()
 				});
 			};
 
