@@ -217,6 +217,10 @@ scripts.Common = {
 			return this.optional(element) || /^\d+([\.,]\d+)?$/i.test(value);
 		}, "Вводити потрібно лише цифри");
 
+		$.validator.addMethod("nocurrency", function(value, element) {
+			return this.optional(element) || /^[\D]+$/i.test(value);
+		}, "Суми потрібно вводити у полі вище");
+
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
@@ -229,6 +233,9 @@ scripts.Common = {
 			},
 			'js-is-strictDigitsOnly': {
 				digits: true
+			},
+			'js-is-nocurrency': {
+				nocurrency: true
 			}
 		});
 
