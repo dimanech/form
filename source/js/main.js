@@ -206,8 +206,8 @@ scripts.Common = {
 		}, "Tільки букви, будь-ласка");
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
-			return this.optional(element) || /^\d+([,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри. Використовуйте кому");
+			return this.optional(element) || /^\d+([.,]\d+)?$/i.test(value);
+		}, "Вводити потрібно лише цифри");
 
 		$.validator.addMethod("nocurrency", function(value, element) {
 			return this.optional(element) || /^[\D]+$/i.test(value);
@@ -225,9 +225,6 @@ scripts.Common = {
 			},
 			'js-is-strictDigitsOnly': {
 				digits: true
-			},
-			'js-is-nocurrency': {
-				nocurrency: true
 			}
 		});
 
