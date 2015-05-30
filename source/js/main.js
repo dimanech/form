@@ -141,7 +141,7 @@ scripts.Common = {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					select: function(event, ui) {
+					close: function(event, ui) {
 						focus_next($(event.target));
 					},
 					appendTo: $(selector).parent()
@@ -209,10 +209,6 @@ scripts.Common = {
 			return this.optional(element) || /^\d+([.,]\d+)?$/i.test(value);
 		}, "Вводити потрібно лише цифри");
 
-		$.validator.addMethod("nocurrency", function(value, element) {
-			return this.optional(element) || /^[\D]+$/i.test(value);
-		}, "Суми потрібно вводити у полі вище");
-
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
 				lettersonly: true
@@ -257,7 +253,7 @@ scripts.Common = {
 		this.$cache.body.on('reset', $form, function () {
 			$form.validate().resetForm();
 		}).on('click', '#intro__isnotdeclaration', function () {
-			if($(this).is(':checked')) {
+			if ($(this).is(':checked')) {
 				$form.validate().settings.ignore = "*"; // disable all validation
 			} else {
 				$form.validate().settings.ignore = "";
@@ -266,6 +262,23 @@ scripts.Common = {
 
 		content.hide();
 		$(content[0]).show();
+
+		this.$cache.body.on('blur', ".js-is-nocurrency", function(e) {
+			var el = $(this),
+				val = $.trim(el.val()),
+				note;
+
+			if (/^\d+([.,]\d+)?/i.test(val)) {
+				note = el.parent().siblings(".declaration-small-note");
+				if (note.length == 0) {
+					el.parent().after('<p class="l-weiss-form__item declaration-small-note declaration-small-note_optional">');
+					note = el.parent().siblings(".declaration-small-note");
+				}
+				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
+			} else {
+				el.parent().siblings(".declaration-small-note_optional").remove();
+			}
+		});
 
 		this.$cache.body.on('click', '.js-section-go', function(e) {
 			if (!$(this).is('[type="reset"]')) {
