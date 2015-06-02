@@ -122,8 +122,7 @@ scripts.Common = {
 				".vehicle__44__brand": scripts.Data.autocompliteData.motos
 			},
 			focus_next = function(current) {
-				var selectables = $(":tabbable").not(":checkbox")
-						.not(".ui-menu-item").not(".ui-autocomplete"),
+				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox)"),
 					nextIndex = 0;
 
 				if (current.length === 1) {
@@ -136,15 +135,30 @@ scripts.Common = {
 				selectables.eq(nextIndex).focus();
 			},
 			addAutoComplite = function (selector, data) {
+				var selected = false;
+
+				$(selector).on("focus", function(e) {
+					selected = false;
+				});
+
 				$(selector).autocomplete({
+					delay: 100,
 					source: function(request, response) {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
+					change: function(event, ui) {
+						focus_next($(event.target));
+					},
 					select: function(event, ui) {
+						selected = true;
 						focus_next($(event.target));
 					},
 					appendTo: $(selector).parent()
+				}).on("keydown", function(e) {
+					if (e.which === 9 && !e.shiftKey && selected) {
+						e.preventDefault();
+					}
 				});
 			};
 
@@ -207,11 +221,7 @@ scripts.Common = {
 
 		$.validator.addMethod("fractdigitsonly", function(value, element) {
 			return this.optional(element) || /^\d+([.,]\d+)?$/i.test(value);
-		}, "Вводити потрібно лише цифри. Використовуйте кому");
-
-		$.validator.addMethod("nocurrency", function(value, element) {
-			return this.optional(element) || /^[\D]+$/i.test(value);
-		}, "Суми потрібно вводити у полі вище");
+		}, "Вводити потрібно лише цифри");
 
 		$.validator.addClassRules({
 			'js-is-LettersOnly': {
@@ -257,7 +267,7 @@ scripts.Common = {
 		this.$cache.body.on('reset', $form, function () {
 			$form.validate().resetForm();
 		}).on('click', '#intro__isnotdeclaration', function () {
-			if($(this).is(':checked')) {
+			if ($(this).is(':checked')) {
 				$form.validate().settings.ignore = "*"; // disable all validation
 			} else {
 				$form.validate().settings.ignore = "";
@@ -266,6 +276,23 @@ scripts.Common = {
 
 		content.hide();
 		$(content[0]).show();
+
+		this.$cache.body.on('blur', ".js-is-nocurrency", function(e) {
+			var el = $(this),
+				val = $.trim(el.val()),
+				note;
+
+			if (/^\d+([.,]\d+)?/i.test(val)) {
+				note = el.parent().siblings(".declaration-small-note");
+				if (note.length == 0) {
+					el.parent().after('<p class="l-weiss-form__item declaration-small-note declaration-small-note_optional">');
+					note = el.parent().siblings(".declaration-small-note");
+				}
+				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
+			} else {
+				el.parent().siblings(".optional-note").remove();
+			}
+		});
 
 		this.$cache.body.on('click', '.js-section-go', function(e) {
 			if (!$(this).is('[type="reset"]')) {

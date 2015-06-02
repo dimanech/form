@@ -122,8 +122,7 @@ scripts.Common = {
 				".vehicle__44__brand": scripts.Data.autocompliteData.motos
 			},
 			focus_next = function(current) {
-				var selectables = $(":tabbable").not(":checkbox")
-						.not(".ui-menu-item").not(".ui-autocomplete"),
+				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox)"),
 					nextIndex = 0;
 
 				if (current.length === 1) {
@@ -136,15 +135,30 @@ scripts.Common = {
 				selectables.eq(nextIndex).focus();
 			},
 			addAutoComplite = function (selector, data) {
+				var selected = false;
+
+				$(selector).on("focus", function(e) {
+					selected = false;
+				});
+
 				$(selector).autocomplete({
+					delay: 100,
 					source: function(request, response) {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					close: function(event, ui) {
+					change: function(event, ui) {
+						focus_next($(event.target));
+					},
+					select: function(event, ui) {
+						selected = true;
 						focus_next($(event.target));
 					},
 					appendTo: $(selector).parent()
+				}).on("keydown", function(e) {
+					if (e.which === 9 && !e.shiftKey && selected) {
+						e.preventDefault();
+					}
 				});
 			};
 
@@ -276,7 +290,7 @@ scripts.Common = {
 				}
 				note.html("Це значення схоже на суму, а їх потрібно вводити у поле суми поруч. Можливо, ви помилились?");
 			} else {
-				el.parent().siblings(".declaration-small-note_optional").remove();
+				el.parent().siblings(".optional-note").remove();
 			}
 		});
 
