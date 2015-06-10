@@ -434,6 +434,13 @@ dd {
 .declaration-action p {
   margin: 0 0 10px;
 }
+.declaration-action ul {
+  list-style: none;
+  margin: 0 auto;
+  padding: 0;
+  width: 400px;
+  text-align: left;
+}
 
 .declaration-action_head {
   font-size: 1.4em;

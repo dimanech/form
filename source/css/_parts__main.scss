@@ -216,6 +216,14 @@ $icons-map: sprite-map("icons/*.png", $spacing: 30px, $layout: vertical);
 	p {
 		margin: 0 0 10px;
 	}
+
+	ul {
+		list-style: none;
+		margin: 0 auto;
+		padding: 0;
+		width: 400px;
+		text-align: left;
+	}
 }
 
 .declaration-action_head {
