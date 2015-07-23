@@ -119,10 +119,28 @@ scripts.Common = {
 				".vehicle__40__brand": scripts.Data.autocompliteData.cars,
 				".vehicle__41__brand": scripts.Data.autocompliteData.trucks,
 				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
-				".vehicle__44__brand": scripts.Data.autocompliteData.motos
+				".vehicle__44__brand": scripts.Data.autocompliteData.motos,
+				"#banks__45__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__45__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__46__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__46__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__47__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__47__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__48__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__48__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__49__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__49__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__50__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__50__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__51__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__51__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__52__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__52__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__53__sum_comment": scripts.Data.autocompliteData.banks,
+				"#banks__53__sum_foreign_comment": scripts.Data.autocompliteData.banks
 			},
 			focus_next = function(current) {
-				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox)"),
+				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox), textarea"),
 					nextIndex = 0;
 
 				if (current.length === 1) {
@@ -140,6 +158,8 @@ scripts.Common = {
 				$(selector).on("focus", function(e) {
 					selected = false;
 				});
+
+				console.log(selector + "appended");
 
 				$(selector).autocomplete({
 					delay: 100,
