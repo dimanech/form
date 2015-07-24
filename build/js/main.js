@@ -159,8 +159,6 @@ scripts.Common = {
 					selected = false;
 				});
 
-				console.log(selector + "appended");
-
 				$(selector).autocomplete({
 					delay: 100,
 					source: function(request, response) {
