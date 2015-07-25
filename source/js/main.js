@@ -352,47 +352,41 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			scrpt.jqueryValidateInit();
-			scrpt.toggleFormSection();
-			scrpt.inputActions();
-			scrpt.autoCompliteInit();
-			scrpt.cloneyaInit();
-			scrpt.dateSelectBoxesInit();
-			//var template = Handlebars.compile($('#decl_form_template').html()),
-			//	output = $("#form-wrapper");
-			//
-			//scrpt.$cache.body.on("vulyk.next", function(e, data) {
-			//	scrpt.$cache.html.scrollTop(0);
-			//	output.html(template(data.result.task.data));
-			//	scrpt.jqueryValidateInit();
-			//	scrpt.toggleFormSection();
-			//	scrpt.inputActions();
-			//	scrpt.autoCompliteInit();
-			//	scrpt.cloneyaInit();
-			//	scrpt.dateSelectBoxesInit();
-			//}).on("vulyk.save", function(e, callback) {
-			//	var $form = $('#form-declaration'),
-			//		data = $form.serializeJSON();
-			//
-			//	if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
-			//		$form.remove();
-			//		callback(data);
-			//	} else {
-			//		scrpt.$cache.html.scrollTop(0);
-			//	}
-			//}).on("vulyk.skip", function(e, callback) {
-			//	$('#form-declaration').remove();
-			//	callback();
-			//}).on("vulyk.task_error", function(e, data) {
-			//	$.magnificPopup.open({
-			//		items: {
-			//			src: '<div class="zoom-anim-dialog small-dialog">' +
-			//			'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
-			//			'</div>',
-			//			type: 'inline'
-			//		}
-			//	})
-			//});
+			var template = Handlebars.compile($('#decl_form_template').html()),
+				output = $("#form-wrapper");
+
+			scrpt.$cache.body.on("vulyk.next", function(e, data) {
+				scrpt.$cache.html.scrollTop(0);
+				output.html(template(data.result.task.data));
+				scrpt.jqueryValidateInit();
+				scrpt.toggleFormSection();
+				scrpt.inputActions();
+				scrpt.autoCompliteInit();
+				scrpt.cloneyaInit();
+				scrpt.dateSelectBoxesInit();
+			}).on("vulyk.save", function(e, callback) {
+				var $form = $('#form-declaration'),
+					data = $form.serializeJSON();
+
+				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
+					$form.remove();
+					callback(data);
+				} else {
+					scrpt.$cache.html.scrollTop(0);
+				}
+			}).on("vulyk.skip", function(e, callback) {
+				$('#form-declaration').remove();
+				callback();
+			}).on("vulyk.task_error", function(e, data) {
+				$.magnificPopup.open({
+					items: {
+						src: '<div class="zoom-anim-dialog small-dialog">' +
+						'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
+						'</div>',
+						type: 'inline'
+					}
+				})
+			});
 		});
 
 		return scrpt;
