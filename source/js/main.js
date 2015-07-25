@@ -121,23 +121,31 @@ scripts.Common = {
 				".vehicle__42__brand": scripts.Data.autocompliteData.boats,
 				".vehicle__44__brand": scripts.Data.autocompliteData.motos,
 				"#banks__45__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__45__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__45__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__46__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__46__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__46__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__47__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__47__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__47__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__48__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__48__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__48__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__49__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__49__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__49__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__50__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__50__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__50__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__51__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__51__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__51__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__52__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__52__sum_foreign_comment": scripts.Data.autocompliteData.banks,
+				"#banks__52__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
 				"#banks__53__sum_comment": scripts.Data.autocompliteData.banks,
-				"#banks__53__sum_foreign_comment": scripts.Data.autocompliteData.banks
+				"#banks__53__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__63__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__63__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__64__sum_comment": scripts.Data.autocompliteData.banks,
+				"#liabilities__64__sum_foreign_comment": scripts.Data.autocompliteData.banksForeign,
+				"#liabilities__54__sum_comment": scripts.Data.autocompliteData.insurances,
+				"#liabilities__54__sum_foreign_comment": scripts.Data.autocompliteData.insurancesForeign,
+				"#liabilities__60__sum_comment": scripts.Data.autocompliteData.insurances,
+				"#liabilities__60__sum_foreign_comment": scripts.Data.autocompliteData.insurancesForeign
 			},
 			focus_next = function(current) {
 				var selectables = $(":input:not(.ui-menu-item, .ui-autocomplete):not(:disabled):not(:checkbox), textarea"),
@@ -344,41 +352,47 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			var template = Handlebars.compile($('#decl_form_template').html()),
-				output = $("#form-wrapper");
-
-			scrpt.$cache.body.on("vulyk.next", function(e, data) {
-				scrpt.$cache.html.scrollTop(0);
-				output.html(template(data.result.task.data));
-				scrpt.jqueryValidateInit();
-				scrpt.toggleFormSection();
-				scrpt.inputActions();
-				scrpt.autoCompliteInit();
-				scrpt.cloneyaInit();
-				scrpt.dateSelectBoxesInit();
-			}).on("vulyk.save", function(e, callback) {
-				var $form = $('#form-declaration'),
-					data = $form.serializeJSON();
-
-				if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
-					$form.remove();
-					callback(data);
-				} else {
-					scrpt.$cache.html.scrollTop(0);
-				}
-			}).on("vulyk.skip", function(e, callback) {
-				$('#form-declaration').remove();
-				callback();
-			}).on("vulyk.task_error", function(e, data) {
-				$.magnificPopup.open({
-					items: {
-						src: '<div class="zoom-anim-dialog small-dialog">' +
-						'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
-						'</div>',
-						type: 'inline'
-					}
-				})
-			});
+			scrpt.jqueryValidateInit();
+			scrpt.toggleFormSection();
+			scrpt.inputActions();
+			scrpt.autoCompliteInit();
+			scrpt.cloneyaInit();
+			scrpt.dateSelectBoxesInit();
+			//var template = Handlebars.compile($('#decl_form_template').html()),
+			//	output = $("#form-wrapper");
+			//
+			//scrpt.$cache.body.on("vulyk.next", function(e, data) {
+			//	scrpt.$cache.html.scrollTop(0);
+			//	output.html(template(data.result.task.data));
+			//	scrpt.jqueryValidateInit();
+			//	scrpt.toggleFormSection();
+			//	scrpt.inputActions();
+			//	scrpt.autoCompliteInit();
+			//	scrpt.cloneyaInit();
+			//	scrpt.dateSelectBoxesInit();
+			//}).on("vulyk.save", function(e, callback) {
+			//	var $form = $('#form-declaration'),
+			//		data = $form.serializeJSON();
+			//
+			//	if ($("#section-4").is(":visible") || $("#intro__isnotdeclaration").is(":checked")) {
+			//		$form.remove();
+			//		callback(data);
+			//	} else {
+			//		scrpt.$cache.html.scrollTop(0);
+			//	}
+			//}).on("vulyk.skip", function(e, callback) {
+			//	$('#form-declaration').remove();
+			//	callback();
+			//}).on("vulyk.task_error", function(e, data) {
+			//	$.magnificPopup.open({
+			//		items: {
+			//			src: '<div class="zoom-anim-dialog small-dialog">' +
+			//			'<div class="dialog-content">Привет!<br/>Первый пакет деклараций обработан.<br/>Сейчас мы внесем немного исправлений и вот-вот тут появится 100 тысяч документов. не забывайте нас, зайдите завтра.</div>' +
+			//			'</div>',
+			//			type: 'inline'
+			//		}
+			//	})
+			//});
 		});
 
 		return scrpt;
