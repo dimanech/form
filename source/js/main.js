@@ -22,6 +22,10 @@ scripts.Common = {
 		return 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window
 	},
 
+	isPlacholders: function () {
+		return document.createElement("input").placeholder == undefined;
+	},
+
 	globalInit: function() {
 		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
 			var self = $(this);
@@ -370,9 +374,6 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			if (!scrpt.isModernBrowser()) {
-				scrpt.addPlaceholder();
-			}
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
@@ -383,6 +384,9 @@ scripts.Common = {
 				scrpt.autoCompliteInit();
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
+				if (scrpt.isPlacholders()) {
+					scrpt.addPlaceholder();
+				}
 			}).on("vulyk.save", function(e, callback) {
 				var $form = $('#form-declaration'),
 					data = $form.serializeJSON();
