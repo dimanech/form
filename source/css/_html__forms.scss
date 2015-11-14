@@ -256,10 +256,14 @@ $formColor: $baseColor;
 
 	.i-weiss-form-placeholder {
 		position: absolute;
-		top: 2px;
+		top: 6px;
 		left: 15px;
+		right: 0;
 		font-style: italic;
 		color: lighten($formColor, 10%);
+		overflow: hidden;
+		white-space: nowrap;
+		text-overflow: ellipsis;
 
 		&.hidden {
 			display: none;

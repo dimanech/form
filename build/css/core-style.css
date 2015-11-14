@@ -405,6 +405,18 @@ figure {
   outline: none;
   box-shadow: 0 0 0 3px #ebe66f;
 }
+.ie8 .weiss-form input[type="password"]:focus, .ie9 .weiss-form input[type="password"]:focus, .ie8
+.weiss-form input[type="search"]:focus, .ie9
+.weiss-form input[type="search"]:focus, .ie8
+.weiss-form input[type="text"]:focus, .ie9
+.weiss-form input[type="text"]:focus, .ie8
+.weiss-form select:focus, .ie9
+.weiss-form select:focus, .ie8
+.weiss-form textarea:focus, .ie9
+.weiss-form textarea:focus {
+  box-shadow: none;
+  outline: 3px solid #ebe66f;
+}
 .weiss-form textarea {
   line-height: 18px;
   overflow: auto;
@@ -425,7 +437,11 @@ figure {
   -ms-appearance: none;
   appearance: none;
 }
-.weiss-form select .ie8 {
+.weiss-form select::-ms-expand {
+  display: none;
+}
+.ie8 .weiss-form select, .ie9 .weiss-form select {
+  height: 31px;
   padding-right: 0;
 }
 .weiss-form select[multiple="multiple"] {
@@ -494,6 +510,20 @@ figure {
 }
 .weiss-form input:focus::-ms-input-placeholder {
   color: #5d5d5d;
+}
+.weiss-form .i-weiss-form-placeholder {
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  right: 0;
+  font-style: italic;
+  color: #5d5d5d;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.weiss-form .i-weiss-form-placeholder.hidden {
+  display: none;
 }
 
 /* @end */

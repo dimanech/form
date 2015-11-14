@@ -705,3 +705,10 @@ dd {
 }
 
 /* @end */
+/* @group Clone button specific styles
+  --------------------------------------------------------------------------- */
+button.weiss-btn_clone {
+  margin-top: 3px;
+}
+
+/* @end */
