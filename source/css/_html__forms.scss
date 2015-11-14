@@ -241,6 +241,18 @@ $formColor: $baseColor;
 			}
 		}
 	}
+
+	.i-weiss-form-placeholder {
+		position: absolute;
+		top: 2px;
+		left: 15px;
+		font-style: italic;
+		color: lighten($formColor, 10%);
+
+		&.hidden {
+			display: none;
+		}
+	}
 }
 
 /* @end */

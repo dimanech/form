@@ -31,10 +31,6 @@ scripts.Common = {
 		});
 	},
 
-	jsPlaceholderInit: function () {
-		$('input[placeholder], textarea[placeholder]').placeholder();
-	},
-
 	toggleFormSection: function(enableOnValue) {
 		var trueValue = (typeof enableOnValue === "undefined") ? "other" : enableOnValue,
 			ctrlInput = $(".js-related-control").find("input[type='checkbox'], select");
@@ -232,6 +228,31 @@ scripts.Common = {
 		});
 	},
 
+	addPlaceholder: function () {
+		var item = '.weiss-form input[placeholder], .weiss-form textarea[placeholder]';
+
+		$(item).each(function() {
+			var self = $(this);
+			self.before("<i class='i-weiss-form-placeholder'>" + self.attr('placeholder') + "</i>");
+		});
+
+		function togglePlaceholder (elem, hidePlaceholder) {
+			if (!elem.val()) {
+				elem.parent().find('.i-weiss-form-placeholder')[hidePlaceholder ? 'addClass' : 'removeClass']('hidden');
+			}
+		}
+
+		$(item).on('focus', function() {
+			togglePlaceholder ($(this), true);
+			}).on('focusout', function() {
+			togglePlaceholder ($(this), false);
+		});
+
+		$('.i-weiss-form-placeholder').on('click', function() {
+			$(this).next().focus();
+		});
+	},
+
 	jqueryValidateInit: function () {
 
 		$.validator.addMethod("lettersonly", function(value, element) {
@@ -349,8 +370,9 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			var template = Handlebars.compile($('#decl_form_template').html()),
-				output = $("#form-wrapper");
+			if (!scrpt.isModernBrowser()) {
+				scrpt.addPlaceholder();
+			}
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
