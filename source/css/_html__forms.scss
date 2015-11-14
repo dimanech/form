@@ -115,6 +115,12 @@ $formColor: $baseColor;
 			border-color: lighten(#a4a4a4, 10%);
 			outline: none;
 			box-shadow: 0 0 0 3px #ebe66f; //#E4E4E4;
+
+			.ie8 &,
+			.ie9 & {
+				box-shadow: none;
+				outline: 3px solid #ebe66f;
+			}
 		}
 	}
 
