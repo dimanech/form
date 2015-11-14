@@ -140,8 +140,12 @@ $formColor: $baseColor;
 		-ms-appearance: none;
 		appearance: none;
 
-		.ie8,
-		.ie9 {
+		&::-ms-expand {
+			display: none;
+		}
+
+		.ie8 &,
+		.ie9 & {
 			padding-right: 0;
 		}
 	}
