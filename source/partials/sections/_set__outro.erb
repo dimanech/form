@@ -40,7 +40,7 @@
 				<select id="declaration__date_year" name="declaration[date_year]" data-inp-act="hidden,unclear">
 					<option value="unspecified" selected="" disabled="">Рік</option>
 					<option value="nodata">Немає даних</option>
-					<% (2015).downto(1991) do |i| %>
+					<% (2016).downto(1991) do |i| %>
 					<option value=<%= "#{i}" %>><%= "#{i}" %></option>
 					<% end %>
 				</select>

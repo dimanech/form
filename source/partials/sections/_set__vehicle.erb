@@ -77,7 +77,7 @@
 					<select id="vehicle__<%= field.number %>__year" name="vehicle[<%= field.number %>][][year]" data-inp-act="hidden,unclear">
 						<option selected="" disabled="">Рік випуску</option>
 						<option value="nodata">Невідомий</option>
-						<% (2015).downto(1880) do |i| %>
+						<% (2016).downto(1880) do |i| %>
 						<option value=<%= "#{i}" %>><%= "#{i}" %></option>
 						<% end %>
 					</select>
@@ -182,7 +182,7 @@
 					<select id="vehicle__<%= field.number %>__year" name="vehicle[<%= field.number %>][][year]" data-inp-act="hidden,unclear">
 						<option selected="" disabled="">Рік випуску</option>
 						<option value="nodata">Невідомий</option>
-						<% (2015).downto(1880) do |i| %>
+						<% (2016).downto(1880) do |i| %>
 						<option value=<%= "#{i}" %>><%= "#{i}" %></option>
 						<% end %>
 					</select>
