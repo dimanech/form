@@ -22,6 +22,10 @@ scripts.Common = {
 		return 'querySelector' in document && 'localStorage' in window && 'addEventListener' in window
 	},
 
+	isPlacholders: function () {
+		return document.createElement("input").placeholder == undefined;
+	},
+
 	globalInit: function() {
 		this.$cache.body.on('click', ".weiss-form__input-act input[type='checkbox']", function() {
 			var self = $(this);
@@ -29,10 +33,6 @@ scripts.Common = {
 			self.parent().toggleClass('js-ico-checked');
 			self.parents('.weiss-form__input-w-ico').toggleClass('weiss-form__input-act_' + self.data('input-type') );
 		});
-	},
-
-	jsPlaceholderInit: function () {
-		$('input[placeholder], textarea[placeholder]').placeholder();
 	},
 
 	toggleFormSection: function(enableOnValue) {
@@ -165,11 +165,7 @@ scripts.Common = {
 				selectables.eq(nextIndex).focus();
 			},
 			addAutoComplite = function (selector, data) {
-				var selected = false;
-
-				$(selector).on("focus", function(e) {
-					selected = false;
-				});
+				var open = false;
 
 				$(selector).autocomplete({
 					delay: 100,
@@ -177,17 +173,14 @@ scripts.Common = {
 						var results = $.ui.autocomplete.filter(data, request.term);
 						response(results.slice(0, 7));
 					},
-					change: function(event, ui) {
-						focus_next($(event.target));
-					},
-					select: function(event, ui) {
-						selected = true;
-						focus_next($(event.target));
+					open: function() {
+						open = true;
 					},
 					appendTo: $(selector).parent()
 				}).on("keydown", function(e) {
-					if (e.which === 9 && !e.shiftKey && selected) {
+					if (e.which === 9 && !e.shiftKey && open) {
 						e.preventDefault();
+						focus_next($(selector));
 					}
 				});
 			};
@@ -236,6 +229,31 @@ scripts.Common = {
 			yearLabel: 'Рік',
 			monthLabel: 'Місяць',
 			dayLabel: 'День'
+		});
+	},
+
+	addPlaceholder: function () {
+		var item = '.weiss-form input[placeholder], .weiss-form textarea[placeholder]';
+
+		$(item).each(function() {
+			var self = $(this);
+			self.before("<i class='i-weiss-form-placeholder'>" + self.attr('placeholder') + "</i>");
+		});
+
+		function togglePlaceholder (elem, hidePlaceholder) {
+			if (!elem.val()) {
+				elem.parent().find('.i-weiss-form-placeholder')[hidePlaceholder ? 'addClass' : 'removeClass']('hidden');
+			}
+		}
+
+		$(item).on('focus', function() {
+			togglePlaceholder ($(this), true);
+			}).on('focusout', function() {
+			togglePlaceholder ($(this), false);
+		});
+
+		$('.i-weiss-form-placeholder').on('click', function() {
+			$(this).next().focus();
 		});
 	},
 
@@ -356,8 +374,6 @@ scripts.Common = {
 		scrpt.globalInit();
 
 		$(function () { // DOM Ready
-			var template = Handlebars.compile($('#decl_form_template').html()),
-				output = $("#form-wrapper");
 
 			scrpt.$cache.body.on("vulyk.next", function(e, data) {
 				scrpt.$cache.html.scrollTop(0);
@@ -368,6 +384,9 @@ scripts.Common = {
 				scrpt.autoCompliteInit();
 				scrpt.cloneyaInit();
 				scrpt.dateSelectBoxesInit();
+				if (scrpt.isPlacholders()) {
+					scrpt.addPlaceholder();
+				}
 			}).on("vulyk.save", function(e, callback) {
 				var $form = $('#form-declaration'),
 					data = $form.serializeJSON();
